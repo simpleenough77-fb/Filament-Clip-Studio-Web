@@ -1,0 +1,377 @@
+{
+  "H2D": {
+    "id": "H2D",
+    "label": "H2D (Bed size 350 x 320 x 325 mm)",
+    "bed": [
+      350.0,
+      320.0,
+      325.0
+    ],
+    "usable": [
+      25.0,
+      0.0,
+      325.0,
+      320.0
+    ],
+    "single": [
+      0.0,
+      0.0,
+      325.0,
+      320.0
+    ],
+    "exclusions": [],
+    "settings": "H2D.json",
+    "dual": true,
+    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
+  },
+  "H2D Pro": {
+    "id": "H2D Pro",
+    "label": "H2D Pro (Bed size 350 x 320 x 325 mm)",
+    "bed": [
+      350.0,
+      320.0,
+      325.0
+    ],
+    "usable": [
+      25.0,
+      0.0,
+      325.0,
+      320.0
+    ],
+    "single": [
+      0.0,
+      0.0,
+      325.0,
+      320.0
+    ],
+    "exclusions": [],
+    "settings": "H2D_Pro.json",
+    "dual": true,
+    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
+  },
+  "H2S": {
+    "id": "H2S",
+    "label": "H2S (Bed size 340 x 320 x 340 mm)",
+    "bed": [
+      340.0,
+      320.0,
+      340.0
+    ],
+    "usable": [
+      0.0,
+      0.0,
+      340.0,
+      320.0
+    ],
+    "single": [
+      0.0,
+      0.0,
+      340.0,
+      320.0
+    ],
+    "exclusions": [],
+    "settings": "H2S.json",
+    "dual": false,
+    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
+  },
+  "H2C": {
+    "id": "H2C",
+    "label": "H2C (Bed size 330 x 320 x 325 mm)",
+    "bed": [
+      330.0,
+      320.0,
+      325.0
+    ],
+    "usable": [
+      25.0,
+      0.0,
+      325.0,
+      320.0
+    ],
+    "single": [
+      0.0,
+      0.0,
+      325.0,
+      320.0
+    ],
+    "exclusions": [],
+    "settings": "H2C.json",
+    "dual": true,
+    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
+  },
+  "X2D": {
+    "id": "X2D",
+    "label": "X2D (Bed size 256 x 256 x 260 mm)",
+    "bed": [
+      256.0,
+      256.0,
+      260
+    ],
+    "usable": [
+      20.5,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "single": [
+      0.0,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "exclusions": [],
+    "settings": "X2D.json",
+    "dual": true,
+    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
+  },
+  "X1 Carbon": {
+    "id": "X1 Carbon",
+    "label": "X1 Carbon (Bed size 256 x 256 x 250 mm)",
+    "bed": [
+      256.0,
+      256.0,
+      250.0
+    ],
+    "usable": [
+      0.0,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "single": [
+      0.0,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "exclusions": [
+      "0x0",
+      "18x0",
+      "18x28",
+      "0x28"
+    ],
+    "settings": "X1_Carbon.json",
+    "dual": false,
+    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
+  },
+  "X1E": {
+    "id": "X1E",
+    "label": "X1E (Bed size 256 x 256 x 250 mm)",
+    "bed": [
+      256.0,
+      256.0,
+      250.0
+    ],
+    "usable": [
+      0.0,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "single": [
+      0.0,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "exclusions": [
+      "0x0",
+      "18x0",
+      "18x28",
+      "0x28"
+    ],
+    "settings": "X1E.json",
+    "dual": false,
+    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
+  },
+  "X1": {
+    "id": "X1",
+    "label": "X1 (Bed size 256 x 256 x 250 mm)",
+    "bed": [
+      256.0,
+      256.0,
+      250.0
+    ],
+    "usable": [
+      0.0,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "single": [
+      0.0,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "exclusions": [
+      "0x0",
+      "18x0",
+      "18x28",
+      "0x28"
+    ],
+    "settings": "X1.json",
+    "dual": false,
+    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
+  },
+  "P2S": {
+    "id": "P2S",
+    "label": "P2S (Bed size 256 x 256 x 256 mm)",
+    "bed": [
+      256.0,
+      256.0,
+      256.0
+    ],
+    "usable": [
+      0.0,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "single": [
+      0.0,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "exclusions": [],
+    "settings": "P2S.json",
+    "dual": false,
+    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
+  },
+  "P1S": {
+    "id": "P1S",
+    "label": "P1S (Bed size 256 x 256 x 250 mm)",
+    "bed": [
+      256.0,
+      256.0,
+      250.0
+    ],
+    "usable": [
+      0.0,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "single": [
+      0.0,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "exclusions": [
+      "0x0",
+      "18x0",
+      "18x28",
+      "0x28"
+    ],
+    "settings": "P1S.json",
+    "dual": false,
+    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
+  },
+  "P1P": {
+    "id": "P1P",
+    "label": "P1P (Bed size 256 x 256 x 250 mm)",
+    "bed": [
+      256.0,
+      256.0,
+      250.0
+    ],
+    "usable": [
+      0.0,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "single": [
+      0.0,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "exclusions": [
+      "0x0",
+      "18x0",
+      "18x28",
+      "0x28"
+    ],
+    "settings": "P1P.json",
+    "dual": false,
+    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
+  },
+  "A1": {
+    "id": "A1",
+    "label": "A1 (Bed size 256 x 256 x 256 mm)",
+    "bed": [
+      256.0,
+      256.0,
+      256.0
+    ],
+    "usable": [
+      0.0,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "single": [
+      0.0,
+      0.0,
+      256.0,
+      256.0
+    ],
+    "exclusions": [],
+    "settings": "A1.json",
+    "dual": false,
+    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
+  },
+  "A1 mini": {
+    "id": "A1 mini",
+    "label": "A1 mini (Bed size 180 x 180 x 180 mm)",
+    "bed": [
+      180.0,
+      180.0,
+      180.0
+    ],
+    "usable": [
+      0.0,
+      0.0,
+      180.0,
+      180.0
+    ],
+    "single": [
+      0.0,
+      0.0,
+      180.0,
+      180.0
+    ],
+    "exclusions": [],
+    "settings": "A1_mini.json",
+    "dual": false,
+    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
+  },
+  "A2L": {
+    "id": "A2L",
+    "label": "A2L (Bed size 330 x 320 x 325 mm)",
+    "bed": [
+      330.0,
+      320.0,
+      325.0
+    ],
+    "usable": [
+      0.0,
+      0.0,
+      330.0,
+      320.0
+    ],
+    "single": [
+      0.0,
+      0.0,
+      330.0,
+      320.0
+    ],
+    "exclusions": [],
+    "settings": "A2L.json",
+    "dual": false,
+    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
+  }
+}

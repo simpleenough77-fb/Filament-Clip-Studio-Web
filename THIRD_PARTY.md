@@ -1,0 +1,11 @@
+# Third-party components and source
+
+- **OpenSCAD WASM**: unmodified official `OpenSCAD-2025.03.25.wasm24456-WebAssembly-web.zip`, downloaded from https://files.openscad.org/playground/OpenSCAD-2025.03.25.wasm24456-WebAssembly-web.zip. Embedded version identifies commit `ce5039f8a9545ad5a8cf197b3ca11c0939bc67f1`. GPL-2.0-or-later, with CGAL linking exception; license in vendor/openscad/COPYING. Exact source: https://github.com/openscad/openscad/tree/ce5039f8a9545ad5a8cf197b3ca11c0939bc67f1 . The OpenSCAD repository contains dependency/submodule and WebAssembly build instructions; WASM build tooling: https://github.com/openscad/openscad-wasm . Engine selected from the official OpenSCAD Playground configuration, not the failing npm builds used in preliminary testing.
+- **Pyodide 0.27.7**: unmodified npm release, Mozilla Public License 2.0. License in vendor/pyodide/LICENSE; exact release source/build recipes: https://github.com/pyodide/pyodide/tree/0.27.7 . Python and bundled components retain their respective notices within the runtime distribution. Package versions/hashes are in pyodide-lock.json.
+- **Pillow 10.2.0**: Pyodide distribution wheel, checked against pyodide-lock.json SHA-256. Its license is contained in the wheel's dist-info/LICENSE. Source: https://github.com/python-pillow/Pillow/tree/10.2.0 . Pyodide build recipe: https://github.com/pyodide/pyodide/tree/0.27.7/packages/pillow .
+- **Liberation Sans/Serif 2.00.1**: OpenSCAD-bundled fonts. License in fonts/LICENSE.
+- **DejaVu Sans Bold**: font bundled with Matplotlib in FreeCAD. License in fonts/LICENSE_DEJAVU; upstream https://dejavu-fonts.github.io/ .
+- **Bambu printer preset snapshots**: retained from the existing studio; Bambu Studio source and licensing: https://github.com/bambulab/BambuStudio . Treat presets as snapshots, and review them in the current slicer.
+- **Catalog**: product names and approximate swatches from the author's Bambu Lab/Cookiecad catalog. Source links and collection metadata remain in author/Catalog.json. These are approximate previews, not guaranteed printed colors.
+
+Third-party dependencies do not transfer ownership of the manufacturer's brands or other third-party material. Source references are included to make the exact bundled components auditable.
