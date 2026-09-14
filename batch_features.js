@@ -13,7 +13,8 @@ function applyDraft(d){
  if(!d||!Array.isArray(d.rows)||d.rows.some(r=>!product(r.product)))throw Error('This batch includes a filament no longer available in the catalog. Your current batch was kept.');
  if(d.rows.some(r=>!Number.isInteger(r.quantity)||r.quantity<1)||d.rows.reduce((n,r)=>n+r.quantity,0)>100)throw Error('Batch quantities must be whole numbers, with no more than 100 clips.');
  rows=clone(d.rows);
- for(const k of ['printer','font','type_size','vendor_size','color_size','style','body_mode','text_mode']){
+ $('holder_sleeve').value=d.settings?.holder_sleeve||'no';
+ for(const k of ['printer','font','type_size','vendor_size','color_size','style','holder_sleeve','body_mode','text_mode']){
   if(d.settings?.[k]!==undefined){const el=$(k),v=String(d.settings[k]);if(el.tagName!=='SELECT'||[...el.options].some(o=>o.value===v))el.value=v;}
  }
  renderRows();

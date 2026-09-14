@@ -10,6 +10,7 @@ CATALOG=json.loads((AUTHOR/'Catalog.json').read_text())['products']
 PRODUCTS={p['id']:p for p in CATALOG}
 PRINTERS=json.loads((AUTHOR/'Printers.json').read_text())
 from placement import plan
+from print_geometry import body_code,standing_parts
 import batch_library
 LIBRARY=ROOT/"Batch_Library.json"
 FONTS=['Liberation Sans:style=Bold','DejaVu Sans:style=Bold','Liberation Serif:style=Bold']
@@ -34,7 +35,8 @@ def valid_color(s):
 def validate(data, allow_empty=False):
     rows=data.get('rows',[]); settings=data.get('settings',{})
     if not (0 if allow_empty else 1)<=len(rows)<=100:raise ValueError('Add between 1 and 100 label variants.')
-    s={k:settings.get(k,v) for k,v in dict(font=FONTS[0],type_size=6,vendor_size=0,color_size=0,style='part',body_mode='fixed',body_color='#000000',text_mode='contrast',printer='H2D',text_color='#00AE42',dark_color='#151515',light_color='#FFFFFF').items()}
+    s={k:settings.get(k,v) for k,v in dict(font=FONTS[0],type_size=6,vendor_size=0,color_size=0,style='part',holder_sleeve='no',body_mode='fixed',body_color='#000000',text_mode='contrast',printer='H2D',text_color='#00AE42',dark_color='#151515',light_color='#FFFFFF').items()}
+    if s['holder_sleeve'] not in ('no','yes'):raise ValueError('Choose whether to include a holder sleeve.')
     if s['printer'] not in PRINTERS:raise ValueError('Choose an available printer.')
     if s['font'] not in FONTS:raise ValueError('Choose an available font.')
     for k in ('type_size','vendor_size','color_size'):
@@ -124,7 +126,9 @@ def load_stl(path):
             pt=tuple(round(v,6) for v in tri[i:i+3])
             if pt not in lookup:lookup[pt]=len(verts);verts.append(pt)
             face.append(lookup[pt])
-        faces.append(face)
+        # STL float conversion can collapse a microscopic edge to one vertex.
+        # Such triangles have no surface area and must not enter the 3MF mesh.
+        if len(set(face))==3:faces.append(face)
     if not faces:raise ValueError('Empty mesh '+str(path))
     return verts,faces
 
@@ -212,15 +216,15 @@ async def generate(key,ack=False):
     variants=[]
     for index,r in enumerate(checks):
         params=f'lines={json.dumps(r["lines"],ensure_ascii=False)}; sizes={json.dumps(sizes)}; font={json.dumps(s["font"])}; width={r["width"]};\n'
-        base=includes()+params;geometry='import("/author/'+('cookiecad' if r['spool_profile']=='Cookiecad' else 'bambu')+'.stl");'
+        base=includes()+params;geometry=body_code(r['spool_profile'],s['holder_sleeve']=='yes')
         bodycode=base+(('difference(){'+geometry+'translate([0,0,-.01])label_all(lines,sizes,font,width,.61);}') if s['style']=='part' else geometry)
         bodyfile=meshdir/f'{index}_body.stl';await run_scad(bodycode,bodyfile)
-        parts=[('Clip body - '+r['spool_profile'],load_stl(bodyfile))]
+        parts=[('Clip body'+(' with holder sleeve' if s['holder_sleeve']=='yes' else '')+' - '+r['spool_profile'],load_stl(bodyfile))]
         for i,label in enumerate(['Manufacturer','Filament type','Color name']):
             path=meshdir/f'{index}_{i}.stl'
             code=base+(f'translate([0,0,-.01])label_line(lines,sizes,font,width,{i},.61);' if s['style']=='cut' else f'label_line(lines,sizes,font,width,{i},.6);')
             await run_scad(code,path);parts.append((label+' - '+r['display'][i],load_stl(path)))
-        variants.append(dict(check=r,parts=parts))
+        variants.append(dict(check=r,parts=standing_parts(parts,r['spool_profile'])))
     plates=plan(checks,s,PRINTERS[s['printer']])
     write_batch(out/'Filament_Labels.3mf',variants,plates,s,PRINTERS[s['printer']],AUTHOR)
     with (out/'Labels.csv').open('w',encoding='utf-8-sig',newline='') as f:

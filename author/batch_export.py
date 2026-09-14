@@ -56,7 +56,7 @@ def write_batch(path,variants,plates,settings,printer,author):
             for index,(_,(verts,faces)) in enumerate(v['parts']):
                 if index and settings['style']=='cut':continue
                 color=v['check']['body_color'] if not index else v['check']['text_color']
-                # Show label face with its correct silhouette in plan view.
+                # Show the side-standing assembly footprint in plan view.
                 for f in faces:
                     pts=[]
                     for k in f:

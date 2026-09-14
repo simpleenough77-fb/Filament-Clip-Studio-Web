@@ -1,5 +1,6 @@
 """Rectangle packing with printer keep-outs and center-first ordering."""
 import math
+from print_geometry import footprint
 
 GAP = 3.0
 MARGIN = 5.0
@@ -82,7 +83,7 @@ def plan(checks,settings,printer):
     rainbow=settings['body_mode']=='filament' or (settings['text_mode']=='filament' and settings['style']!='cut')
     for i,r in enumerate(checks):
         key=r['product'] if rainbow else 'shared'
-        groups.setdefault(key,[]).extend(dict(variant=i,w=r['width']+4,h=33) for _ in range(r['quantity']))
+        groups.setdefault(key,[]).extend(dict(variant=i,w=footprint(r['spool_profile'])[0],h=footprint(r['spool_profile'])[1]) for _ in range(r['quantity']))
     plates=[]
     for key,items in groups.items():
         two_color=settings['style']!='cut' and not(settings['body_mode']==settings['text_mode']=='filament')

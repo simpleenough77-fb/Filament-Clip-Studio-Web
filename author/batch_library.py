@@ -3,7 +3,7 @@ import json, os, re
 from pathlib import Path
 from datetime import datetime, timezone
 
-FIELDS=('printer','font','type_size','vendor_size','color_size','style','body_mode','text_mode')
+FIELDS=('printer','font','type_size','vendor_size','color_size','style','holder_sleeve','body_mode','text_mode')
 def clean_draft(data, validate):
     if not isinstance(data,dict) or not isinstance(data.get('rows'),list):
         raise ValueError('Invalid batch data.')

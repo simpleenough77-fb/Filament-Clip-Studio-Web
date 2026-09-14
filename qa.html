@@ -1,4 +1,4 @@
-<!doctype html><html><meta charset="utf-8"><title>Browser studio regression checks</title><style>body{background:#10191d;color:#edf3f3;font:18px system-ui;margin:40px}button,a{padding:12px;background:#83eac5;color:#10261e}pre{white-space:pre-wrap}</style><h1>Browser studio regression checks</h1><button id="start">Run CSV, truncation, and actual-filament checks</button><pre id="out">Ready</pre><div id="downloads"></div><script src="./bridge.js"></script><script>
+<!doctype html><html><meta charset="utf-8"><title>Browser studio regression checks</title><style>body{background:#10191d;color:#edf3f3;font:18px system-ui;margin:40px}button,a{padding:12px;background:#83eac5;color:#10261e}pre{white-space:pre-wrap}</style><h1>Browser studio regression checks</h1><button id="start">Run CSV, truncation, holder sleeve, and actual-filament checks</button><pre id="out">Ready</pre><div id="downloads"></div><script src="./bridge.js"></script><script>
 const out=document.querySelector('#out');let report=[];
 async function api(path,data){const response=await fetch(path,{method:'POST',body:JSON.stringify(data)});const d=await response.json();if(!response.ok)throw Error(d.error);return d}
 function check(name,ok){report.push({name,ok});out.textContent=JSON.stringify(report,null,2);if(!ok)throw Error(name)}
@@ -8,7 +8,7 @@ document.querySelector('#start').onclick=async()=>{try{
  const imp=await api('/csv',{csv,mode:'replace',existing:[]});check('CSV keeps valid records and reports row 3 and 5',imp.rows.length===2&&imp.skipped.map(r=>r.row).join(',')==='3,5');
  const long=cat.products.find(p=>p.manufacturer==='Cookiecad'&&p.color_name==='Funfetti Clear with Rainbow Glitter'&&p.filament_type==='PLA');
  const rows=[{product:long.id,quantity:5},{product:cat.products.find(p=>p.manufacturer==='Bambu Lab'&&p.filament_type==='PETG-HF'&&p.color_name==='Blue').id,quantity:6}];
- const r=await api('/review',{rows,settings:{body_mode:'filament',text_mode:'contrast',font:'DejaVu Sans:style=Bold'}});
+ const r=await api('/review',{rows,settings:{holder_sleeve:'yes',body_mode:'filament',text_mode:'contrast',font:'DejaVu Sans:style=Bold'}});
  check('Long name shortened with a period',r.warnings.some(w=>w.truncated.endsWith('.')&&!w.truncated.endsWith('…')));
  check('Actual filament variants use separate plates',r.plates.length===2&&r.plates.every(p=>new Set(p.items.map(i=>i.variant)).size===1));
  let blocked=false;try{await api('/generate',{key:r.key,ack:false})}catch(e){blocked=/Accept/.test(e.message)}check('Generation requires truncation acceptance',blocked);
