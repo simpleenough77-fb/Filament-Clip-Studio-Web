@@ -3,12 +3,12 @@
     "original_filename": "Bambu_Original_v10_68mm_R3_Corners-Holder Sleeve.stl",
     "sha256": "320a47058e2c07b83f5e72ceb04cd91402c62fc0096df6147f201111ecba6e04",
     "source": "Owner-provided STL, 2026-09-14",
-    "transform": "x = input_x - width/2; y = 16.5 - input_z; z = input_y (label coordinate frame)"
+    "transform": "x = input_x - width/2; y = input_z - 16.5; z = max_input_y - input_y (label coordinate frame; rigid rotation, no reflection)"
   },
   "cookiecad_sleeve.stl": {
     "original_filename": "Cookiecad_v10_R3_Corners-Holder Sleeve.stl",
     "sha256": "aa76da46615a9315812f45139b6e8b68c7668896c3594ce219a3d72a14008249",
     "source": "Owner-provided STL, 2026-09-14",
-    "transform": "x = input_x - width/2; y = 16.5 - input_z; z = input_y (label coordinate frame)"
+    "transform": "x = input_x - width/2; y = input_z - 16.5; z = max_input_y - input_y (label coordinate frame; rigid rotation, no reflection)"
   }
 }
