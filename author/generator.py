@@ -219,12 +219,23 @@ async def generate(key,ack=False):
         base=includes()+params;geometry=body_code(r['spool_profile'],s['holder_sleeve']=='yes')
         bodycode=base+(('difference(){'+geometry+'translate([0,0,-.01])label_all(lines,sizes,font,width,.61);}') if s['style']=='part' else geometry)
         bodyfile=meshdir/f'{index}_body.stl';await run_scad(bodycode,bodyfile)
-        parts=[('Clip body'+(' with holder sleeve' if s['holder_sleeve']=='yes' else '')+' - '+r['spool_profile'],load_stl(bodyfile))]
+        bodymesh=load_stl(bodyfile)
+        if s['holder_sleeve']=='yes' and s['style']!='part':
+            from tested_sleeves import reference
+            original=reference()[r['spool_profile']]['body']
+            bodymesh=(original['vertices'],original['faces'])
+        parts=[('Clip body'+(' with holder sleeve' if s['holder_sleeve']=='yes' else '')+' - '+r['spool_profile'],bodymesh)]
         for i,label in enumerate(['Manufacturer','Filament type','Color name']):
             path=meshdir/f'{index}_{i}.stl'
             code=base+(f'translate([0,0,-.01])label_line(lines,sizes,font,width,{i},.61);' if s['style']=='cut' else f'label_line(lines,sizes,font,width,{i},.6);')
             await run_scad(code,path);parts.append((label+' - '+r['display'][i],load_stl(path)))
-        variants.append(dict(check=r,parts=standing_parts(parts,r['spool_profile'])))
+        if s['holder_sleeve']=='yes':
+            from tested_sleeves import sleeve_parts
+            flags,blocker=sleeve_parts(r['spool_profile'],parts[0][1])
+            parts.append(blocker)
+            variants.append(dict(check=r,parts=parts,support_paint=flags))
+        else:
+            variants.append(dict(check=r,parts=standing_parts(parts,r['spool_profile'])))
     plates=plan(checks,s,PRINTERS[s['printer']])
     write_batch(out/'Filament_Labels.3mf',variants,plates,s,PRINTERS[s['printer']],AUTHOR)
     with (out/'Labels.csv').open('w',encoding='utf-8-sig',newline='') as f:

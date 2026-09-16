@@ -4,7 +4,7 @@
  const storageKey='clip-studio-web-library-v1';
  const state=()=>JSON.parse(localStorage.getItem(storageKey)||'{"version":1,"draft":null,"preferences":{},"batches":{}}');
  const request=(path,data)=>new Promise((resolve,reject)=>{
-  if(!worker){worker=new Worker('./studio-worker.js?v=sleeve-face-2',{type:'module'});worker.onmessage=({data:d})=>{const p=pending.get(d.id);if(!p)return;pending.delete(d.id);d.error?p.reject(Error(d.error)):p.resolve(d.value)};worker.onerror=e=>{for(const p of pending.values())p.reject(Error(e.message));pending.clear();worker.terminate();worker=null};}
+  if(!worker){worker=new Worker('./studio-worker.js?v=tested-supports-4',{type:'module'});worker.onmessage=({data:d})=>{const p=pending.get(d.id);if(!p)return;pending.delete(d.id);d.error?p.reject(Error(d.error)):p.resolve(d.value)};worker.onerror=e=>{for(const p of pending.values())p.reject(Error(e.message));pending.clear();worker.terminate();worker=null};}
   const n=++id;pending.set(n,{resolve,reject});worker.postMessage({id:n,path,data});
  });
  window.fetch=async(input,options={})=>{

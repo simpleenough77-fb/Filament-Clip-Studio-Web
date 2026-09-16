@@ -23,12 +23,17 @@ def write_batch(path,variants,plates,settings,printer,author):
         aid=oid+len(var['parts']);ids.append(aid);oc=ET.SubElement(cfg,'object',id=str(aid));meta(oc,'name',' - '.join(r['lines']));meta(oc,'extruder',body)
         partids=[]
         for i,(name,(verts,faces)) in enumerate(var['parts']):
+            blocker=name=='Tunnel support blocker'
             partids.append(oid);obj=ET.SubElement(res,q('object'),id=str(oid),type='model',name=safe_name(name),pid='1',pindex=str((body if i==0 else text)-1))
             mesh=ET.SubElement(obj,q('mesh'));vnode=ET.SubElement(mesh,q('vertices'));tnode=ET.SubElement(mesh,q('triangles'))
             for x,y,z in verts:ET.SubElement(vnode,q('vertex'),x=str(x),y=str(y),z=str(z))
-            for a,b,c in faces:ET.SubElement(tnode,q('triangle'),v1=str(a),v2=str(b),v3=str(c))
+            for fi,(a,b,c) in enumerate(faces):
+                attrs=dict(v1=str(a),v2=str(b),v3=str(c))
+                if i==0 and var.get('support_paint') and var['support_paint'][fi]:attrs['paint_supports']=var['support_paint'][fi]
+                ET.SubElement(tnode,q('triangle'),**attrs)
             kind='normal_part' if i==0 or settings['style']=='part' else 'negative_part' if settings['style']=='cut' else 'modifier_part'
-            pc=ET.SubElement(oc,'part',id=str(oid),subtype=kind);meta(pc,'name',name+' | '+r['filament_roles'][0 if i==0 else 1]);meta(pc,'extruder',body if i==0 else text);meta(pc,'matrix','1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1')
+            if blocker:kind='support_blocker'
+            pc=ET.SubElement(oc,'part',id=str(oid),subtype=kind);meta(pc,'name',name+' | '+r['filament_roles'][0 if i==0 else 1]);meta(pc,'extruder',0 if blocker else body if i==0 else text);meta(pc,'matrix','1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1')
             ET.SubElement(pc,'mesh_stat',face_count=str(len(faces)),edges_fixed='0',degenerate_facets='0',facets_removed='0',facets_reversed='0',backwards_edges='0');oid+=1
         assembly=ET.SubElement(res,q('object'),id=str(aid),type='model',name=safe_name(' - '.join(r['lines'])));comp=ET.SubElement(assembly,q('components'))
         for pid in partids:ET.SubElement(comp,q('component'),objectid=str(pid))
@@ -54,7 +59,7 @@ def write_batch(path,variants,plates,settings,printer,author):
         for item in plate['items']:
             v=variants[item['variant']];cx=item['x']+item['w']/2;cy=item['y']+item['h']/2
             for index,(_,(verts,faces)) in enumerate(v['parts']):
-                if index and settings['style']=='cut':continue
+                if _=='Tunnel support blocker' or (index and settings['style']=='cut'):continue
                 color=v['check']['body_color'] if not index else v['check']['text_color']
                 # Show the side-standing assembly footprint in plan view.
                 for f in faces:
@@ -74,6 +79,9 @@ def write_batch(path,variants,plates,settings,printer,author):
             if len(v)==3 and (k.startswith('filament_') or k in variant_fields):v=v[:1]
             cfgsettings[k]=v*len(palette)
     cfgsettings.update(name='Filament Labels',filament_colour=[c for _,c in palette],filament_multi_colour=[c for _,c in palette],filament_map=['1']*len(palette),filament_nozzle_map=['0']*len(palette),filament_colour_type=['0']*len(palette),filament_self_index=[str(i+1) for i in range(len(palette))],filament_extruder_variant=['Direct Drive Standard']*len(palette),enable_prime_tower='1' if any(p['tower'] for p in plates) else '0',prime_tower_width='60',prime_tower_brim_width='3',prime_tower_extra_rib_length='0',prime_tower_enable_framework='0',brim_type='no_brim',skirt_loops='0')
+    if settings.get('holder_sleeve')=='yes':
+        cfgsettings.update(json.loads((author/'Tested_Support_Settings.json').read_text()))
+        cfgsettings.update(support_filament='0',support_interface_filament='0')
     cfgsettings['wipe_tower_x']=[str(p['tower'][0]+8 if p['tower'] else 0) for p in plates];cfgsettings['wipe_tower_y']=[str(p['tower'][1]+8 if p['tower'] else 0) for p in plates]
     # Studio stores one complete filament-to-filament matrix per physical nozzle.
     nozzle_count=len(cfgsettings['nozzle_diameter'])
