@@ -22,3 +22,8 @@
 - Published the completed macro-enabled workbook at `downloads/Filament_Label_Builder.xlsm`. SHA-256: `f358ffe65df0db1e955e16a59433e5540acc611bf16709beff5b482ec04954cb`.
 - The studio includes a direct download link beside the CSV import controls. The workbook remains separate from browser generation and exports the import CSV for the studio.
 - ZIP integrity validation passed for the workbook.
+
+## User guide - 2026-09-17
+
+- Added `guide.html` with the studio workflow, Excel CSV builder, styling choices, sleeve support instructions, CSV validation, long-name behavior, and troubleshooting.
+- Added a visible User guide / how-to link beside the studio status badge.

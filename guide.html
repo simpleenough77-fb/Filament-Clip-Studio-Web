@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Filament Clip Studio - User Guide</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#edf3f3;background:#10191d;color-scheme:dark}body{margin:0}main{max-width:920px;margin:auto;padding:40px 26px 70px}h1{font-size:38px;letter-spacing:-1px;margin:8px 0 12px}h2{font-size:22px;margin:0 0 10px;color:#f1faf8}h3{font-size:16px;margin:20px 0 6px;color:#a5dec6}p,li{color:#b5c6ca;line-height:1.65}.eyebrow{color:#6ce3ba;font-size:12px;font-weight:700;letter-spacing:2px}.panel{background:#19262c;padding:24px;border:1px solid #304148;border-radius:16px;margin-top:20px}.small{font-size:13px}.notice{border-left:3px solid #73c8b0;padding-left:13px}.warn{background:#453b24;border:1px solid #9c813e;padding:15px;border-radius:9px;color:#ffe4a4}.links{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 24px}a.button{background:#83eac5;color:#10261e;font:600 14px system-ui;border-radius:8px;padding:11px 18px;text-decoration:none}a.text{color:#83eac5}code{background:#101b20;border:1px solid #304148;border-radius:4px;padding:2px 5px;color:#d8f5eb}ol,ul{padding-left:24px}.back{color:#83eac5;text-decoration:none;font-size:14px}
+</style>
+</head>
+<body><main>
+<a class="back" href="./">← Back to Filament Clip Studio</a>
+<div class="eyebrow" style="margin-top:28px">USER GUIDE / HOW-TO</div>
+<h1>Filament Clip Studio</h1>
+<p>Build readable, color-aware filament clip labels for the accepted Bambu Lab and Cookiecad clip bodies. The browser edition creates one multi-plate 3MF project and an import-ready CSV on your device.</p>
+<div class="links"><a class="button" href="./">Open the studio</a><a class="button" href="./downloads/Filament_Label_Builder.xlsm" download>Download the Excel CSV builder</a></div>
+
+<section class="panel"><h2>Quick start</h2><ol>
+<li>Add a label row, then choose the manufacturer, filament type, color/name, and quantity. Add as many rows as needed.</li>
+<li>For a larger batch, use the Excel CSV builder. Export its CSV, then select <strong>Import CSV</strong> in the studio. Choose whether to add the rows or replace the current batch.</li>
+<li>Review the label previews and the plate plan. If a long name is shortened, read the warning and accept the shortened text before generation.</li>
+<li>Choose <strong>Generate batch</strong>. The download contains one 3MF project with the packed plates and a <code>Labels.csv</code> copy of the generated labels.</li>
+<li>Open the 3MF in Bambu Studio, confirm the filament assignments and support preview, then slice.</li>
+</ol></section>
+
+<section class="panel"><h2>Using the Excel CSV builder</h2><p>The workbook is a guided way to create valid import rows. On the entry sheet, choose a manufacturer first, then choose a filament type and a color/name from the matching catalog. Enter quantity and use the export button to create the CSV.</p><p class="notice small">If Excel asks whether to enable macros, enable them only for this workbook if you want to use its export button. The studio also accepts a CSV made by another tool when it uses the columns <code>manufacturer, filament_type, color_name, quantity</code>.</p><p><a class="text" href="./downloads/Filament_Label_Builder.xlsm" download>Download the Excel CSV builder</a></p></section>
+
+<section class="panel"><h2>Style the batch</h2>
+<h3>Label style</h3><p>Choose a flat colored inlay with separate parts, an engraved negative label, or flat color filament modifiers. The 3MF keeps the generated parts selectable for slicer adjustments.</p>
+<h3>Filament choices</h3><p><strong>Clip body filament</strong> can use one shared filament, which defaults to black, or the catalog filament named on each label. <strong>Label text filament</strong> can use one shared filament, a contrasting filament, or the catalog filament named on each label. The contrasting shared text choice uses the project’s Bambu Green signature color.</p>
+<h3>Text sizes</h3><p>Type field size controls the larger filament type line. Manufacturer field size and Color/name field size accept <code>0</code> for automatic sizing. The color/name line is shortened when necessary so it remains within the label width.</p>
+<h3>Printer and packing</h3><p>Select the Bambu Lab printer that will be used. The studio uses that plate size and usable area when it packs the batch. Shared-filament batches combine variants to reduce plate count; Actual Filament batches keep each catalog combination grouped for easier color assignment.</p>
+</section>
+
+<section class="panel"><h2>Holder sleeves and supports</h2><div class="warn"><strong>Holder sleeves require supports.</strong> The sleeve option uses the owner-tested sleeve bodies, painted support regions, and tunnel support blockers.</div><ol><li>Set <strong>Holder sleeve</strong> to <strong>Include holder sleeve</strong>. The warning appears immediately.</li><li>Keep the sleeve project’s text-side-down orientation. Do not remove the tunnel blocker.</li><li>In Bambu Studio, inspect the support preview before slicing. The supplied project is configured for the tested support clearance and interface settings, but your material and printer profile can still affect the result.</li></ol><p>Clips without a sleeve use the standing orientation and do not need the sleeve support workflow.</p></section>
+
+<section class="panel"><h2>CSV validation and long names</h2><p>Unrecognized manufacturer, filament type, or color combinations are skipped rather than added. After import, the studio reports the skipped CSV row numbers and values so you can correct them and import again.</p><p>Names that exceed the available text width are shortened to a readable abbreviation ending in one period. Generation pauses until you review and accept the shortened text.</p></section>
+
+<section class="panel"><h2>Troubleshooting</h2><ul>
+<li><strong>Nothing imported:</strong> confirm the CSV header names and check the import report for row numbers. The official catalog accepts the combinations listed in the studio.</li>
+<li><strong>Text or colors need adjustment:</strong> change the style or shared filament choice before generating again. Assign the actual presets in Bambu Studio after opening the 3MF.</li>
+<li><strong>Supports look different:</strong> inspect the sliced preview and adjust only after checking the generated support blockers and painted support regions. Sleeves are intended to be printed with supports.</li>
+<li><strong>Need to move a batch:</strong> use the downloaded ZIP and CSV as a backup. Saved batches stay in the current browser on the current computer.</li>
+</ul></section>
+
+<section class="panel"><h2>Privacy and catalog ownership</h2><p>Generation runs in the browser; no account or paid server is required. Saved batches remain in that browser. The public application code is open source, while the official manufacturer, type, color, and spool catalog is maintained by the project owner.</p></section>
+<p class="small" style="margin-top:26px">Filament Clip Studio · browser edition</p>
+</main></body></html>
