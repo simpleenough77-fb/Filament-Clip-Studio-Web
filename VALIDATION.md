@@ -16,3 +16,9 @@
 - All six combinations (sleeve yes/no × inlay/engraved/modifier) pass generated archive, manifold, height/footprint, support-paint, blocker and support-settings checks. Bambu Studio 02.08.02.61 `--info` imports the sleeved project and reports both clip bodies manifold, with footprints 68 × 33 mm and 62.5 × 33 mm.
 - Owner reports the supplied 3MF printed successfully. New studio output is structurally verified and imports in Bambu Studio; no additional physical print of a newly generated project is claimed.
 - The supported setup uses a 0.2 mm top and bottom Z gap, two interface layers on each side, 0.35 mm XY clearance and no build-plate-only restriction. Confirm the support preview and your own filament profile before printing.
+
+## Excel label builder - 2026-09-17
+
+- Published the completed macro-enabled workbook at `downloads/Filament_Label_Builder.xlsm`. SHA-256: `f358ffe65df0db1e955e16a59433e5540acc611bf16709beff5b482ec04954cb`.
+- The studio includes a direct download link beside the CSV import controls. The workbook remains separate from browser generation and exports the import CSV for the studio.
+- ZIP integrity validation passed for the workbook.
