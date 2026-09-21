@@ -88,7 +88,9 @@ def write_batch(path,variants,plates,settings,printer,author):
     )
     if has_sleeve:
         cfgsettings.update(json.loads((author/'Tested_Support_Settings.json').read_text()))
-        cfgsettings.update(enable_support='1', support_type='normal(manual)', support_filament='0', support_interface_filament='0')
+        cfgsettings.update(enable_support='1', support_type='normal(manual)', support_filament='0', support_interface_filament='0', enable_arc_fitting='0', version='02.08.02.61')
+        cfgsettings['different_settings_to_system']=['enable_arc_fitting;enable_support;support_type','','','','','']
+        cfgsettings['from']='project'
     cfgsettings['wipe_tower_x']=[str(p['tower'][0]+8 if p['tower'] else 0) for p in plates];cfgsettings['wipe_tower_y']=[str(p['tower'][1]+8 if p['tower'] else 0) for p in plates]
     # Studio stores one complete filament-to-filament matrix per physical nozzle.
     nozzle_count=len(cfgsettings['nozzle_diameter'])
@@ -99,6 +101,6 @@ def write_batch(path,variants,plates,settings,printer,author):
     with zipfile.ZipFile(path,'w',zipfile.ZIP_DEFLATED) as z:
         z.writestr('[Content_Types].xml','<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="model" ContentType="application/vnd.ms-package.3dmanufacturing-3dmodel+xml"/><Default Extension="config" ContentType="application/octet-stream"/><Default Extension="png" ContentType="image/png"/><Default Extension="json" ContentType="application/json"/></Types>')
         z.writestr('_rels/.rels','<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Target="/3D/3dmodel.model" Id="rel0" Type="http://schemas.microsoft.com/3dmanufacturing/2013/01/3dmodel"/></Relationships>')
-        z.writestr('3D/3dmodel.model',ET.tostring(model,encoding='utf-8',xml_declaration=True));z.writestr('Metadata/model_settings.config',ET.tostring(cfg,encoding='utf-8',xml_declaration=True));z.writestr('Metadata/project_settings.config',json.dumps(cfgsettings))
+        z.writestr('3D/3dmodel.model',ET.tostring(model,encoding='utf-8',xml_declaration=True));z.writestr('Metadata/model_settings.config',ET.tostring(cfg,encoding='utf-8',xml_declaration=True));z.writestr('Metadata/project_settings.config',json.dumps(cfgsettings));z.writestr('Metadata/slice_info.config','<?xml version="1.0" encoding="UTF-8"?><config><header><header_item key="X-BBL-Client-Type" value="slicer"/><header_item key="X-BBL-Client-Version" value="02.08.02.61"/></header></config>')
         z.writestr('Metadata/Label_Batch.json',json.dumps(dict(printer=printer,settings=settings,plates=plates,filaments=palette,notes='Assign actual compatible filament presets in Bambu Studio. Placement reserves bed/nozzle keep-outs and prime-tower space; inspect slicing before printing.')))
         for name,data in images.items():z.writestr(name,data)

@@ -217,9 +217,15 @@ async def generate(key,ack=False):
     for index,r in enumerate(checks):
         params=f'lines={json.dumps(r["lines"],ensure_ascii=False)}; sizes={json.dumps(sizes)}; font={json.dumps(s["font"])}; width={r["width"]};\n'
         base=includes()+params;geometry=body_code(r['spool_profile'],s['holder_sleeve']=='yes')
-        bodycode=base+(('difference(){'+geometry+'translate([0,0,-.01])label_all(lines,sizes,font,width,.61);}') if s['style']=='part' else geometry)
-        bodyfile=meshdir/f'{index}_body.stl';await run_scad(bodycode,bodyfile)
-        bodymesh=load_stl(bodyfile)
+        # Use the owner-tested sleeve mesh directly. Running it through the
+        # label Boolean can recreate the small tunnel/plate notch.
+        if s['holder_sleeve']=='yes':
+            from tested_sleeves import body_mesh
+            bodymesh=body_mesh(r['spool_profile'])
+        else:
+            bodycode=base+(('difference(){'+geometry+'translate([0,0,-.01])label_all(lines,sizes,font,width,.61);}') if s['style']=='part' else geometry)
+            bodyfile=meshdir/f'{index}_body.stl';await run_scad(bodycode,bodyfile)
+            bodymesh=load_stl(bodyfile)
         parts=[('Clip body'+(' with holder sleeve' if s['holder_sleeve']=='yes' else '')+' - '+r['spool_profile'],bodymesh)]
         for i,label in enumerate(['Manufacturer','Filament type','Color name']):
             path=meshdir/f'{index}_{i}.stl'
@@ -270,4 +276,3 @@ def import_csv(text, capacity=100):
         if reason:skipped.append(dict(row=line,**{k:record.get(k) or '' for k in required},reason=reason));continue
         rows.append(dict(product=match[0]['id'],quantity=qty,swatch=match[0]['swatch']));total+=qty
     return dict(rows=rows,skipped=skipped,imported=len(rows),total=total)
-

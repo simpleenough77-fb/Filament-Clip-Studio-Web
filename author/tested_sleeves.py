@@ -5,6 +5,10 @@ from functools import lru_cache
 @lru_cache(None)
 def reference():
     return json.loads(Path(__file__).with_name('Tested_Sleeves.json').read_text())
+def body_mesh(profile):
+    """Return the exact body mesh captured from the owner-tested sleeve project."""
+    src=reference()[profile]['body']
+    return src['vertices'],src['faces']
 def key(vertices,face):
     return tuple(sorted(tuple(round(c,4) for c in vertices[i]) for i in face))
 def sleeve_parts(profile,body_mesh):
