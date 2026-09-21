@@ -34,3 +34,8 @@
 - The generated sleeve assets use a 4 mm diameter tunnel blocker and the revised support paint, including sleeve coverage.
 - A derived 0.5 mm relief removes 0.25 mm from each end of the central tunnel, leaving the plate and retaining legs unchanged. The resulting Bambu and Cookiecad sleeve meshes are manifold in the OpenSCAD export.
 - Regression coverage passes for sleeve/no-sleeve and inlay/engraved/modifier output combinations. Physical performance of this new relief remains to be confirmed by the owner's print test.
+
+## Owner-provided working sleeve project — 2026-09-21
+
+- The supplied `Filament_Labels-Sleeve.3mf` is now the geometry reference. Its sleeve bodies preserve a continuous plate, shorten the tunnel ends without a plate notch, use 4 mm tunnel blockers, and carry support painting onto the sleeve/retaining geometry.
+- Sleeve exports now force `enable_support=1` and `support_type=normal(manual)` whenever a tunnel blocker is present, even if the selected printer preset disables support.

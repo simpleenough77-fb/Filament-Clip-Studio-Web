@@ -79,9 +79,16 @@ def write_batch(path,variants,plates,settings,printer,author):
             if len(v)==3 and (k.startswith('filament_') or k in variant_fields):v=v[:1]
             cfgsettings[k]=v*len(palette)
     cfgsettings.update(name='Filament Labels',filament_colour=[c for _,c in palette],filament_multi_colour=[c for _,c in palette],filament_map=['1']*len(palette),filament_nozzle_map=['0']*len(palette),filament_colour_type=['0']*len(palette),filament_self_index=[str(i+1) for i in range(len(palette))],filament_extruder_variant=['Direct Drive Standard']*len(palette),enable_prime_tower='1' if any(p['tower'] for p in plates) else '0',prime_tower_width='60',prime_tower_brim_width='3',prime_tower_extra_rib_length='0',prime_tower_enable_framework='0',brim_type='no_brim',skirt_loops='0')
-    if settings.get('holder_sleeve')=='yes':
+    # A sleeve project must carry explicit manual-support settings. Detect the
+    # blocker part as well as the UI setting so an exported project cannot fall
+    # back to the printer preset's disabled/auto-support defaults.
+    has_sleeve = settings.get('holder_sleeve') == 'yes' or any(
+        any(name == 'Tunnel support blocker' for name, _ in var.get('parts', []))
+        for var in variants
+    )
+    if has_sleeve:
         cfgsettings.update(json.loads((author/'Tested_Support_Settings.json').read_text()))
-        cfgsettings.update(support_filament='0',support_interface_filament='0')
+        cfgsettings.update(enable_support='1', support_type='normal(manual)', support_filament='0', support_interface_filament='0')
     cfgsettings['wipe_tower_x']=[str(p['tower'][0]+8 if p['tower'] else 0) for p in plates];cfgsettings['wipe_tower_y']=[str(p['tower'][1]+8 if p['tower'] else 0) for p in plates]
     # Studio stores one complete filament-to-filament matrix per physical nozzle.
     nozzle_count=len(cfgsettings['nozzle_diameter'])
