@@ -1,5 +1,5 @@
 {
   "source": "Owner supplied Filament_Labels.3mf; revised support blocker and support painting, 2026-09-21",
   "sha256": "aa4246eb1724270603648e264e337d4b50e550e7243656834408f12a757494d0",
-  "extraction": "Clip body geometry verified unchanged against the accepted sleeve bodies before a derived 0.5 mm relief was cut from each end of the central tunnel. Support paint_supports faces were transferred to the canonical sleeve bodies. The tunnel blocker retained its owner placement and was updated from 3 mm to 4 mm diameter."
+  "extraction": "Clip body geometry verified unchanged against the accepted sleeve bodies before a derived 0.5 mm relief was cut from each end of the central tunnel above the plate top surface. Support paint_supports coverage was transferred to the canonical sleeve bodies and retained across the sleeve/retaining geometry. The tunnel blocker retained its owner placement and was updated from 3 mm to 4 mm diameter."
 }

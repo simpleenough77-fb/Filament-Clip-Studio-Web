@@ -31,6 +31,6 @@
 ## Revised tunnel support clearance — 2026-09-21
 
 - Owner supplied a revised `Filament_Labels.3mf` with a larger tunnel blocker and updated support painting. The attachment SHA-256 is recorded in `author/Tested_Sleeves_Provenance.json`.
-- The generated sleeve assets use a 4 mm diameter tunnel blocker and the revised plate-face support paint.
+- The generated sleeve assets use a 4 mm diameter tunnel blocker and the revised support paint, including sleeve coverage.
 - A derived 0.5 mm relief removes 0.25 mm from each end of the central tunnel, leaving the plate and retaining legs unchanged. The resulting Bambu and Cookiecad sleeve meshes are manifold in the OpenSCAD export.
 - Regression coverage passes for sleeve/no-sleeve and inlay/engraved/modifier output combinations. Physical performance of this new relief remains to be confirmed by the owner's print test.
