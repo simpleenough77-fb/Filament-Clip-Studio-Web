@@ -220,10 +220,6 @@ async def generate(key,ack=False):
         bodycode=base+(('difference(){'+geometry+'translate([0,0,-.01])label_all(lines,sizes,font,width,.61);}') if s['style']=='part' else geometry)
         bodyfile=meshdir/f'{index}_body.stl';await run_scad(bodycode,bodyfile)
         bodymesh=load_stl(bodyfile)
-        if s['holder_sleeve']=='yes' and s['style']!='part':
-            from tested_sleeves import reference
-            original=reference()[r['spool_profile']]['body']
-            bodymesh=(original['vertices'],original['faces'])
         parts=[('Clip body'+(' with holder sleeve' if s['holder_sleeve']=='yes' else '')+' - '+r['spool_profile'],bodymesh)]
         for i,label in enumerate(['Manufacturer','Filament type','Color name']):
             path=meshdir/f'{index}_{i}.stl'
