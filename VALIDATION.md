@@ -19,8 +19,8 @@
 
 ## Excel label builder - 2026-09-17
 
-- Published the completed macro-enabled workbook at `downloads/Filament_Label_Builder.xlsm`. SHA-256: `f358ffe65df0db1e955e16a59433e5540acc611bf16709beff5b482ec04954cb`.
-- The studio includes a direct download link beside the CSV import controls. The workbook remains separate from browser generation and exports the import CSV for the studio.
+- Updated the macro-enabled workbook at `downloads/Filament_Label_Builder.xlsm` from the owner-provided corrected file. SHA-256: `fb2573be51878d04decf68c8a4bad55d424c006e93264d8c8a0392f1a119104b`.
+- The studio includes a direct download link beside the User guide / how-to link at the top of the page. The workbook remains separate from browser generation and exports the import CSV for the studio.
 - ZIP integrity validation passed for the workbook.
 
 ## User guide - 2026-09-17
