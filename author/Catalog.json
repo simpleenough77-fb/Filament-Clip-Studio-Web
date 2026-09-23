@@ -1,7 +1,7 @@
 {
-  "version": 3,
-  "updated": "2026-09-13",
-  "note": "404 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets.",
+  "version": "3.1",
+  "updated": "2026-09-23",
+  "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile.",
   "products": [
     {
       "id": "bambu-petg-hf-blue",
@@ -46,7 +46,7 @@
         "#489FDF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Azure — approximate manufacturer swatch"
+      "swatch_description": "Azure \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-44b4049f2972",
@@ -69,7 +69,7 @@
         "#00AE42"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Bambu Green — approximate manufacturer swatch"
+      "swatch_description": "Bambu Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-b7fd97b891b5",
@@ -93,7 +93,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-cccd33088b8c",
@@ -116,7 +116,7 @@
         "#0A2CA5"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blue — approximate manufacturer swatch"
+      "swatch_description": "Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-28a76b2b1db2",
@@ -139,7 +139,7 @@
         "#0C2340"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Navy Blue — approximate manufacturer swatch"
+      "swatch_description": "Navy Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-33a02e5b459c",
@@ -162,7 +162,7 @@
         "#789D4A"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Olive — approximate manufacturer swatch"
+      "swatch_description": "Olive \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-14a7ff76f1d9",
@@ -185,7 +185,7 @@
         "#FF6A13"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Orange — approximate manufacturer swatch"
+      "swatch_description": "Orange \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-fa057c7fd23a",
@@ -208,7 +208,7 @@
         "#D32941"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Red — approximate manufacturer swatch"
+      "swatch_description": "Red \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-92662ced7f94",
@@ -232,7 +232,7 @@
         "#87909A"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Silver — approximate manufacturer swatch"
+      "swatch_description": "Silver \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-c5d8775246cb",
@@ -255,7 +255,7 @@
         "#FFC72C"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Tangerine Yellow — approximate manufacturer swatch"
+      "swatch_description": "Tangerine Yellow \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-3f204d963c59",
@@ -279,7 +279,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-3c65d4bb202c",
@@ -302,7 +302,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-39b48116b25d",
@@ -325,7 +325,7 @@
         "#0C3B95"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blue — approximate manufacturer swatch"
+      "swatch_description": "Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-07a5e1184dbb",
@@ -348,7 +348,7 @@
         "#C6C6C6"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gray — approximate manufacturer swatch"
+      "swatch_description": "Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-3ac7d3f963d0",
@@ -371,7 +371,7 @@
         "#F48438"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Orange — approximate manufacturer swatch"
+      "swatch_description": "Orange \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-e2f564dcea80",
@@ -394,7 +394,7 @@
         "#E83100"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Red — approximate manufacturer swatch"
+      "swatch_description": "Red \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-ebe191ceefe7",
@@ -417,7 +417,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-a211dfa508fb",
@@ -440,7 +440,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-c4f8872afa70",
@@ -463,7 +463,7 @@
         "#2140B4"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blue — approximate manufacturer swatch"
+      "swatch_description": "Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-ee045fbe8e19",
@@ -486,7 +486,7 @@
         "#8A949E"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gray — approximate manufacturer swatch"
+      "swatch_description": "Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-b7ee3ce73e5e",
@@ -509,7 +509,7 @@
         "#00A6A0"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Green — approximate manufacturer swatch"
+      "swatch_description": "Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-94da843b3298",
@@ -532,7 +532,7 @@
         "#E02928"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Red — approximate manufacturer swatch"
+      "swatch_description": "Red \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-0be265a7c4c8",
@@ -555,7 +555,7 @@
         "#FFFAF2"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-58e0fa4779bc",
@@ -578,7 +578,7 @@
         "#F5F1DD"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-5e014907e888",
@@ -601,7 +601,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-02dafbdae150",
@@ -625,7 +625,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-dbd8a3bfd95d",
@@ -648,7 +648,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-84a7cae56dec",
@@ -671,7 +671,7 @@
         "#75AED8"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blue — approximate manufacturer swatch"
+      "swatch_description": "Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-c29194f5981e",
@@ -694,7 +694,7 @@
         "#353533"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gray — approximate manufacturer swatch"
+      "swatch_description": "Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-db117f335d24",
@@ -717,7 +717,7 @@
         "#FF4800"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Orange — approximate manufacturer swatch"
+      "swatch_description": "Orange \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-7b3884453748",
@@ -740,7 +740,7 @@
         "#EAEAE4"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-5fa9d2bc3c71",
@@ -764,7 +764,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-47f184fd7bd7",
@@ -787,7 +787,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-d84733f6e152",
@@ -810,7 +810,7 @@
         "#5A5161"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Clear Black — approximate manufacturer swatch"
+      "swatch_description": "Clear Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-e1620935b1c4",
@@ -833,7 +833,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Transparent — approximate manufacturer swatch"
+      "swatch_description": "Transparent \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-7e823a7fd942",
@@ -856,7 +856,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-a1b77f9f6159",
@@ -879,7 +879,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-a19ee4611b0f",
@@ -902,7 +902,7 @@
         "#A8A8AA"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gray — approximate manufacturer swatch"
+      "swatch_description": "Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-a0e0dcd03d1b",
@@ -925,7 +925,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-fddf08f2e4c1",
@@ -949,7 +949,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-bae142554e4b",
@@ -973,7 +973,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-a97e6fe7c076",
@@ -997,7 +997,7 @@
         "#DBC8B7"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Dark Beige — approximate manufacturer swatch"
+      "swatch_description": "Dark Beige \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-8a6b7771e157",
@@ -1021,7 +1021,7 @@
         "#502C1E"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Dark Brown — approximate manufacturer swatch"
+      "swatch_description": "Dark Brown \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-baba1f9339b2",
@@ -1045,7 +1045,7 @@
         "#7F7E83"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gray — approximate manufacturer swatch"
+      "swatch_description": "Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-f74ad22aee30",
@@ -1069,7 +1069,7 @@
         "#01963A"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Green — approximate manufacturer swatch"
+      "swatch_description": "Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-9e8c6dc53aca",
@@ -1093,7 +1093,7 @@
         "#688197"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Misty Blue — approximate manufacturer swatch"
+      "swatch_description": "Misty Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-ee3cd56ddb69",
@@ -1117,7 +1117,7 @@
         "#0185D7"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Navy Blue — approximate manufacturer swatch"
+      "swatch_description": "Navy Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-d177d3a0ddcb",
@@ -1141,7 +1141,7 @@
         "#FF671E"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Orange — approximate manufacturer swatch"
+      "swatch_description": "Orange \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-f264ed7e9fc1",
@@ -1165,7 +1165,7 @@
         "#034537"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Pine Green — approximate manufacturer swatch"
+      "swatch_description": "Pine Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-4ae4b06ba2e9",
@@ -1189,7 +1189,7 @@
         "#D6001C"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Red — approximate manufacturer swatch"
+      "swatch_description": "Red \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-84352330af62",
@@ -1213,7 +1213,7 @@
         "#001389"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Reflex Blue — approximate manufacturer swatch"
+      "swatch_description": "Reflex Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-75203eec2a0a",
@@ -1237,7 +1237,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-3cad292eea40",
@@ -1261,7 +1261,7 @@
         "#FCE300"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Yellow — approximate manufacturer swatch"
+      "swatch_description": "Yellow \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-d945aa0b38ad",
@@ -1284,7 +1284,7 @@
         "#E5C688"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Brown — approximate manufacturer swatch"
+      "swatch_description": "Brown \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-21ba85c03bb3",
@@ -1308,7 +1308,7 @@
         "#E0E0E0"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Clear — approximate manufacturer swatch"
+      "swatch_description": "Clear \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-7d6bfb286f20",
@@ -1331,7 +1331,7 @@
         "#8E8E8E"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gray — approximate manufacturer swatch"
+      "swatch_description": "Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-b3bc9e7aafec",
@@ -1355,7 +1355,7 @@
         "#61B0FF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Light Blue — approximate manufacturer swatch"
+      "swatch_description": "Light Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-7c765930a14d",
@@ -1378,7 +1378,7 @@
         "#748C45"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Olive — approximate manufacturer swatch"
+      "swatch_description": "Olive \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-639d9b5f5129",
@@ -1401,7 +1401,7 @@
         "#FF911A"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Orange — approximate manufacturer swatch"
+      "swatch_description": "Orange \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-2f2ad6dd9ac2",
@@ -1424,7 +1424,7 @@
         "#F9C1BD"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Pink — approximate manufacturer swatch"
+      "swatch_description": "Pink \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-ff81aad59092",
@@ -1447,7 +1447,7 @@
         "#D6ABFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Purple — approximate manufacturer swatch"
+      "swatch_description": "Purple \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-90e923a277f9",
@@ -1471,7 +1471,7 @@
         "#77EDD7"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Teal — approximate manufacturer swatch"
+      "swatch_description": "Teal \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-63415d3b5ed7",
@@ -1495,7 +1495,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-e74761e20e54",
@@ -1518,7 +1518,7 @@
         "#9F332A"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Brick Red — approximate manufacturer swatch"
+      "swatch_description": "Brick Red \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-a1e76108517c",
@@ -1541,7 +1541,7 @@
         "#324585"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Indigo Blue — approximate manufacturer swatch"
+      "swatch_description": "Indigo Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-8de177bd553f",
@@ -1564,7 +1564,7 @@
         "#16B08E"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Malachite Green — approximate manufacturer swatch"
+      "swatch_description": "Malachite Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-0f649a8c7016",
@@ -1587,7 +1587,7 @@
         "#565656"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Titan Gray — approximate manufacturer swatch"
+      "swatch_description": "Titan Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-397060b75ecc",
@@ -1610,7 +1610,7 @@
         "#583061"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Violet Purple — approximate manufacturer swatch"
+      "swatch_description": "Violet Purple \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-9558097522f3",
@@ -1634,7 +1634,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-9a95d3776f0a",
@@ -1657,7 +1657,7 @@
         "#F9DFB9"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Cream — approximate manufacturer swatch"
+      "swatch_description": "Cream \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-a09042e9cb7e",
@@ -1680,7 +1680,7 @@
         "#515151"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Dark Gray — approximate manufacturer swatch"
+      "swatch_description": "Dark Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-bbdeefedff7a",
@@ -1703,7 +1703,7 @@
         "#39541A"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Forest Green — approximate manufacturer swatch"
+      "swatch_description": "Forest Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-a3cd5fdf9db2",
@@ -1726,7 +1726,7 @@
         "#ADB1B2"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gray — approximate manufacturer swatch"
+      "swatch_description": "Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-b1df7afbb90f",
@@ -1749,7 +1749,7 @@
         "#00AE42"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Green — approximate manufacturer swatch"
+      "swatch_description": "Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-c88f32b433ab",
@@ -1772,7 +1772,7 @@
         "#1F79E5"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Lake Blue — approximate manufacturer swatch"
+      "swatch_description": "Lake Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-b6c5beee71a7",
@@ -1795,7 +1795,7 @@
         "#6EE53C"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Lime Green — approximate manufacturer swatch"
+      "swatch_description": "Lime Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-6156c21ab6d2",
@@ -1818,7 +1818,7 @@
         "#F75403"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Orange — approximate manufacturer swatch"
+      "swatch_description": "Orange \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-65ba7a21e012",
@@ -1841,7 +1841,7 @@
         "#875718"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Peanut Brown — approximate manufacturer swatch"
+      "swatch_description": "Peanut Brown \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-58d45f2e9a51",
@@ -1864,7 +1864,7 @@
         "#EB3A3A"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Red — approximate manufacturer swatch"
+      "swatch_description": "Red \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-37bfec40b789",
@@ -1887,7 +1887,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-33313de9d263",
@@ -1910,7 +1910,7 @@
         "#FFD00B"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Yellow — approximate manufacturer swatch"
+      "swatch_description": "Yellow \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-40fd7a90bf7f",
@@ -1933,7 +1933,7 @@
         "#CDCECA"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gray — approximate manufacturer swatch"
+      "swatch_description": "Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-c8b379a648f7",
@@ -1956,7 +1956,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-6b2d148bead7",
@@ -1980,7 +1980,7 @@
         "#16C344"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Bambu Green — approximate manufacturer swatch",
+      "swatch_description": "Bambu Green \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2010,7 +2010,7 @@
         "#F7E6DE"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Beige — approximate manufacturer swatch",
+      "swatch_description": "Beige \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2041,7 +2041,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch",
+      "swatch_description": "Black \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2072,7 +2072,7 @@
         "#0A2989"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blue — approximate manufacturer swatch",
+      "swatch_description": "Blue \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2102,7 +2102,7 @@
         "#5B6579"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blue Grey — approximate manufacturer swatch",
+      "swatch_description": "Blue Grey \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2132,7 +2132,7 @@
         "#BDCF00"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Bright Green — approximate manufacturer swatch",
+      "swatch_description": "Bright Green \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2162,7 +2162,7 @@
         "#847D48"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Bronze — approximate manufacturer swatch",
+      "swatch_description": "Bronze \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2192,7 +2192,7 @@
         "#9D432C"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Brown — approximate manufacturer swatch",
+      "swatch_description": "Brown \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2222,7 +2222,7 @@
         "#0055B8"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Cobalt Blue — approximate manufacturer swatch",
+      "swatch_description": "Cobalt Blue \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2253,7 +2253,7 @@
         "#6F5034"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Cocoa Brown — approximate manufacturer swatch",
+      "swatch_description": "Cocoa Brown \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2284,7 +2284,7 @@
         "#0086D6"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Cyan — approximate manufacturer swatch",
+      "swatch_description": "Cyan \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2314,7 +2314,7 @@
         "#545454"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Dark Gray — approximate manufacturer swatch",
+      "swatch_description": "Dark Gray \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2344,7 +2344,7 @@
         "#E4BD68"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gold — approximate manufacturer swatch",
+      "swatch_description": "Gold \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2375,7 +2375,7 @@
         "#8E9089"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gray — approximate manufacturer swatch",
+      "swatch_description": "Gray \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2436,7 +2436,7 @@
         "#482A60"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Indigo Purple — approximate manufacturer swatch",
+      "swatch_description": "Indigo Purple \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2467,7 +2467,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Jade White — approximate manufacturer swatch",
+      "swatch_description": "Jade White \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2497,7 +2497,7 @@
         "#D1D3D5"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Light Gray — approximate manufacturer swatch",
+      "swatch_description": "Light Gray \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2527,7 +2527,7 @@
         "#EC008C"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Magenta — approximate manufacturer swatch",
+      "swatch_description": "Magenta \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2557,7 +2557,7 @@
         "#9D2236"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Maroon Red — approximate manufacturer swatch",
+      "swatch_description": "Maroon Red \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2588,7 +2588,7 @@
         "#3F8E43"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Mistletoe Green — approximate manufacturer swatch",
+      "swatch_description": "Mistletoe Green \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2618,7 +2618,7 @@
         "#FF6A13"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Orange — approximate manufacturer swatch",
+      "swatch_description": "Orange \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2648,7 +2648,7 @@
         "#F55A74"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Pink — approximate manufacturer swatch",
+      "swatch_description": "Pink \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2679,7 +2679,7 @@
         "#FF8E16"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Pumpkin Orange — approximate manufacturer swatch",
+      "swatch_description": "Pumpkin Orange \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2709,7 +2709,7 @@
         "#5E43B7"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Purple — approximate manufacturer swatch",
+      "swatch_description": "Purple \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2740,7 +2740,7 @@
         "#C12E1F"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Red — approximate manufacturer swatch",
+      "swatch_description": "Red \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2770,7 +2770,7 @@
         "#A6A9AA"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Silver — approximate manufacturer swatch",
+      "swatch_description": "Silver \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2801,7 +2801,7 @@
         "#FEC601"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Sunflower Yellow — approximate manufacturer swatch",
+      "swatch_description": "Sunflower Yellow \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2831,7 +2831,7 @@
         "#00B1B7"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Turquoise — approximate manufacturer swatch",
+      "swatch_description": "Turquoise \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2861,7 +2861,7 @@
         "#F4EE2A"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Yellow — approximate manufacturer swatch",
+      "swatch_description": "Yellow \u2014 approximate manufacturer swatch",
       "label_aliases": [
         [
           "Bambu Lab",
@@ -2894,7 +2894,7 @@
         "#D8F4F4"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Arctic Whisper — approximate manufacturer swatch"
+      "swatch_description": "Arctic Whisper \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-0d2e3c0ee25a",
@@ -2920,7 +2920,7 @@
         "#AFCDF2"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blueberry Bubblegum — approximate manufacturer swatch"
+      "swatch_description": "Blueberry Bubblegum \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-0cb037bfd25e",
@@ -2946,7 +2946,7 @@
         "#CFD8EA"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Cotton Candy Cloud — approximate manufacturer swatch"
+      "swatch_description": "Cotton Candy Cloud \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-b4193002468e",
@@ -2972,7 +2972,7 @@
         "#E9986B"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Dusk Glare — approximate manufacturer swatch"
+      "swatch_description": "Dusk Glare \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-ca70ddfb109c",
@@ -2998,7 +2998,7 @@
         "#7DDC56"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Mint Lime — approximate manufacturer swatch"
+      "swatch_description": "Mint Lime \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-ef387dd4b03e",
@@ -3024,7 +3024,7 @@
         "#55AED5"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Ocean to Meadow — approximate manufacturer swatch"
+      "swatch_description": "Ocean to Meadow \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-94bb72441f08",
@@ -3050,7 +3050,7 @@
         "#F5AAA4"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Pink Citrus — approximate manufacturer swatch"
+      "swatch_description": "Pink Citrus \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-afcf469f405a",
@@ -3076,7 +3076,7 @@
         "#FA9E95"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Solar Breeze — approximate manufacturer swatch"
+      "swatch_description": "Solar Breeze \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-d1318f1d9634",
@@ -3099,7 +3099,7 @@
         "#684A43"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Brown — approximate manufacturer swatch"
+      "swatch_description": "Brown \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-3f69beb3c26d",
@@ -3122,7 +3122,7 @@
         "#3B665E"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Green — approximate manufacturer swatch"
+      "swatch_description": "Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-129a5f9c12e5",
@@ -3145,7 +3145,7 @@
         "#424379"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Nebulae — approximate manufacturer swatch"
+      "swatch_description": "Nebulae \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-d5c66c2cd60e",
@@ -3168,7 +3168,7 @@
         "#594177"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Purple — approximate manufacturer swatch"
+      "swatch_description": "Purple \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-b0173495852d",
@@ -3191,7 +3191,7 @@
         "#7AC0E9"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Glow Blue — approximate manufacturer swatch"
+      "swatch_description": "Glow Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-9da58f9a13a4",
@@ -3214,7 +3214,7 @@
         "#A1FFAC"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Glow Green — approximate manufacturer swatch"
+      "swatch_description": "Glow Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-962aa7947d78",
@@ -3237,7 +3237,7 @@
         "#FF9D5B"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Glow Orange — approximate manufacturer swatch"
+      "swatch_description": "Glow Orange \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-4ef13811cf53",
@@ -3260,7 +3260,7 @@
         "#F17B8F"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Glow Pink — approximate manufacturer swatch"
+      "swatch_description": "Glow Pink \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-f2445a00a0f1",
@@ -3283,7 +3283,7 @@
         "#F8FF80"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Glow Yellow — approximate manufacturer swatch"
+      "swatch_description": "Glow Yellow \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-038c63253ed6",
@@ -3306,7 +3306,7 @@
         "#AD4E38"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Red Granite — approximate manufacturer swatch"
+      "swatch_description": "Red Granite \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-92b58a51e251",
@@ -3329,7 +3329,7 @@
         "#F7F3F0"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White Marble — approximate manufacturer swatch"
+      "swatch_description": "White Marble \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-67dd01cffd80",
@@ -3352,7 +3352,7 @@
         "#C2E189"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Apple Green — approximate manufacturer swatch"
+      "swatch_description": "Apple Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-9fec0e885b02",
@@ -3376,7 +3376,7 @@
         "#9B9EA0"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Ash Gray — approximate manufacturer swatch"
+      "swatch_description": "Ash Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-a3890a77fa79",
@@ -3399,7 +3399,7 @@
         "#CBC6B8"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Bone White — approximate manufacturer swatch"
+      "swatch_description": "Bone White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-28d43d2d6116",
@@ -3422,7 +3422,7 @@
         "#AE835B"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Caramel — approximate manufacturer swatch"
+      "swatch_description": "Caramel \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-86a57dfae5fe",
@@ -3446,7 +3446,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Charcoal — approximate manufacturer swatch"
+      "swatch_description": "Charcoal \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-f1983693e3a7",
@@ -3469,7 +3469,7 @@
         "#042F56"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Dark Blue — approximate manufacturer swatch"
+      "swatch_description": "Dark Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-33b6a0f0cbc9",
@@ -3492,7 +3492,7 @@
         "#7D6556"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Dark Brown — approximate manufacturer swatch"
+      "swatch_description": "Dark Brown \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-62011596c96a",
@@ -3515,7 +3515,7 @@
         "#4D3324"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Dark Chocolate — approximate manufacturer swatch"
+      "swatch_description": "Dark Chocolate \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-e6a0b35db896",
@@ -3538,7 +3538,7 @@
         "#68724D"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Dark Green — approximate manufacturer swatch"
+      "swatch_description": "Dark Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-0ee1e4c90eaf",
@@ -3561,7 +3561,7 @@
         "#BB3D43"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Dark Red — approximate manufacturer swatch"
+      "swatch_description": "Dark Red \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-c5c287a42439",
@@ -3584,7 +3584,7 @@
         "#E8DBB7"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Desert Tan — approximate manufacturer swatch"
+      "swatch_description": "Desert Tan \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-efecc5128d68",
@@ -3607,7 +3607,7 @@
         "#61C680"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Grass Green — approximate manufacturer swatch"
+      "swatch_description": "Grass Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-76a8dc193793",
@@ -3630,7 +3630,7 @@
         "#A3D8E1"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Ice Blue — approximate manufacturer swatch"
+      "swatch_description": "Ice Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-3f246e7ba147",
@@ -3654,7 +3654,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Ivory White — approximate manufacturer swatch"
+      "swatch_description": "Ivory White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-a4f52cc42a88",
@@ -3677,7 +3677,7 @@
         "#D3B7A7"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Latte Brown — approximate manufacturer swatch"
+      "swatch_description": "Latte Brown \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-fd4e5d8968ec",
@@ -3700,7 +3700,7 @@
         "#F7D959"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Lemon Yellow — approximate manufacturer swatch"
+      "swatch_description": "Lemon Yellow \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-a64022b8db5f",
@@ -3723,7 +3723,7 @@
         "#AE96D4"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Lilac purple — approximate manufacturer swatch"
+      "swatch_description": "Lilac purple \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-ff0e9202aba4",
@@ -3747,7 +3747,7 @@
         "#F99963"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Mandarin Orange — approximate manufacturer swatch"
+      "swatch_description": "Mandarin Orange \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-5389fb0462fc",
@@ -3771,7 +3771,7 @@
         "#0078BF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Marine Blue — approximate manufacturer swatch"
+      "swatch_description": "Marine Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-fe679e4419fb",
@@ -3794,7 +3794,7 @@
         "#757575"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Nardo Gray — approximate manufacturer swatch"
+      "swatch_description": "Nardo Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-596a664261aa",
@@ -3817,7 +3817,7 @@
         "#950051"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Plum — approximate manufacturer swatch"
+      "swatch_description": "Plum \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-f00152c3c92c",
@@ -3840,7 +3840,7 @@
         "#E8AFCF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Sakura Pink — approximate manufacturer swatch"
+      "swatch_description": "Sakura Pink \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-fcab20b538b8",
@@ -3864,7 +3864,7 @@
         "#DE4343"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Scarlet Red — approximate manufacturer swatch"
+      "swatch_description": "Scarlet Red \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-2d1f9aa115bf",
@@ -3887,7 +3887,7 @@
         "#56B7E6"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Sky Blue — approximate manufacturer swatch"
+      "swatch_description": "Sky Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-3ff43dbd620e",
@@ -3910,7 +3910,7 @@
         "#B15533"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Terracotta — approximate manufacturer swatch"
+      "swatch_description": "Terracotta \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-346cd7056e97",
@@ -3933,7 +3933,7 @@
         "#39699E"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Cobalt Blue Metallic — approximate manufacturer swatch"
+      "swatch_description": "Cobalt Blue Metallic \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-a1b259cdcc07",
@@ -3956,7 +3956,7 @@
         "#AA6443"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Copper Brown Metallic — approximate manufacturer swatch"
+      "swatch_description": "Copper Brown Metallic \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-1391bb199a72",
@@ -3979,7 +3979,7 @@
         "#B39B84"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Iridium Gold Metallic — approximate manufacturer swatch"
+      "swatch_description": "Iridium Gold Metallic \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-c690afc1682e",
@@ -4002,7 +4002,7 @@
         "#43403D"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Iron Gray Metallic — approximate manufacturer swatch"
+      "swatch_description": "Iron Gray Metallic \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-d02117950391",
@@ -4025,7 +4025,7 @@
         "#1D7C6A"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Oxide Green Metallic — approximate manufacturer swatch"
+      "swatch_description": "Oxide Green Metallic \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-8586c150fd75",
@@ -4049,7 +4049,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Absolute Black — approximate manufacturer swatch"
+      "swatch_description": "Absolute Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-aa14204bb5e2",
@@ -4073,7 +4073,7 @@
         "#FFB672"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Apricot — approximate manufacturer swatch"
+      "swatch_description": "Apricot \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-854f4fb3877f",
@@ -4097,7 +4097,7 @@
         "#A5DAE8"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Baby Blue — approximate manufacturer swatch"
+      "swatch_description": "Baby Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-18eb5e6c06ec",
@@ -4121,7 +4121,7 @@
         "#F7CDD7"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Milky Pink — approximate manufacturer swatch"
+      "swatch_description": "Milky Pink \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-1cdfda0d29e2",
@@ -4145,7 +4145,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Pure White — approximate manufacturer swatch"
+      "swatch_description": "Pure White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-d41a7d33ba16",
@@ -4171,7 +4171,7 @@
         "#235EBB"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Aurora Purple — approximate manufacturer swatch"
+      "swatch_description": "Aurora Purple \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-67e6eab34941",
@@ -4195,7 +4195,7 @@
         "#60A4E8"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blue Hawaii — approximate manufacturer swatch"
+      "swatch_description": "Blue Hawaii \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-197b5dbb4fd2",
@@ -4221,7 +4221,7 @@
         "#9986B9"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Dawn Radiance — approximate manufacturer swatch"
+      "swatch_description": "Dawn Radiance \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-4bc61ab77c9e",
@@ -4245,7 +4245,7 @@
         "#E74176"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gilded Rose — approximate manufacturer swatch"
+      "swatch_description": "Gilded Rose \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-553cb167dd01",
@@ -4269,7 +4269,7 @@
         "#0047BB"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Midnight Blaze — approximate manufacturer swatch"
+      "swatch_description": "Midnight Blaze \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-01b7cce1ea43",
@@ -4293,7 +4293,7 @@
         "#720062"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Mystic Magenta — approximate manufacturer swatch"
+      "swatch_description": "Mystic Magenta \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-3da5cacc29e8",
@@ -4317,7 +4317,7 @@
         "#BB22A3"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Neon City — approximate manufacturer swatch"
+      "swatch_description": "Neon City \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-ebbd279fd558",
@@ -4341,7 +4341,7 @@
         "#00629B"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Phantom Blue — approximate manufacturer swatch"
+      "swatch_description": "Phantom Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-0340bee9eccc",
@@ -4367,7 +4367,7 @@
         "#478892"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "South Beach — approximate manufacturer swatch"
+      "swatch_description": "South Beach \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-d3bc71e75c6c",
@@ -4391,7 +4391,7 @@
         "#A34342"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Velvet Eclipse — approximate manufacturer swatch"
+      "swatch_description": "Velvet Eclipse \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-c104538939d2",
@@ -4414,7 +4414,7 @@
         "#A8C6EE"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Baby Blue — approximate manufacturer swatch"
+      "swatch_description": "Baby Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-747073f2216c",
@@ -4437,7 +4437,7 @@
         "#008BDA"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blue — approximate manufacturer swatch"
+      "swatch_description": "Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-9fbecae1f448",
@@ -4460,7 +4460,7 @@
         "#018814"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Candy Green — approximate manufacturer swatch"
+      "swatch_description": "Candy Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-feed6f7811db",
@@ -4483,7 +4483,7 @@
         "#D02727"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Candy Red — approximate manufacturer swatch"
+      "swatch_description": "Candy Red \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-a2973c748806",
@@ -4506,7 +4506,7 @@
         "#F3CFB2"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Champagne — approximate manufacturer swatch"
+      "swatch_description": "Champagne \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-55dce7026030",
@@ -4530,7 +4530,7 @@
         "#F4A925"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gold — approximate manufacturer swatch"
+      "swatch_description": "Gold \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-42de789b51f4",
@@ -4553,7 +4553,7 @@
         "#96DCB9"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Mint — approximate manufacturer swatch"
+      "swatch_description": "Mint \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-af2e24bd1e11",
@@ -4576,7 +4576,7 @@
         "#F7ADA6"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Pink — approximate manufacturer swatch"
+      "swatch_description": "Pink \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-7fc8fcb59415",
@@ -4599,7 +4599,7 @@
         "#8671CB"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Purple — approximate manufacturer swatch"
+      "swatch_description": "Purple \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-26842cf9bd11",
@@ -4622,7 +4622,7 @@
         "#BA9594"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Rose Gold — approximate manufacturer swatch"
+      "swatch_description": "Rose Gold \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-2a4d67be18b3",
@@ -4646,7 +4646,7 @@
         "#C8C8C8"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Silver — approximate manufacturer swatch"
+      "swatch_description": "Silver \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-b5c6cf8c215f",
@@ -4670,7 +4670,7 @@
         "#5F6367"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Titan Gray — approximate manufacturer swatch"
+      "swatch_description": "Titan Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-06176c3eefd6",
@@ -4694,7 +4694,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-08be091858a9",
@@ -4717,7 +4717,7 @@
         "#3F5443"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Alpine Green Sparkle — approximate manufacturer swatch"
+      "swatch_description": "Alpine Green Sparkle \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-533409f98630",
@@ -4740,7 +4740,7 @@
         "#CEA629"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Classic Gold Sparkle — approximate manufacturer swatch"
+      "swatch_description": "Classic Gold Sparkle \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-51e30ff3a6df",
@@ -4763,7 +4763,7 @@
         "#792B36"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Crimson Red Sparkle — approximate manufacturer swatch"
+      "swatch_description": "Crimson Red Sparkle \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-f5b76bdd075a",
@@ -4786,7 +4786,7 @@
         "#2D2B28"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Onyx Black Sparkle — approximate manufacturer swatch"
+      "swatch_description": "Onyx Black Sparkle \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-af366808ce77",
@@ -4809,7 +4809,7 @@
         "#483D8B"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Royal Purple Sparkle — approximate manufacturer swatch"
+      "swatch_description": "Royal Purple Sparkle \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-0abb299bd4f3",
@@ -4832,7 +4832,7 @@
         "#8E9089"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Slate Gray Sparkle — approximate manufacturer swatch"
+      "swatch_description": "Slate Gray Sparkle \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-0fda3f61ceb9",
@@ -4856,7 +4856,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-0c82e5594d98",
@@ -4879,7 +4879,7 @@
         "#019BD9"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Cyan — approximate manufacturer swatch"
+      "swatch_description": "Cyan \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-14f998c4b221",
@@ -4903,7 +4903,7 @@
         "#AFB1AE"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gray — approximate manufacturer swatch"
+      "swatch_description": "Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-998d9730c8c4",
@@ -4926,7 +4926,7 @@
         "#DC3926"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Orange — approximate manufacturer swatch"
+      "swatch_description": "Orange \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-60e55b6e82a8",
@@ -4949,7 +4949,7 @@
         "#959698"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Silver — approximate manufacturer swatch"
+      "swatch_description": "Silver \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-7aa935a628a0",
@@ -4973,7 +4973,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-e73dd2833692",
@@ -4996,7 +4996,7 @@
         "#F4D53F"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Yellow — approximate manufacturer swatch"
+      "swatch_description": "Yellow \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-f0c1e1adbcb3",
@@ -5019,7 +5019,7 @@
         "#0047BB"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blue — approximate manufacturer swatch"
+      "swatch_description": "Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-f5cc878d0461",
@@ -5042,7 +5042,7 @@
         "#F5B6CD"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Cherry Pink — approximate manufacturer swatch"
+      "swatch_description": "Cherry Pink \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-78ceea401d1b",
@@ -5065,7 +5065,7 @@
         "#B8CDE9"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Ice Blue — approximate manufacturer swatch"
+      "swatch_description": "Ice Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-d30b359fff9b",
@@ -5088,7 +5088,7 @@
         "#B8ACD6"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Lavender — approximate manufacturer swatch"
+      "swatch_description": "Lavender \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-8a912b1c5f6c",
@@ -5111,7 +5111,7 @@
         "#96D8AF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Light Jade — approximate manufacturer swatch"
+      "swatch_description": "Light Jade \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-bde190371159",
@@ -5134,7 +5134,7 @@
         "#F5DBAB"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Mellow Yellow — approximate manufacturer swatch"
+      "swatch_description": "Mellow Yellow \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-364e82465fde",
@@ -5157,7 +5157,7 @@
         "#F74E02"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Orange — approximate manufacturer swatch"
+      "swatch_description": "Orange \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-204b24a9f343",
@@ -5180,7 +5180,7 @@
         "#8344B0"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Purple — approximate manufacturer swatch"
+      "swatch_description": "Purple \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-431d2214a587",
@@ -5203,7 +5203,7 @@
         "#B50011"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Red — approximate manufacturer swatch"
+      "swatch_description": "Red \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-1c3cfec08aa6",
@@ -5226,7 +5226,7 @@
         "#009FA1"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Teal — approximate manufacturer swatch"
+      "swatch_description": "Teal \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-c4b2513b93b1",
@@ -5249,7 +5249,7 @@
         "#4F3F24"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black Walnut — approximate manufacturer swatch"
+      "swatch_description": "Black Walnut \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-2d796aea5f28",
@@ -5272,7 +5272,7 @@
         "#918669"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Classic Birch — approximate manufacturer swatch"
+      "swatch_description": "Classic Birch \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-29659d6fcace",
@@ -5295,7 +5295,7 @@
         "#995F11"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Clay Brown — approximate manufacturer swatch"
+      "swatch_description": "Clay Brown \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-810831fcabe3",
@@ -5318,7 +5318,7 @@
         "#C98935"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Ochre Yellow — approximate manufacturer swatch"
+      "swatch_description": "Ochre Yellow \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-ba4464c7ba9f",
@@ -5341,7 +5341,7 @@
         "#4C241C"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Rosewood — approximate manufacturer swatch"
+      "swatch_description": "Rosewood \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-d9d94ca5632b",
@@ -5364,7 +5364,7 @@
         "#D6CCA3"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White Oak — approximate manufacturer swatch"
+      "swatch_description": "White Oak \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-c7668217f62c",
@@ -5388,7 +5388,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-2d51d99f2c66",
@@ -5411,7 +5411,7 @@
         "#951E23"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Burgundy Red — approximate manufacturer swatch"
+      "swatch_description": "Burgundy Red \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-b2bd00301fe1",
@@ -5434,7 +5434,7 @@
         "#69398E"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Iris Purple — approximate manufacturer swatch"
+      "swatch_description": "Iris Purple \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-81389696b77c",
@@ -5457,7 +5457,7 @@
         "#6E88BC"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Jeans Blue — approximate manufacturer swatch"
+      "swatch_description": "Jeans Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-11f8db9dc4b4",
@@ -5481,7 +5481,7 @@
         "#4D5054"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Lava Gray — approximate manufacturer swatch"
+      "swatch_description": "Lava Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-fd157f7b04ca",
@@ -5504,7 +5504,7 @@
         "#5C9748"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Matcha Green — approximate manufacturer swatch"
+      "swatch_description": "Matcha Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-3f85e650084a",
@@ -5527,7 +5527,7 @@
         "#2842AD"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Royal Blue — approximate manufacturer swatch"
+      "swatch_description": "Royal Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-1340c28ed1c5",
@@ -5550,7 +5550,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-5dbc571396e4",
@@ -5573,7 +5573,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-1202dd298ea3",
@@ -5596,7 +5596,7 @@
         "#F0F1A8"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Clear — approximate manufacturer swatch"
+      "swatch_description": "Clear \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-e004df27e8c2",
@@ -5619,7 +5619,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-7c58f4c2b0e8",
@@ -5642,7 +5642,7 @@
         "#C0DF16"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Green — approximate manufacturer swatch"
+      "swatch_description": "Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-64b5a7b3cc3f",
@@ -5665,7 +5665,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-090e824386d9",
@@ -5688,7 +5688,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-2eac4ebf80be",
@@ -5711,7 +5711,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Nature — approximate manufacturer swatch"
+      "swatch_description": "Nature \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-f5361166cde8",
@@ -5734,7 +5734,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-bb4e6df49eca",
@@ -5757,7 +5757,7 @@
         "#B9E3DF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Light Cyan — approximate manufacturer swatch"
+      "swatch_description": "Light Cyan \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-be8882acd1ed",
@@ -5780,7 +5780,7 @@
         "#CDEA80"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Lime Green — approximate manufacturer swatch"
+      "swatch_description": "Lime Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-b58760ca368c",
@@ -5803,7 +5803,7 @@
         "#F68A1B"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Neon Orange — approximate manufacturer swatch"
+      "swatch_description": "Neon Orange \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-4d5d590c085f",
@@ -5826,7 +5826,7 @@
         "#F3CFB2"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Rose Beige/Flesh — approximate manufacturer swatch"
+      "swatch_description": "Rose Beige/Flesh \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-edff867b7c67",
@@ -5849,7 +5849,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-03f5ab35bc83",
@@ -5875,7 +5875,7 @@
         "#EEA2AA"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blaze — approximate manufacturer swatch"
+      "swatch_description": "Blaze \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-172c58e18d30",
@@ -5898,7 +5898,7 @@
         "#5C4738"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Cocoa Brown — approximate manufacturer swatch"
+      "swatch_description": "Cocoa Brown \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-d3c554ed6d23",
@@ -5921,7 +5921,7 @@
         "#7EB4E1"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Crystal Blue — approximate manufacturer swatch"
+      "swatch_description": "Crystal Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-a0a48ece61cd",
@@ -5947,7 +5947,7 @@
         "#A6DEF4"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Frozen — approximate manufacturer swatch"
+      "swatch_description": "Frozen \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-924547ff4b47",
@@ -5970,7 +5970,7 @@
         "#D6ABFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Grape Jelly — approximate manufacturer swatch"
+      "swatch_description": "Grape Jelly \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-a7f0b61ad5b5",
@@ -5993,7 +5993,7 @@
         "#9EA2A3"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Quicksilver — approximate manufacturer swatch"
+      "swatch_description": "Quicksilver \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-36a4b42c289f",
@@ -6016,7 +6016,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-23dc695fd0c6",
@@ -6039,7 +6039,7 @@
         "#101820"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-5ee9d10ba30f",
@@ -6062,7 +6062,7 @@
         "#0072CE"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blue — approximate manufacturer swatch"
+      "swatch_description": "Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-04ee6ab43778",
@@ -6085,7 +6085,7 @@
         "#898D8D"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gray — approximate manufacturer swatch"
+      "swatch_description": "Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-0ea965fbc176",
@@ -6108,7 +6108,7 @@
         "#C8102E"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Red — approximate manufacturer swatch"
+      "swatch_description": "Red \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-2793a4c021f8",
@@ -6131,7 +6131,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-3cea2755a45d",
@@ -6154,7 +6154,7 @@
         "#F3E600"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Yellow — approximate manufacturer swatch"
+      "swatch_description": "Yellow \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-ec6178932dbd",
@@ -6178,7 +6178,7 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black — approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-91cc929b74a7",
@@ -6201,7 +6201,7 @@
         "#5898DD"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blue — approximate manufacturer swatch"
+      "swatch_description": "Blue \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-52bbd6aeb1fa",
@@ -6224,7 +6224,7 @@
         "#939393"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gray — approximate manufacturer swatch"
+      "swatch_description": "Gray \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-8e8480bc774a",
@@ -6247,7 +6247,7 @@
         "#90FF1A"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Neon Green — approximate manufacturer swatch"
+      "swatch_description": "Neon Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-26d71db72dc9",
@@ -6270,7 +6270,7 @@
         "#ED0000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Red — approximate manufacturer swatch"
+      "swatch_description": "Red \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-8eb0bc39705e",
@@ -6293,7 +6293,7 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White — approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
       "id": "bambu-1c08b7d77c87",
@@ -6316,7 +6316,7 @@
         "#F9EF41"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Yellow — approximate manufacturer swatch"
+      "swatch_description": "Yellow \u2014 approximate manufacturer swatch"
     },
     {
       "id": "cookiecad-858d592987",
@@ -6494,8 +6494,8 @@
       "filament_type": "ABS",
       "color_name": "Unicorn",
       "spool_profile": "Cookiecad",
-      "source": "https://cookiecad.com/products/copy-of-unicorn-🦄-pink-blue-purple-pla-filament-1-75mm-1kg",
-      "source_title": "ABS Unicorn ABS (pink → blue → purple) Filament 1.75mm, 1kg",
+      "source": "https://cookiecad.com/products/copy-of-unicorn-\ud83e\udd84-pink-blue-purple-pla-filament-1-75mm-1kg",
+      "source_title": "ABS Unicorn ABS (pink \u2192 blue \u2192 purple) Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "swatch": "#49C5E4",
       "preview_palette": [
@@ -7090,11 +7090,11 @@
       "id": "cookiecad-c437c46ef0",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Blue Ombré",
+      "color_name": "Blue Ombr\u00e9",
       "spool_profile": "Cookiecad",
       "swatch": "#FFFFFF",
       "source": "https://cookiecad.com/products/blue-ombre-pla-filament-1-75mm-1kg",
-      "source_title": "Blue Ombré PLA Filament 1.75mm, 1kg",
+      "source_title": "Blue Ombr\u00e9 PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#FFFFFF",
@@ -7102,7 +7102,7 @@
       ],
       "swatch_effects": [],
       "swatch_source": "https://cookiecad.com/filament-color-matrix",
-      "swatch_description": "Blue Ombré gradient colors: #FFFFFF, #0097C1",
+      "swatch_description": "Blue Ombr\u00e9 gradient colors: #FFFFFF, #0097C1",
       "swatch_css": "background-image:linear-gradient(90deg, #FFFFFF, #0097C1)",
       "swatch_method": "Manufacturer color matrix",
       "available_at_refresh": true
@@ -7111,11 +7111,11 @@
       "id": "cookiecad-0b6d68cec1",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Blue Ombré Elixir",
+      "color_name": "Blue Ombr\u00e9 Elixir",
       "spool_profile": "Cookiecad",
       "swatch": "#FFFFFF",
       "source": "https://cookiecad.com/products/blue-ombre-elixir-pla-filament-1-75mm-1kg",
-      "source_title": "Blue Ombré Elixir PLA Filament 1.75mm, 1kg",
+      "source_title": "Blue Ombr\u00e9 Elixir PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#FFFFFF",
@@ -7131,7 +7131,7 @@
         }
       ],
       "swatch_source": "https://cookiecad.com/filament-color-matrix",
-      "swatch_description": "Blue Ombré Elixir gradient colors: #FFFFFF, #0097C1",
+      "swatch_description": "Blue Ombr\u00e9 Elixir gradient colors: #FFFFFF, #0097C1",
       "swatch_css": "background-image:linear-gradient(90deg, #FFFFFF, #0097C1)",
       "swatch_method": "Manufacturer color matrix",
       "available_at_refresh": false
@@ -7346,7 +7346,7 @@
       "spool_profile": "Cookiecad",
       "swatch": "#96D8E9",
       "source": "https://cookiecad.com/products/fairy-floss-pink-purple-blue-pla-filament-1-75mm-1kg",
-      "source_title": "Fairy Floss (pink → purple → blue) PLA Filament 1.75mm, 1kg",
+      "source_title": "Fairy Floss (pink \u2192 purple \u2192 blue) PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#96D8E9",
@@ -7495,11 +7495,11 @@
       "id": "cookiecad-59edd50e34",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Gray Ombré",
+      "color_name": "Gray Ombr\u00e9",
       "spool_profile": "Cookiecad",
       "swatch": "#FFFFFF",
       "source": "https://cookiecad.com/products/gray-ombre-pla-filament-1-75mm-1kg",
-      "source_title": "Gray Ombré PLA Filament 1.75mm, 1kg",
+      "source_title": "Gray Ombr\u00e9 PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#FFFFFF",
@@ -7712,7 +7712,7 @@
       "spool_profile": "Cookiecad",
       "swatch": "#00B0E7",
       "source": "https://cookiecad.com/products/mermaid-elixir-puple-blue-green-pla-filament-1-75mm-1kg",
-      "source_title": "Mermaid Elixir (purple → blue → green) PLA Filament 1.75mm, 1kg",
+      "source_title": "Mermaid Elixir (purple \u2192 blue \u2192 green) PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#00B0E7",
@@ -8234,11 +8234,11 @@
       "id": "cookiecad-6d3da27dbb",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Pink Ombré",
+      "color_name": "Pink Ombr\u00e9",
       "spool_profile": "Cookiecad",
       "swatch": "#FFFFFF",
       "source": "https://cookiecad.com/products/pink-ombre-pla-filament-1-75mm-1kg",
-      "source_title": "Pink Ombré PLA Filament 1.75mm, 1kg",
+      "source_title": "Pink Ombr\u00e9 PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#FFFFFF",
@@ -8255,11 +8255,11 @@
       "id": "cookiecad-d403a7bd36",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Pink Ombré Elixir",
+      "color_name": "Pink Ombr\u00e9 Elixir",
       "spool_profile": "Cookiecad",
       "swatch": "#FFFFFF",
       "source": "https://cookiecad.com/products/pink-ombre-elixir-pla-filament-1-75mm-1kg",
-      "source_title": "Pink Ombré Elixir PLA Filament 1.75mm, 1kg",
+      "source_title": "Pink Ombr\u00e9 Elixir PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#FFFFFF",
@@ -8400,11 +8400,11 @@
       "id": "cookiecad-ab521d7949",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Purple Ombré",
+      "color_name": "Purple Ombr\u00e9",
       "spool_profile": "Cookiecad",
       "swatch": "#FFFFFF",
       "source": "https://cookiecad.com/products/purple-ombre-pla-filament-1-75mm-1kg",
-      "source_title": "Purple Ombré PLA Filament 1.75mm, 1kg",
+      "source_title": "Purple Ombr\u00e9 PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#FFFFFF",
@@ -8421,11 +8421,11 @@
       "id": "cookiecad-d54a4fe4ff",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Purple Ombré Elixir",
+      "color_name": "Purple Ombr\u00e9 Elixir",
       "spool_profile": "Cookiecad",
       "swatch": "#FFFFFF",
       "source": "https://cookiecad.com/products/purple-ombre-elixir-pla-filament-1-75mm-1kg",
-      "source_title": "Purple Ombré Elixir PLA Filament 1.75mm, 1kg",
+      "source_title": "Purple Ombr\u00e9 Elixir PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#FFFFFF",
@@ -8570,7 +8570,7 @@
       "spool_profile": "Cookiecad",
       "swatch": "#FAE400",
       "source": "https://cookiecad.com/products/sunrise-pink-orange-yellow-pla-filament-1-75mm-1kg",
-      "source_title": "Sunrise (pink → orange → yellow) PLA Filament 1.75mm, 1kg",
+      "source_title": "Sunrise (pink \u2192 orange \u2192 yellow) PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#FAE400",
@@ -8591,7 +8591,7 @@
       "spool_profile": "Cookiecad",
       "swatch": "#FAE400",
       "source": "https://cookiecad.com/products/sunrise-elixir-pink-orange-yellow-pla-filament-1-75mm-1kg",
-      "source_title": "Sunrise Elixir (pink → orange → yellow) PLA Filament 1.75mm, 1kg",
+      "source_title": "Sunrise Elixir (pink \u2192 orange \u2192 yellow) PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#FAE400",
@@ -8641,7 +8641,7 @@
       "spool_profile": "Cookiecad",
       "swatch": "#E01691",
       "source": "https://cookiecad.com/products/copy-of-sunrise-pink-orange-yellow-pla-filament-1-75mm-1kg",
-      "source_title": "Sunset (dark blue → purple → magenta) PLA Filament 1.75mm, 1kg",
+      "source_title": "Sunset (dark blue \u2192 purple \u2192 magenta) PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#E01691",
@@ -8662,7 +8662,7 @@
       "spool_profile": "Cookiecad",
       "swatch": "#E01691",
       "source": "https://cookiecad.com/products/sunset-elixir-pla-filament-1-75mm-1kg",
-      "source_title": "Sunset Elixir (blue → purple → magenta) PLA Filament 1.75mm, 1kg",
+      "source_title": "Sunset Elixir (blue \u2192 purple \u2192 magenta) PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#E01691",
@@ -8739,8 +8739,8 @@
       "color_name": "Unicorn",
       "spool_profile": "Cookiecad",
       "swatch": "#49C5E4",
-      "source": "https://cookiecad.com/products/unicorn-🦄-pink-blue-purple-pla-filament-1-75mm-1kg",
-      "source_title": "Unicorn 🦄 (pink → blue → purple) PLA Filament 1.75mm, 1kg",
+      "source": "https://cookiecad.com/products/unicorn-\ud83e\udd84-pink-blue-purple-pla-filament-1-75mm-1kg",
+      "source_title": "Unicorn \ud83e\udd84 (pink \u2192 blue \u2192 purple) PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#49C5E4",
@@ -8761,7 +8761,7 @@
       "spool_profile": "Cookiecad",
       "swatch": "#49C5E4",
       "source": "https://cookiecad.com/products/unicorn-elixir-pink-blue-purple-pla-filament-1-75mm-1kg",
-      "source_title": "Unicorn Elixir (pink → purple → blue) PLA Filament 1.75mm, 1kg",
+      "source_title": "Unicorn Elixir (pink \u2192 purple \u2192 blue) PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#49C5E4",
@@ -9113,11 +9113,11 @@
       "id": "cookiecad-fa3f5e5d08",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA Silk",
-      "color_name": "Pink Ombré",
+      "color_name": "Pink Ombr\u00e9",
       "spool_profile": "Cookiecad",
       "swatch": "#FFFFFF",
       "source": "https://cookiecad.com/products/silk-pink-ombre-pla-filament-1-75mm-1kg",
-      "source_title": "SILK Pink Ombré PLA Filament 1.75mm, 1kg",
+      "source_title": "SILK Pink Ombr\u00e9 PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#FFFFFF",
@@ -9134,11 +9134,11 @@
       "id": "cookiecad-b4a8112ad0",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA Silk",
-      "color_name": "Silver Ombré",
+      "color_name": "Silver Ombr\u00e9",
       "spool_profile": "Cookiecad",
       "swatch": "#FFFFFF",
       "source": "https://cookiecad.com/products/copy-of-silk-pink-ombre-pla-filament-1-75mm-1kg",
-      "source_title": "SILK Silver Ombré PLA Filament 1.75mm, 1kg",
+      "source_title": "SILK Silver Ombr\u00e9 PLA Filament 1.75mm, 1kg",
       "source_date": "2026-09-13",
       "preview_palette": [
         "#FFFFFF",
@@ -9283,7 +9283,7 @@
       ],
       "swatch_effects": [],
       "swatch_source": "https://cookiecad.com/filament-color-matrix",
-      "swatch_description": "Blue Ombré gradient colors: #FFFFFF, #0097C1",
+      "swatch_description": "Blue Ombr\u00e9 gradient colors: #FFFFFF, #0097C1",
       "swatch_css": "background-image:linear-gradient(90deg, #FFFFFF, #0097C1)",
       "swatch_method": "Manufacturer color matrix",
       "available_at_refresh": true
@@ -10070,6 +10070,210 @@
       "swatch_description": "Witches Blue gradient colors: #31008F",
       "swatch_css": "background-color:#31008F",
       "swatch_method": "Manufacturer color matrix",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-black",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Black",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Black",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Initial catalog color approximation from owner/vendor listing",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-white",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "White",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Initial catalog color approximation from owner/vendor listing",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silver-blue",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Silver Blue",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silver Blue",
+      "swatch": "#6E879D",
+      "preview_palette": [
+        "#6E879D"
+      ],
+      "swatch_method": "Initial catalog color approximation from owner/vendor listing",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-red",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Red",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Red",
+      "swatch": "#D52B2B",
+      "preview_palette": [
+        "#D52B2B"
+      ],
+      "swatch_method": "Initial catalog color approximation from owner/vendor listing",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-sapphire-blue",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Sapphire Blue",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Sapphire Blue",
+      "swatch": "#24558A",
+      "preview_palette": [
+        "#24558A"
+      ],
+      "swatch_method": "Initial catalog color approximation from owner/vendor listing",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-dark-grey",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Dark Grey",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Dark Grey",
+      "swatch": "#4A4A4A",
+      "preview_palette": [
+        "#4A4A4A"
+      ],
+      "swatch_method": "Initial catalog color approximation from owner/vendor listing",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-abs-black",
+      "manufacturer": "Amolen",
+      "filament_type": "ABS",
+      "color_name": "Black",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/abs-filament-1-75-mm-1kg",
+      "source_date": "2026-09-23",
+      "source_color_name": "Black",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Initial catalog color approximation from owner/vendor listing",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-abs-white",
+      "manufacturer": "Amolen",
+      "filament_type": "ABS",
+      "color_name": "White",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/abs-filament-1-75-mm-1kg",
+      "source_date": "2026-09-23",
+      "source_color_name": "White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Initial catalog color approximation from owner/vendor listing",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-tpu-85a-black",
+      "manufacturer": "Amolen",
+      "filament_type": "TPU",
+      "color_name": "85A Black",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/tpu-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "85A Black",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Initial catalog color approximation from owner/vendor listing",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-tpu-95a-white",
+      "manufacturer": "Amolen",
+      "filament_type": "TPU",
+      "color_name": "95A White",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/tpu-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "95A White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Initial catalog color approximation from owner/vendor listing",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-tpu-95a-pink",
+      "manufacturer": "Amolen",
+      "filament_type": "TPU",
+      "color_name": "95A Pink",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/tpu-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "95A Pink",
+      "swatch": "#E85B7A",
+      "preview_palette": [
+        "#E85B7A"
+      ],
+      "swatch_method": "Initial catalog color approximation from owner/vendor listing",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-tpu-95a-purple",
+      "manufacturer": "Amolen",
+      "filament_type": "TPU",
+      "color_name": "95A Purple",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/tpu-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "95A Purple",
+      "swatch": "#75458F",
+      "preview_palette": [
+        "#75458F"
+      ],
+      "swatch_method": "Initial catalog color approximation from owner/vendor listing",
       "available_at_refresh": true
     }
   ]

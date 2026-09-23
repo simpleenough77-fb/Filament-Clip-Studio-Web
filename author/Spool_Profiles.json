@@ -57,6 +57,28 @@
       "accepted_baseline_stl": "Cookiecad_v10_R3_Corners.stl",
       "design_width_mm": 62.5,
       "measured_spool_width_mm": 62.5
+    },
+    {
+      "id": "amolen_1kg",
+      "name": "Amolen 1 kg spool",
+      "outside_diameter_mm": 200,
+      "flange_to_flange_width_mm": 57,
+      "inside_clear_width_mm": 54,
+      "flange_rim_thickness_mm": 2.3,
+      "flange_body_thickness_mm": 1.9,
+      "connector": "button",
+      "button_hole_mm": [
+        2,
+        5
+      ],
+      "button_center_spacing_mm": 27.4,
+      "hole_from_outer_rim_mm": 3.3,
+      "design_width_mm": 61,
+      "sleeve_thickness_mm": 2,
+      "sleeve_offset_mm": 7.5,
+      "status": "owner_accepted_prototype_revision_17",
+      "measurement_source": "Owner measurements and physical fit tests, 2026-09-23",
+      "weight_scope": "1 kg only"
     }
   ],
   "printed_bambu_reference": {

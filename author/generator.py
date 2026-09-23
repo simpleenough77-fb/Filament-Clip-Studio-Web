@@ -51,7 +51,7 @@ def validate(data, allow_empty=False):
         if r.get('product') not in PRODUCTS:raise ValueError('A product is not in the approved catalog.')
         p=PRODUCTS[r['product']]
         profile=p['spool_profile'] # Author-maintained manufacturer/spool mapping
-        if profile not in ('Bambu Original','Cookiecad'):raise ValueError('Choose an accepted spool profile.')
+        if profile not in ('Bambu Original','Cookiecad','Amolen 1kg'):raise ValueError('Choose an accepted spool profile.')
         n=r.get('quantity',1)
         if isinstance(n,bool) or str(n)!=str(int(n)) or not 1<=int(n)<=100:raise ValueError('Quantities must be whole numbers from 1 to 100.')
         swatch=r.get('swatch') or p.get('swatch')
@@ -88,7 +88,7 @@ async def preflight(data):
     data=validate(data);s=data['settings'];sizes=[s['vendor_size'],s['type_size'],s['color_size']]
     checks=[];code=includes()
     for i,r in enumerate(data['rows']):
-        p=PRODUCTS[r['product']];lines=[p['manufacturer'],p['filament_type'],p['color_name']];width=(68 if r['spool_profile']=='Bambu Original' else 62.5)-4
+        p=PRODUCTS[r['product']];lines=[p['manufacturer'],p['filament_type'],p['color_name']];width={'Bambu Original':68,'Cookiecad':62.5,'Amolen 1kg':61}[r['spool_profile']]-4
         for j,t in enumerate(lines):
             code+=f'let(t={json.dumps(t)},sz={sizes[j]},font={json.dumps(s["font"])},f=label_fit(t,sz,font,{width}),m=textmetrics(f,size=sz,font=font)) echo([{i},{j},t,f,m.size.x,m.size.y]);\n'
         checks.append(dict(**r,lines=lines,display=[],width=width,body_color=colors(r,s)[0],text_color=colors(r,s)[1],filament_roles=filament_roles(r,s),swatch_palette=palette(r),swatch_effects=p.get('swatch_effects',[]),swatch_description=p.get('swatch_description',''),body_actual=s['body_mode']=='filament',text_actual=s['text_mode']=='filament'))
@@ -221,7 +221,7 @@ async def generate(key,ack=False):
         # label Boolean can recreate the small tunnel/plate notch.
         if s['holder_sleeve']=='yes':
             from tested_sleeves import body_mesh
-            bodymesh=body_mesh(r['spool_profile'])
+            bodymesh=load_stl(AUTHOR/'amolen_tested_sleeve.stl') if r['spool_profile']=='Amolen 1kg' else body_mesh(r['spool_profile'])
         else:
             bodycode=base+(('difference(){'+geometry+'translate([0,0,-.01])label_all(lines,sizes,font,width,.61);}') if s['style']=='part' else geometry)
             bodyfile=meshdir/f'{index}_body.stl';await run_scad(bodycode,bodyfile)
@@ -232,10 +232,13 @@ async def generate(key,ack=False):
             code=base+(f'translate([0,0,-.01])label_line(lines,sizes,font,width,{i},.61);' if s['style']=='cut' else f'label_line(lines,sizes,font,width,{i},.6);')
             await run_scad(code,path);parts.append((label+' - '+r['display'][i],load_stl(path)))
         if s['holder_sleeve']=='yes':
-            from tested_sleeves import sleeve_parts
-            flags,blocker=sleeve_parts(r['spool_profile'],parts[0][1])
-            parts.append(blocker)
-            variants.append(dict(check=r,parts=parts,support_paint=flags))
+            if r['spool_profile']=='Amolen 1kg':
+                variants.append(dict(check=r,parts=standing_parts(parts,r['spool_profile']),support_paint=[]))
+            else:
+                from tested_sleeves import sleeve_parts
+                flags,blocker=sleeve_parts(r['spool_profile'],parts[0][1])
+                parts.append(blocker)
+                variants.append(dict(check=r,parts=parts,support_paint=flags))
         else:
             variants.append(dict(check=r,parts=standing_parts(parts,r['spool_profile'])))
     plates=plan(checks,s,PRINTERS[s['printer']])
