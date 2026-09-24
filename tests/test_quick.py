@@ -148,7 +148,7 @@ def test_github_pages_redirect_stub():
     assert (out / 'downloads' / 'catalog.csv').read_text() == build_site.catalog_csv_text()
 
 def test_support_footer_on_public_pages():
-    for name in ('index.html', 'guide.html', 'accessories.html'):
+    for name in ('index.html', 'studio.html', 'guide.html', 'accessories.html'):
         html = (ROOT / name).read_text(encoding='utf-8')
         assert html.count('class="support"') == 1, name
         assert 'href="https://ko-fi.com/clipstudio"' in html, name
@@ -158,12 +158,27 @@ def test_support_footer_on_public_pages():
 def test_page_images_exist():
     acc = json.loads((ROOT / 'downloads' / 'accessories' / 'accessories.json').read_text(encoding='utf-8'))
     wanted = {'images/accessories/' + i['image'] for i in acc['items']}
-    for name in ('index.html', 'guide.html', 'accessories.html'):
-        wanted |= set(re.findall(r'images/photos/[\w.-]+\.jpg', (ROOT / name).read_text(encoding='utf-8')))
+    for name in ('index.html', 'studio.html', 'guide.html', 'accessories.html'):
+        wanted |= set(re.findall(r'images/(?:photos/)?[\w.-]+\.jpg', (ROOT / name).read_text(encoding='utf-8')))
     missing = sorted(p for p in wanted if not (ROOT / p).is_file())
     assert not missing, missing
     for p in wanted:
         assert (ROOT / p).stat().st_size < 600_000, p + ' is too large for the web; resize it'
+
+def test_front_page_and_studio():
+    home = (ROOT / 'index.html').read_text(encoding='utf-8')
+    studio = (ROOT / 'studio.html').read_text(encoding='utf-8')
+    assert 'studio-worker' not in home and 'bridge.js' not in home, 'front page must stay light'
+    assert 'bridge.js' in studio and re.search(r'>Build [^<]*</span>', studio), 'studio keeps the app and build badge'
+    for name in ('index.html', 'studio.html', 'guide.html', 'accessories.html'):
+        page = (ROOT / name).read_text(encoding='utf-8')
+        assert 'og:image' in page and '<meta name="description"' in page, name + ' needs share metadata'
+        for href in re.findall(r'href="\./([\w-]+\.html)', page):
+            assert (ROOT / href).is_file(), f'{name} links to missing {href}'
+    catalog_brands = {p['manufacturer'] for p in g.CATALOG}
+    for brand in catalog_brands:
+        assert brand in home, 'front page supported-spools list is missing ' + brand
+    assert (ROOT / '.github' / 'ISSUE_TEMPLATE' / 'spool-request.yml').is_file()
 
 if __name__ == '__main__':
     failures = 0

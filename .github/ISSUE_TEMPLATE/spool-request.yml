@@ -1,0 +1,61 @@
+name: Request a spool fit
+description: Ask for label clips that fit a spool brand the studio doesn't support yet.
+title: "Spool request: "
+labels: ["spool request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Each clip is shaped and physically tested for one brand's spool. Your measurements and photos help decide which brand is fitted next.
+        If someone has already requested your spool, add a 👍 to that issue instead of opening a new one.
+  - type: input
+    id: brand
+    attributes:
+      label: Filament brand
+      placeholder: e.g. Sunlu
+    validations:
+      required: true
+  - type: input
+    id: product
+    attributes:
+      label: Filament line or product page
+      description: A link or name for one filament that comes on this spool.
+      placeholder: e.g. Sunlu PLA+ 1 kg, https://...
+    validations:
+      required: true
+  - type: dropdown
+    id: spool_type
+    attributes:
+      label: Spool type
+      options:
+        - Plastic
+        - Cardboard
+        - Refill on a reusable spool
+        - Other or not sure
+    validations:
+      required: true
+  - type: input
+    id: outside_diameter
+    attributes:
+      label: Outside diameter (mm)
+      placeholder: e.g. 200
+  - type: input
+    id: inside_width
+    attributes:
+      label: Width between the flanges, inside (mm)
+      placeholder: e.g. 61
+  - type: input
+    id: flange_thickness
+    attributes:
+      label: Flange or rim thickness (mm)
+      placeholder: e.g. 3.5
+  - type: textarea
+    id: photos
+    attributes:
+      label: Photos
+      description: Drag photos of the spool's edge and rim here. A photo with a ruler or calipers helps most.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: How many of these spools you have, whether you could lend one for testing, and so on.
