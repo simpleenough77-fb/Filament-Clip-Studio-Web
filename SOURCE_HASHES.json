@@ -49,7 +49,7 @@
   "author/cookiecad.stl": "5567fc6770ee2c3287f885820750ec695ec2e7e81bae017c985321a1d5883061",
   "author/cookiecad_sleeve.stl": "aa76da46615a9315812f45139b6e8b68c7668896c3594ce219a3d72a14008249",
   "author/cookiecad_tested_sleeve.stl": "b9aa4bb91a17ba5ebd5b6de5721961642ef3fe9e6ee1290aa19df5b98a6513bd",
-  "author/generator.py": "529b1439a84080b01e0aaf8967b327988b03b6ccf2ffbfc5ba25387c075729e3",
+  "author/generator.py": "4a41270c087e6cf38efcdc0f1cee1056cad408414f172786a13b8ae7e3cff2d8",
   "author/placement.py": "0412f89bb9232efd7a9148298e86508a1dee45eabe332b344120a7689a1abe67",
   "author/print_geometry.py": "093ad33095b02aaccd3c9fd571b0dc17328efb1e0f4b51edf6092163e2149f59",
   "author/tested_sleeves.py": "6bd2a61709ddac15d9390beb9c54e2a36f323a14eed44feeb296472ed4ed5553",

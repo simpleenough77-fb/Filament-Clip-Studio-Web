@@ -234,6 +234,11 @@ async def generate(key,ack=False):
         if s['holder_sleeve']=='yes':
             from tested_sleeves import sleeve_parts
             flags,blocker=sleeve_parts(r['spool_profile'],parts[0][1])
+            # Amolen is printed flat with its readable label face upward.
+            # The generated text starts at z=0; place it on the tested body's
+            # opposite face without changing the clip or blocker geometry.
+            if r['spool_profile']=='Amolen 1kg':
+                parts=[parts[0]]+[(name, ([(x,y,18.0-z) for x,y,z in verts],faces)) for name,(verts,faces) in parts[1:]]
             parts.append(blocker)
             variants.append(dict(check=r,parts=parts,support_paint=flags))
         else:
