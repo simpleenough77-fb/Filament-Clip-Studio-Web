@@ -8,11 +8,11 @@ Choose filament combinations, import a CSV if desired, review labels and any sho
 
 The official catalog is maintained through this repository by its owner. Visitors can select catalog entries; there is no public catalog-writing endpoint. Forks may maintain their own catalogs under the license. Drafts and named batches are stored in browser local storage and do not synchronize between devices. Download CSV backups before clearing browser data.
 
-The first visit downloads about 28 MB of application/runtime assets. A desktop browser is recommended for large batches. Quantity is limited to 100 clips. Three fonts, independent text parts, engraved/modifier styles, printer keep-outs and actual-filament plate grouping are supported. Clips are exported standing on their sides (33 mm tall), with plate layout based on their standing footprints. Choose **Holder sleeve → Include holder sleeve** to use the author-supplied collar models for AMS holders; the correct version is selected automatically for each spool. Spreadsheet CSV files are uploaded with Import CSV; the browser cannot scan the desktop Excel export folder.
+The first visit downloads about 28 MB of application/runtime assets. A desktop browser is recommended for large batches. Quantity is limited to 100 clips. Three fonts, independent text parts, engraved/modifier styles, printer keep-outs and actual-filament plate grouping are supported. Clips are exported standing on their sides (33 mm tall), with plate layout based on their standing footprints. Choose **Holder sleeve → Include holder sleeve** to use the author-supplied collar models for AMS holders; the correct version is selected automatically for each spool. Spreadsheet CSV files are uploaded with Import CSV, or rows copied from a spreadsheet are added with Paste rows.
 
 ## Local use and hosting
 
-Serve this directory as static files (for example `python3 -m http.server 8000`) and open http://localhost:8000. Do not open index.html with file://. All runtime dependencies are included; no generation server is needed. GitHub Pages is configured to publish the repository root. There are no credentials, analytics, paid API calls, or private batch files in this distribution.
+Serve this directory as static files (for example `python3 -m http.server 8000`) and open http://localhost:8000. Do not open index.html with file://. All runtime dependencies are included; no generation server is needed. GitHub Pages is published by the workflow described below. There are no credentials, analytics, paid API calls, or private batch files in this distribution.
 
 ## Mechanical lineage
 
@@ -29,3 +29,14 @@ On 2026-09-13, local browser tests generated both clip types, a 100-clip/4-plate
 ## License
 
 Application code and original project contributions: GPL-3.0-or-later, authorized by Avishai Avivi on 2026-09-13. See LICENSE. Third-party components retain their own licenses; see THIRD_PARTY.md. Manufacturer names identify compatibility and filament products; no endorsement is implied.
+
+## Build, tests and deployment
+
+GitHub Actions (`.github/workflows/pages.yml`) runs the fast checks on every push and pull request, then deploys `main` to GitHub Pages. The Pages source must be set to **GitHub Actions** (Settings → Pages).
+
+- `python tests/test_quick.py` — catalog integrity, CSV import regressions and the catalog feed (no OpenSCAD needed).
+- `node tests/test_paste.mjs` — conversion of rows pasted from a spreadsheet.
+- `python tools/build_site.py` — writes `downloads/catalog.csv` (the Google Sheets builder imports it with `=IMPORTDATA`) and `SOURCE_HASHES.json`. The deploy also stamps the build badge with the commit and date. Both files are generated, not committed.
+- The geometry tests in `tests/test_standing_exports.py` and `tests/test_sleeve_label_face.py` need a local OpenSCAD install and are run by hand.
+
+The Google Sheets CSV builder: https://docs.google.com/spreadsheets/d/17I2c2LSQdosgysyYz1NXYAqdRnsjegUHCgwkq1jBLrE/copy

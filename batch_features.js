@@ -58,12 +58,9 @@ async function importText(text){
  $('importReport').innerHTML=`<p>${d.imported} CSV records imported (${d.total} clips ${mode==='add'?'added':'loaded'}). ${d.skipped.length} records skipped. Current batch: ${rows.reduce((n,r)=>n+r.quantity,0)} clips.${!d.rows.length?' Your existing batch was kept.':''}</p>`+(d.skipped.length?`<div class="scroll-table"><table><thead><tr><th>CSV row</th><th>Manufacturer</th><th>Type</th><th>Color / name</th><th>Quantity</th><th>Reason</th></tr></thead><tbody>${d.skipped.map(r=>`<tr><td>${r.row}</td><td>${esc(r.manufacturer)}</td><td>${esc(r.filament_type)}</td><td>${esc(r.color_name)}</td><td>${esc(r.quantity)}</td><td>${esc(r.reason)}</td></tr>`).join('')}</tbody></table></div>`:'');
 }
 $('import').onclick=()=>$('file').click();$('file').onchange=()=>busy('Reading CSV…',async()=>{try{if($('file').files.length)await importText(await $('file').files[0].text());}finally{$('file').value='';}});
-async function refreshExcel(){
- try{let d=await fetch('/excel-exports').then(r=>r.json());$('excelFile').innerHTML=d.files.length?d.files.map(f=>`<option value="${esc(f.name)}">${esc(new Date(f.modified*1000).toLocaleString())} · ${esc(f.name)}</option>`).join(''):'<option value="">No Excel exports yet</option>';excelSelection();}catch{$('excelFile').innerHTML='<option value="">Excel exports unavailable</option>';excelSelection();}
-}
-function excelSelection(){let name=$('excelFile').value;$('downloadExcel').classList.toggle('hidden',!name);$('downloadExcel').href='/excel-csv/'+encodeURIComponent(name);$('downloadExcel').download=name;}
-$('excelFile').onchange=excelSelection;$('refreshExcel').onclick=refreshExcel;
-$('importExcel').onclick=()=>busy('Reading Excel CSV…',async()=>{let name=$('excelFile').value;if(!name)throw Error('Export a CSV from the workbook first, then refresh this list.');let r=await fetch('/excel-csv/'+encodeURIComponent(name));if(!r.ok)throw Error('That Excel export is unavailable. Refresh the list.');await importText(await r.text());});
+$('pasteRows').onclick=()=>{$('pastePanel').classList.remove('hidden');$('pasteText').focus();};
+$('cancelPaste').onclick=()=>{$('pasteText').value='';$('pastePanel').classList.add('hidden');};
+$('importPaste').onclick=()=>busy('Reading pasted rows…',async()=>{await importText(pastedTextToCsv($('pasteText').value));$('pasteText').value='';$('pastePanel').classList.add('hidden');});
 
 Promise.all([fetch('/catalog').then(r=>r.json()),fetch('/library').then(r=>r.json())]).then(([d,library])=>{
  catalog=d.products;fonts=d.fonts;$('printer').innerHTML=d.printers.map(p=>`<option value="${esc(p.id)}">${esc(p.label)}</option>`).join('');$('font').innerHTML=options(fonts,fonts[0]);
