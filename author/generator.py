@@ -124,7 +124,7 @@ async def preflight(data):
     plates,_=full_plan(checks,s)
     key=hashlib.sha256(json.dumps(data,sort_keys=True).encode()).hexdigest()
     PREFLIGHTS[key]=(data,checks,warnings)
-    return dict(key=key,rows=checks,warnings=warnings,total=sum(r['quantity'] for r in checks),sizes=sizes,font=s['font'],style=s['style'],plates=plates,printer=PRINTERS[s['printer']],accessories=accessories.summary(s['devices']))
+    return dict(key=key,rows=checks,warnings=warnings,total=sum(r['quantity'] for r in checks),sizes=sizes,font=s['font'],style=s['style'],plates=plates,printer=PRINTERS[s['printer']],accessories=accessories.summary(s['devices'],PRINTERS[s['printer']]))
 
 def load_stl(path):
     raw=path.read_bytes()
