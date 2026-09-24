@@ -60,6 +60,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
           command: deploy
+          wranglerVersion: '4.138.0'
       # GitHub Pages: the full site until PRIMARY_HOST is set, then a redirect to it
       # (keeping downloads/catalog.csv for older copies of the Google Sheets builder).
       - name: Stage GitHub Pages redirect
