@@ -13,17 +13,17 @@
 <div class="eyebrow" style="margin-top:28px">USER GUIDE / HOW-TO</div>
 <h1>Filament Clip Studio</h1>
 <p>Build readable, color-aware filament clip labels for the accepted Bambu Lab and Cookiecad clip bodies. The browser edition creates one multi-plate 3MF project and an import-ready CSV on your device.</p>
-<div class="links"><a class="button" href="./">Open the studio</a><a class="button" href="./downloads/Filament_Label_Builder.xlsm" download>Download the Excel CSV builder</a></div>
+<div class="links"><a class="button" href="./">Open the studio</a><a class="button" href="https://docs.google.com/spreadsheets/d/17I2c2LSQdosgysyYz1NXYAqdRnsjegUHCgwkq1jBLrE/copy" target="_blank" rel="noopener">Open the Google Sheets CSV builder</a></div>
 
 <section class="panel"><h2>Quick start</h2><ol>
 <li>Add a label row, then choose the manufacturer, filament type, color/name, and quantity. Add as many rows as needed.</li>
-<li>For a larger batch, use the Excel CSV builder. Export its CSV, then select <strong>Import CSV</strong> in the studio. Choose whether to add the rows or replace the current batch.</li>
+<li>For a larger batch, use the Google Sheets CSV builder. Download its CSV, then select <strong>Import CSV</strong> in the studio. Choose whether to add the rows or replace the current batch.</li>
 <li>Review the label previews and the plate plan. If a long name is shortened, read the warning and accept the shortened text before generation.</li>
 <li>Choose <strong>Generate batch</strong>. The download contains one 3MF project with the packed plates and a <code>Labels.csv</code> copy of the generated labels.</li>
 <li>Open the 3MF in Bambu Studio, confirm the filament assignments and support preview, then slice.</li>
 </ol></section>
 
-<section class="panel"><h2>Using the Excel CSV builder</h2><p>The workbook is a guided way to create valid import rows. On the entry sheet, choose a manufacturer first, then choose a filament type and a color/name from the matching catalog. Enter quantity and use the export button to create the CSV.</p><p class="notice small">If Excel asks whether to enable macros, enable them only for this workbook if you want to use its export button. The studio also accepts a CSV made by another tool when it uses the columns <code>manufacturer, filament_type, color_name, quantity</code>.</p><p><a class="text" href="./downloads/Filament_Label_Builder.xlsm" download>Download the Excel CSV builder</a></p></section>
+<section class="panel"><h2>Using the Google Sheets CSV builder</h2><p>The Google Sheet is a guided way to create valid import rows. Opening the link asks you to make your own copy (a Google account is required); the shared original is view-only. In your copy, open the <strong>Labels</strong> tab, choose a manufacturer first, then a filament type and a color/name from the matching catalog, and enter a quantity. Every row must show <strong>&#10003; OK</strong> in the Status column, and a batch holds up to 100 clips.</p><p>When the batch status reads <strong>&#10003; Batch ready</strong>, the <strong>Export CSV</strong> button turns green. Click it to open the <strong>CSV export</strong> tab, then choose <strong>File &gt; Download &gt; Comma Separated Values (.csv)</strong>. Import that file here with <strong>Import CSV</strong>.</p><p class="notice small">The studio also accepts a CSV made by another tool when it uses the columns <code>manufacturer, filament_type, color_name, quantity</code>.</p><p><a class="text" href="https://docs.google.com/spreadsheets/d/17I2c2LSQdosgysyYz1NXYAqdRnsjegUHCgwkq1jBLrE/copy" target="_blank" rel="noopener">Open the Google Sheets CSV builder</a></p></section>
 
 <section class="panel"><h2>Style the batch</h2>
 <h3>Label style</h3><p>Choose a flat colored inlay with separate parts, an engraved negative label, or flat color filament modifiers. The 3MF keeps the generated parts selectable for slicer adjustments.</p>
