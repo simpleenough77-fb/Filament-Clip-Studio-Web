@@ -85,6 +85,8 @@ def test_accessories_manifest_matches_stl_files():
     for item in acc['items']:
         assert item['kind'] in ('holder', 'template'), item['id']
         assert item.get('pairs', '').strip(), item['id'] + ' needs pairing text for its card'
+        page = (ROOT / 'accessories.html').read_text(encoding='utf-8')
+        assert f'id="{item.get("mount")}"' in page, item['id'] + ' needs a mount anchor that exists on accessories.html'
         data = (ROOT / 'downloads' / 'accessories' / item['file']).read_bytes()
         count = struct.unpack('<I', data[80:84])[0]
         assert len(data) == 84 + 50 * count, f"{item['file']} is not a valid binary STL"
