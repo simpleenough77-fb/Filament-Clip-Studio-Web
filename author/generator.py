@@ -221,7 +221,7 @@ async def generate(key,ack=False):
         # label Boolean can recreate the small tunnel/plate notch.
         if s['holder_sleeve']=='yes':
             from tested_sleeves import body_mesh
-            bodymesh=load_stl(AUTHOR/'amolen_tested_sleeve.stl') if r['spool_profile']=='Amolen 1kg' else body_mesh(r['spool_profile'])
+            bodymesh=body_mesh(r['spool_profile'])
         else:
             bodycode=base+(('difference(){'+geometry+'translate([0,0,-.01])label_all(lines,sizes,font,width,.61);}') if s['style']=='part' else geometry)
             bodyfile=meshdir/f'{index}_body.stl';await run_scad(bodycode,bodyfile)
@@ -232,13 +232,10 @@ async def generate(key,ack=False):
             code=base+(f'translate([0,0,-.01])label_line(lines,sizes,font,width,{i},.61);' if s['style']=='cut' else f'label_line(lines,sizes,font,width,{i},.6);')
             await run_scad(code,path);parts.append((label+' - '+r['display'][i],load_stl(path)))
         if s['holder_sleeve']=='yes':
-            if r['spool_profile']=='Amolen 1kg':
-                variants.append(dict(check=r,parts=standing_parts(parts,r['spool_profile']),support_paint=[]))
-            else:
-                from tested_sleeves import sleeve_parts
-                flags,blocker=sleeve_parts(r['spool_profile'],parts[0][1])
-                parts.append(blocker)
-                variants.append(dict(check=r,parts=parts,support_paint=flags))
+            from tested_sleeves import sleeve_parts
+            flags,blocker=sleeve_parts(r['spool_profile'],parts[0][1])
+            parts.append(blocker)
+            variants.append(dict(check=r,parts=parts,support_paint=flags))
         else:
             variants.append(dict(check=r,parts=standing_parts(parts,r['spool_profile'])))
     plates=plan(checks,s,PRINTERS[s['printer']])

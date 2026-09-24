@@ -5,7 +5,7 @@
   "README.md": "a0418949c7503f7b578a6ee79811c0f4186c0a105fc8b1d91f0d414b9ce91ecc",
   "THIRD_PARTY.md": "da1d1873b2eee2dfef095f70dfbe7989948ba698a9a77edfd1c5dbe5a9155b47",
   "VALIDATION.md": "7a18db7e12b1809e3067736f0e9fa247029d715e6899d0bcea4ecf7f059ca005",
-  "assets.json": "e84496c0560c19e06ef96bc2a74445206498753b0fe6b25f887ae14f8d7b258c",
+  "assets.json": "c305d6522a8bf9b9407de608c1d24afd2864ffeb502880b9390ab44f193ac8f2",
   "author/Accepted_Geometry.scad": "41ef0be9e8b8fb8d3bd9c591fb32fbccc5d2fb14fec49542b465e22ab7b631bc",
   "author/Catalog.json": "b180323d2a3fc335ac8e5b0e2f369798d079b93ea4960a80a8826eaea9cee94c",
   "author/Labels.scad": "2add6f91453e42076e24a280aeef8607ec18c91fbce5ae8c05b88a364b04a84b",
@@ -49,10 +49,10 @@
   "author/cookiecad.stl": "5567fc6770ee2c3287f885820750ec695ec2e7e81bae017c985321a1d5883061",
   "author/cookiecad_sleeve.stl": "aa76da46615a9315812f45139b6e8b68c7668896c3594ce219a3d72a14008249",
   "author/cookiecad_tested_sleeve.stl": "b9aa4bb91a17ba5ebd5b6de5721961642ef3fe9e6ee1290aa19df5b98a6513bd",
-  "author/generator.py": "605c87240e0c6ee4b76449e779241432c21879718bc621e95442e0ed2228fea2",
+  "author/generator.py": "529b1439a84080b01e0aaf8967b327988b03b6ccf2ffbfc5ba25387c075729e3",
   "author/placement.py": "0412f89bb9232efd7a9148298e86508a1dee45eabe332b344120a7689a1abe67",
   "author/print_geometry.py": "093ad33095b02aaccd3c9fd571b0dc17328efb1e0f4b51edf6092163e2149f59",
-  "author/tested_sleeves.py": "797495caacf39f40fd49efc2a02b6c22b97c2a010b6ee2d6066b1aa4f386469f",
+  "author/tested_sleeves.py": "6bd2a61709ddac15d9390beb9c54e2a36f323a14eed44feeb296472ed4ed5553",
   "batch_features.js": "b3da84cd7b7701f6df27252c81e0525e005d503fef4158da39633f14d6525125",
   "bridge.js": "2ebd7439959ae60d54140d5f7a156e30eb95bcf9e918f41ffb3ca01ef48ad361",
   "compile-worker.js": "d80c97aa4afb6c1dc3e5679757738680f4a583e2f13a70b9f13a52e5cbecf8c3",
@@ -89,5 +89,6 @@
   "vendor/pyodide/pyodide.mjs.map": "2c222c365362dcf99657da38aa627537e732006692f0da4dcf7e5f783724795d",
   "vendor/pyodide/python_stdlib.zip": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
   "author/amolen.stl": "fa4402ffd01517ef2b77670e024610e92d03b433363a77170d3a4a75a86e43b6",
-  "author/amolen_tested_sleeve.stl": "e56734f2a5af30b1c3abc298d000c767d5410b19f59ad2d79bd9d1af2f53b7dc"
+  "author/amolen_tested_sleeve.stl": "e56734f2a5af30b1c3abc298d000c767d5410b19f59ad2d79bd9d1af2f53b7dc",
+  "author/Amolen_Sleeve.json": "2412d178f2309cd5a55e3a75fa3c3c6940ff4350ada7b63172a4aee7baa08efe"
 }

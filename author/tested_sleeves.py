@@ -4,7 +4,14 @@ from pathlib import Path
 from functools import lru_cache
 @lru_cache(None)
 def reference():
-    return json.loads(Path(__file__).with_name('Tested_Sleeves.json').read_text())
+    data=json.loads(Path(__file__).with_name('Tested_Sleeves.json').read_text())
+    # Amolen's sleeve was captured from the supplied owner-tested 3MF.  Keep
+    # it as a separate source file so its support paint and blocker remain
+    # traceable to that project while sharing the same export path.
+    amolen=Path(__file__).with_name('Amolen_Sleeve.json')
+    if amolen.exists():
+        data['Amolen 1kg']=json.loads(amolen.read_text())
+    return data
 def body_mesh(profile):
     """Return the exact body mesh captured from the owner-tested sleeve project."""
     src=reference()[profile]['body']
