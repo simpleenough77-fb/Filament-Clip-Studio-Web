@@ -152,6 +152,16 @@ def test_support_footer_on_public_pages():
         assert 'href="https://ko-fi.com/post/Provide-Development-Hardware-A5C327LDRO"' in html, name
         assert html.index('class="support"') < html.index('</main>'), name
 
+def test_page_images_exist():
+    acc = json.loads((ROOT / 'downloads' / 'accessories' / 'accessories.json').read_text(encoding='utf-8'))
+    wanted = {'images/accessories/' + i['image'] for i in acc['items']}
+    for name in ('index.html', 'guide.html', 'accessories.html'):
+        wanted |= set(re.findall(r'images/photos/[\w.-]+\.jpg', (ROOT / name).read_text(encoding='utf-8')))
+    missing = sorted(p for p in wanted if not (ROOT / p).is_file())
+    assert not missing, missing
+    for p in wanted:
+        assert (ROOT / p).stat().st_size < 600_000, p + ' is too large for the web; resize it'
+
 if __name__ == '__main__':
     failures = 0
     for name, fn in sorted(globals().items()):
