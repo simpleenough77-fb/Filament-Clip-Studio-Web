@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Filament Clip Studio - Holders and mounting templates</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#edf3f3;background:#10191d;color-scheme:dark}body{margin:0}main{max-width:980px;margin:auto;padding:40px 26px 70px}h1{font-size:38px;letter-spacing:-1px;margin:8px 0 12px}h2{font-size:22px;margin:0 0 10px;color:#f1faf8}h3{font-size:17px;margin:4px 0 6px;color:#f1faf8}p,li{color:#b5c6ca;line-height:1.65}.eyebrow{color:#6ce3ba;font-size:12px;font-weight:700;letter-spacing:2px}.panel{background:#19262c;padding:24px;border:1px solid #304148;border-radius:16px;margin-top:20px}.small{font-size:13px}.notice{border-left:3px solid #73c8b0;padding-left:13px}.links{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 24px}a.button{background:#83eac5;color:#10261e;font:600 14px system-ui;border-radius:8px;padding:11px 18px;text-decoration:none;display:inline-block}a.text{color:#83eac5}code{background:#101b20;border:1px solid #304148;border-radius:4px;padding:2px 5px;color:#d8f5eb}ol,ul{padding-left:24px}.back{color:#83eac5;text-decoration:none;font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:14px}.card{background:#101b20;border:1px solid #304148;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px}.card p{margin:0;font-size:14px}.meta{font-size:13px;color:#8fa7ad}.fits{font-size:13px;color:#a5dec6}.card a.button{align-self:flex-start;margin-top:auto}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:700px){.photos{grid-template-columns:1fr}}
+figure{margin:0}figure img{width:100%;border-radius:10px;display:block;aspect-ratio:4/3;object-fit:cover;background:#101b20}figcaption{font-size:13px;color:#8fa7ad;margin-top:6px}
+figure.missing img{display:none}figure .ph{display:none}figure.missing .ph{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;border:2px dashed #40545c;border-radius:10px;color:#6f878d;font-size:14px;background:#101b20}
+</style>
+</head>
+<body><main>
+<a class="back" href="./">&larr; Back to Filament Clip Studio</a>
+<div class="eyebrow" style="margin-top:28px">HOLDERS &amp; MOUNTING TEMPLATES</div>
+<h1>Put your labels on the machines</h1>
+<p>Clip holders mount on AMS units, filament dryers and shelves so each spool's label sits right where you load it. Mounting templates center a holder on a specific device. Print them in any filament; they are attached with 24&nbsp;mm double-sided nano tape.</p>
+<div class="links"><a class="button" href="./">Open the studio</a><a class="button" href="./guide.html">User guide</a></div>
+
+<section class="panel"><h2>In use</h2>
+<div class="photos">
+<figure><img src="./images/photos/holders-on-ams.jpg" alt="Label clips in holders mounted on AMS HT units and a filament dryer" loading="lazy" onerror="this.parentElement.classList.add('missing')"><div class="ph">Photo coming soon</div><figcaption>Holders on AMS HT units and a Creality SpacePi X4 dryer.</figcaption></figure>
+<figure><img src="./images/photos/clips-on-shelf.jpg" alt="Label clips on spools stored on a shelf" loading="lazy" onerror="this.parentElement.classList.add('missing')"><div class="ph">Photo coming soon</div><figcaption>Label clips on spools stored on a shelf.</figcaption></figure>
+</div></section>
+
+<section class="panel"><h2>Clip holders</h2><p class="small">"Fits" lists the printers in the studio whose usable plate area holds the part, including diagonal placement where needed.</p><div id="holders" class="cards"><p class="small">Loading…</p></div></section>
+
+<section class="panel"><h2>Mounting templates</h2><p class="small">A template is a placement guide: it sits on the device and positions the holder so it ends up centered.</p><div id="templates" class="cards"><p class="small">Loading…</p></div></section>
+
+<section class="panel"><h2>Mounting a holder</h2>
+<p>You need the holder, the template for your device, 24&nbsp;mm double-sided nano tape and isopropyl alcohol.</p>
+<ol>
+<li>Clean both surfaces, the spot on the device and the back of the holder, with isopropyl alcohol. Let them dry.</li>
+<li>Place the template on the device. It centers the holder on the device.</li>
+<li>Dry-fit first: set the holder in the template without tape and check the position.</li>
+<li>Apply the tape to the back of the holder.</li>
+<li>Using the template to position it, press the holder onto the device firmly, then remove the template.</li>
+</ol>
+<p class="notice small">Tape is hard to reposition once it has bonded, which is why the dry fit comes first.</p>
+</section>
+<p class="small" style="margin-top:26px">Filament Clip Studio &middot; browser edition</p>
+</main>
+<script>
+(async()=>{
+ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ // Can a w x d rectangle sit inside a W x H area, trying rotations in 0.5 degree steps?
+ const fits=(w,d,W,H)=>{for(let a=0;a<=90;a+=0.5){const r=a*Math.PI/180,c=Math.cos(r),s=Math.sin(r);if(w*c+d*s<=W+1e-6&&w*s+d*c<=H+1e-6)return true;}return false;};
+ try{
+  const [acc,printers]=await Promise.all([fetch('./downloads/accessories/accessories.json').then(r=>r.json()),fetch('./author/Printers.json').then(r=>r.json())]);
+  const fitList=([w,d])=>{const ok=Object.values(printers).filter(p=>{const [x0,y0,x1,y1]=p.usable;return fits(w,d,x1-x0,y1-y0);}).map(p=>p.id);return ok.length?ok.join(', '):'None of the listed printers';};
+  const card=i=>`<div class="card"><figure><img src="./images/accessories/${esc(i.image)}" alt="${esc(i.name)}" loading="lazy" onerror="this.parentElement.classList.add('missing')"><div class="ph">Photo coming soon</div></figure><h3>${esc(i.name)}</h3><p>${esc(i.description)}</p><div class="meta">${i.size.map(v=>Math.round(v*10)/10).join(' &times; ')} mm</div>${i.kind==='holder'?`<div class="fits">Fits: ${esc(fitList(i.size))}</div>`:''}<a class="button" href="./downloads/accessories/${esc(i.file)}" download>Download STL</a></div>`;
+  document.getElementById('holders').innerHTML=acc.items.filter(i=>i.kind==='holder').map(card).join('');
+  document.getElementById('templates').innerHTML=acc.items.filter(i=>i.kind==='template').map(card).join('');
+ }catch(e){for(const id of ['holders','templates'])document.getElementById(id).innerHTML='<p class="small">Unable to load the accessory list: '+esc(e.message)+'</p>';}
+})();
+</script>
+</body></html>

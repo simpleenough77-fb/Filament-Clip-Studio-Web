@@ -77,6 +77,24 @@ def test_source_hashes_cover_tracked_files():
     assert not any(k.startswith('.github/') or k in build_site.GENERATED for k in hashes)
 
 
+def test_accessories_manifest_matches_stl_files():
+    import struct
+    acc = json.loads((ROOT / 'downloads' / 'accessories' / 'accessories.json').read_text(encoding='utf-8'))
+    ids = [i['id'] for i in acc['items']]
+    assert len(ids) == len(set(ids)), 'duplicate accessory ids'
+    for item in acc['items']:
+        assert item['kind'] in ('holder', 'template'), item['id']
+        data = (ROOT / 'downloads' / 'accessories' / item['file']).read_bytes()
+        count = struct.unpack('<I', data[80:84])[0]
+        assert len(data) == 84 + 50 * count, f"{item['file']} is not a valid binary STL"
+        lo, hi = [float('inf')] * 3, [float('-inf')] * 3
+        for t in range(count):
+            v = struct.unpack('<9f', data[84 + 50 * t + 12:84 + 50 * t + 48])
+            for k in range(9):
+                lo[k % 3] = min(lo[k % 3], v[k]); hi[k % 3] = max(hi[k % 3], v[k])
+        size = [round(hi[k] - lo[k], 2) for k in range(3)]
+        assert all(abs(a - b) < 0.05 for a, b in zip(size, item['size'])), (item['file'], size, item['size'])
+
 if __name__ == '__main__':
     failures = 0
     for name, fn in sorted(globals().items()):
