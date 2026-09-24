@@ -36,5 +36,12 @@
   "author/generator.py",
   "author/placement.py",
   "author/print_geometry.py",
-  "author/tested_sleeves.py"
+  "author/tested_sleeves.py",
+  "author/accessories.py",
+  "downloads/accessories/One_post_holder.stl",
+  "downloads/accessories/Dual_post_holder.stl",
+  "downloads/accessories/Quad_post_holder.stl",
+  "downloads/accessories/AMS_2_Pro_template.stl",
+  "downloads/accessories/AMS_HT_template.stl",
+  "downloads/accessories/Creality_SpacePi_X4_template.stl"
 ]

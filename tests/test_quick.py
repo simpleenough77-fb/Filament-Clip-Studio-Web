@@ -95,6 +95,46 @@ def test_accessories_manifest_matches_stl_files():
         size = [round(hi[k] - lo[k], 2) for k in range(3)]
         assert all(abs(a - b) < 0.05 for a, b in zip(size, item['size'])), (item['file'], size, item['size'])
 
+def test_accessories_plan_and_3mf():
+    import tempfile, zipfile, xml.etree.ElementTree as ET
+    import accessories
+    from batch_export import write_batch
+    devices = accessories.validate_devices({'ams_ht': '2', 'ams_2_pro': 1, 'spacepi_x4': 1})
+    names = {a['name']: a['quantity'] for a in accessories.summary(devices)}
+    assert names == {'AMS HT mounting template': 1, 'One-post holder': 2, 'AMS 2 Pro mounting template': 1,
+                     'Four-post holder': 1, 'Creality SpacePi X4 mounting template': 1, 'Two-post holder': 2}
+    for printer in ('H2D', 'H2S', 'A2L'):
+        variants, plates = accessories.plan(devices, g.PRINTERS[printer], 3)
+        assert sum(len(p['items']) for p in plates) == 8, printer
+        for p in plates:
+            x0, y0, x1, y1 = p['area']
+            for i in p['items']:
+                assert x0 - 1e-6 <= i['x'] and i['x'] + i['w'] <= x1 + 1e-6 and y0 - 1e-6 <= i['y'] and i['y'] + i['h'] <= y1 + 1e-6
+    for printer in ('X1 Carbon', 'A1 mini'):
+        try:
+            accessories.plan({'ams_2_pro': 1}, g.PRINTERS[printer], 0)
+        except ValueError as e:
+            assert 'does not fit' in str(e)
+        else:
+            raise AssertionError('four-post holder must be rejected on ' + printer)
+    assert accessories.plan({'ams_ht': 1}, g.PRINTERS['A1 mini'], 0)[1]
+    for bad in ({'ams_ht': 21}, {'ams_ht': -1}, {'toaster': 1}, {'ams_ht': True}):
+        try:
+            accessories.validate_devices(bad)
+        except ValueError:
+            continue
+        raise AssertionError(bad)
+    s = g.validate(dict(rows=[dict(product=g.CATALOG[0]['id'], quantity=1)], settings=dict(printer='H2D', devices=devices)))['settings']
+    variants, plates = accessories.plan(s['devices'], g.PRINTERS['H2D'], 0)
+    for n, p in enumerate(plates):
+        p['number'] = n + 1; p['origin'] = [n * 420, 0]
+    out = Path(tempfile.mkdtemp()) / 'accessories.3mf'
+    write_batch(out, variants, plates, s, g.PRINTERS['H2D'], g.AUTHOR)
+    with zipfile.ZipFile(out) as z:
+        assert z.testzip() is None
+        model = ET.fromstring(z.read('3D/3dmodel.model'))
+    assert len(model.findall('.//m:build/m:item', {'m': g.NS})) == 8
+
 if __name__ == '__main__':
     failures = 0
     for name, fn in sorted(globals().items()):

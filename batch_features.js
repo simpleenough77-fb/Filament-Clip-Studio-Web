@@ -17,6 +17,7 @@ function applyDraft(d){
  for(const k of ['printer','font','type_size','vendor_size','color_size','style','holder_sleeve','body_mode','text_mode']){
   if(d.settings?.[k]!==undefined){const el=$(k),v=String(d.settings[k]);if(el.tagName!=='SELECT'||[...el.options].some(o=>o.value===v))el.value=v;}
  }
+ const dv=d.settings?.devices||{};for(const k of Object.keys(DEVICES))$('dev_'+k).value=dv[k]||0;updateDeviceSummary();
  renderRows();
 }
 function rememberUndo(){undoDraft=draft();try{localStorage.setItem('clip-label-undo',JSON.stringify(undoDraft));}catch{}}
