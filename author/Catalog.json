@@ -10275,6 +10275,1434 @@
       ],
       "swatch_method": "Initial catalog color approximation from owner/vendor listing",
       "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-paper-white",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Paper White",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Paper White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-charcoal-black",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Charcoal Black",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Charcoal Black",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-sakura-pink",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Sakura Pink",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Sakura Pink",
+      "swatch": "#E85B7A",
+      "preview_palette": [
+        "#E85B7A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-lavender-purple",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Lavender Purple",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Lavender Purple",
+      "swatch": "#75458F",
+      "preview_palette": [
+        "#75458F"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-eggplant-purple",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Eggplant Purple",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Eggplant Purple",
+      "swatch": "#75458F",
+      "preview_palette": [
+        "#75458F"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-fuchsia",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Fuchsia",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Fuchsia",
+      "swatch": "#D92A8A",
+      "preview_palette": [
+        "#D92A8A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-peach-fuzz",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Peach Fuzz",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Peach Fuzz",
+      "swatch": "#707B83",
+      "preview_palette": [
+        "#707B83"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-carrot-orange",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Carrot Orange",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Carrot Orange",
+      "swatch": "#F27A24",
+      "preview_palette": [
+        "#F27A24"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-lime-green",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Lime Green",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Lime Green",
+      "swatch": "#2E8B57",
+      "preview_palette": [
+        "#2E8B57"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-ice-blue",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Ice Blue",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Ice Blue",
+      "swatch": "#24558A",
+      "preview_palette": [
+        "#24558A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-sand-beige",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Sand Beige",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Sand Beige",
+      "swatch": "#D8B98A",
+      "preview_palette": [
+        "#D8B98A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-real-gold",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Real Gold",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Real Gold",
+      "swatch": "#C9A227",
+      "preview_palette": [
+        "#C9A227"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-koala-grey",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Koala Grey",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Koala Grey",
+      "swatch": "#777777",
+      "preview_palette": [
+        "#777777"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-ocean-blue",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Ocean Blue",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Ocean Blue",
+      "swatch": "#24558A",
+      "preview_palette": [
+        "#24558A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-apple-red",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Apple Red",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Apple Red",
+      "swatch": "#D52B2B",
+      "preview_palette": [
+        "#D52B2B"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-forest-green",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Forest Green",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Forest Green",
+      "swatch": "#2E8B57",
+      "preview_palette": [
+        "#2E8B57"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-chestnut-brown",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA",
+      "color_name": "Chestnut Brown",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-high-speed",
+      "source_date": "2026-09-23",
+      "source_color_name": "Chestnut Brown",
+      "swatch": "#7A4B2A",
+      "preview_palette": [
+        "#7A4B2A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-matte-sand-beige",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Matte",
+      "color_name": "Sand Beige",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-matte",
+      "source_date": "2026-09-23",
+      "source_color_name": "Sand Beige",
+      "swatch": "#D8B98A",
+      "preview_palette": [
+        "#D8B98A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-matte-terracotta",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Matte",
+      "color_name": "Terracotta",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-matte",
+      "source_date": "2026-09-23",
+      "source_color_name": "Terracotta",
+      "swatch": "#B85C45",
+      "preview_palette": [
+        "#B85C45"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-matte-navy-blue",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Matte",
+      "color_name": "Navy Blue",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-matte",
+      "source_date": "2026-09-23",
+      "source_color_name": "Navy Blue",
+      "swatch": "#24558A",
+      "preview_palette": [
+        "#24558A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-matte-porcelain-white",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Matte",
+      "color_name": "Porcelain White",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-matte",
+      "source_date": "2026-09-23",
+      "source_color_name": "Porcelain White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-matte-chocolate-brown",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Matte",
+      "color_name": "Chocolate Brown",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-matte",
+      "source_date": "2026-09-23",
+      "source_color_name": "Chocolate Brown",
+      "swatch": "#6D4531",
+      "preview_palette": [
+        "#6D4531"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-mint-macaron",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Mint Macaron",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Mint Macaron",
+      "swatch": "#707B83",
+      "preview_palette": [
+        "#707B83"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-pink",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Pink",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Pink",
+      "swatch": "#707B83",
+      "preview_palette": [
+        "#707B83"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-sakura-pink",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Sakura Pink",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Sakura Pink",
+      "swatch": "#E85B7A",
+      "preview_palette": [
+        "#E85B7A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-coffee-gold",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Coffee Gold",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Coffee Gold",
+      "swatch": "#C9A227",
+      "preview_palette": [
+        "#C9A227"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-pumpkin-orange",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Pumpkin Orange",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Pumpkin Orange",
+      "swatch": "#F27A24",
+      "preview_palette": [
+        "#F27A24"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-gradient-aged-brass",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Gradient Aged Brass",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Gradient Aged Brass",
+      "swatch": "#707B83",
+      "preview_palette": [
+        "#707B83"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-white",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk White",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-purple",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Purple",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Purple",
+      "swatch": "#75458F",
+      "preview_palette": [
+        "#75458F"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-silver-grey",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Silver Grey",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Silver Grey",
+      "swatch": "#777777",
+      "preview_palette": [
+        "#777777"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-mercury-silver",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Mercury Silver",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Mercury Silver",
+      "swatch": "#707B83",
+      "preview_palette": [
+        "#707B83"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-gold",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Gold",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Gold",
+      "swatch": "#C9A227",
+      "preview_palette": [
+        "#C9A227"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-black",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Black",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Black",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-bronze-green",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Bronze Green",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Bronze Green",
+      "swatch": "#2E8B57",
+      "preview_palette": [
+        "#2E8B57"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-ice-blue",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Ice Blue",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Ice Blue",
+      "swatch": "#24558A",
+      "preview_palette": [
+        "#24558A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-cucumber-green",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Cucumber Green",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Cucumber Green",
+      "swatch": "#2E8B57",
+      "preview_palette": [
+        "#2E8B57"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-neon-green",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Neon Green",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Neon Green",
+      "swatch": "#2E8B57",
+      "preview_palette": [
+        "#2E8B57"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-baby-blue",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Baby Blue",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Baby Blue",
+      "swatch": "#24558A",
+      "preview_palette": [
+        "#24558A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-fluoro-yellow",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Fluoro Yellow",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Fluoro Yellow",
+      "swatch": "#F0C419",
+      "preview_palette": [
+        "#F0C419"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-red-copper",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Red Copper",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Red Copper",
+      "swatch": "#D52B2B",
+      "preview_palette": [
+        "#D52B2B"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-sapphire-blue",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Sapphire Blue",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Sapphire Blue",
+      "swatch": "#24558A",
+      "preview_palette": [
+        "#24558A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-silk-black-blue",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk",
+      "color_name": "Silk Black Blue",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Silk Black Blue",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-s-series-black-purple-orange",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk S-Series",
+      "color_name": "Black Purple Orange",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-s-series",
+      "source_date": "2026-09-23",
+      "source_color_name": "Black Purple Orange",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-s-series-blue-red-yellow-green",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk S-Series",
+      "color_name": "Blue Red Yellow Green",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-s-series",
+      "source_date": "2026-09-23",
+      "source_color_name": "Blue Red Yellow Green",
+      "swatch": "#D52B2B",
+      "preview_palette": [
+        "#D52B2B"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-s-series-berry-pop",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk S-Series",
+      "color_name": "Berry Pop",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-s-series",
+      "source_date": "2026-09-23",
+      "source_color_name": "Berry Pop",
+      "swatch": "#707B83",
+      "preview_palette": [
+        "#707B83"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-s-series-nebula-ribbon",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk S-Series",
+      "color_name": "Nebula Ribbon",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-s-series",
+      "source_date": "2026-09-23",
+      "source_color_name": "Nebula Ribbon",
+      "swatch": "#707B83",
+      "preview_palette": [
+        "#707B83"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-s-series-black-turquoise-magenta",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk S-Series",
+      "color_name": "Black Turquoise Magenta",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-s-series",
+      "source_date": "2026-09-23",
+      "source_color_name": "Black Turquoise Magenta",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-s-series-black-red",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk S-Series",
+      "color_name": "Black Red",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-s-series",
+      "source_date": "2026-09-23",
+      "source_color_name": "Black Red",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-s-series-red-white",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk S-Series",
+      "color_name": "Red White",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-s-series",
+      "source_date": "2026-09-23",
+      "source_color_name": "Red White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-s-series-black-red-yellow",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk S-Series",
+      "color_name": "Black Red Yellow",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-s-series",
+      "source_date": "2026-09-23",
+      "source_color_name": "Black Red Yellow",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-s-series-black-yellow-green",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk S-Series",
+      "color_name": "Black Yellow Green",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-s-series",
+      "source_date": "2026-09-23",
+      "source_color_name": "Black Yellow Green",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-s-series-gray-blue-brown",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk S-Series",
+      "color_name": "Gray Blue Brown",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-s-series",
+      "source_date": "2026-09-23",
+      "source_color_name": "Gray Blue Brown",
+      "swatch": "#24558A",
+      "preview_palette": [
+        "#24558A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-s-series-black-pink-white",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk S-Series",
+      "color_name": "Black Pink White",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-s-series",
+      "source_date": "2026-09-23",
+      "source_color_name": "Black Pink White",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-s-series-gold-purple-red",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk S-Series",
+      "color_name": "Gold Purple Red",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-s-series",
+      "source_date": "2026-09-23",
+      "source_color_name": "Gold Purple Red",
+      "swatch": "#D52B2B",
+      "preview_palette": [
+        "#D52B2B"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-s-series-blue-pink-white",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk S-Series",
+      "color_name": "Blue Pink White",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-s-series",
+      "source_date": "2026-09-23",
+      "source_color_name": "Blue Pink White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-s-series-blue-pink-green",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk S-Series",
+      "color_name": "Blue Pink Green",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-s-series",
+      "source_date": "2026-09-23",
+      "source_color_name": "Blue Pink Green",
+      "swatch": "#24558A",
+      "preview_palette": [
+        "#24558A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-glow-green",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk Glow",
+      "color_name": "Green",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic-glow-in-the-dark-1-75mm-1kg-2-2lb",
+      "source_date": "2026-09-23",
+      "source_color_name": "Green",
+      "swatch": "#2E8B57",
+      "preview_palette": [
+        "#2E8B57"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-glow-blue",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk Glow",
+      "color_name": "Blue",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic-glow-in-the-dark-1-75mm-1kg-2-2lb",
+      "source_date": "2026-09-23",
+      "source_color_name": "Blue",
+      "swatch": "#24558A",
+      "preview_palette": [
+        "#24558A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-glow-orange-red",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk Glow",
+      "color_name": "Orange-Red",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic-glow-in-the-dark-1-75mm-1kg-2-2lb",
+      "source_date": "2026-09-23",
+      "source_color_name": "Orange-Red",
+      "swatch": "#D52B2B",
+      "preview_palette": [
+        "#D52B2B"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-glow-purple",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk Glow",
+      "color_name": "Purple",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic-glow-in-the-dark-1-75mm-1kg-2-2lb",
+      "source_date": "2026-09-23",
+      "source_color_name": "Purple",
+      "swatch": "#75458F",
+      "preview_palette": [
+        "#75458F"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-glow-yellow",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk Glow",
+      "color_name": "Yellow",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-basic-glow-in-the-dark-1-75mm-1kg-2-2lb",
+      "source_date": "2026-09-23",
+      "source_color_name": "Yellow",
+      "swatch": "#F0C419",
+      "preview_palette": [
+        "#F0C419"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-s-series-glow-black-green",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA S-Series Glow",
+      "color_name": "Black Green",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-s-series-glow-in-the-dark-1-75mm-1kg-2-2lb",
+      "source_date": "2026-09-23",
+      "source_color_name": "Black Green",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-s-series-glow-red-yellow",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA S-Series Glow",
+      "color_name": "Red Yellow",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-s-series-glow-in-the-dark-1-75mm-1kg-2-2lb",
+      "source_date": "2026-09-23",
+      "source_color_name": "Red Yellow",
+      "swatch": "#D52B2B",
+      "preview_palette": [
+        "#D52B2B"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-quad-blue-red-white-black",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk Quad",
+      "color_name": "Blue Red White Black",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-quad-color-1-75mm-1kg-2-2lb",
+      "source_date": "2026-09-23",
+      "source_color_name": "Blue Red White Black",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-quad-blue-yellow-red-white",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk Quad",
+      "color_name": "Blue Yellow Red White",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-quad-color-1-75mm-1kg-2-2lb",
+      "source_date": "2026-09-23",
+      "source_color_name": "Blue Yellow Red White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-temp-color-change-purple-green-to-pink-yellow",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Temp Color Change",
+      "color_name": "Purple Green to Pink Yellow",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-temperature",
+      "source_date": "2026-09-23",
+      "source_color_name": "Purple Green to Pink Yellow",
+      "swatch": "#75458F",
+      "preview_palette": [
+        "#75458F"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-temp-color-change-black-to-red-to-yellow",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Temp Color Change",
+      "color_name": "Black To Red To Yellow",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-temperature",
+      "source_date": "2026-09-23",
+      "source_color_name": "Black To Red To Yellow",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-temp-color-change-red-to-white",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Temp Color Change",
+      "color_name": "Red to White",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-temperature",
+      "source_date": "2026-09-23",
+      "source_color_name": "Red to White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-temp-color-change-blue-to-white",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Temp Color Change",
+      "color_name": "Blue to White",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-temperature",
+      "source_date": "2026-09-23",
+      "source_color_name": "Blue to White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-temp-color-change-orange-to-white",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Temp Color Change",
+      "color_name": "Orange to White",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-temperature",
+      "source_date": "2026-09-23",
+      "source_color_name": "Orange to White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-temp-color-change-green-to-yellow",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Temp Color Change",
+      "color_name": "Green to Yellow",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-temperature",
+      "source_date": "2026-09-23",
+      "source_color_name": "Green to Yellow",
+      "swatch": "#2E8B57",
+      "preview_palette": [
+        "#2E8B57"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-dual-blue-bright-yellow",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Dual",
+      "color_name": "Blue & Bright Yellow",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-dual-color",
+      "source_date": "2026-09-23",
+      "source_color_name": "Blue & Bright Yellow",
+      "swatch": "#24558A",
+      "preview_palette": [
+        "#24558A"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-dual-black-gold",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Dual",
+      "color_name": "Black & Gold",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-basic-dual-color",
+      "source_date": "2026-09-23",
+      "source_color_name": "Black & Gold",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-petg-multicolor-rainbow",
+      "manufacturer": "Amolen",
+      "filament_type": "PETG",
+      "color_name": "Multicolor Rainbow",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/petg-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Multicolor Rainbow",
+      "swatch": "#718096",
+      "preview_palette": [
+        "#718096"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-petg-black",
+      "manufacturer": "Amolen",
+      "filament_type": "PETG",
+      "color_name": "Black",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/petg-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Black",
+      "swatch": "#111111",
+      "preview_palette": [
+        "#111111"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-petg-grey",
+      "manufacturer": "Amolen",
+      "filament_type": "PETG",
+      "color_name": "Grey",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/petg-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Grey",
+      "swatch": "#777777",
+      "preview_palette": [
+        "#777777"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-petg-red",
+      "manufacturer": "Amolen",
+      "filament_type": "PETG",
+      "color_name": "Red",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/petg-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "Red",
+      "swatch": "#D52B2B",
+      "preview_palette": [
+        "#D52B2B"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-petg-white",
+      "manufacturer": "Amolen",
+      "filament_type": "PETG",
+      "color_name": "White",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/petg-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-tpu-75a-white",
+      "manufacturer": "Amolen",
+      "filament_type": "TPU",
+      "color_name": "75A White",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/tpu-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "75A White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-tpu-90a-clear",
+      "manufacturer": "Amolen",
+      "filament_type": "TPU",
+      "color_name": "90A Clear",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/tpu-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "90A Clear",
+      "swatch": "#C8D6D8",
+      "preview_palette": [
+        "#C8D6D8"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-tpu-95a-clear",
+      "manufacturer": "Amolen",
+      "filament_type": "TPU",
+      "color_name": "95A Clear",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/tpu-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "95A Clear",
+      "swatch": "#C8D6D8",
+      "preview_palette": [
+        "#C8D6D8"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-tpu-95a-fruity-splash",
+      "manufacturer": "Amolen",
+      "filament_type": "TPU",
+      "color_name": "95A Fruity Splash",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/tpu-basic",
+      "source_date": "2026-09-23",
+      "source_color_name": "95A Fruity Splash",
+      "swatch": "#707B83",
+      "preview_palette": [
+        "#707B83"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-abs-glow-red",
+      "manufacturer": "Amolen",
+      "filament_type": "ABS Glow",
+      "color_name": "Red",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/abs-glow-in-the-dark",
+      "source_date": "2026-09-23",
+      "source_color_name": "Red",
+      "swatch": "#D52B2B",
+      "preview_palette": [
+        "#D52B2B"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
+      "available_at_refresh": true
     }
   ]
 }
