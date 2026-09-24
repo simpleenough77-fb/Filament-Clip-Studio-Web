@@ -144,6 +144,14 @@ def test_github_pages_redirect_stub():
         assert "location.replace('https://filamentclip.com' + p" in page and 'url=https://filamentclip.com/' in page
     assert (out / 'downloads' / 'catalog.csv').read_text() == build_site.catalog_csv_text()
 
+def test_support_footer_on_public_pages():
+    for name in ('index.html', 'guide.html', 'accessories.html'):
+        html = (ROOT / name).read_text(encoding='utf-8')
+        assert html.count('class="support"') == 1, name
+        assert 'href="https://ko-fi.com/clipstudio"' in html, name
+        assert 'href="https://ko-fi.com/post/Provide-Development-Hardware-A5C327LDRO"' in html, name
+        assert html.index('class="support"') < html.index('</main>'), name
+
 if __name__ == '__main__':
     failures = 0
     for name, fn in sorted(globals().items()):
