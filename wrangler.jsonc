@@ -1,0 +1,12 @@
+// Cloudflare Workers static-assets site for filamentclip.com.
+// Deployed by .github/workflows/pages.yml after tests pass; _site is staged by that workflow.
+// Custom domains (filamentclip.com, www.filamentclip.com) are attached in the Cloudflare dashboard.
+{
+  "name": "filament-clip-studio",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./_site",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

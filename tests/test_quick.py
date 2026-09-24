@@ -135,6 +135,15 @@ def test_accessories_plan_and_3mf():
         model = ET.fromstring(z.read('3D/3dmodel.model'))
     assert len(model.findall('.//m:build/m:item', {'m': g.NS})) == 8
 
+def test_github_pages_redirect_stub():
+    import tempfile
+    out = Path(tempfile.mkdtemp())
+    build_site.write_redirect_stub(out, 'https://filamentclip.com/')
+    for name in ('index.html', '404.html'):
+        page = (out / name).read_text()
+        assert "location.replace('https://filamentclip.com' + p" in page and 'url=https://filamentclip.com/' in page
+    assert (out / 'downloads' / 'catalog.csv').read_text() == build_site.catalog_csv_text()
+
 if __name__ == '__main__':
     failures = 0
     for name, fn in sorted(globals().items()):

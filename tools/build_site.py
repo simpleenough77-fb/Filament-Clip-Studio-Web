@@ -2,6 +2,8 @@
 
   python tools/build_site.py            # write downloads/catalog.csv and SOURCE_HASHES.json
   python tools/build_site.py --stamp    # also stamp the build badge in index.html (CI only)
+  python tools/build_site.py --redirect-stub DIR HOST
+                                        # write a GitHub Pages site that forwards every path to HOST
 
 downloads/catalog.csv is the single catalog feed for the Google Sheets CSV builder, whose
 Catalog tab imports it with =IMPORTDATA(). It is generated from author/Catalog.json, so the
@@ -51,7 +53,40 @@ def stamp_build(root=ROOT):
     return sha, day
 
 
+REDIRECT = """<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Filament Clip Studio has moved</title>
+<link rel="canonical" href="{host}/"><meta http-equiv="refresh" content="0; url={host}/">
+<script>
+// Keep the page, query and fragment: /Filament-Clip-Studio-Web/guide.html#x -> {host}/guide.html#x
+var p = location.pathname.replace(/^\\/Filament-Clip-Studio-Web/i, '') || '/';
+location.replace('{host}' + p + location.search + location.hash);
+</script></head>
+<body style="font-family:system-ui,sans-serif;background:#10191d;color:#edf3f3;padding:40px">
+<p>Filament Clip Studio has moved to <a style="color:#83eac5" href="{host}/">{host}</a>.</p></body></html>
+"""
+
+
+def write_redirect_stub(dest, host):
+    """GitHub Pages fallback: every old github.io URL forwards to the new host.
+
+    downloads/catalog.csv is kept so copies of the Google Sheets builder made before
+    the move keep loading the catalog.
+    """
+    dest = Path(dest); host = host.rstrip('/')
+    (dest / 'downloads').mkdir(parents=True, exist_ok=True)
+    page = REDIRECT.replace('{host}', host)
+    for name in ('index.html', '404.html'):
+        (dest / name).write_text(page, encoding='utf-8')
+    (dest / '.nojekyll').write_text('', encoding='utf-8')
+    (dest / 'downloads' / 'catalog.csv').write_text(catalog_csv_text(), encoding='utf-8')
+
+
 def main():
+    if '--redirect-stub' in sys.argv:
+        i = sys.argv.index('--redirect-stub')
+        write_redirect_stub(sys.argv[i + 1], sys.argv[i + 2])
+        print('Wrote GitHub Pages redirect to', sys.argv[i + 2])
+        return
     CATALOG_CSV.parent.mkdir(exist_ok=True)
     CATALOG_CSV.write_text(catalog_csv_text(), encoding='utf-8')
     hashes = source_hashes()
