@@ -1,3 +1,7 @@
 .DS_Store
 __pycache__/
 *.pyc
+# Generated at deploy by tools/build_site.py
+SOURCE_HASHES.json
+downloads/catalog.csv
+_site/
