@@ -234,11 +234,6 @@ async def generate(key,ack=False):
         if s['holder_sleeve']=='yes':
             from tested_sleeves import sleeve_parts
             flags,blocker=sleeve_parts(r['spool_profile'],parts[0][1])
-            # The supplied Amolen project is already standing on its side.
-            # Rotate only its generated text modifiers into that same frame;
-            # the owner-tested body and blocker are already in standing axes.
-            if r['spool_profile']=='Amolen 1kg':
-                parts=[parts[0]]+standing_parts(parts[1:],r['spool_profile'])
             parts.append(blocker)
             variants.append(dict(check=r,parts=parts,support_paint=flags))
         else:
