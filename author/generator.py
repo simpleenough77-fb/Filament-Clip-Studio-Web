@@ -12,6 +12,8 @@ PRINTERS=json.loads((AUTHOR/'Printers.json').read_text())
 from placement import plan
 from print_geometry import body_code,standing_parts
 import batch_library
+import accessories
+import math
 LIBRARY=ROOT/"Batch_Library.json"
 FONTS=['Liberation Sans:style=Bold','DejaVu Sans:style=Bold','Liberation Serif:style=Bold']
 TOKEN=secrets.token_urlsafe(24); PREFLIGHTS={}
@@ -36,6 +38,7 @@ def validate(data, allow_empty=False):
     rows=data.get('rows',[]); settings=data.get('settings',{})
     if not (0 if allow_empty else 1)<=len(rows)<=100:raise ValueError('Add between 1 and 100 label variants.')
     s={k:settings.get(k,v) for k,v in dict(font=FONTS[0],type_size=6,vendor_size=0,color_size=0,style='part',holder_sleeve='no',body_mode='fixed',body_color='#000000',text_mode='contrast',printer='H2D',text_color='#00AE42',dark_color='#151515',light_color='#FFFFFF').items()}
+    s['devices']=accessories.validate_devices(settings.get('devices'))
     if s['holder_sleeve'] not in ('no','yes'):raise ValueError('Choose whether to include a holder sleeve.')
     if s['printer'] not in PRINTERS:raise ValueError('Choose an available printer.')
     if s['font'] not in FONTS:raise ValueError('Choose an available font.')
@@ -84,6 +87,17 @@ def filament_roles(r,s):
     text=product if s['text_mode']=='filament' else ('Bambu Green' if s['body_mode']=='fixed' else 'Light' if colors(r,s)[1]=='#FFFFFF' else 'Dark')+' contrasting filament - choose matching filament in slicer' if s['text_mode']=='contrast' else 'Shared text filament - choose in slicer'
     return [product if s['body_mode']=='filament' else 'Shared black body filament - choose in slicer',text]
 
+def full_plan(checks,s):
+    """Clip plates followed by holder/template plates, numbered and laid out together."""
+    printer=PRINTERS[s['printer']]
+    plates=plan(checks,s,printer)
+    extra,acc_plates=accessories.plan(s.get('devices',{}),printer,len(checks))
+    plates+=acc_plates
+    cols=math.ceil(math.sqrt(len(plates)))
+    for n,p in enumerate(plates):
+        p['number']=n+1;p['origin']=[n%cols*printer['bed'][0]*1.2,-(n//cols)*printer['bed'][1]*1.2]
+    return plates,extra
+
 async def preflight(data):
     data=validate(data);s=data['settings'];sizes=[s['vendor_size'],s['type_size'],s['color_size']]
     checks=[];code=includes()
@@ -107,10 +121,10 @@ async def preflight(data):
         svgfile=CACHE/'preview.svg';await run_scad(svgcode,svgfile)
         svg=ET.fromstring(svgfile.read_text())
         r['paths']=[node.attrib['d'] for node in svg.iter() if node.tag.endswith('path')]
-    plates=plan(checks,s,PRINTERS[s['printer']])
+    plates,_=full_plan(checks,s)
     key=hashlib.sha256(json.dumps(data,sort_keys=True).encode()).hexdigest()
     PREFLIGHTS[key]=(data,checks,warnings)
-    return dict(key=key,rows=checks,warnings=warnings,total=sum(r['quantity'] for r in checks),sizes=sizes,font=s['font'],style=s['style'],plates=plates,printer=PRINTERS[s['printer']])
+    return dict(key=key,rows=checks,warnings=warnings,total=sum(r['quantity'] for r in checks),sizes=sizes,font=s['font'],style=s['style'],plates=plates,printer=PRINTERS[s['printer']],accessories=accessories.summary(s['devices']))
 
 def load_stl(path):
     raw=path.read_bytes()
@@ -238,7 +252,8 @@ async def generate(key,ack=False):
             variants.append(dict(check=r,parts=parts,support_paint=flags))
         else:
             variants.append(dict(check=r,parts=standing_parts(parts,r['spool_profile'])))
-    plates=plan(checks,s,PRINTERS[s['printer']])
+    plates,extra=full_plan(checks,s)
+    variants+=extra
     write_batch(out/'Filament_Labels.3mf',variants,plates,s,PRINTERS[s['printer']],AUTHOR)
     with (out/'Labels.csv').open('w',encoding='utf-8-sig',newline='') as f:
         w=csv.writer(f);w.writerow(['manufacturer','filament_type','color_name','quantity'])
