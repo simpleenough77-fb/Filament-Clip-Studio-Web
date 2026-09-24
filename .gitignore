@@ -5,3 +5,4 @@ __pycache__/
 SOURCE_HASHES.json
 downloads/catalog.csv
 _site/
+_pages/

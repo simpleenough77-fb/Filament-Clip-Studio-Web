@@ -12,7 +12,7 @@ The first visit downloads about 28 MB of application/runtime assets. A desktop b
 
 ## Local use and hosting
 
-Serve this directory as static files (for example `python3 -m http.server 8000`) and open http://localhost:8000. Do not open index.html with file://. All runtime dependencies are included; no generation server is needed. GitHub Pages is published by the workflow described below. There are no credentials, analytics, paid API calls, or private batch files in this distribution.
+Serve this directory as static files (for example `python3 -m http.server 8000`) and open http://localhost:8000. Do not open index.html with file://. All runtime dependencies are included; no generation server is needed. The site is published by the workflow described below. There are no credentials, analytics, paid API calls, or private batch files in this distribution.
 
 ## Mechanical lineage
 
@@ -32,7 +32,7 @@ Application code and original project contributions: GPL-3.0-or-later, authorize
 
 ## Build, tests and deployment
 
-GitHub Actions (`.github/workflows/pages.yml`) runs the fast checks on every push and pull request, then deploys `main` to GitHub Pages. The Pages source must be set to **GitHub Actions** (Settings → Pages).
+GitHub Actions (`.github/workflows/pages.yml`) runs the fast checks on every push and pull request, then deploys `main` to Cloudflare Workers static assets (https://filamentclip.com, configured in `wrangler.jsonc`; headers in `_headers`). It needs the repository variable `CLOUDFLARE_ACCOUNT_ID` and secret `CLOUDFLARE_API_TOKEN` (Workers Scripts: Edit). When the variable `PRIMARY_HOST` is set, GitHub Pages serves only a redirect to it (old links keep working, and `downloads/catalog.csv` stays available there). The Pages source must be set to **GitHub Actions** (Settings → Pages).
 
 - `python tests/test_quick.py` — catalog integrity, CSV import regressions and the catalog feed (no OpenSCAD needed).
 - `node tests/test_paste.mjs` — conversion of rows pasted from a spreadsheet.

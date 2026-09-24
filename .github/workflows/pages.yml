@@ -1,4 +1,4 @@
-# Tests every push and pull request; deploys main to GitHub Pages.
+# Tests every push and pull request; deploys main to Cloudflare (filamentclip.com) and GitHub Pages.
 # Requires Settings > Pages > Build and deployment > Source = "GitHub Actions".
 name: Test and deploy
 
@@ -50,10 +50,24 @@ jobs:
       - name: Generate catalog feed, source hashes and build stamp
         run: python tools/build_site.py --stamp
       - name: Stage site
-        run: rsync -a --exclude '.git' --exclude '.github' --exclude '_site' ./ _site/
+        run: rsync -a --exclude '.git' --exclude '.github' --exclude '_site' --exclude '_pages' --exclude 'tests' --exclude 'tools' --exclude 'wrangler.jsonc' ./ _site/
+      # Primary host: Cloudflare Workers static assets (filamentclip.com).
+      # Enabled once the repo variable CLOUDFLARE_ACCOUNT_ID and secret CLOUDFLARE_API_TOKEN exist.
+      - name: Deploy to Cloudflare
+        if: vars.CLOUDFLARE_ACCOUNT_ID != ''
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
+      # GitHub Pages: the full site until PRIMARY_HOST is set, then a redirect to it
+      # (keeping downloads/catalog.csv for older copies of the Google Sheets builder).
+      - name: Stage GitHub Pages redirect
+        if: vars.PRIMARY_HOST != ''
+        run: python tools/build_site.py --redirect-stub _pages "${{ vars.PRIMARY_HOST }}"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: ${{ vars.PRIMARY_HOST != '' && '_pages' || '_site' }}
       - id: deployment
         uses: actions/deploy-pages@v4
