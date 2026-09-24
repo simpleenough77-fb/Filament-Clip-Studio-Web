@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "tape": "24 mm double-sided nano tape",
+  "note": "Sizes are the STL bounding boxes in millimetres (width x depth x height). tests/test_quick.py checks them against the files.",
+  "items": [
+    {"id": "one-post-holder", "kind": "holder", "name": "One-post holder", "file": "One_post_holder.stl", "image": "one-post-holder.jpg", "size": [77.02, 58.01, 30.0], "posts": 1,
+     "description": "Holds one label clip. Mount it on an AMS unit, dryer or shelf edge."},
+    {"id": "dual-post-holder", "kind": "holder", "name": "Two-post holder", "file": "Dual_post_holder.stl", "image": "dual-post-holder.jpg", "size": [156.44, 58.01, 30.0], "posts": 2,
+     "description": "Holds two label clips side by side."},
+    {"id": "quad-post-holder", "kind": "holder", "name": "Four-post holder", "file": "Quad_post_holder.stl", "image": "quad-post-holder.jpg", "size": [320.0, 58.01, 30.0], "posts": 4,
+     "description": "Holds four label clips side by side. At 320 mm long it needs a large print bed."},
+    {"id": "ams-2-pro-template", "kind": "template", "name": "AMS 2 Pro mounting template", "file": "AMS_2_Pro_template.stl", "image": "ams-2-pro-template.jpg", "size": [161.27, 40.0, 22.61], "device": "Bambu Lab AMS 2 Pro",
+     "description": "Centers a holder on a Bambu Lab AMS 2 Pro."},
+    {"id": "ams-ht-template", "kind": "template", "name": "AMS HT mounting template", "file": "AMS_HT_template.stl", "image": "ams-ht-template.jpg", "size": [115.0, 90.01, 35.0], "device": "Bambu Lab AMS HT",
+     "description": "Centers a holder on the front of a Bambu Lab AMS HT."},
+    {"id": "creality-spacepi-x4-template", "kind": "template", "name": "Creality SpacePi X4 mounting template", "file": "Creality_SpacePi_X4_template.stl", "image": "creality-spacepi-x4-template.jpg", "size": [180.0, 62.5, 4.0], "device": "Creality SpacePi X4 dryer",
+     "description": "Centers a holder on a Creality SpacePi X4 filament dryer."}
+  ]
+}
