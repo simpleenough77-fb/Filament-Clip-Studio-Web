@@ -1,7 +1,7 @@
 """Prepare the published site. Run by .github/workflows/pages.yml before every deploy.
 
   python tools/build_site.py            # write downloads/catalog.csv and SOURCE_HASHES.json
-  python tools/build_site.py --stamp    # also stamp the build badge in index.html (CI only)
+  python tools/build_site.py --stamp    # also stamp the build badge in studio.html (CI only)
   python tools/build_site.py --redirect-stub DIR HOST
                                         # write a GitHub Pages site that forwards every path to HOST
 
@@ -45,10 +45,10 @@ def source_hashes(root=ROOT):
 def stamp_build(root=ROOT):
     sha = (os.environ.get('GITHUB_SHA') or subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=root, capture_output=True, text=True).stdout.strip() or 'dev')[:7]
     day = datetime.now(timezone.utc).strftime('%Y-%m-%d')
-    index = root / 'index.html'
+    index = root / 'studio.html'
     html, count = re.subn(r'>Build [^<]*</span>', f'>Build {sha} · {day}</span>', index.read_text(encoding='utf-8'), count=1)
     if count != 1:
-        sys.exit('Build badge not found in index.html')
+        sys.exit('Build badge not found in studio.html')
     index.write_text(html, encoding='utf-8')
     return sha, day
 

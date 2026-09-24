@@ -6,6 +6,6 @@
 - **Liberation Sans/Serif 2.00.1**: OpenSCAD-bundled fonts. License in fonts/LICENSE.
 - **DejaVu Sans Bold**: font bundled with Matplotlib in FreeCAD. License in fonts/LICENSE_DEJAVU; upstream https://dejavu-fonts.github.io/ .
 - **Bambu printer preset snapshots**: retained from the existing studio; Bambu Studio source and licensing: https://github.com/bambulab/BambuStudio . Treat presets as snapshots, and review them in the current slicer.
-- **Catalog**: product names and approximate swatches from the author's Bambu Lab/Cookiecad catalog. Source links and collection metadata remain in author/Catalog.json. These are approximate previews, not guaranteed printed colors.
+- **Catalog**: product names and approximate swatches from the author's Bambu Lab/Cookiecad/Amolen catalog. Source links and collection metadata remain in author/Catalog.json. These are approximate previews, not guaranteed printed colors.
 
 Third-party dependencies do not transfer ownership of the manufacturer's brands or other third-party material. Source references are included to make the exact bundled components auditable.
