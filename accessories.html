@@ -6,7 +6,7 @@
 <title>Filament Clip Studio - Holders and mounting templates</title>
 <style>
 :root{font-family:system-ui,sans-serif;color:#edf3f3;background:#10191d;color-scheme:dark}body{margin:0}main{max-width:980px;margin:auto;padding:40px 26px 70px}h1{font-size:38px;letter-spacing:-1px;margin:8px 0 12px}h2{font-size:22px;margin:0 0 10px;color:#f1faf8}h3{font-size:17px;margin:4px 0 6px;color:#f1faf8}p,li{color:#b5c6ca;line-height:1.65}.eyebrow{color:#6ce3ba;font-size:12px;font-weight:700;letter-spacing:2px}.panel{background:#19262c;padding:24px;border:1px solid #304148;border-radius:16px;margin-top:20px}.small{font-size:13px}.notice{border-left:3px solid #73c8b0;padding-left:13px}.links{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 24px}a.button{background:#83eac5;color:#10261e;font:600 14px system-ui;border-radius:8px;padding:11px 18px;text-decoration:none;display:inline-block}a.text{color:#83eac5}code{background:#101b20;border:1px solid #304148;border-radius:4px;padding:2px 5px;color:#d8f5eb}ol,ul{padding-left:24px}.back{color:#83eac5;text-decoration:none;font-size:14px}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:14px}.card{background:#101b20;border:1px solid #304148;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px}.card p{margin:0;font-size:14px}.meta{font-size:13px;color:#8fa7ad}.fits{font-size:13px;color:#a5dec6}.card a.button{align-self:flex-start;margin-top:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:14px}.card{background:#101b20;border:1px solid #304148;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px}.card p{margin:0;font-size:14px}.meta{font-size:13px;color:#8fa7ad}.fits{font-size:13px;color:#a5dec6}.card a.button{align-self:flex-start;margin-top:auto}.pairs{font-size:13px;color:#d8e6e8}.scale{height:6px;background:#22343b;border-radius:3px;overflow:hidden}.scale span{display:block;height:100%;background:#6ce3ba;border-radius:3px}
 .photos{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:700px){.photos{grid-template-columns:1fr}}
 figure{margin:0}figure img{width:100%;border-radius:10px;display:block;aspect-ratio:4/3;object-fit:cover;background:#101b20}figcaption{font-size:13px;color:#8fa7ad;margin-top:6px}
 figure.missing img{display:none}figure .ph{display:none}figure.missing .ph{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;border:2px dashed #40545c;border-radius:10px;color:#6f878d;font-size:14px;background:#101b20}
@@ -26,9 +26,9 @@ figure.missing img{display:none}figure .ph{display:none}figure.missing .ph{displ
 <figure><img src="./images/photos/clips-on-shelf.jpg" alt="Label clips on spools stored on a shelf" loading="lazy" onerror="this.parentElement.classList.add('missing')"><div class="ph">Photo coming soon</div><figcaption>Label clips on spools stored on a shelf.</figcaption></figure>
 </div></section>
 
-<section class="panel"><h2>Clip holders</h2><p class="small">"Fits" lists the printers in the studio whose usable plate area holds the part, including diagonal placement where needed.</p><div id="holders" class="cards"><p class="small">Loading…</p></div></section>
+<section class="panel"><h2>Clip holders</h2><p class="small">"Fits" is based on each printer's usable plate area in the studio, including diagonal placement where needed. The green bar under each picture shows the part's length to scale, against the 320&nbsp;mm four-post holder.</p><div id="holders" class="cards"><p class="small">Loading…</p></div></section>
 
-<section class="panel"><h2>Mounting templates</h2><p class="small">A template is a placement guide: it sits on the device and positions the holder so it ends up centered.</p><div id="templates" class="cards"><p class="small">Loading…</p></div></section>
+<section class="panel"><h2>Mounting templates</h2><p class="small">A template is a placement guide: it sits on the device and positions the holder so it ends up centered. Bars show length to the same scale as the holders.</p><div id="templates" class="cards"><p class="small">Loading…</p></div></section>
 
 <section class="panel"><h2>Mounting a holder</h2>
 <p>You need the holder, the template for your device, 24&nbsp;mm double-sided nano tape and isopropyl alcohol.</p>
@@ -41,11 +41,11 @@ figure.missing img{display:none}figure .ph{display:none}figure.missing .ph{displ
 </ol>
 <p class="notice small">Tape is hard to reposition once it has bonded, which is why the dry fit comes first.</p>
 </section>
-<p class="small" style="margin-top:26px">Filament Clip Studio &middot; browser edition</p>
 <footer class="support" id="support"><h2>Help Clip Studio grow</h2>
 <p>The generator, holders, and mounting templates are free. If they’ve made your setup a little easier, optional support helps cover prototypes and access to more hardware for measurement and fit testing.</p>
 <p><a class="kofi" href="https://ko-fi.com/clipstudio" target="_blank" rel="noopener">Support Clip Studio on Ko-fi</a></p>
 <p>Have a device to donate or loan for development? <a class="text" href="https://ko-fi.com/post/Provide-Development-Hardware-A5C327LDRO" target="_blank" rel="noopener">Provide development hardware</a>.</p></footer>
+<p class="small" style="margin-top:18px">Filament Clip Studio &middot; browser edition</p>
 </main>
 <script>
 (async()=>{
@@ -55,8 +55,10 @@ figure.missing img{display:none}figure .ph{display:none}figure.missing .ph{displ
  try{
   const [acc,printers]=await Promise.all([fetch('./downloads/accessories/accessories.json').then(r=>r.json()),fetch('./author/Printers.json').then(r=>r.json())]);
   // Same clearances as the studio's plate layout: 5 mm edge margin each side plus a 3 mm part gap.
-  const fitList=([w,d])=>{const ok=Object.values(printers).filter(p=>{const [x0,y0,x1,y1]=p.single;return fits(w+3,d+3,x1-x0-10,y1-y0-10);}).map(p=>p.id);return ok.length?ok.join(', '):'None of the listed printers';};
-  const card=i=>`<div class="card"><figure><img src="./images/accessories/${esc(i.image)}" alt="${esc(i.name)}" loading="lazy" onerror="this.parentElement.classList.add('missing')"><div class="ph">Photo coming soon</div></figure><h3>${esc(i.name)}</h3><p>${esc(i.description)}</p><div class="meta">${i.size.map(v=>Math.round(v*10)/10).join(' &times; ')} mm</div>${i.kind==='holder'?`<div class="fits">Fits: ${esc(fitList(i.size))}</div>`:''}<a class="button" href="./downloads/accessories/${esc(i.file)}" download>Download STL</a></div>`;
+  const all=Object.values(printers).map(p=>p.id);
+  const fitList=([w,d])=>{const ok=Object.values(printers).filter(p=>{const [x0,y0,x1,y1]=p.single;return fits(w+3,d+3,x1-x0-10,y1-y0-10);}).map(p=>p.id);if(!ok.length)return 'None of the listed printers';if(ok.length===all.length)return 'Every printer in the studio';const no=all.filter(x=>!ok.includes(x));return ok.length>=all.length/2?'Every printer except '+no.join(', '):'Large beds only: '+ok.join(', ');};
+  const maxLen=Math.max(...acc.items.map(i=>i.size[0]));
+  const card=i=>`<div class="card"><figure><img src="./images/accessories/${esc(i.image)}" alt="${esc(i.name)}" loading="lazy" onerror="this.parentElement.classList.add('missing')"><div class="ph">Photo coming soon</div></figure><div class="scale" role="img" aria-label="Length ${Math.round(i.size[0])} mm, to scale"><span style="width:${(i.size[0]/maxLen*100).toFixed(1)}%"></span></div><h3>${esc(i.name)}</h3><p>${esc(i.description)}</p>${i.pairs?`<div class="pairs">${esc(i.pairs)}</div>`:''}<div class="meta">${i.size.map(v=>Math.round(v*10)/10).join(' &times; ')} mm</div>${i.kind==='holder'?`<div class="fits">Fits: ${esc(fitList(i.size))}</div>`:''}<a class="button" href="./downloads/accessories/${esc(i.file)}" download>Download STL</a></div>`;
   document.getElementById('holders').innerHTML=acc.items.filter(i=>i.kind==='holder').map(card).join('');
   document.getElementById('templates').innerHTML=acc.items.filter(i=>i.kind==='template').map(card).join('');
  }catch(e){for(const id of ['holders','templates'])document.getElementById(id).innerHTML='<p class="small">Unable to load the accessory list: '+esc(e.message)+'</p>';}

@@ -84,6 +84,7 @@ def test_accessories_manifest_matches_stl_files():
     assert len(ids) == len(set(ids)), 'duplicate accessory ids'
     for item in acc['items']:
         assert item['kind'] in ('holder', 'template'), item['id']
+        assert item.get('pairs', '').strip(), item['id'] + ' needs pairing text for its card'
         data = (ROOT / 'downloads' / 'accessories' / item['file']).read_bytes()
         count = struct.unpack('<I', data[80:84])[0]
         assert len(data) == 84 + 50 * count, f"{item['file']} is not a valid binary STL"
