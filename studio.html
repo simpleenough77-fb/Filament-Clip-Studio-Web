@@ -20,7 +20,7 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;p
 <p><a class="kofi" href="https://ko-fi.com/clipstudio" target="_blank" rel="noopener">Support Clip Studio on Ko-fi</a></p>
 <p>Have a device to donate or loan for development? <a class="text" href="https://ko-fi.com/post/Provide-Development-Hardware-A5C327LDRO" target="_blank" rel="noopener">Provide development hardware</a>.</p></footer>
 </main>
-<script src="./bridge.js?v=tested-supports-4"></script><script>
+<script src="./bridge.js?v=tested-supports-5"></script><script>
 const token='__TOKEN__';let catalog=[],fonts=[],rows=[],reviewKey=null;
 const $=id=>document.getElementById(id);const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const options=(items,selected)=>items.map(x=>`<option value="${esc(x)}" ${x===selected?'selected':''}>${esc(x)}</option>`).join('');
@@ -38,7 +38,7 @@ $('holder_sleeve').addEventListener('change',updateSleeveWarning);
 const DEVICES={ams_ht:{template:'AMS HT mounting template',holders:[['One-post holder',1]]},ams_2_pro:{template:'AMS 2 Pro mounting template',holders:[['Four-post holder',1]]},spacepi_x4:{template:'Creality SpacePi X4 mounting template',holders:[['Two-post holder',2]]}};
 function devices(){return Object.fromEntries(Object.keys(DEVICES).map(k=>[k,Math.max(0,Math.min(20,Math.floor(Number($('dev_'+k).value)||0)))]).filter(([,n])=>n>0));}
 function accessoryList(dv){let m=new Map();for(const [k,n] of Object.entries(dv)){let d=DEVICES[k];m.set(d.template,(m.get(d.template)||0)+1);for(const [h,per] of d.holders)m.set(h,(m.get(h)||0)+per*n);}return [...m].map(([name,q])=>`${q} × ${name}`);}
-function updateDeviceSummary(){let l=accessoryList(devices());$('deviceSummary').textContent=l.length?'Adds: '+l.join(', ')+'.':'No holders or templates.';}
+function updateDeviceSummary(){let l=accessoryList(devices());$('deviceSummary').textContent=(l.length?'Adds: '+l.join(', ')+'.':'No holders or templates.')+(devices().ams_2_pro?' On printers that can\'t fit the 320 mm four-post holder, the split version (two halves joined by a dovetail) is used automatically.':'');}
 document.querySelectorAll('[id^="dev_"]').forEach(x=>x.addEventListener('input',updateDeviceSummary));
 function settings(){return {...Object.fromEntries(['printer','font','type_size','vendor_size','color_size','style','holder_sleeve','body_mode','text_mode'].map(k=>[k,$(k).value])),devices:devices()};}
 document.querySelectorAll('.grid input,.grid select').forEach(x=>x.addEventListener('input',invalidate));
@@ -54,4 +54,4 @@ function renderPlates(d){
  let p=d.printer,area=d.plates[0].area;
  $('platePlan').innerHTML=`<p>${d.total} clips${d.accessories&&d.accessories.length?' plus '+d.accessories.map(a=>a.quantity+' × '+esc(a.name)).join(', '):''} on ${d.plates.length} plate${d.plates.length===1?'':'s'} · ${esc(p.id)}<br><span class="small">Layout area: ${area[2]-area[0]} × ${area[3]-area[1]} mm. Layout reserves edge clearance and prime-tower space where needed. ${$('holder_sleeve').value==='yes'?'Sleeve clips lie text-side down and require supports.':'Clips stand on their sides.'} Layout expands from the center.</span></p><div class="plate-grid">${d.plates.map(p=>`<div class="plate-card"><strong>Plate ${p.number}: ${p.items.some(i=>i.accessory)?p.items.length+' holder'+(p.items.length===1?'':'s')+' / template'+(p.items.length===1?'':'s'):p.items.length+' clips'}</strong><svg viewBox="0 0 ${d.printer.bed[0]} ${d.printer.bed[1]}" aria-label="Plate ${p.number} layout"><g transform="translate(0 ${d.printer.bed[1]}) scale(1 -1)">${p.tower?`<rect x="${p.tower[0]}" y="${p.tower[1]}" width="76" height="76" fill="#49585d"/>`:''}${p.items.map(i=>`<rect x="${i.x}" y="${i.y}" width="${i.w}" height="${i.h}" rx="2" fill="${i.accessory?'#3a4a50':d.rows[i.variant].body_color}" stroke="#00AE42" stroke-width="1"/>`).join('')}</g></svg></div>`).join('')}</div>`;
 }
-</script><script src="./paste_import.js?v=tested-supports-4"></script><script src="./batch_features.js?v=tested-supports-4"></script></html>
+</script><script src="./paste_import.js?v=tested-supports-5"></script><script src="./batch_features.js?v=tested-supports-5"></script></html>

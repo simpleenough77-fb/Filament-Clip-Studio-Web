@@ -113,13 +113,18 @@ def test_accessories_plan_and_3mf():
             x0, y0, x1, y1 = p['area']
             for i in p['items']:
                 assert x0 - 1e-6 <= i['x'] and i['x'] + i['w'] <= x1 + 1e-6 and y0 - 1e-6 <= i['y'] and i['y'] + i['h'] <= y1 + 1e-6
-    for printer in ('X1 Carbon', 'A1 mini'):
-        try:
-            accessories.plan({'ams_2_pro': 1}, g.PRINTERS[printer], 0)
-        except ValueError as e:
-            assert 'does not fit' in str(e)
-        else:
-            raise AssertionError('four-post holder must be rejected on ' + printer)
+    for printer in ('X1 Carbon', 'P1S', 'A1 mini'):
+        variants_s, plates_s = accessories.plan({'ams_2_pro': 1}, g.PRINTERS[printer], 0)
+        names_s = [v['check']['lines'][0] for v in variants_s]
+        assert 'Four-post holder' not in names_s and sum('Split four-post holder' in n for n in names_s) == 2, (printer, names_s)
+        assert accessories.summary({'ams_2_pro': 1}, g.PRINTERS[printer])[1]['name'] == 'Split four-post holder'
+        for p in plates_s:
+            x0, y0, x1, y1 = p['area']
+            for i in p['items']:
+                assert x0 - 1e-6 <= i['x'] and i['x'] + i['w'] <= x1 + 1e-6 and y0 - 1e-6 <= i['y'] and i['y'] + i['h'] <= y1 + 1e-6
+    assert [v['check']['lines'][0] for v in accessories.plan({'ams_2_pro': 1}, g.PRINTERS['H2D'], 0)[0]][1] == 'Four-post holder'
+    pieces = accessories.load_pieces('Split_4_post_holder.stl')
+    assert len(pieces) == 2 and all(abs(w - 163.3) < 0.5 and abs(h - 58.01) < 0.05 for _, _, w, h in pieces)
     assert accessories.plan({'ams_ht': 1}, g.PRINTERS['A1 mini'], 0)[1]
     for bad in ({'ams_ht': 21}, {'ams_ht': -1}, {'toaster': 1}, {'ams_ht': True}):
         try:
