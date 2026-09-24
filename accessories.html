@@ -6,7 +6,7 @@
 <title>Filament Clip Studio - Holders and mounting templates</title>
 <style>
 :root{font-family:system-ui,sans-serif;color:#edf3f3;background:#10191d;color-scheme:dark}body{margin:0}main{max-width:980px;margin:auto;padding:40px 26px 70px}h1{font-size:38px;letter-spacing:-1px;margin:8px 0 12px}h2{font-size:22px;margin:0 0 10px;color:#f1faf8}h3{font-size:17px;margin:4px 0 6px;color:#f1faf8}p,li{color:#b5c6ca;line-height:1.65}.eyebrow{color:#6ce3ba;font-size:12px;font-weight:700;letter-spacing:2px}.panel{background:#19262c;padding:24px;border:1px solid #304148;border-radius:16px;margin-top:20px}.small{font-size:13px}.notice{border-left:3px solid #73c8b0;padding-left:13px}.links{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 24px}a.button{background:#83eac5;color:#10261e;font:600 14px system-ui;border-radius:8px;padding:11px 18px;text-decoration:none;display:inline-block}a.text{color:#83eac5}code{background:#101b20;border:1px solid #304148;border-radius:4px;padding:2px 5px;color:#d8f5eb}ol,ul{padding-left:24px}.back{color:#83eac5;text-decoration:none;font-size:14px}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:14px}.card{background:#101b20;border:1px solid #304148;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px}.card p{margin:0;font-size:14px}.meta{font-size:13px;color:#8fa7ad}.fits{font-size:13px;color:#a5dec6}.card a.button{align-self:flex-start;margin-top:auto}.pairs{font-size:13px;color:#d8e6e8}.scale{height:6px;background:#22343b;border-radius:3px;overflow:hidden}.scale span{display:block;height:100%;background:#6ce3ba;border-radius:3px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:14px}.card{background:#101b20;border:1px solid #304148;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px}.card p{margin:0;font-size:14px}.meta{font-size:13px;color:#8fa7ad}.fits{font-size:13px;color:#a5dec6}.card a.button{align-self:flex-start;margin-top:auto}.pairs{font-size:13px;color:#d8e6e8}.card a.howto{font-size:13px;color:#83eac5}.device{border-top:1px solid #304148;margin-top:22px;padding-top:18px}.device h3{margin-top:0}.device ol{margin:8px 0 14px}.split{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;align-items:start}@media(max-width:700px){.split{grid-template-columns:1fr}}.scale{height:6px;background:#22343b;border-radius:3px;overflow:hidden}.scale span{display:block;height:100%;background:#6ce3ba;border-radius:3px}
 .photos{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:700px){.photos{grid-template-columns:1fr}}
 figure{margin:0}figure img{width:100%;border-radius:10px;display:block;aspect-ratio:4/3;object-fit:cover;background:#101b20}figcaption{font-size:13px;color:#8fa7ad;margin-top:6px}
 figure.missing img{display:none}figure .ph{display:none}figure.missing .ph{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;border:2px dashed #40545c;border-radius:10px;color:#6f878d;font-size:14px;background:#101b20}
@@ -30,31 +30,48 @@ figure.missing img{display:none}figure .ph{display:none}figure.missing .ph{displ
 
 <section class="panel"><h2>Mounting templates</h2><p class="small">A template is a placement guide: it sits on the device and positions the holder so it ends up centered. Bars show length to the same scale as the holders.</p><div id="templates" class="cards"><p class="small">Loading…</p></div></section>
 
-<section class="panel"><h2>Mounting a holder</h2>
-<p>You need the holder, the template for your device, 24&nbsp;mm double-sided nano tape and isopropyl alcohol.</p>
-<ol>
-<li>Clean both surfaces, the spot on the device and the back of the holder, with isopropyl alcohol. Let them dry.</li>
-<li>Place the template on the device. It centers the holder on the device.</li>
-<li>Dry-fit first: set the holder in the template without tape and check the position.</li>
-<li>Apply the tape to the back of the holder.</li>
-<li>Using the template to position it, press the holder onto the device firmly, then remove the template.</li>
-</ol>
-<p class="notice small">Tape is hard to reposition once it has bonded, which is why the dry fit comes first.</p>
-<h3 id="ams-2-pro-fit" style="margin-top:22px">How the AMS 2 Pro template fits the four-post holder</h3>
+<section class="panel" id="mounting"><h2>Mounting a holder</h2>
+<p>You need the holder, the template for your device, 24&nbsp;mm double-sided nano tape and isopropyl alcohol. Each template works a little differently, so follow the steps for your device.</p>
+<p class="notice small">For every device: clean both surfaces, the spot on the device and the back of the holder, with isopropyl alcohol and let them dry. Dry-fit before you tape, because tape is hard to reposition once it has bonded.</p>
+
+<div class="device" id="ams-2-pro-fit"><h3>Bambu Lab AMS 2 Pro &middot; one four-post holder</h3>
 <p>The template has three narrow arms, one at each end and one in the middle. They slot into the three narrow slots in the four-post holder, locking the template onto the holder. The notch on top of the template fits over the top latch on the AMS 2 Pro, which centers the holder on the unit.</p>
+<ol>
+<li>Slot the template's three arms into the holder's three narrow slots.</li>
+<li>Dry-fit: set the holder on the AMS 2 Pro with the template's notch over the top latch, and check the position.</li>
+<li>Apply the tape to the back of the holder.</li>
+<li>Set it back in place with the notch over the latch and press the holder firmly onto the unit.</li>
+<li>Remove the template.</li>
+</ol>
 <div class="photos">
 <figure><img src="./images/photos/ams-2-pro-template-arms.jpg" alt="Red AMS 2 Pro template with its three arms slotted into the three narrow slots of a black four-post holder" loading="lazy" onerror="this.parentElement.classList.add('missing')"><div class="ph">Photo coming soon</div><figcaption>The three arms slot into the holder's three narrow slots.</figcaption></figure>
 <figure><img src="./images/photos/ams-2-pro-template-notch.jpg" alt="AMS 2 Pro template seated on the four-post holder, showing the notch on top that fits the AMS 2 Pro latch" loading="lazy" onerror="this.parentElement.classList.add('missing')"><div class="ph">Photo coming soon</div><figcaption>The notch on top fits the AMS 2 Pro's top latch.</figcaption></figure>
-</div>
-<h3 id="ams-ht-fit" style="margin-top:22px">How the AMS HT template fits</h3>
-<p>The notch on top of the template fits the AMS HT's top latch, and the opening in the template positions the one-post holder.</p>
-<h3 id="spacepi-x4-fit" style="margin-top:22px">How the Creality SpacePi X4 template fits</h3>
-<p>The template fits around the SpacePi X4's locking latch, and the two-post holders sit on top of it.</p>
-<div class="photos">
-<figure><img src="./images/photos/ams-ht-template-fit.jpg" alt="Pink AMS HT template with a black one-post holder positioned in its opening" loading="lazy" onerror="this.parentElement.classList.add('missing')"><div class="ph">Photo coming soon</div><figcaption>AMS HT: the opening positions the one-post holder; the notch on top fits the top latch.</figcaption></figure>
-<figure><img src="./images/photos/spacepi-x4-template-fit.jpg" alt="Pink template fitted around the locking latch of a Creality SpacePi X4, with black two-post holders sitting on top of it" loading="lazy" onerror="this.parentElement.classList.add('missing')"><div class="ph">Photo coming soon</div><figcaption>SpacePi X4: the template fits the locking latch and the holders sit on top of it.</figcaption></figure>
-</div>
-<p class="notice small" style="margin-top:16px">The clips and holders are shaped to stay in place even when the lid is opened all the way.</p>
+</div></div>
+
+<div class="device split" id="ams-ht-fit"><div><h3>Bambu Lab AMS HT &middot; one one-post holder</h3>
+<p>The notch on top of the template fits the AMS HT's top latch, and the opening in the template positions the holder.</p>
+<ol>
+<li>Place the template on the AMS HT with the notch over the top latch.</li>
+<li>Dry-fit: set the one-post holder in the template's opening and check the position.</li>
+<li>Apply the tape to the back of the holder.</li>
+<li>Set the holder back in the opening and press it firmly onto the unit.</li>
+<li>Remove the template.</li>
+</ol></div>
+<figure><img src="./images/photos/ams-ht-template-fit.jpg" alt="Pink AMS HT template with a black one-post holder positioned in its opening" loading="lazy" onerror="this.parentElement.classList.add('missing')"><div class="ph">Photo coming soon</div><figcaption>The opening positions the holder; the notch on top fits the top latch.</figcaption></figure></div>
+
+<div class="device split" id="spacepi-x4-fit"><div><h3>Creality SpacePi X4 &middot; two two-post holders</h3>
+<p>The template fits the SpacePi X4's locking latch, and the holder sits on top of it.</p>
+<ol>
+<li>Fit the template onto the locking latch.</li>
+<li>Dry-fit: rest the two-post holder on top of the template and check the position.</li>
+<li>Apply the tape to the back of the holder.</li>
+<li>Rest the holder on the template again and press it firmly onto the dryer.</li>
+<li>Slide the template down and off.</li>
+<li>Repeat for the second two-post holder.</li>
+</ol></div>
+<figure><img src="./images/photos/spacepi-x4-template-fit.jpg" alt="Pink template fitted on the locking latch of a Creality SpacePi X4, with black two-post holders sitting on top of it" loading="lazy" onerror="this.parentElement.classList.add('missing')"><div class="ph">Photo coming soon</div><figcaption>The template fits the locking latch and the holder sits on top of it.</figcaption></figure></div>
+
+<p class="notice small" style="margin-top:18px">The clips and holders are shaped to stay in place even when the lid is opened all the way.</p>
 </section>
 <footer class="support" id="support"><h2>Help Clip Studio grow</h2>
 <p>The generator, holders, and mounting templates are free. If they’ve made your setup a little easier, optional support helps cover prototypes and access to more hardware for measurement and fit testing.</p>
@@ -73,7 +90,7 @@ figure.missing img{display:none}figure .ph{display:none}figure.missing .ph{displ
   const all=Object.values(printers).map(p=>p.id);
   const fitList=([w,d])=>{const ok=Object.values(printers).filter(p=>{const [x0,y0,x1,y1]=p.single;return fits(w+3,d+3,x1-x0-10,y1-y0-10);}).map(p=>p.id);if(!ok.length)return 'None of the listed printers';if(ok.length===all.length)return 'Every printer in the studio';const no=all.filter(x=>!ok.includes(x));return ok.length>=all.length/2?'Every printer except '+no.join(', '):'Large beds only: '+ok.join(', ');};
   const maxLen=Math.max(...acc.items.map(i=>i.size[0]));
-  const card=i=>`<div class="card"><figure><img src="./images/accessories/${esc(i.image)}" alt="${esc(i.name)}" loading="lazy" onerror="this.parentElement.classList.add('missing')"><div class="ph">Photo coming soon</div></figure><div class="scale" role="img" aria-label="Length ${Math.round(i.size[0])} mm, to scale"><span style="width:${(i.size[0]/maxLen*100).toFixed(1)}%"></span></div><h3>${esc(i.name)}</h3><p>${esc(i.description)}</p>${i.pairs?`<div class="pairs">${esc(i.pairs)}</div>`:''}<div class="meta">${i.size.map(v=>Math.round(v*10)/10).join(' &times; ')} mm</div>${i.kind==='holder'?`<div class="fits">Fits: ${esc(fitList(i.size))}</div>`:''}<a class="button" href="./downloads/accessories/${esc(i.file)}" download>Download STL</a></div>`;
+  const card=i=>`<div class="card"><figure><img src="./images/accessories/${esc(i.image)}" alt="${esc(i.name)}" loading="lazy" onerror="this.parentElement.classList.add('missing')"><div class="ph">Photo coming soon</div></figure><div class="scale" role="img" aria-label="Length ${Math.round(i.size[0])} mm, to scale"><span style="width:${(i.size[0]/maxLen*100).toFixed(1)}%"></span></div><h3>${esc(i.name)}</h3><p>${esc(i.description)}</p>${i.pairs?`<div class="pairs">${esc(i.pairs)}</div>`:''}${i.mount?`<a class="howto" href="#${esc(i.mount)}">How to mount &darr;</a>`:''}<div class="meta">${i.size.map(v=>Math.round(v*10)/10).join(' &times; ')} mm</div>${i.kind==='holder'?`<div class="fits">Fits: ${esc(fitList(i.size))}</div>`:''}<a class="button" href="./downloads/accessories/${esc(i.file)}" download>Download STL</a></div>`;
   document.getElementById('holders').innerHTML=acc.items.filter(i=>i.kind==='holder').map(card).join('');
   document.getElementById('templates').innerHTML=acc.items.filter(i=>i.kind==='template').map(card).join('');
  }catch(e){for(const id of ['holders','templates'])document.getElementById(id).innerHTML='<p class="small">Unable to load the accessory list: '+esc(e.message)+'</p>';}
