@@ -1,14 +1,14 @@
 import {loadPyodide} from './vendor/pyodide/pyodide.mjs';
 const python=loadPyodide({indexURL:new URL('./vendor/pyodide/',import.meta.url).href}).then(async py=>{
  await py.loadPackage('pillow');
- const assets=await(await fetch('./assets.json?v=tested-supports-5')).json();
+ const assets=await(await fetch('./assets.json?v=tested-supports-6')).json();
  py.FS.mkdir('/author');py.FS.mkdir('/Generated');py.FS.mkdir('/.cache');
- for(const name of assets){const path='/'+name;py.FS.mkdirTree(path.slice(0,path.lastIndexOf('/')));py.FS.writeFile(path,new Uint8Array(await(await fetch('./'+name+'?v=tested-supports-5')).arrayBuffer()));}
+ for(const name of assets){const path='/'+name;py.FS.mkdirTree(path.slice(0,path.lastIndexOf('/')));py.FS.writeFile(path,new Uint8Array(await(await fetch('./'+name+'?v=tested-supports-6')).arrayBuffer()));}
  await py.runPythonAsync('import sys\nsys.path.insert(0,"/author")\nimport generator as g\nimport json,base64\n');
  return py;
 });
 self.compileScad=(code,ext)=>new Promise((resolve,reject)=>{
- const w=new Worker('./compile-worker.js?v=tested-supports-5',{type:'module'});
+ const w=new Worker('./compile-worker.js?v=tested-supports-6',{type:'module'});
  const timer=setTimeout(()=>{w.terminate();reject(Error('A clip took too long to generate. Try a smaller batch.'));},120000);
  w.onmessage=({data})=>{clearTimeout(timer);w.terminate();if(!data.ok)return reject(Error(data.error));let s='';for(let i=0;i<data.bytes.length;i+=32768)s+=String.fromCharCode(...data.bytes.subarray(i,i+32768));resolve(JSON.stringify({bytes:btoa(s),log:data.log}));};
  w.onerror=e=>{clearTimeout(timer);w.terminate();reject(Error(e.message))};w.postMessage({code,ext});

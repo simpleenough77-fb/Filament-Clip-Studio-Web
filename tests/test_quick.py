@@ -185,6 +185,39 @@ def test_front_page_and_studio():
         assert brand in home, 'front page supported-spools list is missing ' + brand
     assert (ROOT / '.github' / 'ISSUE_TEMPLATE' / 'spool-request.yml').is_file()
 
+def test_clip_bodies_loaded_and_clean():
+    import struct
+    sys.path.insert(0, str(ROOT / 'author'))
+    import print_geometry
+    worker = (ROOT / 'compile-worker.js').read_text(encoding='utf-8')
+    for profile, spec in print_geometry.PROFILES.items():
+        for name in (spec['stem'] + '.stl', spec['stem'] + '_tested_sleeve.stl'):
+            # OpenSCAD in the browser can only import bodies the compile worker copies in.
+            assert f"'{name}'" in worker, f'compile-worker.js does not load {name} ({profile})'
+            assert (ROOT / 'author' / name).is_file(), name
+    # Amolen bodies: no stray label-text shells in the bottom 0.6 mm, and the sleeve JSON matches its STL.
+    def shells(path):
+        raw = (ROOT / 'author' / path).read_bytes(); n = struct.unpack_from('<I', raw, 80)[0]
+        tris = [struct.unpack_from('<9f', raw, 84 + 50 * i + 12) for i in range(n)]
+        parent = {}
+        def find(x):
+            while parent.setdefault(x, x) != x:
+                parent[x] = parent[parent[x]]; x = parent[x]
+            return x
+        key = lambda t, i: (round(t[i], 4), round(t[i + 1], 4), round(t[i + 2], 4))
+        for tr in tris:
+            parent[find(key(tr, 3))] = find(key(tr, 0)); parent[find(key(tr, 6))] = find(key(tr, 0))
+        groups = {}
+        for tr in tris:
+            groups.setdefault(find(key(tr, 0)), []).append(max(tr[2], tr[5], tr[8]))
+        return n, [max(z) for z in groups.values()]
+    for name in ('amolen.stl', 'amolen_tested_sleeve.stl'):
+        n, tops = shells(name)
+        assert all(z > 0.61 for z in tops), f'{name} contains label-text shells'
+    sleeve = json.loads((ROOT / 'author' / 'Amolen_Sleeve.json').read_text())
+    assert len(sleeve['body']['faces']) == shells('amolen_tested_sleeve.stl')[0] == len(sleeve['body']['paint'])
+    assert sum(1 for p in sleeve['body']['paint'] if p) > 0 and len(sleeve['blocker']['faces']) > 0
+
 if __name__ == '__main__':
     failures = 0
     for name, fn in sorted(globals().items()):
