@@ -17,7 +17,7 @@ ns={'m':g.NS}
 async def main():
  report=[]
  for sleeve in ['no','yes']:
-  for style in ['part','cut','modifier']:
+  for style in ['part','cut']:
    review=await g.preflight(dict(rows=rows,settings=dict(holder_sleeve=sleeve,style=style)))
    result=await g.generate(review['key'],True)
    archive=g.GENERATED/Path(result['download']).name

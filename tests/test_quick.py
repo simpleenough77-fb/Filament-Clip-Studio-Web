@@ -218,6 +218,16 @@ def test_clip_bodies_loaded_and_clean():
     assert len(sleeve['body']['faces']) == shells('amolen_tested_sleeve.stl')[0] == len(sleeve['body']['paint'])
     assert sum(1 for p in sleeve['body']['paint'] if p) > 0 and len(sleeve['blocker']['faces']) > 0
 
+def test_label_styles_are_inlay_and_engraved_only():
+    studio = (ROOT / 'studio.html').read_text(encoding='utf-8')
+    assert 'value="modifier"' not in studio and 'value="part"' in studio and 'value="cut"' in studio
+    try:
+        g.validate(dict(rows=[dict(product=g.CATALOG[0]['id'], quantity=1)], settings=dict(printer='H2D', style='modifier')))
+    except ValueError as e:
+        assert 'label style' in str(e)
+    else:
+        raise AssertionError('the modifier label style must be rejected')
+
 if __name__ == '__main__':
     failures = 0
     for name, fn in sorted(globals().items()):
