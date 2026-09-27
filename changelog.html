@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Change log - Filament Clip Studio</title>
+<meta name="description" content="What changed on Filament Clip Studio and when: new spool brands, holders, studio features and fixes.">
+<link rel="canonical" href="https://filamentclip.com/changelog">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Filament Clip Studio">
+<meta property="og:title" content="Change log - Filament Clip Studio"><meta property="og:description" content="What changed on Filament Clip Studio and when.">
+<meta property="og:url" content="https://filamentclip.com/changelog"><meta property="og:image" content="https://filamentclip.com/images/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{font-family:system-ui,sans-serif;color:#edf3f3;background:#10191d;color-scheme:dark}body{margin:0}
+main{max-width:860px;margin:auto;padding:22px 26px 60px}
+nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:6px 0 18px;border-bottom:1px solid #22343b}
+nav .brand{font-weight:700;color:#f1faf8;text-decoration:none;margin-right:auto}nav a{color:#b5c6ca;text-decoration:none;font-size:14px}nav a:hover,nav a[aria-current]{color:#83eac5}
+h1{font-size:38px;letter-spacing:-1px;margin:26px 0 8px}h2{font-size:17px;margin:0;color:#f1faf8}
+p,li{color:#b5c6ca;line-height:1.6}.eyebrow{color:#6ce3ba;font-size:12px;font-weight:700;letter-spacing:2px;margin-top:26px}
+a.text{color:#83eac5}.small{font-size:13px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 6px}
+.filters button{background:#19262c;color:#c9d8db;border:1px solid #304148;border-radius:20px;padding:6px 14px;font:600 13px system-ui;cursor:pointer}
+.filters button[aria-pressed="true"]{background:#83eac5;color:#10261e;border-color:#83eac5}
+.day{margin-top:22px}.day time{display:block;color:#8fa7ad;font-size:13px;font-weight:600;letter-spacing:.5px;margin-bottom:8px}
+.entry{background:#19262c;border:1px solid #304148;border-radius:14px;padding:16px 18px;margin-bottom:10px}
+.entry .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.entry ul{margin:8px 0 0;padding-left:20px}.entry li{font-size:15px}
+.kind{font-size:12px;font-weight:700;border-radius:20px;padding:3px 10px;letter-spacing:.3px}
+.kind.New{background:#1f4a3b;color:#8ff0c9}.kind.Improved{background:#20394d;color:#9fd2ff}.kind.Fixed{background:#4a3a1f;color:#ffd68a}.kind.Removed{background:#4a2626;color:#ffb3ad}
+.support{margin-top:34px;padding:22px 24px;background:#19262c;border:1px solid #304148;border-radius:16px}.support h2{font-size:19px;margin:0 0 8px;color:#f1faf8}.support p{color:#b5c6ca;line-height:1.6;margin:0 0 12px;font-size:14px}.support p:last-child{margin:0}.support a.kofi{background:#83eac5;color:#10261e;font:600 14px system-ui;border-radius:8px;padding:10px 16px;text-decoration:none;display:inline-block}.support a.text{color:#83eac5}
+@media(max-width:700px){nav .brand{flex-basis:100%}h1{font-size:32px}}
+</style>
+</head>
+<body><main>
+<nav><a class="brand" href="./">Filament Clip Studio</a><a href="./studio.html">Studio</a><a href="./accessories.html">Holders &amp; templates</a><a href="./guide.html">Guide</a><a href="./changelog.html" aria-current="page">Change log</a></nav>
+<div class="eyebrow">CHANGE LOG</div>
+<h1>What&rsquo;s new</h1>
+<p>Changes to the studio, the catalog and the site, newest first. Dates are in UTC. For every technical change, see the <a class="text" href="https://github.com/simpleenough77-fb/Filament-Clip-Studio-Web/commits/main" target="_blank" rel="noopener">commit history on GitHub</a>.</p>
+<div class="filters" role="group" aria-label="Show changes of kind">
+<button type="button" data-kind="" aria-pressed="true">All</button><button type="button" data-kind="New" aria-pressed="false">New</button><button type="button" data-kind="Improved" aria-pressed="false">Improved</button><button type="button" data-kind="Fixed" aria-pressed="false">Fixed</button><button type="button" data-kind="Removed" aria-pressed="false">Removed</button>
+</div>
+<div id="log"><p class="small">Loading the change log&hellip;</p></div>
+<noscript><p>The change log needs JavaScript. You can read the raw list in <a class="text" href="./changelog.json">changelog.json</a>.</p></noscript>
+<footer class="support" id="support"><h2>Help Clip Studio grow</h2>
+<p>The generator, holders, and mounting templates are free. If they’ve made your setup a little easier, optional support helps cover prototypes and access to more hardware for measurement and fit testing.</p>
+<p><a class="kofi" href="https://ko-fi.com/clipstudio" target="_blank" rel="noopener">Support Clip Studio on Ko-fi</a></p>
+<p>Have a device to donate or loan for development? <a class="text" href="https://ko-fi.com/post/Provide-Development-Hardware-A5C327LDRO" target="_blank" rel="noopener">Provide development hardware</a>.</p></footer>
+<p class="small" style="margin-top:18px;color:#8fa7ad">Filament Clip Studio &middot; browser edition</p>
+</main>
+<script>
+(async()=>{
+ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const log=document.getElementById('log');
+ let entries=[];
+ try{entries=(await (await fetch('./changelog.json',{cache:'no-cache'})).json()).entries;}
+ catch(e){log.innerHTML='<p class="small">The change log could not be loaded. See <a class="text" href="./changelog.json">changelog.json</a>.</p>';return;}
+ const fmt=d=>new Date(d+'T00:00:00Z').toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'});
+ function render(kind){
+  const shown=entries.filter(e=>!kind||e.kind===kind);
+  if(!shown.length){log.innerHTML='<p class="small">No changes of this kind yet.</p>';return;}
+  const days=[];for(const e of shown){if(!days.length||days[days.length-1].date!==e.date)days.push({date:e.date,items:[]});days[days.length-1].items.push(e);}
+  log.innerHTML=days.map(d=>`<section class="day"><time datetime="${esc(d.date)}">${esc(fmt(d.date))}</time>${d.items.map(e=>`<article class="entry"><div class="head"><span class="kind ${esc(e.kind)}">${esc(e.kind)}</span><h2>${esc(e.title)}</h2></div><ul>${e.details.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></article>`).join('')}</section>`).join('');
+ }
+ document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));render(b.dataset.kind);
+ }));
+ render('');
+})();
+</script>
+</body></html>

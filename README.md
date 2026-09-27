@@ -39,4 +39,8 @@ GitHub Actions (`.github/workflows/pages.yml`) runs the fast checks on every pus
 - `python tools/build_site.py` — writes `downloads/catalog.csv` (the Google Sheets builder imports it with `=IMPORTDATA`) and `SOURCE_HASHES.json`. The deploy also stamps the build badge with the commit and date. Both files are generated, not committed.
 - The geometry tests in `tests/test_standing_exports.py` and `tests/test_sleeve_label_face.py` need a local OpenSCAD install and are run by hand.
 
+## Change log
+
+`changelog.json` feeds the public change log at https://filamentclip.com/changelog. For every change a visitor would notice, add an entry at the top (newest first) with the UTC date, a kind (`New`, `Improved`, `Fixed` or `Removed`), a short title and one or more plain-language details. `tests/test_quick.py` checks the format and order.
+
 The Google Sheets CSV builder: https://docs.google.com/spreadsheets/d/17I2c2LSQdosgysyYz1NXYAqdRnsjegUHCgwkq1jBLrE/copy
