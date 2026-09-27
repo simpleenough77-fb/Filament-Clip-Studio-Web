@@ -31,7 +31,7 @@ def write_batch(path,variants,plates,settings,printer,author):
                 attrs=dict(v1=str(a),v2=str(b),v3=str(c))
                 if i==0 and var.get('support_paint') and var['support_paint'][fi]:attrs['paint_supports']=var['support_paint'][fi]
                 ET.SubElement(tnode,q('triangle'),**attrs)
-            kind='normal_part' if i==0 or settings['style']=='part' else 'negative_part' if settings['style']=='cut' else 'modifier_part'
+            kind='negative_part' if i and settings['style']=='cut' else 'normal_part'
             if blocker:kind='support_blocker'
             pc=ET.SubElement(oc,'part',id=str(oid),subtype=kind);meta(pc,'name',name+' | '+r['filament_roles'][0 if i==0 else 1]);meta(pc,'extruder',0 if blocker else body if i==0 else text);meta(pc,'matrix','1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1')
             ET.SubElement(pc,'mesh_stat',face_count=str(len(faces)),edges_fixed='0',degenerate_facets='0',facets_removed='0',facets_reversed='0',backwards_edges='0');oid+=1

@@ -46,7 +46,7 @@ def validate(data, allow_empty=False):
         s[k]=float(s[k]);
         if k!='type_size' and s[k]==0:s[k]=s['type_size']*.8
         elif not 2<=s[k]<=8:raise ValueError('Font sizes must be 2–8 mm; use 0 for automatic manufacturer/color sizing.')
-    if s['style'] not in ('part','cut','modifier'):raise ValueError('Unknown label style.')
+    if s['style'] not in ('part','cut'):raise ValueError('Unknown label style. Choose Flat colored inlay or Engraved.')
     if s['body_mode'] not in ('fixed','filament') or s['text_mode'] not in ('fixed','filament','contrast'):raise ValueError('Unknown color mode.')
     for k in ('body_color','text_color','dark_color','light_color'):s[k]=valid_color(s[k])
     clean=[]
@@ -187,7 +187,7 @@ def make_3mf(path,parts,name,body_color,text_color,style,quantity=1,roles=None,s
         mesh=ET.SubElement(meshobj,q('mesh'));vnode=ET.SubElement(mesh,q('vertices'));tnode=ET.SubElement(mesh,q('triangles'))
         for x,y,z in verts:ET.SubElement(vnode,q('vertex'),x=str(x),y=str(y),z=str(z))
         for a,b,c in faces:ET.SubElement(tnode,q('triangle'),v1=str(a),v2=str(b),v3=str(c))
-        subtype='normal_part' if i==0 or style=='part' else 'negative_part' if style=='cut' else 'modifier_part'
+        subtype='negative_part' if i and style=='cut' else 'normal_part'
         part=ET.SubElement(obj,'part',id=oid,subtype=subtype)
         ET.SubElement(part,'metadata',key='name',value=label+(' | '+roles[0 if i==0 else 1] if roles else ''))
         ET.SubElement(part,'metadata',key='extruder',value=str(1 if i==0 or style=='cut' or same_filament else 2))
