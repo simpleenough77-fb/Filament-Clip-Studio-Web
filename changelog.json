@@ -1,6 +1,11 @@
 {
   "note": "Newest first. Add an entry at the top for every change visitors would notice. kind: New, Improved, Fixed or Removed. Dates are UTC (YYYY-MM-DD).",
   "entries": [
+    {"date": "2026-09-27", "kind": "New", "title": "Jayo spools",
+     "details": ["Added 302 Jayo colors across 25 filament types: the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store, including sold-out colors (Jayo ABS comes in 1 kg).",
+                 "Jayo reusable spools use the Bambu Lab clip.",
+                 "The Google Sheets batch builder offers Jayo too.",
+                 "Cardboard-spool and transparent-spool rolls, 5 kg spools, bundles and multi-roll packs aren't included."]},
     {"date": "2026-09-27", "kind": "New", "title": "Change log",
      "details": ["This page: a dated list of what changed on the site and in the studio."]},
     {"date": "2026-09-27", "kind": "New", "title": "Sunlu spools",

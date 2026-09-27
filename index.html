@@ -63,12 +63,13 @@ a.button.secondary{background:#26383f;color:#e6f2f2}a.text{color:#83eac5}
 </div></section>
 
 <section class="panel" id="spools"><h2>Supported spools</h2>
-<p>Each clip is shaped and physically tested for one brand&rsquo;s spool, so support grows one fitted brand at a time. Some spools share a fit: Sunlu&rsquo;s 1&nbsp;kg rolls use the Bambu Lab clip. For every supported brand, the catalog lists every public type and color the manufacturer shows on its website, with a link to the source.</p>
+<p>Each clip is shaped and physically tested for one brand&rsquo;s spool, so support grows one fitted brand at a time. Some spools share a fit: Sunlu&rsquo;s 1&nbsp;kg rolls and Jayo&rsquo;s 1.1&nbsp;kg reusable spools use the Bambu Lab clip. For every supported brand, the catalog lists every public type and color the manufacturer shows on its website, with a link to the source.</p>
 <div class="brands" id="brandList">
 <div class="brand-card"><h3>Bambu Lab</h3><div class="count">Fitted and tested</div></div>
 <div class="brand-card"><h3>Cookiecad</h3><div class="count">Fitted and tested</div></div>
 <div class="brand-card"><h3>Amolen</h3><div class="count">Fitted and tested</div></div>
 <div class="brand-card"><h3>Sunlu</h3><div class="count">1 kg rolls &middot; uses the Bambu Lab clip</div></div>
+<div class="brand-card"><h3>Jayo</h3><div class="count">1.1 kg reusable spools &middot; uses the Bambu Lab clip</div></div>
 </div>
 <div class="brands">
 <div class="brand-card soon"><h3>Creality</h3><div class="count">Coming next</div></div>
@@ -108,7 +109,7 @@ a.button.secondary{background:#26383f;color:#e6f2f2}a.text{color:#83eac5}
   for(const r of rows.slice(1)){if(!r[0])continue;const b=by.get(r[0])||{types:new Set(),n:0};b.types.add(r[1]);b.n++;by.set(r[0],b);}
   if(!by.size)return;
   const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  document.getElementById('brandList').innerHTML=[...by].map(([m,b])=>`<div class="brand-card"><h3>${esc(m)}</h3><div class="count">${m==='Sunlu'?'1 kg rolls &middot; uses the Bambu Lab clip':'Fitted and tested'} &middot; ${b.types.size} types &middot; ${b.n} colors</div></div>`).join('');
+  document.getElementById('brandList').innerHTML=[...by].map(([m,b])=>`<div class="brand-card"><h3>${esc(m)}</h3><div class="count">${({Sunlu:'1 kg rolls &middot; uses the Bambu Lab clip',Jayo:'1.1 kg reusable spools &middot; uses the Bambu Lab clip'})[m]||'Fitted and tested'} &middot; ${b.types.size} types &middot; ${b.n} colors</div></div>`).join('');
  }catch(e){/* keep the static list */}
 })();
 </script>
