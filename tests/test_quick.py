@@ -153,7 +153,7 @@ def test_github_pages_redirect_stub():
     assert (out / 'downloads' / 'catalog.csv').read_text() == build_site.catalog_csv_text()
 
 def test_support_footer_on_public_pages():
-    for name in ('index.html', 'studio.html', 'guide.html', 'accessories.html'):
+    for name in ('index.html', 'studio.html', 'guide.html', 'accessories.html', 'changelog.html'):
         html = (ROOT / name).read_text(encoding='utf-8')
         assert html.count('class="support"') == 1, name
         assert 'href="https://ko-fi.com/clipstudio"' in html, name
@@ -175,7 +175,7 @@ def test_front_page_and_studio():
     studio = (ROOT / 'studio.html').read_text(encoding='utf-8')
     assert 'studio-worker' not in home and 'bridge.js' not in home, 'front page must stay light'
     assert 'bridge.js' in studio and re.search(r'>Build [^<]*</span>', studio), 'studio keeps the app and build badge'
-    for name in ('index.html', 'studio.html', 'guide.html', 'accessories.html'):
+    for name in ('index.html', 'studio.html', 'guide.html', 'accessories.html', 'changelog.html'):
         page = (ROOT / name).read_text(encoding='utf-8')
         assert 'og:image' in page and '<meta name="description"' in page, name + ' needs share metadata'
         for href in re.findall(r'href="\./([\w-]+\.html)', page):
@@ -184,6 +184,24 @@ def test_front_page_and_studio():
     for brand in catalog_brands:
         assert brand in home, 'front page supported-spools list is missing ' + brand
     assert (ROOT / '.github' / 'ISSUE_TEMPLATE' / 'spool-request.yml').is_file()
+
+def test_changelog():
+    import datetime, json
+    data = json.loads((ROOT / 'changelog.json').read_text(encoding='utf-8'))
+    entries = data['entries']
+    assert entries, 'change log is empty'
+    dates = []
+    for e in entries:
+        assert set(e) == {'date', 'kind', 'title', 'details'}, e
+        datetime.date.fromisoformat(e['date'])
+        assert e['kind'] in ('New', 'Improved', 'Fixed', 'Removed'), e
+        assert e['title'].strip() and e['details'] and all(isinstance(x, str) and x.strip() for x in e['details']), e
+        dates.append(e['date'])
+    assert dates == sorted(dates, reverse=True), 'changelog.json entries must be newest first'
+    page = (ROOT / 'changelog.html').read_text(encoding='utf-8')
+    assert "fetch('./changelog.json'" in page and 'esc(' in page
+    for name in ('index.html', 'studio.html', 'guide.html', 'accessories.html', '404.html'):
+        assert 'changelog.html' in (ROOT / name).read_text(encoding='utf-8'), name + ' should link to the change log'
 
 def test_clip_bodies_loaded_and_clean():
     import struct
