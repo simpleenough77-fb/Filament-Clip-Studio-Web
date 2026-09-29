@@ -1,6 +1,11 @@
 {
   "note": "Newest first. Add an entry at the top for every change visitors would notice. kind: New, Improved, Fixed or Removed. Dates are UTC (YYYY-MM-DD).",
   "entries": [
+    {"date": "2026-09-29", "kind": "Improved", "title": "Shorter names that print in full",
+     "details": ["Long Bambu Lab, Cookiecad and Amolen type and color names are shortened so no label gets cut off. Examples: PLA Translucent is now PLA Clear, Iridium Gold Metallic is Iridium Gold, Funfetti Clear with Rainbow Glitter is Funfetti, and Amolen PLA Temp Color Change is PLA Thermo.",
+                 "CSVs and spreadsheet rows that use the old names still import into the studio. Saved batches are not affected."]},
+    {"date": "2026-09-29", "kind": "Fixed", "title": "Cookiecad Lavender/Purple",
+     "details": ["Batches that included the Cookiecad PLA color Lavender/Purple failed at Review labels because its old name contained a backslash. It is renamed Lavender/Purple and works again."]},
     {"date": "2026-09-29", "kind": "Improved", "title": "Label style photo",
      "details": ["The studio and the guide now show one label printed three ways, with the settings behind each: an inlay on a filament-colored body, an inlay on a black body, and engraved text."]},
     {"date": "2026-09-27", "kind": "New", "title": "Jayo spools",
