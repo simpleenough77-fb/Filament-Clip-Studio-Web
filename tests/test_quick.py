@@ -203,6 +203,22 @@ def test_changelog():
     for name in ('index.html', 'studio.html', 'guide.html', 'accessories.html', '404.html'):
         assert 'changelog.html' in (ROOT / name).read_text(encoding='utf-8'), name + ' should link to the change log'
 
+def test_catalog_names_are_safe_and_aliases_import():
+    # A backslash in a name breaks the OpenSCAD label measurement (Review labels fails).
+    names = {}
+    for p in g.CATALOG:
+        for v in (p['manufacturer'], p['filament_type'], p['color_name']):
+            assert '\\' not in v and '"' not in v, 'unsafe character in ' + repr(v)
+        names[(p['manufacturer'], p['filament_type'], p['color_name'])] = p['id']
+    for p in g.CATALOG:
+        for alias in p.get('label_aliases', []):
+            assert tuple(alias) not in names or names[tuple(alias)] == p['id'], f'alias {alias} collides with another product'
+    csv_text = 'manufacturer,filament_type,color_name,quantity\nBambu Lab,PLA Translucent,Cherry Pink,1\nCookiecad,PLA,Funfetti Clear with Rainbow Glitter,2\nAmolen,PLA Temp Color Change,Red to White,1\n'
+    got = g.import_csv(csv_text)
+    assert got['imported'] == 3 and not got['skipped'], got['skipped']
+    picked = [(g.PRODUCTS[r['product']]['filament_type'], g.PRODUCTS[r['product']]['color_name']) for r in got['rows']]
+    assert picked == [('PLA Clear', 'Cherry Pink'), ('PLA', 'Funfetti'), ('PLA Thermo', 'Red\u2192White')], picked
+
 def test_clip_bodies_loaded_and_clean():
     import struct
     sys.path.insert(0, str(ROOT / 'author'))

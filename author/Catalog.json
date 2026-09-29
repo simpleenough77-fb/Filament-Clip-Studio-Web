@@ -1,7 +1,7 @@
 {
-  "version": "3.3",
-  "updated": "2026-09-27",
-  "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools use the Bambu Lab clip fit (owner-tested). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools use the Bambu Lab clip fit (owner-tested).",
+  "version": "3.4",
+  "updated": "2026-09-29",
+  "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools use the Bambu Lab clip fit (owner-tested). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools use the Bambu Lab clip fit (owner-tested). Some long Bambu Lab, Cookiecad and Amolen names are shortened so they print in full on the clip; the manufacturer's original names are kept as label_aliases, so CSVs that use them still import.",
   "products": [
     {
       "id": "bambu-petg-hf-blue",
@@ -1266,7 +1266,7 @@
     {
       "id": "bambu-d945aa0b38ad",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PETG Translucent",
+      "filament_type": "PETG Clear",
       "color_name": "Brown",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/petg-translucent",
@@ -1284,12 +1284,19 @@
         "#E5C688"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Brown \u2014 approximate manufacturer swatch"
+      "swatch_description": "Brown \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PETG Translucent",
+          "Brown"
+        ]
+      ]
     },
     {
       "id": "bambu-21ba85c03bb3",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PETG Translucent",
+      "filament_type": "PETG Clear",
       "color_name": "Clear",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/petg-translucent",
@@ -1308,12 +1315,19 @@
         "#E0E0E0"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Clear \u2014 approximate manufacturer swatch"
+      "swatch_description": "Clear \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PETG Translucent",
+          "Clear"
+        ]
+      ]
     },
     {
       "id": "bambu-7d6bfb286f20",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PETG Translucent",
+      "filament_type": "PETG Clear",
       "color_name": "Gray",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/petg-translucent",
@@ -1331,12 +1345,19 @@
         "#8E8E8E"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gray \u2014 approximate manufacturer swatch"
+      "swatch_description": "Gray \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PETG Translucent",
+          "Gray"
+        ]
+      ]
     },
     {
       "id": "bambu-b3bc9e7aafec",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PETG Translucent",
+      "filament_type": "PETG Clear",
       "color_name": "Light Blue",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/petg-translucent",
@@ -1355,12 +1376,19 @@
         "#61B0FF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Light Blue \u2014 approximate manufacturer swatch"
+      "swatch_description": "Light Blue \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PETG Translucent",
+          "Light Blue"
+        ]
+      ]
     },
     {
       "id": "bambu-7c765930a14d",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PETG Translucent",
+      "filament_type": "PETG Clear",
       "color_name": "Olive",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/petg-translucent",
@@ -1378,12 +1406,19 @@
         "#748C45"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Olive \u2014 approximate manufacturer swatch"
+      "swatch_description": "Olive \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PETG Translucent",
+          "Olive"
+        ]
+      ]
     },
     {
       "id": "bambu-639d9b5f5129",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PETG Translucent",
+      "filament_type": "PETG Clear",
       "color_name": "Orange",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/petg-translucent",
@@ -1401,12 +1436,19 @@
         "#FF911A"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Orange \u2014 approximate manufacturer swatch"
+      "swatch_description": "Orange \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PETG Translucent",
+          "Orange"
+        ]
+      ]
     },
     {
       "id": "bambu-2f2ad6dd9ac2",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PETG Translucent",
+      "filament_type": "PETG Clear",
       "color_name": "Pink",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/petg-translucent",
@@ -1424,12 +1466,19 @@
         "#F9C1BD"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Pink \u2014 approximate manufacturer swatch"
+      "swatch_description": "Pink \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PETG Translucent",
+          "Pink"
+        ]
+      ]
     },
     {
       "id": "bambu-ff81aad59092",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PETG Translucent",
+      "filament_type": "PETG Clear",
       "color_name": "Purple",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/petg-translucent",
@@ -1447,12 +1496,19 @@
         "#D6ABFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Purple \u2014 approximate manufacturer swatch"
+      "swatch_description": "Purple \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PETG Translucent",
+          "Purple"
+        ]
+      ]
     },
     {
       "id": "bambu-90e923a277f9",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PETG Translucent",
+      "filament_type": "PETG Clear",
       "color_name": "Teal",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/petg-translucent",
@@ -1471,7 +1527,14 @@
         "#77EDD7"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Teal \u2014 approximate manufacturer swatch"
+      "swatch_description": "Teal \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PETG Translucent",
+          "Teal"
+        ]
+      ]
     },
     {
       "id": "bambu-63415d3b5ed7",
@@ -2873,7 +2936,7 @@
     {
       "id": "bambu-ffb313cb9698",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Basic Gradient",
+      "filament_type": "PLA Gradient",
       "color_name": "Arctic Whisper",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-basic-gradient",
@@ -2894,13 +2957,20 @@
         "#D8F4F4"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Arctic Whisper \u2014 approximate manufacturer swatch"
+      "swatch_description": "Arctic Whisper \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Basic Gradient",
+          "Arctic Whisper"
+        ]
+      ]
     },
     {
       "id": "bambu-0d2e3c0ee25a",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Basic Gradient",
-      "color_name": "Blueberry Bubblegum",
+      "filament_type": "PLA Gradient",
+      "color_name": "Blueberry Bubble",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-basic-gradient",
       "source_date": "2026-09-13",
@@ -2920,12 +2990,19 @@
         "#AFCDF2"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blueberry Bubblegum \u2014 approximate manufacturer swatch"
+      "swatch_description": "Blueberry Bubblegum \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Basic Gradient",
+          "Blueberry Bubblegum"
+        ]
+      ]
     },
     {
       "id": "bambu-0cb037bfd25e",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Basic Gradient",
+      "filament_type": "PLA Gradient",
       "color_name": "Cotton Candy Cloud",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-basic-gradient",
@@ -2946,12 +3023,19 @@
         "#CFD8EA"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Cotton Candy Cloud \u2014 approximate manufacturer swatch"
+      "swatch_description": "Cotton Candy Cloud \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Basic Gradient",
+          "Cotton Candy Cloud"
+        ]
+      ]
     },
     {
       "id": "bambu-b4193002468e",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Basic Gradient",
+      "filament_type": "PLA Gradient",
       "color_name": "Dusk Glare",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-basic-gradient",
@@ -2972,12 +3056,19 @@
         "#E9986B"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Dusk Glare \u2014 approximate manufacturer swatch"
+      "swatch_description": "Dusk Glare \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Basic Gradient",
+          "Dusk Glare"
+        ]
+      ]
     },
     {
       "id": "bambu-ca70ddfb109c",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Basic Gradient",
+      "filament_type": "PLA Gradient",
       "color_name": "Mint Lime",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-basic-gradient",
@@ -2998,12 +3089,19 @@
         "#7DDC56"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Mint Lime \u2014 approximate manufacturer swatch"
+      "swatch_description": "Mint Lime \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Basic Gradient",
+          "Mint Lime"
+        ]
+      ]
     },
     {
       "id": "bambu-ef387dd4b03e",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Basic Gradient",
+      "filament_type": "PLA Gradient",
       "color_name": "Ocean to Meadow",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-basic-gradient",
@@ -3024,12 +3122,19 @@
         "#55AED5"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Ocean to Meadow \u2014 approximate manufacturer swatch"
+      "swatch_description": "Ocean to Meadow \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Basic Gradient",
+          "Ocean to Meadow"
+        ]
+      ]
     },
     {
       "id": "bambu-94bb72441f08",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Basic Gradient",
+      "filament_type": "PLA Gradient",
       "color_name": "Pink Citrus",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-basic-gradient",
@@ -3050,12 +3155,19 @@
         "#F5AAA4"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Pink Citrus \u2014 approximate manufacturer swatch"
+      "swatch_description": "Pink Citrus \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Basic Gradient",
+          "Pink Citrus"
+        ]
+      ]
     },
     {
       "id": "bambu-afcf469f405a",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Basic Gradient",
+      "filament_type": "PLA Gradient",
       "color_name": "Solar Breeze",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-basic-gradient",
@@ -3076,7 +3188,14 @@
         "#FA9E95"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Solar Breeze \u2014 approximate manufacturer swatch"
+      "swatch_description": "Solar Breeze \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Basic Gradient",
+          "Solar Breeze"
+        ]
+      ]
     },
     {
       "id": "bambu-d1318f1d9634",
@@ -3916,7 +4035,7 @@
       "id": "bambu-346cd7056e97",
       "manufacturer": "Bambu Lab",
       "filament_type": "PLA Metal",
-      "color_name": "Cobalt Blue Metallic",
+      "color_name": "Cobalt Blue",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-metal",
       "source_date": "2026-09-13",
@@ -3933,13 +4052,20 @@
         "#39699E"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Cobalt Blue Metallic \u2014 approximate manufacturer swatch"
+      "swatch_description": "Cobalt Blue Metallic \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Metal",
+          "Cobalt Blue Metallic"
+        ]
+      ]
     },
     {
       "id": "bambu-a1b259cdcc07",
       "manufacturer": "Bambu Lab",
       "filament_type": "PLA Metal",
-      "color_name": "Copper Brown Metallic",
+      "color_name": "Copper Brown",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-metal",
       "source_date": "2026-09-13",
@@ -3956,13 +4082,20 @@
         "#AA6443"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Copper Brown Metallic \u2014 approximate manufacturer swatch"
+      "swatch_description": "Copper Brown Metallic \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Metal",
+          "Copper Brown Metallic"
+        ]
+      ]
     },
     {
       "id": "bambu-1391bb199a72",
       "manufacturer": "Bambu Lab",
       "filament_type": "PLA Metal",
-      "color_name": "Iridium Gold Metallic",
+      "color_name": "Iridium Gold",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-metal",
       "source_date": "2026-09-13",
@@ -3979,13 +4112,20 @@
         "#B39B84"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Iridium Gold Metallic \u2014 approximate manufacturer swatch"
+      "swatch_description": "Iridium Gold Metallic \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Metal",
+          "Iridium Gold Metallic"
+        ]
+      ]
     },
     {
       "id": "bambu-c690afc1682e",
       "manufacturer": "Bambu Lab",
       "filament_type": "PLA Metal",
-      "color_name": "Iron Gray Metallic",
+      "color_name": "Iron Gray",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-metal",
       "source_date": "2026-09-13",
@@ -4002,13 +4142,20 @@
         "#43403D"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Iron Gray Metallic \u2014 approximate manufacturer swatch"
+      "swatch_description": "Iron Gray Metallic \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Metal",
+          "Iron Gray Metallic"
+        ]
+      ]
     },
     {
       "id": "bambu-d02117950391",
       "manufacturer": "Bambu Lab",
       "filament_type": "PLA Metal",
-      "color_name": "Oxide Green Metallic",
+      "color_name": "Oxide Green",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-metal",
       "source_date": "2026-09-13",
@@ -4025,7 +4172,14 @@
         "#1D7C6A"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Oxide Green Metallic \u2014 approximate manufacturer swatch"
+      "swatch_description": "Oxide Green Metallic \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Metal",
+          "Oxide Green Metallic"
+        ]
+      ]
     },
     {
       "id": "bambu-8586c150fd75",
@@ -4150,7 +4304,7 @@
     {
       "id": "bambu-d41a7d33ba16",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Silk Multi-Color",
+      "filament_type": "PLA Silk Multi",
       "color_name": "Aurora Purple",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-silk-multi-color",
@@ -4171,12 +4325,19 @@
         "#235EBB"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Aurora Purple \u2014 approximate manufacturer swatch"
+      "swatch_description": "Aurora Purple \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Silk Multi-Color",
+          "Aurora Purple"
+        ]
+      ]
     },
     {
       "id": "bambu-67e6eab34941",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Silk Multi-Color",
+      "filament_type": "PLA Silk Multi",
       "color_name": "Blue Hawaii",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-silk-multi-color",
@@ -4195,12 +4356,19 @@
         "#60A4E8"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blue Hawaii \u2014 approximate manufacturer swatch"
+      "swatch_description": "Blue Hawaii \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Silk Multi-Color",
+          "Blue Hawaii"
+        ]
+      ]
     },
     {
       "id": "bambu-197b5dbb4fd2",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Silk Multi-Color",
+      "filament_type": "PLA Silk Multi",
       "color_name": "Dawn Radiance",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-silk-multi-color",
@@ -4221,12 +4389,19 @@
         "#9986B9"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Dawn Radiance \u2014 approximate manufacturer swatch"
+      "swatch_description": "Dawn Radiance \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Silk Multi-Color",
+          "Dawn Radiance"
+        ]
+      ]
     },
     {
       "id": "bambu-4bc61ab77c9e",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Silk Multi-Color",
+      "filament_type": "PLA Silk Multi",
       "color_name": "Gilded Rose",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-silk-multi-color",
@@ -4245,12 +4420,19 @@
         "#E74176"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Gilded Rose \u2014 approximate manufacturer swatch"
+      "swatch_description": "Gilded Rose \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Silk Multi-Color",
+          "Gilded Rose"
+        ]
+      ]
     },
     {
       "id": "bambu-553cb167dd01",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Silk Multi-Color",
+      "filament_type": "PLA Silk Multi",
       "color_name": "Midnight Blaze",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-silk-multi-color",
@@ -4269,12 +4451,19 @@
         "#0047BB"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Midnight Blaze \u2014 approximate manufacturer swatch"
+      "swatch_description": "Midnight Blaze \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Silk Multi-Color",
+          "Midnight Blaze"
+        ]
+      ]
     },
     {
       "id": "bambu-01b7cce1ea43",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Silk Multi-Color",
+      "filament_type": "PLA Silk Multi",
       "color_name": "Mystic Magenta",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-silk-multi-color",
@@ -4293,12 +4482,19 @@
         "#720062"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Mystic Magenta \u2014 approximate manufacturer swatch"
+      "swatch_description": "Mystic Magenta \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Silk Multi-Color",
+          "Mystic Magenta"
+        ]
+      ]
     },
     {
       "id": "bambu-3da5cacc29e8",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Silk Multi-Color",
+      "filament_type": "PLA Silk Multi",
       "color_name": "Neon City",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-silk-multi-color",
@@ -4317,12 +4513,19 @@
         "#BB22A3"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Neon City \u2014 approximate manufacturer swatch"
+      "swatch_description": "Neon City \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Silk Multi-Color",
+          "Neon City"
+        ]
+      ]
     },
     {
       "id": "bambu-ebbd279fd558",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Silk Multi-Color",
+      "filament_type": "PLA Silk Multi",
       "color_name": "Phantom Blue",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-silk-multi-color",
@@ -4341,12 +4544,19 @@
         "#00629B"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Phantom Blue \u2014 approximate manufacturer swatch"
+      "swatch_description": "Phantom Blue \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Silk Multi-Color",
+          "Phantom Blue"
+        ]
+      ]
     },
     {
       "id": "bambu-0340bee9eccc",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Silk Multi-Color",
+      "filament_type": "PLA Silk Multi",
       "color_name": "South Beach",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-silk-multi-color",
@@ -4367,12 +4577,19 @@
         "#478892"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "South Beach \u2014 approximate manufacturer swatch"
+      "swatch_description": "South Beach \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Silk Multi-Color",
+          "South Beach"
+        ]
+      ]
     },
     {
       "id": "bambu-d3bc71e75c6c",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Silk Multi-Color",
+      "filament_type": "PLA Silk Multi",
       "color_name": "Velvet Eclipse",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-silk-multi-color",
@@ -4391,7 +4608,14 @@
         "#A34342"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Velvet Eclipse \u2014 approximate manufacturer swatch"
+      "swatch_description": "Velvet Eclipse \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Silk Multi-Color",
+          "Velvet Eclipse"
+        ]
+      ]
     },
     {
       "id": "bambu-c104538939d2",
@@ -4700,7 +4924,7 @@
       "id": "bambu-08be091858a9",
       "manufacturer": "Bambu Lab",
       "filament_type": "PLA Sparkle",
-      "color_name": "Alpine Green Sparkle",
+      "color_name": "Alpine Green",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-sparkle",
       "source_date": "2026-09-13",
@@ -4717,13 +4941,20 @@
         "#3F5443"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Alpine Green Sparkle \u2014 approximate manufacturer swatch"
+      "swatch_description": "Alpine Green Sparkle \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Sparkle",
+          "Alpine Green Sparkle"
+        ]
+      ]
     },
     {
       "id": "bambu-533409f98630",
       "manufacturer": "Bambu Lab",
       "filament_type": "PLA Sparkle",
-      "color_name": "Classic Gold Sparkle",
+      "color_name": "Classic Gold",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-sparkle",
       "source_date": "2026-09-13",
@@ -4740,13 +4971,20 @@
         "#CEA629"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Classic Gold Sparkle \u2014 approximate manufacturer swatch"
+      "swatch_description": "Classic Gold Sparkle \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Sparkle",
+          "Classic Gold Sparkle"
+        ]
+      ]
     },
     {
       "id": "bambu-51e30ff3a6df",
       "manufacturer": "Bambu Lab",
       "filament_type": "PLA Sparkle",
-      "color_name": "Crimson Red Sparkle",
+      "color_name": "Crimson Red",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-sparkle",
       "source_date": "2026-09-13",
@@ -4763,13 +5001,20 @@
         "#792B36"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Crimson Red Sparkle \u2014 approximate manufacturer swatch"
+      "swatch_description": "Crimson Red Sparkle \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Sparkle",
+          "Crimson Red Sparkle"
+        ]
+      ]
     },
     {
       "id": "bambu-f5b76bdd075a",
       "manufacturer": "Bambu Lab",
       "filament_type": "PLA Sparkle",
-      "color_name": "Onyx Black Sparkle",
+      "color_name": "Onyx Black",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-sparkle",
       "source_date": "2026-09-13",
@@ -4786,13 +5031,20 @@
         "#2D2B28"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Onyx Black Sparkle \u2014 approximate manufacturer swatch"
+      "swatch_description": "Onyx Black Sparkle \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Sparkle",
+          "Onyx Black Sparkle"
+        ]
+      ]
     },
     {
       "id": "bambu-af366808ce77",
       "manufacturer": "Bambu Lab",
       "filament_type": "PLA Sparkle",
-      "color_name": "Royal Purple Sparkle",
+      "color_name": "Royal Purple",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-sparkle",
       "source_date": "2026-09-13",
@@ -4809,13 +5061,20 @@
         "#483D8B"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Royal Purple Sparkle \u2014 approximate manufacturer swatch"
+      "swatch_description": "Royal Purple Sparkle \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Sparkle",
+          "Royal Purple Sparkle"
+        ]
+      ]
     },
     {
       "id": "bambu-0abb299bd4f3",
       "manufacturer": "Bambu Lab",
       "filament_type": "PLA Sparkle",
-      "color_name": "Slate Gray Sparkle",
+      "color_name": "Slate Gray",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-sparkle",
       "source_date": "2026-09-13",
@@ -4832,7 +5091,14 @@
         "#8E9089"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Slate Gray Sparkle \u2014 approximate manufacturer swatch"
+      "swatch_description": "Slate Gray Sparkle \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Sparkle",
+          "Slate Gray Sparkle"
+        ]
+      ]
     },
     {
       "id": "bambu-0fda3f61ceb9",
@@ -5001,7 +5267,7 @@
     {
       "id": "bambu-f0c1e1adbcb3",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Translucent",
+      "filament_type": "PLA Clear",
       "color_name": "Blue",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-translucent",
@@ -5019,12 +5285,19 @@
         "#0047BB"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Blue \u2014 approximate manufacturer swatch"
+      "swatch_description": "Blue \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Translucent",
+          "Blue"
+        ]
+      ]
     },
     {
       "id": "bambu-f5cc878d0461",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Translucent",
+      "filament_type": "PLA Clear",
       "color_name": "Cherry Pink",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-translucent",
@@ -5042,12 +5315,19 @@
         "#F5B6CD"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Cherry Pink \u2014 approximate manufacturer swatch"
+      "swatch_description": "Cherry Pink \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Translucent",
+          "Cherry Pink"
+        ]
+      ]
     },
     {
       "id": "bambu-78ceea401d1b",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Translucent",
+      "filament_type": "PLA Clear",
       "color_name": "Ice Blue",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-translucent",
@@ -5065,12 +5345,19 @@
         "#B8CDE9"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Ice Blue \u2014 approximate manufacturer swatch"
+      "swatch_description": "Ice Blue \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Translucent",
+          "Ice Blue"
+        ]
+      ]
     },
     {
       "id": "bambu-d30b359fff9b",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Translucent",
+      "filament_type": "PLA Clear",
       "color_name": "Lavender",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-translucent",
@@ -5088,12 +5375,19 @@
         "#B8ACD6"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Lavender \u2014 approximate manufacturer swatch"
+      "swatch_description": "Lavender \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Translucent",
+          "Lavender"
+        ]
+      ]
     },
     {
       "id": "bambu-8a912b1c5f6c",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Translucent",
+      "filament_type": "PLA Clear",
       "color_name": "Light Jade",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-translucent",
@@ -5111,12 +5405,19 @@
         "#96D8AF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Light Jade \u2014 approximate manufacturer swatch"
+      "swatch_description": "Light Jade \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Translucent",
+          "Light Jade"
+        ]
+      ]
     },
     {
       "id": "bambu-bde190371159",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Translucent",
+      "filament_type": "PLA Clear",
       "color_name": "Mellow Yellow",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-translucent",
@@ -5134,12 +5435,19 @@
         "#F5DBAB"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Mellow Yellow \u2014 approximate manufacturer swatch"
+      "swatch_description": "Mellow Yellow \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Translucent",
+          "Mellow Yellow"
+        ]
+      ]
     },
     {
       "id": "bambu-364e82465fde",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Translucent",
+      "filament_type": "PLA Clear",
       "color_name": "Orange",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-translucent",
@@ -5157,12 +5465,19 @@
         "#F74E02"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Orange \u2014 approximate manufacturer swatch"
+      "swatch_description": "Orange \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Translucent",
+          "Orange"
+        ]
+      ]
     },
     {
       "id": "bambu-204b24a9f343",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Translucent",
+      "filament_type": "PLA Clear",
       "color_name": "Purple",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-translucent",
@@ -5180,12 +5495,19 @@
         "#8344B0"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Purple \u2014 approximate manufacturer swatch"
+      "swatch_description": "Purple \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Translucent",
+          "Purple"
+        ]
+      ]
     },
     {
       "id": "bambu-431d2214a587",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Translucent",
+      "filament_type": "PLA Clear",
       "color_name": "Red",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-translucent",
@@ -5203,12 +5525,19 @@
         "#B50011"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Red \u2014 approximate manufacturer swatch"
+      "swatch_description": "Red \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Translucent",
+          "Red"
+        ]
+      ]
     },
     {
       "id": "bambu-1c3cfec08aa6",
       "manufacturer": "Bambu Lab",
-      "filament_type": "PLA Translucent",
+      "filament_type": "PLA Clear",
       "color_name": "Teal",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/pla-translucent",
@@ -5226,7 +5555,14 @@
         "#009FA1"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Teal \u2014 approximate manufacturer swatch"
+      "swatch_description": "Teal \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "PLA Translucent",
+          "Teal"
+        ]
+      ]
     },
     {
       "id": "bambu-c4b2513b93b1",
@@ -5601,7 +5937,7 @@
     {
       "id": "bambu-e004df27e8c2",
       "manufacturer": "Bambu Lab",
-      "filament_type": "Support for ABS",
+      "filament_type": "Support ABS",
       "color_name": "White",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/support-for-abs",
@@ -5619,12 +5955,19 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White \u2014 approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "Support for ABS",
+          "White"
+        ]
+      ]
     },
     {
       "id": "bambu-7c58f4c2b0e8",
       "manufacturer": "Bambu Lab",
-      "filament_type": "Support for PA/PET",
+      "filament_type": "Support PA/PET",
       "color_name": "Green",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/support-for-pa-pet",
@@ -5642,12 +5985,19 @@
         "#C0DF16"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Green \u2014 approximate manufacturer swatch"
+      "swatch_description": "Green \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "Support for PA/PET",
+          "Green"
+        ]
+      ]
     },
     {
       "id": "bambu-64b5a7b3cc3f",
       "manufacturer": "Bambu Lab",
-      "filament_type": "Support for PLA (New Version)",
+      "filament_type": "Support PLA",
       "color_name": "White",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/support-for-pla-new",
@@ -5665,12 +6015,19 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "White \u2014 approximate manufacturer swatch"
+      "swatch_description": "White \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "Support for PLA (New Version)",
+          "White"
+        ]
+      ]
     },
     {
       "id": "bambu-090e824386d9",
       "manufacturer": "Bambu Lab",
-      "filament_type": "Support for PLA/PETG",
+      "filament_type": "Sup. PLA/PETG",
       "color_name": "Black",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/support-for-pla-petg",
@@ -5688,12 +6045,19 @@
         "#000000"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Black \u2014 approximate manufacturer swatch"
+      "swatch_description": "Black \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "Support for PLA/PETG",
+          "Black"
+        ]
+      ]
     },
     {
       "id": "bambu-2eac4ebf80be",
       "manufacturer": "Bambu Lab",
-      "filament_type": "Support for PLA/PETG",
+      "filament_type": "Sup. PLA/PETG",
       "color_name": "Nature",
       "spool_profile": "Bambu Original",
       "source": "https://us.store.bambulab.com/products/support-for-pla-petg",
@@ -5711,7 +6075,14 @@
         "#FFFFFF"
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
-      "swatch_description": "Nature \u2014 approximate manufacturer swatch"
+      "swatch_description": "Nature \u2014 approximate manufacturer swatch",
+      "label_aliases": [
+        [
+          "Bambu Lab",
+          "Support for PLA/PETG",
+          "Nature"
+        ]
+      ]
     },
     {
       "id": "bambu-f5361166cde8",
@@ -7063,7 +7434,7 @@
       "id": "cookiecad-df19332c12",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Blue Chip Marble",
+      "color_name": "Blue Marble",
       "spool_profile": "Cookiecad",
       "swatch": "#8CD4E5",
       "source": "https://cookiecad.com/products/blue-chip-marble-pla-filament-1-75mm-1kg-1",
@@ -7084,7 +7455,14 @@
       "swatch_description": "Blue Chip gradient colors: #8CD4E5",
       "swatch_css": "background-color:#8CD4E5",
       "swatch_method": "Manufacturer color matrix",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Cookiecad",
+          "PLA",
+          "Blue Chip Marble"
+        ]
+      ]
     },
     {
       "id": "cookiecad-c437c46ef0",
@@ -7377,7 +7755,7 @@
       "id": "cookiecad-019a3228d4",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Funfetti Clear with Rainbow Glitter",
+      "color_name": "Funfetti",
       "spool_profile": "Cookiecad",
       "swatch": "#DFE5E8",
       "source": "https://cookiecad.com/products/cookiecad-funfetti-clear-with-rainbow-glitter-pla-filament-1-75mm-1kg",
@@ -7408,13 +7786,20 @@
       "swatch_description": "Funfetti gradient colors: clear",
       "swatch_css": "background-color:var(--matrix-clear-base)",
       "swatch_method": "Manufacturer color matrix",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Cookiecad",
+          "PLA",
+          "Funfetti Clear with Rainbow Glitter"
+        ]
+      ]
     },
     {
       "id": "cookiecad-65b8dd3edf",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Gold Dust Clear with Gold Glitter",
+      "color_name": "Gold Dust",
       "spool_profile": "Cookiecad",
       "swatch": "#DFE5E8",
       "source": "https://cookiecad.com/products/gold-dust-clear-with-gold-glitter-pla-filament-1-75mm-1kg",
@@ -7441,7 +7826,14 @@
       "swatch_description": "Gold Dust gradient colors: clear",
       "swatch_css": "background-color:var(--matrix-clear-base)",
       "swatch_method": "Manufacturer color matrix",
-      "available_at_refresh": false
+      "available_at_refresh": false,
+      "label_aliases": [
+        [
+          "Cookiecad",
+          "PLA",
+          "Gold Dust Clear with Gold Glitter"
+        ]
+      ]
     },
     {
       "id": "cookiecad-adf5288d3a",
@@ -7584,7 +7976,7 @@
       "id": "cookiecad-78e35aa9ea",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Lavender Chip Marble",
+      "color_name": "Lavender Marble",
       "spool_profile": "Cookiecad",
       "swatch": "#D6A6E5",
       "source": "https://cookiecad.com/products/blue-chip-marble-pla-filament-1-75mm-1kg",
@@ -7605,7 +7997,14 @@
       "swatch_description": "Lavender Chip gradient colors: #D6A6E5",
       "swatch_css": "background-color:#D6A6E5",
       "swatch_method": "Manufacturer color matrix",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Cookiecad",
+          "PLA",
+          "Lavender Chip Marble"
+        ]
+      ]
     },
     {
       "id": "cookiecad-7f8a205270",
@@ -7639,7 +8038,7 @@
       "id": "cookiecad-89535842ca",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Lavender \\ Purple",
+      "color_name": "Lavender/Purple",
       "spool_profile": "Cookiecad",
       "swatch": "#D6A6E5",
       "source": "https://cookiecad.com/products/lavender-purple-pla-filament-1-75mm-1kg",
@@ -7653,7 +8052,14 @@
       "swatch_description": "Lavender gradient colors: #D6A6E5",
       "swatch_css": "background-color:#D6A6E5",
       "swatch_method": "Manufacturer color matrix",
-      "available_at_refresh": false
+      "available_at_refresh": false,
+      "label_aliases": [
+        [
+          "Cookiecad",
+          "PLA",
+          "Lavender \\ Purple"
+        ]
+      ]
     },
     {
       "id": "cookiecad-262b8a6b06",
@@ -7737,7 +8143,7 @@
       "id": "cookiecad-adb28cb7c6",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Mermaid Fast Change",
+      "color_name": "Mermaid Fast",
       "spool_profile": "Cookiecad",
       "source": "https://cookiecad.com/products/copy-of-mermaid-purple-blue-green-pla-filament-1-75mm-1kg",
       "source_title": "Mermaid Fast Change (purple, blue & green) PLA Filament 1.75mm, 500g",
@@ -7752,7 +8158,14 @@
       "swatch_description": "Fast Mermaid gradient colors: #00B0E7, #C661CC",
       "swatch_css": "background-image:linear-gradient(90deg, #00B0E7, #C661CC)",
       "swatch_method": "Manufacturer color matrix",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Cookiecad",
+          "PLA",
+          "Mermaid Fast Change"
+        ]
+      ]
     },
     {
       "id": "cookiecad-664cb2d0f2",
@@ -7807,7 +8220,7 @@
       "id": "cookiecad-9c4f3a0863",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Mint Chip Marble",
+      "color_name": "Mint Marble",
       "spool_profile": "Cookiecad",
       "swatch": "#A6E8DB",
       "source": "https://cookiecad.com/products/mint-chip-pla-filament-1-75mm-1kg",
@@ -7828,7 +8241,14 @@
       "swatch_description": "Mint Chip gradient colors: #A6E8DB",
       "swatch_css": "background-color:#A6E8DB",
       "swatch_method": "Manufacturer color matrix",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Cookiecad",
+          "PLA",
+          "Mint Chip Marble"
+        ]
+      ]
     },
     {
       "id": "cookiecad-f8d434f6f1",
@@ -8157,7 +8577,7 @@
       "id": "cookiecad-a9c6598781",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Pastel Rainbow Elixir",
+      "color_name": "Pastel Elixir",
       "spool_profile": "Cookiecad",
       "swatch": "#FAE400",
       "source": "https://cookiecad.com/products/pastel-rainbow-elixir-pla-filament-1-75mm-1kg",
@@ -8181,7 +8601,14 @@
       "swatch_description": "Pastel Rainbow Elixir gradient colors: #FAE400, #96D8E9, #F575C7",
       "swatch_css": "background-image:linear-gradient(90deg, #FAE400, #96D8E9, #F575C7)",
       "swatch_method": "Manufacturer color matrix",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Cookiecad",
+          "PLA",
+          "Pastel Rainbow Elixir"
+        ]
+      ]
     },
     {
       "id": "cookiecad-982e054e57",
@@ -8207,7 +8634,7 @@
       "id": "cookiecad-3376198b34",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Pink Chip Marble",
+      "color_name": "Pink Marble",
       "spool_profile": "Cookiecad",
       "swatch": "#F3CFD3",
       "source": "https://cookiecad.com/products/pink-chip-pla-filament-1-75mm-1kg",
@@ -8228,7 +8655,14 @@
       "swatch_description": "Pink Chip gradient colors: #F3CFD3",
       "swatch_css": "background-color:#F3CFD3",
       "swatch_method": "Manufacturer color matrix",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Cookiecad",
+          "PLA",
+          "Pink Chip Marble"
+        ]
+      ]
     },
     {
       "id": "cookiecad-6d3da27dbb",
@@ -8421,7 +8855,7 @@
       "id": "cookiecad-d54a4fe4ff",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Purple Ombr\u00e9 Elixir",
+      "color_name": "Purple Ombr\u00e9 Elix",
       "spool_profile": "Cookiecad",
       "swatch": "#FFFFFF",
       "source": "https://cookiecad.com/products/purple-ombre-elixir-pla-filament-1-75mm-1kg",
@@ -8444,7 +8878,14 @@
       "swatch_description": "Purple Ombre Elixir gradient colors: #FFFFFF, #BD27BD",
       "swatch_css": "background-image:linear-gradient(90deg, #FFFFFF, #BD27BD)",
       "swatch_method": "Manufacturer color matrix",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Cookiecad",
+          "PLA",
+          "Purple Ombr\u00e9 Elixir"
+        ]
+      ]
     },
     {
       "id": "cookiecad-350adb8977",
@@ -8539,7 +8980,7 @@
       "id": "cookiecad-abc0db0dcc",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Star Dust Glitter Black",
+      "color_name": "Star Dust",
       "spool_profile": "Cookiecad",
       "swatch": "#000000",
       "source": "https://cookiecad.com/products/cookiecad-star-dust-glitter-translucent-black-pla-filament-1-75mm-1kg",
@@ -8560,7 +9001,14 @@
       "swatch_description": "Star Dust gradient colors: #000000",
       "swatch_css": "background-color:#000000",
       "swatch_method": "Manufacturer color matrix",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Cookiecad",
+          "PLA",
+          "Star Dust Glitter Black"
+        ]
+      ]
     },
     {
       "id": "cookiecad-9d04304b28",
@@ -8786,7 +9234,7 @@
       "id": "cookiecad-944c194793",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Unicorn Fast Change",
+      "color_name": "Unicorn Fast",
       "spool_profile": "Cookiecad",
       "source": "https://cookiecad.com/products/copy-of-mermaid-fast-change-purple-blue-green-pla-filament-1-75mm-1kg",
       "source_title": "Unicorn Fast Change (purple, blue & green) PLA Filament 1.75mm, 500g",
@@ -8801,7 +9249,14 @@
       "swatch_description": "Fast Unicorn gradient colors: #49C5E4, #F575C7",
       "swatch_css": "background-image:linear-gradient(90deg, #49C5E4, #F575C7)",
       "swatch_method": "Manufacturer color matrix",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Cookiecad",
+          "PLA",
+          "Unicorn Fast Change"
+        ]
+      ]
     },
     {
       "id": "cookiecad-98ca724ee9",
@@ -8855,7 +9310,7 @@
       "id": "cookiecad-db3d7ccfbe",
       "manufacturer": "Cookiecad",
       "filament_type": "PLA",
-      "color_name": "Vanilla Chip Marble",
+      "color_name": "Vanilla Marble",
       "spool_profile": "Cookiecad",
       "swatch": "#FFFFFF",
       "source": "https://cookiecad.com/products/vanilla-chip-marble-pla-filament-1-75mm-1kg",
@@ -8876,7 +9331,14 @@
       "swatch_description": "Vanilla Chip gradient colors: #FFFFFF",
       "swatch_css": "background-color:#FFFFFF",
       "swatch_method": "Manufacturer color matrix",
-      "available_at_refresh": false
+      "available_at_refresh": false,
+      "label_aliases": [
+        [
+          "Cookiecad",
+          "PLA",
+          "Vanilla Chip Marble"
+        ]
+      ]
     },
     {
       "id": "cookiecad-818347e77c",
@@ -10654,7 +11116,7 @@
       "id": "amolen-pla-silk-silk-mint-macaron",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Mint Macaron",
+      "color_name": "Mint Macaron",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10665,13 +11127,20 @@
         "#707B83"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Mint Macaron"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-pink",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Pink",
+      "color_name": "Pink",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10682,13 +11151,20 @@
         "#707B83"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Pink"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-sakura-pink",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Sakura Pink",
+      "color_name": "Sakura Pink",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10699,13 +11175,20 @@
         "#E85B7A"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Sakura Pink"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-coffee-gold",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Coffee Gold",
+      "color_name": "Coffee Gold",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10716,13 +11199,20 @@
         "#C9A227"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Coffee Gold"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-pumpkin-orange",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Pumpkin Orange",
+      "color_name": "Pumpkin Orange",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10733,13 +11223,20 @@
         "#F27A24"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Pumpkin Orange"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-gradient-aged-brass",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Gradient Aged Brass",
+      "color_name": "Aged Brass",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10750,13 +11247,20 @@
         "#707B83"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Gradient Aged Brass"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-white",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk White",
+      "color_name": "White",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10767,13 +11271,20 @@
         "#F4F4F0"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk White"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-purple",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Purple",
+      "color_name": "Purple",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10784,13 +11295,20 @@
         "#75458F"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Purple"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-silver-grey",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Silver Grey",
+      "color_name": "Silver Grey",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10801,13 +11319,20 @@
         "#777777"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Silver Grey"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-mercury-silver",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Mercury Silver",
+      "color_name": "Mercury Silver",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10818,13 +11343,20 @@
         "#707B83"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Mercury Silver"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-gold",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Gold",
+      "color_name": "Gold",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10835,13 +11367,20 @@
         "#C9A227"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Gold"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-black",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Black",
+      "color_name": "Black",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10852,13 +11391,20 @@
         "#111111"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Black"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-bronze-green",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Bronze Green",
+      "color_name": "Bronze Green",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10869,13 +11415,20 @@
         "#2E8B57"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Bronze Green"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-ice-blue",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Ice Blue",
+      "color_name": "Ice Blue",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10886,13 +11439,20 @@
         "#24558A"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Ice Blue"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-cucumber-green",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Cucumber Green",
+      "color_name": "Cucumber Green",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10903,13 +11463,20 @@
         "#2E8B57"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Cucumber Green"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-neon-green",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Neon Green",
+      "color_name": "Neon Green",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10920,13 +11487,20 @@
         "#2E8B57"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Neon Green"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-baby-blue",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Baby Blue",
+      "color_name": "Baby Blue",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10937,13 +11511,20 @@
         "#24558A"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Baby Blue"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-fluoro-yellow",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Fluoro Yellow",
+      "color_name": "Fluoro Yellow",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10954,13 +11535,20 @@
         "#F0C419"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Fluoro Yellow"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-red-copper",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Red Copper",
+      "color_name": "Red Copper",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10971,13 +11559,20 @@
         "#D52B2B"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Red Copper"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-sapphire-blue",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Sapphire Blue",
+      "color_name": "Sapphire Blue",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -10988,13 +11583,20 @@
         "#24558A"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Sapphire Blue"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-silk-black-blue",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk",
-      "color_name": "Silk Black Blue",
+      "color_name": "Black Blue",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-basic",
@@ -11005,13 +11607,20 @@
         "#111111"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk",
+          "Silk Black Blue"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-s-series-black-purple-orange",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Silk S-Series",
-      "color_name": "Black Purple Orange",
+      "filament_type": "Silk S-Series",
+      "color_name": "Blk/Pur/Org",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-s-series",
@@ -11022,13 +11631,20 @@
         "#111111"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk S-Series",
+          "Black Purple Orange"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-s-series-blue-red-yellow-green",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Silk S-Series",
-      "color_name": "Blue Red Yellow Green",
+      "filament_type": "Silk S-Series",
+      "color_name": "Blu/Red/Yel/Grn",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-s-series",
@@ -11039,12 +11655,19 @@
         "#D52B2B"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk S-Series",
+          "Blue Red Yellow Green"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-s-series-berry-pop",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Silk S-Series",
+      "filament_type": "Silk S-Series",
       "color_name": "Berry Pop",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
@@ -11056,12 +11679,19 @@
         "#707B83"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk S-Series",
+          "Berry Pop"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-s-series-nebula-ribbon",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Silk S-Series",
+      "filament_type": "Silk S-Series",
       "color_name": "Nebula Ribbon",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
@@ -11073,13 +11703,20 @@
         "#707B83"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk S-Series",
+          "Nebula Ribbon"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-s-series-black-turquoise-magenta",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Silk S-Series",
-      "color_name": "Black Turquoise Magenta",
+      "filament_type": "Silk S-Series",
+      "color_name": "Blk/Tur/Mag",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-s-series",
@@ -11090,13 +11727,20 @@
         "#111111"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk S-Series",
+          "Black Turquoise Magenta"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-s-series-black-red",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Silk S-Series",
-      "color_name": "Black Red",
+      "filament_type": "Silk S-Series",
+      "color_name": "Black/Red",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-s-series",
@@ -11107,13 +11751,20 @@
         "#111111"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk S-Series",
+          "Black Red"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-s-series-red-white",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Silk S-Series",
-      "color_name": "Red White",
+      "filament_type": "Silk S-Series",
+      "color_name": "Red/White",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-s-series",
@@ -11124,13 +11775,20 @@
         "#F4F4F0"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk S-Series",
+          "Red White"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-s-series-black-red-yellow",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Silk S-Series",
-      "color_name": "Black Red Yellow",
+      "filament_type": "Silk S-Series",
+      "color_name": "Black/Red/Yellow",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-s-series",
@@ -11141,13 +11799,20 @@
         "#111111"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk S-Series",
+          "Black Red Yellow"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-s-series-black-yellow-green",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Silk S-Series",
-      "color_name": "Black Yellow Green",
+      "filament_type": "Silk S-Series",
+      "color_name": "Blk/Yel/Grn",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-s-series",
@@ -11158,13 +11823,20 @@
         "#111111"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk S-Series",
+          "Black Yellow Green"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-s-series-gray-blue-brown",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Silk S-Series",
-      "color_name": "Gray Blue Brown",
+      "filament_type": "Silk S-Series",
+      "color_name": "Gray/Blue/Brown",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-s-series",
@@ -11175,13 +11847,20 @@
         "#24558A"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk S-Series",
+          "Gray Blue Brown"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-s-series-black-pink-white",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Silk S-Series",
-      "color_name": "Black Pink White",
+      "filament_type": "Silk S-Series",
+      "color_name": "Black/Pink/White",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-s-series",
@@ -11192,13 +11871,20 @@
         "#111111"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk S-Series",
+          "Black Pink White"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-s-series-gold-purple-red",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Silk S-Series",
-      "color_name": "Gold Purple Red",
+      "filament_type": "Silk S-Series",
+      "color_name": "Gold/Purple/Red",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-s-series",
@@ -11209,13 +11895,20 @@
         "#D52B2B"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk S-Series",
+          "Gold Purple Red"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-s-series-blue-pink-white",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Silk S-Series",
-      "color_name": "Blue Pink White",
+      "filament_type": "Silk S-Series",
+      "color_name": "Blue/Pink/White",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-s-series",
@@ -11226,13 +11919,20 @@
         "#F4F4F0"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk S-Series",
+          "Blue Pink White"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-s-series-blue-pink-green",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Silk S-Series",
-      "color_name": "Blue Pink Green",
+      "filament_type": "Silk S-Series",
+      "color_name": "Blue/Pink/Green",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-s-series",
@@ -11243,7 +11943,14 @@
         "#24558A"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk S-Series",
+          "Blue Pink Green"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-glow-green",
@@ -11333,8 +12040,8 @@
     {
       "id": "amolen-pla-s-series-glow-black-green",
       "manufacturer": "Amolen",
-      "filament_type": "PLA S-Series Glow",
-      "color_name": "Black Green",
+      "filament_type": "S-Series Glow",
+      "color_name": "Black/Green",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-s-series-glow-in-the-dark-1-75mm-1kg-2-2lb",
@@ -11345,13 +12052,20 @@
         "#111111"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA S-Series Glow",
+          "Black Green"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-s-series-glow-red-yellow",
       "manufacturer": "Amolen",
-      "filament_type": "PLA S-Series Glow",
-      "color_name": "Red Yellow",
+      "filament_type": "S-Series Glow",
+      "color_name": "Red/Yellow",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-s-series-glow-in-the-dark-1-75mm-1kg-2-2lb",
@@ -11362,13 +12076,20 @@
         "#D52B2B"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA S-Series Glow",
+          "Red Yellow"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-quad-blue-red-white-black",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk Quad",
-      "color_name": "Blue Red White Black",
+      "color_name": "Blu/Red/Wht/Blk",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-quad-color-1-75mm-1kg-2-2lb",
@@ -11379,13 +12100,20 @@
         "#111111"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk Quad",
+          "Blue Red White Black"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-silk-quad-blue-yellow-red-white",
       "manufacturer": "Amolen",
       "filament_type": "PLA Silk Quad",
-      "color_name": "Blue Yellow Red White",
+      "color_name": "Blu/Yel/Red/Wht",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-silk-quad-color-1-75mm-1kg-2-2lb",
@@ -11396,13 +12124,20 @@
         "#F4F4F0"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk Quad",
+          "Blue Yellow Red White"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-temp-color-change-purple-green-to-pink-yellow",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Temp Color Change",
-      "color_name": "Purple Green to Pink Yellow",
+      "filament_type": "PLA Thermo",
+      "color_name": "Pur/Grn\u2192Pnk/Yel",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-temperature",
@@ -11413,13 +12148,20 @@
         "#75458F"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Temp Color Change",
+          "Purple Green to Pink Yellow"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-temp-color-change-black-to-red-to-yellow",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Temp Color Change",
-      "color_name": "Black To Red To Yellow",
+      "filament_type": "PLA Thermo",
+      "color_name": "Blk\u2192Red\u2192Yel",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-temperature",
@@ -11430,13 +12172,20 @@
         "#111111"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Temp Color Change",
+          "Black To Red To Yellow"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-temp-color-change-red-to-white",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Temp Color Change",
-      "color_name": "Red to White",
+      "filament_type": "PLA Thermo",
+      "color_name": "Red\u2192White",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-temperature",
@@ -11447,13 +12196,20 @@
         "#F4F4F0"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Temp Color Change",
+          "Red to White"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-temp-color-change-blue-to-white",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Temp Color Change",
-      "color_name": "Blue to White",
+      "filament_type": "PLA Thermo",
+      "color_name": "Blue\u2192White",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-temperature",
@@ -11464,13 +12220,20 @@
         "#F4F4F0"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Temp Color Change",
+          "Blue to White"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-temp-color-change-orange-to-white",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Temp Color Change",
-      "color_name": "Orange to White",
+      "filament_type": "PLA Thermo",
+      "color_name": "Orange\u2192White",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-temperature",
@@ -11481,13 +12244,20 @@
         "#F4F4F0"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Temp Color Change",
+          "Orange to White"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-temp-color-change-green-to-yellow",
       "manufacturer": "Amolen",
-      "filament_type": "PLA Temp Color Change",
-      "color_name": "Green to Yellow",
+      "filament_type": "PLA Thermo",
+      "color_name": "Green\u2192Yellow",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-temperature",
@@ -11498,13 +12268,20 @@
         "#2E8B57"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Temp Color Change",
+          "Green to Yellow"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-dual-blue-bright-yellow",
       "manufacturer": "Amolen",
       "filament_type": "PLA Dual",
-      "color_name": "Blue & Bright Yellow",
+      "color_name": "Blue/Yellow",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-basic-dual-color",
@@ -11515,13 +12292,20 @@
         "#24558A"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Dual",
+          "Blue & Bright Yellow"
+        ]
+      ]
     },
     {
       "id": "amolen-pla-dual-black-gold",
       "manufacturer": "Amolen",
       "filament_type": "PLA Dual",
-      "color_name": "Black & Gold",
+      "color_name": "Black/Gold",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/pla-basic-dual-color",
@@ -11532,13 +12316,20 @@
         "#111111"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Dual",
+          "Black & Gold"
+        ]
+      ]
     },
     {
       "id": "amolen-petg-multicolor-rainbow",
       "manufacturer": "Amolen",
       "filament_type": "PETG",
-      "color_name": "Multicolor Rainbow",
+      "color_name": "Rainbow",
       "spool_profile": "Amolen 1kg",
       "spool_weight_g": 1000,
       "source": "https://www.amolen.com/products/petg-basic",
@@ -11549,7 +12340,14 @@
         "#718096"
       ],
       "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation",
-      "available_at_refresh": true
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PETG",
+          "Multicolor Rainbow"
+        ]
+      ]
     },
     {
       "id": "amolen-petg-black",
