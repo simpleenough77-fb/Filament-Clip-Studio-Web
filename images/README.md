@@ -6,6 +6,7 @@ JPEG, landscape 4:3, about 1600 px wide and under 400 KB each works well.
 ## images/photos/
 - `holders-on-ams.jpg` — holders mounted on AMS units / dryer (studio page, guide, accessories page)
 - `clips-on-shelf.jpg` — clips on spools on a shelf (studio page, guide, accessories page)
+- `label-styles.jpg` — the same label printed three ways: inlay on filament-colored body, inlay on black body, engraved (studio style section, guide)
 
 ## images/accessories/ (one per item in downloads/accessories/accessories.json)
 - `one-post-holder.jpg`, `dual-post-holder.jpg`, `quad-post-holder.jpg`
