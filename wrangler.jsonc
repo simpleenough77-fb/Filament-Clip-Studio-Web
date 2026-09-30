@@ -8,5 +8,12 @@
     "directory": "./_site",
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
+  },
+  // Match the dashboard: no workers.dev or preview URLs; the site is only served on the custom domains.
+  "workers_dev": false,
+  "preview_urls": false,
+  // Workers Logs, as enabled in the dashboard (invocation logs, persisted for querying there).
+  "observability": {
+    "logs": { "enabled": true, "invocation_logs": true, "persist": true }
   }
 }
