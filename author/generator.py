@@ -13,6 +13,7 @@ from placement import plan
 from print_geometry import body_code,standing_parts
 import batch_library
 import accessories
+import nfc
 import math
 LIBRARY=ROOT/"Batch_Library.json"
 FONTS=['Liberation Sans:style=Bold','DejaVu Sans:style=Bold','Liberation Serif:style=Bold']
@@ -37,9 +38,11 @@ def valid_color(s):
 def validate(data, allow_empty=False):
     rows=data.get('rows',[]); settings=data.get('settings',{})
     if not (0 if allow_empty else 1)<=len(rows)<=100:raise ValueError('Add between 1 and 100 label variants.')
-    s={k:settings.get(k,v) for k,v in dict(font=FONTS[0],type_size=6,vendor_size=0,color_size=0,style='part',holder_sleeve='no',body_mode='fixed',body_color='#000000',text_mode='contrast',printer='H2D',text_color='#00AE42',dark_color='#151515',light_color='#FFFFFF').items()}
+    s={k:settings.get(k,v) for k,v in dict(font=FONTS[0],type_size=6,vendor_size=0,color_size=0,style='part',holder_sleeve='no',body_mode='fixed',body_color='#000000',text_mode='contrast',printer='H2D',text_color='#00AE42',dark_color='#151515',light_color='#FFFFFF',nfc='no',tag_size=nfc.DEFAULT_TAG).items()}
     s['devices']=accessories.validate_devices(settings.get('devices'))
     if s['holder_sleeve'] not in ('no','yes'):raise ValueError('Choose whether to include a holder sleeve.')
+    if s['nfc'] not in ('no','yes'):raise ValueError('Choose whether to add NFC tag pockets.')
+    s['tag_size']=nfc.validate_tag(s['tag_size'])
     if s['printer'] not in PRINTERS:raise ValueError('Choose an available printer.')
     if s['font'] not in FONTS:raise ValueError('Choose an available font.')
     for k in ('type_size','vendor_size','color_size'):
@@ -91,12 +94,20 @@ def full_plan(checks,s):
     """Clip plates followed by holder/template plates, numbered and laid out together."""
     printer=PRINTERS[s['printer']]
     plates=plan(checks,s,printer)
-    extra,acc_plates=accessories.plan(s.get('devices',{}),printer,len(checks))
+    extra,acc_plates=accessories.plan(s.get('devices',{}),printer,len(checks),s['tag_size'] if s.get('nfc')=='yes' else None)
     plates+=acc_plates
     cols=math.ceil(math.sqrt(len(plates)))
     for n,p in enumerate(plates):
         p['number']=n+1;p['origin']=[n%cols*printer['bed'][0]*1.2,-(n//cols)*printer['bed'][1]*1.2]
     return plates,extra
+
+def nfc_summary(data,checks):
+    """What the NFC option adds to this batch, for the review panel (None when it is off)."""
+    s=data['settings']
+    if s['nfc']!='yes':return None
+    sleeve=s['holder_sleeve']=='yes'
+    trimmed=[] if sleeve else sorted({r['spool_profile'] for r in checks if nfc.is_trimmed(r['spool_profile'],s['tag_size'])})
+    return dict(tag_size=s['tag_size'],pocket=nfc.diameter(s['tag_size']),depth=nfc.DEPTH,sleeve=sleeve,trimmed=trimmed,holders=bool(s['devices']))
 
 async def preflight(data):
     data=validate(data);s=data['settings'];sizes=[s['vendor_size'],s['type_size'],s['color_size']]
@@ -124,7 +135,7 @@ async def preflight(data):
     plates,_=full_plan(checks,s)
     key=hashlib.sha256(json.dumps(data,sort_keys=True).encode()).hexdigest()
     PREFLIGHTS[key]=(data,checks,warnings)
-    return dict(key=key,rows=checks,warnings=warnings,total=sum(r['quantity'] for r in checks),sizes=sizes,font=s['font'],style=s['style'],plates=plates,printer=PRINTERS[s['printer']],accessories=accessories.summary(s['devices'],PRINTERS[s['printer']]))
+    return dict(key=key,rows=checks,warnings=warnings,total=sum(r['quantity'] for r in checks),sizes=sizes,font=s['font'],style=s['style'],plates=plates,printer=PRINTERS[s['printer']],accessories=accessories.summary(s['devices'],PRINTERS[s['printer']]),nfc=nfc_summary(data,checks))
 
 def load_stl(path):
     raw=path.read_bytes()
@@ -237,7 +248,9 @@ async def generate(key,ack=False):
             from tested_sleeves import body_mesh
             bodymesh=body_mesh(r['spool_profile'])
         else:
-            bodycode=base+(('difference(){'+geometry+'translate([0,0,-.01])label_all(lines,sizes,font,width,.61);}') if s['style']=='part' else geometry)
+            cutter=nfc.sleeveless_cutter_scad(r['spool_profile'],s['tag_size']) if s['nfc']=='yes' else ''
+            if s['style']=='part':bodycode=base+'difference(){'+geometry+'translate([0,0,-.01])label_all(lines,sizes,font,width,.61);'+cutter+'}'
+            else:bodycode=base+('difference(){'+geometry+cutter+'}' if cutter else geometry)
             bodyfile=meshdir/f'{index}_body.stl';await run_scad(bodycode,bodyfile)
             bodymesh=load_stl(bodyfile)
         parts=[('Clip body'+(' with holder sleeve' if s['holder_sleeve']=='yes' else '')+' - '+r['spool_profile'],bodymesh)]
@@ -249,6 +262,7 @@ async def generate(key,ack=False):
             from tested_sleeves import sleeve_parts
             flags,blocker=sleeve_parts(r['spool_profile'],parts[0][1])
             parts.append(blocker)
+            if s['nfc']=='yes':parts.append((nfc.NAME,nfc.sleeve_pocket_mesh(r['spool_profile'],s['tag_size'])))
             variants.append(dict(check=r,parts=parts,support_paint=flags))
         else:
             variants.append(dict(check=r,parts=standing_parts(parts,r['spool_profile'])))

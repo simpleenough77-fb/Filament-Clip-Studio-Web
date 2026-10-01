@@ -1,6 +1,10 @@
 {
   "note": "Newest first. Add an entry at the top for every change visitors would notice. kind: New, Improved, Fixed or Removed. Dates are UTC (YYYY-MM-DD).",
   "entries": [
+    {"date": "2026-10-01", "kind": "New", "title": "NFC tag pockets",
+     "details": ["Turn on NFC tag pockets in Style the batch to add a shallow 0.5 mm recess for a round NFC sticker (25 mm NTAG213 by default, 0.4 mm clearance). Stick the tag in and your phone or inventory app can read the clip or holder.",
+                 "Clips with a holder sleeve get the pocket centered on the back of the sleeve. Clips without a sleeve get it on the back beside the tunnel; on Cookiecad and Amolen clips the pocket is trimmed flat there, so trim the sticker to match. We recommend the holder sleeve version, which is neater.",
+                 "Holders get a pocket on the underside, under each post, so you can tap your phone on the front of the holder."]},
     {"date": "2026-09-29", "kind": "Improved", "title": "Shorter names that print in full",
      "details": ["Long Bambu Lab, Cookiecad and Amolen type and color names are shortened so no label gets cut off. Examples: PLA Translucent is now PLA Clear, Iridium Gold Metallic is Iridium Gold, Funfetti Clear with Rainbow Glitter is Funfetti, and Amolen PLA Temp Color Change is PLA Thermo.",
                  "CSVs and spreadsheet rows that use the old names still import into the studio. Saved batches are not affected."]},

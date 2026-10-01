@@ -38,6 +38,7 @@
   "author/print_geometry.py",
   "author/tested_sleeves.py",
   "author/accessories.py",
+  "author/nfc.py",
   "downloads/accessories/One_post_holder.stl",
   "downloads/accessories/Dual_post_holder.stl",
   "downloads/accessories/Quad_post_holder.stl",

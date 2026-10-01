@@ -14,10 +14,10 @@ function applyDraft(d){
  if(d.rows.some(r=>!Number.isInteger(r.quantity)||r.quantity<1)||d.rows.reduce((n,r)=>n+r.quantity,0)>100)throw Error('Batch quantities must be whole numbers, with no more than 100 clips.');
  rows=clone(d.rows);
  $('holder_sleeve').value=d.settings?.holder_sleeve||'no';
- for(const k of ['printer','font','type_size','vendor_size','color_size','style','holder_sleeve','body_mode','text_mode']){
+ for(const k of ['printer','font','type_size','vendor_size','color_size','style','holder_sleeve','nfc','tag_size','body_mode','text_mode']){
   if(d.settings?.[k]!==undefined){const el=$(k),v=String(d.settings[k]);if(el.tagName!=='SELECT'||[...el.options].some(o=>o.value===v))el.value=v;}
  }
- const dv=d.settings?.devices||{};for(const k of Object.keys(DEVICES))$('dev_'+k).value=dv[k]||0;updateDeviceSummary();
+ const dv=d.settings?.devices||{};for(const k of Object.keys(DEVICES))$('dev_'+k).value=dv[k]||0;updateDeviceSummary();updateNfcNote();
  renderRows();
 }
 function rememberUndo(){undoDraft=draft();try{localStorage.setItem('clip-label-undo',JSON.stringify(undoDraft));}catch{}}

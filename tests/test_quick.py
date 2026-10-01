@@ -262,6 +262,31 @@ def test_label_styles_are_inlay_and_engraved_only():
     else:
         raise AssertionError('the modifier label style must be rejected')
 
+def test_nfc_pockets():
+    import accessories, nfc
+    assert nfc.validate_tag('25') == 25.0 and abs(nfc.diameter(25) - 25.4) < 1e-9
+    for bad in ('x', 9, 26, True):
+        try: nfc.validate_tag(bad)
+        except ValueError: continue
+        raise AssertionError(bad)
+    assert not nfc.is_trimmed('Bambu Original', 25) and nfc.is_trimmed('Cookiecad', 25) and nfc.is_trimmed('Amolen 1kg', 25)
+    assert not nfc.is_trimmed('Cookiecad', 15)
+    assert 'intersection()' in nfc.sleeveless_cutter_scad('Cookiecad', 25) and 'intersection()' not in nfc.sleeveless_cutter_scad('Bambu Original', 25)
+    for printer in ('H2D', 'A1 mini'):
+        devices = accessories.validate_devices({'ams_2_pro': 1, 'spacepi_x4': 1} if printer == 'H2D' else {'ams_2_pro': 1})
+        variants, plates = accessories.plan(devices, g.PRINTERS[printer], 0, 25.0)
+        assert any(n == nfc.NAME for v in variants for n, _ in v['parts']), printer
+        for v in variants:
+            pockets = [m for n, m in v['parts'] if n == nfc.NAME]
+            if not pockets: continue
+            body = v['parts'][0][1][0]
+            xs = [x for x, _, _ in body]; ys = [y for _, y, _ in body]
+            for x, y, z in pockets[0][0]:
+                assert min(xs) < x < max(xs) and min(ys) < y < max(ys) and -1e-6 <= z <= nfc.DEPTH + 1e-6, v['check']['lines']
+    devices = accessories.validate_devices({'ams_2_pro': 1})
+    off = accessories.plan(devices, g.PRINTERS['H2D'], 0)[0]
+    assert not any(n == nfc.NAME for v in off for n, _ in v['parts'])
+
 if __name__ == '__main__':
     failures = 0
     for name, fn in sorted(globals().items()):

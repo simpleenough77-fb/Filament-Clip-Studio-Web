@@ -2,6 +2,7 @@
 import json,math,zipfile,io,re
 import xml.etree.ElementTree as ET
 from PIL import Image,ImageDraw
+from nfc import NAME as NFC_NAME
 NS='http://schemas.microsoft.com/3dmanufacturing/core/2015/02'
 def q(n):return '{'+NS+'}'+n
 def safe_name(value):
@@ -31,9 +32,10 @@ def write_batch(path,variants,plates,settings,printer,author):
                 attrs=dict(v1=str(a),v2=str(b),v3=str(c))
                 if i==0 and var.get('support_paint') and var['support_paint'][fi]:attrs['paint_supports']=var['support_paint'][fi]
                 ET.SubElement(tnode,q('triangle'),**attrs)
-            kind='negative_part' if i and settings['style']=='cut' else 'normal_part'
+            pocket=name==NFC_NAME
+            kind='negative_part' if pocket or (i and settings['style']=='cut') else 'normal_part'
             if blocker:kind='support_blocker'
-            pc=ET.SubElement(oc,'part',id=str(oid),subtype=kind);meta(pc,'name',name+' | '+r['filament_roles'][0 if i==0 else 1]);meta(pc,'extruder',0 if blocker else body if i==0 else text);meta(pc,'matrix','1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1')
+            pc=ET.SubElement(oc,'part',id=str(oid),subtype=kind);meta(pc,'name',name+' | '+r['filament_roles'][0 if i==0 else 1]);meta(pc,'extruder',0 if blocker else body if i==0 or pocket else text);meta(pc,'matrix','1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1')
             ET.SubElement(pc,'mesh_stat',face_count=str(len(faces)),edges_fixed='0',degenerate_facets='0',facets_removed='0',facets_reversed='0',backwards_edges='0');oid+=1
         assembly=ET.SubElement(res,q('object'),id=str(aid),type='model',name=safe_name(' - '.join(r['lines'])));comp=ET.SubElement(assembly,q('components'))
         for pid in partids:ET.SubElement(comp,q('component'),objectid=str(pid))
@@ -59,7 +61,7 @@ def write_batch(path,variants,plates,settings,printer,author):
         for item in plate['items']:
             v=variants[item['variant']];cx=item['x']+item['w']/2;cy=item['y']+item['h']/2
             for index,(_,(verts,faces)) in enumerate(v['parts']):
-                if _=='Tunnel support blocker' or (index and settings['style']=='cut'):continue
+                if _ in ('Tunnel support blocker',NFC_NAME) or (index and settings['style']=='cut'):continue
                 color=v['check']['body_color'] if not index else v['check']['text_color']
                 # Show the side-standing assembly footprint in plan view.
                 for f in faces:

@@ -12,6 +12,7 @@ two parts.
 import math, struct
 from pathlib import Path
 from placement import GAP, MARGIN, pack
+import nfc
 
 ROOT = Path(__file__).resolve().parent.parent
 FILES = ROOT / 'downloads' / 'accessories'
@@ -128,18 +129,20 @@ def load_pieces(file):
 
 
 def fits_rotated(verts, area):
-    """First rotation (0.5 degree steps) whose bounding box fits the area, or None."""
+    """First rotation (0.5 degree steps) whose bounding box fits the area, as
+    (turned verts, width, height, degrees), or None."""
     for tenth in range(5, 900, 5):
         turned = rotated(verts, tenth / 10)
         bw, bh = bbox(turned)
         if bw + GAP <= area[2] - area[0] + 1e-6 and bh + GAP <= area[3] - area[1] + 1e-6:
-            return turned, bw, bh
+            return turned, bw, bh, tenth / 10
     return None
 
 
 def resolve_parts(devices, printer):
     """parts_list with oversized parts swapped for their alternates on this printer:
-    [(name, file, quantity, pieces)]."""
+    [(name, file, quantity, pieces)]. Each piece is (name, (verts, faces, w, h)); `file` is the
+    STL the piece came from, so a piece's position within it is (file, index)."""
     area = area_of(printer); out = []
     for name, file, qty in parts_list(devices):
         verts, faces, w, h = load_mesh(file)
@@ -173,29 +176,45 @@ def fits_axis(w, h, area):
     return (w + GAP <= W + 1e-6 and h + GAP <= H + 1e-6) or (h + GAP <= W + 1e-6 and w + GAP <= H + 1e-6)
 
 
-def plan(devices, printer, first_variant):
+def pocket_centers(file, w, h, piece, nfc_tag):
+    """NFC pocket centres for one holder piece in its own frame ([] for templates or when NFC is off)."""
+    if nfc_tag is None or (file not in nfc.HOLDER_POSTS and file not in nfc.SPLIT_POSTS):
+        return []
+    return nfc.holder_pocket_centers(file, w, h, nfc_tag, piece)
+
+
+def plan(devices, printer, first_variant, nfc_tag=None):
     """Return (variants, plates). Variant indices start at first_variant.
 
     Parts that only fit diagonally get a mesh rotated to the first angle that
-    fits and a plate of their own.
+    fits and a plate of their own. With `nfc_tag` (tag diameter in mm), each holder also
+    carries an NFC tag pocket under every post, as a negative part.
     """
     variants, plates, loose = [], [], []
     area = area_of(printer)
-    for _, _, qty, pieces in resolve_parts(devices, printer):
-        for name, (verts, faces, w, h) in pieces:
+    for _, file, qty, pieces in resolve_parts(devices, printer):
+        for k, (name, (verts, faces, w, h)) in enumerate(pieces):
             check = dict(lines=[name], filament_roles=[ROLE, ROLE], body_color=COLOR, text_color=COLOR, accessory=True)
+            centers = pocket_centers(file, w, h, k, nfc_tag)
             if fits_axis(w, h, area):
                 index = first_variant + len(variants)
-                variants.append(dict(check=check, parts=[(name, (verts, faces))]))
+                parts = [(name, (verts, faces))]
+                if centers:
+                    parts.append((nfc.NAME, nfc.holder_pocket_mesh(centers, nfc_tag)))
+                variants.append(dict(check=check, parts=parts))
                 loose += [dict(variant=index, w=w, h=h, accessory=name) for _ in range(qty)]
                 continue
             found = fits_rotated(verts, area)
             if found is None:
                 raise ValueError(f'The {name} ({w:.0f} x {h:.0f} mm) does not fit the {printer["id"]} plate. '
                                  'Choose a printer with a larger bed, or print it separately from the Holders & mounting templates page.')
-            turned, bw, bh = found
+            turned, bw, bh, degrees = found
             index = first_variant + len(variants)
-            variants.append(dict(check=check, parts=[(name, (turned, faces))]))
+            parts = [(name, (turned, faces))]
+            if centers:
+                turned_centers = [p[:2] for p in rotated([(x, y, 0.0) for x, y in centers], degrees)]
+                parts.append((nfc.NAME, nfc.holder_pocket_mesh(turned_centers, nfc_tag)))
+            variants.append(dict(check=check, parts=parts))
             cx, cy = (area[0] + area[2]) / 2, (area[1] + area[3]) / 2
             for _ in range(qty):
                 plates.append(dict(items=[dict(variant=index, w=bw, h=bh, x=cx - bw / 2, y=cy - bh / 2, rotated=False, accessory=name)],
