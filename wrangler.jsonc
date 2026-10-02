@@ -3,12 +3,20 @@
 // Custom domains (filamentclip.com, www.filamentclip.com) are attached in the Cloudflare dashboard.
 {
   "name": "filament-clip-studio",
+  "main": "./worker/stat.js",
   "compatibility_date": "2026-09-01",
   "assets": {
     "directory": "./_site",
     "html_handling": "auto-trailing-slash",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    // Only /api/* runs the Worker; every other path is served straight from the static assets.
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
   },
+  // Anonymous usage counts (table created from worker/0001_create_events.sql).
+  "d1_databases": [
+    { "binding": "DB", "database_name": "clip-studio-usage", "database_id": "ee8f6aab-16fc-45fc-a5a7-bd02150cb076", "migrations_dir": "./worker" }
+  ],
   // Match the dashboard: no workers.dev or preview URLs; the site is only served on the custom domains.
   "workers_dev": false,
   "preview_urls": false,

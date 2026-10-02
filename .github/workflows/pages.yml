@@ -50,7 +50,7 @@ jobs:
       - name: Generate catalog feed, source hashes and build stamp
         run: python tools/build_site.py --stamp
       - name: Stage site
-        run: rsync -a --exclude '.git' --exclude '.github' --exclude '_site' --exclude '_pages' --exclude 'tests' --exclude 'tools' --exclude 'wrangler.jsonc' ./ _site/
+        run: rsync -a --exclude '.git' --exclude '.github' --exclude '_site' --exclude '_pages' --exclude 'tests' --exclude 'tools' --exclude 'worker' --exclude 'wrangler.jsonc' ./ _site/
       # Primary host: Cloudflare Workers static assets (filamentclip.com).
       # Enabled once the repo variable CLOUDFLARE_ACCOUNT_ID and secret CLOUDFLARE_API_TOKEN exist.
       - name: Deploy to Cloudflare
