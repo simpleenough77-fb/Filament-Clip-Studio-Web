@@ -61,8 +61,8 @@ REDIRECT = """<!doctype html>
 var p = location.pathname.replace(/^\\/Filament-Clip-Studio-Web/i, '') || '/';
 location.replace('{host}' + p + location.search + location.hash);
 </script></head>
-<body style="font-family:system-ui,sans-serif;background:#10191d;color:#edf3f3;padding:40px">
-<p>Filament Clip Studio has moved to <a style="color:#83eac5" href="{host}/">{host}</a>.</p></body></html>
+<body style="font-family:system-ui,sans-serif;background:#0f161e;color:#edf0f3;padding:40px">
+<p>Filament Clip Studio has moved to <a style="color:#83b0ea" href="{host}/">{host}</a>.</p></body></html>
 """
 
 
