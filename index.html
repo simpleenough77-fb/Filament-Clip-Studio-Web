@@ -53,6 +53,7 @@ a.button.secondary{background:#243141;color:#e5ebf3}a.text{color:#83b0ea}
 <p class="lead">Print label clips that fit onto your filament spools and show the brand, type and color in large, readable text. Holders mount on the front of your AMS units and dryers, so you can still see what&rsquo;s loaded.</p>
 <div class="cta"><a class="button" href="./studio.html">Open the studio</a><a class="button secondary" href="./accessories.html">Holders &amp; templates</a></div>
 <p class="facts">Free &middot; Runs in your browser &middot; No account &middot; One 3MF for Bambu Studio</p>
+<p class="facts" id="usageStat" hidden></p>
 </div>
 <img src="./images/photos/clips-on-shelf.jpg" alt="Rows of filament spools on a shelf, each with a readable label clip showing brand, type and color">
 </section>
@@ -113,6 +114,20 @@ a.button.secondary{background:#243141;color:#e5ebf3}a.text{color:#83b0ea}
   const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   document.getElementById('brandList').innerHTML=[...by].map(([m,b])=>`<div class="brand-card"><h3>${esc(m)}</h3><div class="count">${({Sunlu:'1 kg rolls &middot; uses the Bambu Lab clip',Jayo:'1.1 kg reusable spools &middot; uses the Bambu Lab clip'})[m]||'Fitted and tested'} &middot; ${b.types.size} types &middot; ${b.n} colors</div></div>`).join('');
  }catch(e){/* keep the static list */}
+})();
+</script>
+<script>
+// Public usage line from the anonymous batch counter; stays hidden if the count is unavailable or zero.
+(async()=>{
+ try{
+  const r=await fetch('/api/stats');if(!r.ok)return;
+  const d=await r.json();const clips=Number(d.clips)||0,holders=Number(d.holders)||0;
+  if(clips<1)return;
+  const n=x=>x.toLocaleString('en-US');
+  let t=n(clips)+(clips===1?' clip':' clips');
+  if(holders>0)t+=' and '+n(holders)+(holders===1?' holder':' holders');
+  const el=document.getElementById('usageStat');el.textContent=t+' generated so far';el.hidden=false;
+ }catch(e){/* keep it hidden */}
 })();
 </script>
 </body></html>
