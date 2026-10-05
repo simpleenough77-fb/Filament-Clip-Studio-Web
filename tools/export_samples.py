@@ -57,9 +57,14 @@ async def build(out, name, rows, settings):
     result = await g.generate(review['key'], True)
     archive = g.GENERATED / Path(result['download']).name
     with zipfile.ZipFile(archive) as z:
-        data = z.read('Filament_Labels.3mf')
-    target = out / (name + '.3mf')
-    target.write_bytes(data)
+        names = [n for n in z.namelist() if n.endswith('.3mf')]
+        if names == ['Filament_Labels.3mf']:
+            target = out / (name + '.3mf')
+            target.write_bytes(z.read(names[0]))
+        else:  # PrusaSlicer: one project per plate
+            for n in names:
+                (out / n.replace('Filament_Labels', name)).write_bytes(z.read(n))
+            target = out / names[0].replace('Filament_Labels', name)
     return target, result
 
 

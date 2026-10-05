@@ -339,6 +339,13 @@ def test_every_slicer_writes_a_matching_project():
                     p['number'] = n + 1; p['origin'] = [n % 2 * printer['bed'][0] * 1.2, -(n // 2) * printer['bed'][1] * 1.2]
                 out = tmp / f'{gid}-{slicer}-{multicolor}.3mf'
                 write_batch(out, variants, plates, s, printer, g.AUTHOR, slicer)
+                if g.SLICERS[slicer]['family'] == 'prusa' and len(plates) > 1:
+                    files = sorted(tmp.glob(f'{gid}-{slicer}-{multicolor}_Plate_*.3mf'))
+                    assert len(files) == len(plates) and not out.exists(), (gid, slicer)
+                    for f in files:
+                        with zipfile.ZipFile(f) as z:
+                            assert z.testzip() is None and 'Metadata/Slic3r_PE.config' in z.namelist()
+                    continue
                 with zipfile.ZipFile(out) as z:
                     assert z.testzip() is None
                     name = f'{gid}/{slicer}/{multicolor}'

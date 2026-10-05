@@ -1,7 +1,7 @@
 """PrusaSlicer project: Slic3r_PE_model.config plus a minimal Slic3r_PE.config.
 
-PrusaSlicer stores one mesh per object and marks volumes as triangle ranges, and it places plates
-(beds) by where the instances sit, so plates are laid out on the same grid as the other exporters.
+PrusaSlicer stores one mesh per object and marks volumes as triangle ranges. Released versions
+(2.9.x) have a single bed, so a batch with several plates is written as one project file per plate.
 """
 import io, json, zipfile
 import xml.etree.ElementTree as ET
@@ -13,6 +13,17 @@ MAX_EXTRUDERS = 5  # one MMU3 / XL toolhead set
 
 
 def write_prusa(path, variants, plates, settings, printer, author):
+    """PrusaSlicer releases before 3.0 have one bed, so every plate becomes its own project file."""
+    if len(plates) <= 1:
+        return _write_one(path, variants, plates, settings, printer, author)
+    for plate in plates:
+        used = sorted({i['variant'] for i in plate['items']})
+        remap = {v: k for k, v in enumerate(used)}
+        sub = dict(plate, number=1, origin=[0.0, 0.0], items=[dict(i, variant=remap[i['variant']]) for i in plate['items']])
+        _write_one(path.with_name(f'{path.stem}_Plate_{plate["number"]}{path.suffix}'), [variants[v] for v in used], [sub], settings, printer, author)
+
+
+def _write_one(path, variants, plates, settings, printer, author):
     single = settings.get('multicolor') == 'no' and not printer.get('multi')
     palette, slotmap = [], {}
 

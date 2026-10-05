@@ -81,7 +81,7 @@ function syncPrinter(){
  [...$('style').options].forEach(o=>{o.disabled=single&&o.value!=='cut';});
  const s=$('slicer').value,sl=slicerList[s]||{},notes=[];
  if(single)notes.push('<strong>One filament at a time:</strong> labels are engraved into the clip body, so each plate prints in a single filament. The plate names say which filament each plate is for.');
- if(sl.family==='prusa')notes.push('<strong>PrusaSlicer:</strong> open the file as a project and keep the project settings. Plates are laid out as separate beds.');
+ if(sl.family==='prusa')notes.push('<strong>PrusaSlicer:</strong> open the file as a project and keep the project settings. A batch with several plates downloads one project file per plate.');
  else if(sl.family==='orca'&&p.brand==='Bambu Lab')notes.push('<strong>'+esc(sl.label)+':</strong> the project uses a generic printer. Choose your own printer profile after opening it; the plate layout stays.');
  else if(sl.family==='orca')notes.push('<strong>'+esc(sl.label)+':</strong> open it as a project. The printer in the project is generic, so select your own printer profile after opening; the plate layout stays.');
  $('slicerNote').innerHTML=notes.join(' ');$('slicerNote').classList.toggle('hidden',!notes.length);
