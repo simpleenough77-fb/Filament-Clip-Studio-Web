@@ -2,7 +2,7 @@
 
 Needs the OpenSCAD desktop app (the browser build uses a WebAssembly copy instead).
 
-  python3 tools/export_samples.py --out OUTDIR [--printer H2D] [--sleeve yes|no]
+  python3 tools/export_samples.py --out OUTDIR [--printer bambu-350x320] [--slicer orca] [--sleeve yes|no]
                                   [--style part|cut] [--devices ams_2_pro=1,ams_ht=1]
                                   [--rows 'Bambu Lab:PETG-HF:Blue:2,Cookiecad:PLA:Dark Magic:2']
 
@@ -67,7 +67,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--out', required=True)
     ap.add_argument('--name', default=None)
-    ap.add_argument('--printer', default='H2D')
+    ap.add_argument('--printer', default='bambu-350x320', help='printer group id from author/Printers.json')
+    ap.add_argument('--slicer', default='', help='bambu_studio, orca, creality_print, elegoo, anycubic or prusa (default: the brand\'s own)')
+    ap.add_argument('--multicolor', default='yes', choices=['no', 'yes'])
     ap.add_argument('--sleeve', default='no', choices=['no', 'yes'])
     ap.add_argument('--style', default='part', choices=['part', 'cut'])
     ap.add_argument('--nfc', default='no', choices=['no', 'yes'])
@@ -82,8 +84,8 @@ def main():
     g.CACHE.mkdir()
     g.GENERATED.mkdir()
     g.run_scad = make_native(openscad_command())
-    settings = dict(printer=a.printer, holder_sleeve=a.sleeve, style=a.style, nfc=a.nfc, devices=parse_devices(a.devices))
-    name = a.name or f'{a.printer.replace(" ", "_")}-{"sleeve" if a.sleeve == "yes" else "standing"}-{a.style}'
+    settings = dict(printer=a.printer, slicer=a.slicer, multicolor=a.multicolor, holder_sleeve=a.sleeve, style=a.style, nfc=a.nfc, devices=parse_devices(a.devices))
+    name = a.name or f'{a.printer}-{a.slicer or "default"}-{"sleeve" if a.sleeve == "yes" else "standing"}'
     target, result = asyncio.run(build(out, name, parse_rows(a.rows), settings))
     print(f'{target}  plates={result["plates"]} clips={result["total"]}')
 

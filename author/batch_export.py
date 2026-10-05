@@ -3,15 +3,20 @@ import json,math,zipfile,io,re
 import xml.etree.ElementTree as ET
 from PIL import Image,ImageDraw
 from nfc import NAME as NFC_NAME
+from slicers import SLICERS,orca_settings
 NS='http://schemas.microsoft.com/3dmanufacturing/core/2015/02'
 def q(n):return '{'+NS+'}'+n
 def safe_name(value):
     # Bambu Studio applies filename-style restrictions to object and plate names.
     return re.sub(r'\s+', ' ', re.sub(r'[<>:/\\|?*"\x00-\x1f]', '-', str(value))).strip(' .') or 'Label'
 def meta(n,k,v):ET.SubElement(n,'metadata',key=k,value=safe_name(v) if k in ('name','plater_name') else str(v))
-def write_batch(path,variants,plates,settings,printer,author):
+def write_batch(path,variants,plates,settings,printer,author,slicer='bambu_studio'):
+    target=SLICERS[slicer]
+    if target['family']=='prusa':
+        from prusa_export import write_prusa
+        return write_prusa(path,variants,plates,settings,printer,author)
     model=ET.Element(q('model'),unit='millimeter',attrib={'xml:lang':'en-US','xmlns:BambuStudio':'http://schemas.bambulab.com/package/2021'})
-    for key,value in [('Title','Filament Labels'),('Application','BambuStudio-02.08.02.61'),('BambuStudio:3mfVersion','1')]:ET.SubElement(model,q('metadata'),name=key).text=value
+    for key,value in [('Title','Filament Labels'),('Application',target['app']),*target['extra'].items(),('BambuStudio:3mfVersion','1')]:ET.SubElement(model,q('metadata'),name=key).text=value
     res=ET.SubElement(model,q('resources'));build=ET.SubElement(model,q('build'));cfg=ET.Element('config')
     palette=[];slotmap={}
     def slot(role,color):
@@ -73,33 +78,38 @@ def write_batch(path,variants,plates,settings,printer,author):
                     draw.polygon(pts,fill=color)
         b=io.BytesIO();im.save(b,format='PNG')
         for fn in [f'plate_{n}',f'plate_no_light_{n}',f'top_{n}']:images['Metadata/'+fn+'.png']=b.getvalue()
-    cfgsettings=json.loads((author/'Printer_Settings'/printer['settings']).read_text())
-    # Export the stock Standard nozzle variant for each material slot.
-    variant_fields = {'nozzle_temperature','nozzle_temperature_initial_layer','slow_down_min_speed'}
-    for k,v in list(cfgsettings.items()):
-        if isinstance(v,list) and (k.startswith('filament_') or k in variant_fields or k.endswith('_plate_temp') or k.endswith('_plate_temp_initial_layer')):
-            if len(v)==3 and (k.startswith('filament_') or k in variant_fields):v=v[:1]
-            cfgsettings[k]=v*len(palette)
-    cfgsettings.update(name='Filament Labels',filament_colour=[c for _,c in palette],filament_multi_colour=[c for _,c in palette],filament_map=['1']*len(palette),filament_nozzle_map=['0']*len(palette),filament_colour_type=['0']*len(palette),filament_self_index=[str(i+1) for i in range(len(palette))],filament_extruder_variant=['Direct Drive Standard']*len(palette),enable_prime_tower='1' if any(p['tower'] for p in plates) else '0',prime_tower_width='60',prime_tower_brim_width='3',prime_tower_extra_rib_length='0',prime_tower_enable_framework='0',brim_type='no_brim',skirt_loops='0')
-    # A sleeve project must carry explicit manual-support settings. Detect the
-    # blocker part as well as the UI setting so an exported project cannot fall
-    # back to the printer preset's disabled/auto-support defaults.
-    has_sleeve = settings.get('holder_sleeve') == 'yes' or any(
-        any(name == 'Tunnel support blocker' for name, _ in var.get('parts', []))
-        for var in variants
-    )
-    if has_sleeve:
-        cfgsettings.update(json.loads((author/'Tested_Support_Settings.json').read_text()))
-        cfgsettings.update(enable_support='1', support_type='normal(manual)', support_filament='0', support_interface_filament='0', enable_arc_fitting='0', version='02.08.02.61')
-        cfgsettings['different_settings_to_system']=['enable_arc_fitting;enable_support;support_type','','','','','']
-        cfgsettings['from']='project'
-    cfgsettings['wipe_tower_x']=[str(p['tower'][0]+8 if p['tower'] else 0) for p in plates];cfgsettings['wipe_tower_y']=[str(p['tower'][1]+8 if p['tower'] else 0) for p in plates]
-    # Studio stores one complete filament-to-filament matrix per physical nozzle.
-    nozzle_count=len(cfgsettings['nozzle_diameter'])
-    cfgsettings['flush_volumes_matrix']=['0' if i==j else '140' for nozzle in range(nozzle_count) for i in range(len(palette)) for j in range(len(palette))]
-    cfgsettings['flush_multiplier']=['1']*nozzle_count
-    cfgsettings['flush_multiplier_fast']=['1.2']*nozzle_count
-    cfgsettings['flush_volumes_vector']=['140']*(2*len(palette))
+    if target['family']=='bambu':
+        cfgsettings=json.loads((author/'Printer_Settings'/printer['settings']).read_text())
+        # Export the stock Standard nozzle variant for each material slot.
+        variant_fields = {'nozzle_temperature','nozzle_temperature_initial_layer','slow_down_min_speed'}
+        for k,v in list(cfgsettings.items()):
+            if isinstance(v,list) and (k.startswith('filament_') or k in variant_fields or k.endswith('_plate_temp') or k.endswith('_plate_temp_initial_layer')):
+                if len(v)==3 and (k.startswith('filament_') or k in variant_fields):v=v[:1]
+                cfgsettings[k]=v*len(palette)
+        cfgsettings.update(name='Filament Labels',filament_colour=[c for _,c in palette],filament_multi_colour=[c for _,c in palette],filament_map=['1']*len(palette),filament_nozzle_map=['0']*len(palette),filament_colour_type=['0']*len(palette),filament_self_index=[str(i+1) for i in range(len(palette))],filament_extruder_variant=['Direct Drive Standard']*len(palette),enable_prime_tower='1' if any(p['tower'] for p in plates) else '0',prime_tower_width='60',prime_tower_brim_width='3',prime_tower_extra_rib_length='0',prime_tower_enable_framework='0',brim_type='no_brim',skirt_loops='0')
+        # A sleeve project must carry explicit manual-support settings. Detect the
+        # blocker part as well as the UI setting so an exported project cannot fall
+        # back to the printer preset's disabled/auto-support defaults.
+        has_sleeve = settings.get('holder_sleeve') == 'yes' or any(
+            any(name == 'Tunnel support blocker' for name, _ in var.get('parts', []))
+            for var in variants
+        )
+        if has_sleeve:
+            cfgsettings.update(json.loads((author/'Tested_Support_Settings.json').read_text()))
+            cfgsettings.update(enable_support='1', support_type='normal(manual)', support_filament='0', support_interface_filament='0', enable_arc_fitting='0', version='02.08.02.61')
+            cfgsettings['different_settings_to_system']=['enable_arc_fitting;enable_support;support_type','','','','','']
+            cfgsettings['from']='project'
+        cfgsettings['wipe_tower_x']=[str(p['tower'][0]+8 if p['tower'] else 0) for p in plates];cfgsettings['wipe_tower_y']=[str(p['tower'][1]+8 if p['tower'] else 0) for p in plates]
+        # Studio stores one complete filament-to-filament matrix per physical nozzle.
+        nozzle_count=len(cfgsettings['nozzle_diameter'])
+        cfgsettings['flush_volumes_matrix']=['0' if i==j else '140' for nozzle in range(nozzle_count) for i in range(len(palette)) for j in range(len(palette))]
+        cfgsettings['flush_multiplier']=['1']*nozzle_count
+        cfgsettings['flush_multiplier_fast']=['1.2']*nozzle_count
+        cfgsettings['flush_volumes_vector']=['140']*(2*len(palette))
+    else:
+        has_sleeve=settings.get('holder_sleeve')=='yes' or any(any(name=='Tunnel support blocker' for name,_ in var.get('parts',[])) for var in variants)
+        support=json.loads((author/'Tested_Support_Settings.json').read_text()) if has_sleeve else None
+        cfgsettings=orca_settings(palette,plates,printer,support)
     with zipfile.ZipFile(path,'w',zipfile.ZIP_DEFLATED) as z:
         z.writestr('[Content_Types].xml','<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="model" ContentType="application/vnd.ms-package.3dmanufacturing-3dmodel+xml"/><Default Extension="config" ContentType="application/octet-stream"/><Default Extension="png" ContentType="image/png"/><Default Extension="json" ContentType="application/json"/></Types>')
         z.writestr('_rels/.rels','<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Target="/3D/3dmodel.model" Id="rel0" Type="http://schemas.microsoft.com/3dmanufacturing/2013/01/3dmodel"/></Relationships>')

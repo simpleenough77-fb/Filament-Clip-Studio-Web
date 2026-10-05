@@ -9,6 +9,8 @@ AUTHOR=ROOT/'author'; GENERATED=ROOT/'Generated'; CACHE=ROOT/'.cache'
 CATALOG=json.loads((AUTHOR/'Catalog.json').read_text())['products']
 PRODUCTS={p['id']:p for p in CATALOG}
 PRINTERS=json.loads((AUTHOR/'Printers.json').read_text())
+PRINTER_ALIASES=json.loads((AUTHOR/'Printer_Aliases.json').read_text())
+from slicers import SLICERS,DEFAULT_FOR_BRAND
 from placement import plan
 from print_geometry import body_code,standing_parts
 import batch_library
@@ -38,12 +40,21 @@ def valid_color(s):
 def validate(data, allow_empty=False):
     rows=data.get('rows',[]); settings=data.get('settings',{})
     if not (0 if allow_empty else 1)<=len(rows)<=100:raise ValueError('Add between 1 and 100 label variants.')
-    s={k:settings.get(k,v) for k,v in dict(font=FONTS[0],type_size=6,vendor_size=0,color_size=0,style='part',holder_sleeve='no',body_mode='fixed',body_color='#000000',text_mode='contrast',printer='H2D',text_color='#00AE42',dark_color='#151515',light_color='#FFFFFF',nfc='no',tag_size=nfc.DEFAULT_TAG).items()}
+    s={k:settings.get(k,v) for k,v in dict(font=FONTS[0],type_size=6,vendor_size=0,color_size=0,style='part',holder_sleeve='no',body_mode='fixed',body_color='#000000',text_mode='contrast',printer='bambu-350x320',slicer='',multicolor='yes',text_color='#00AE42',dark_color='#151515',light_color='#FFFFFF',nfc='no',tag_size=nfc.DEFAULT_TAG).items()}
     s['devices']=accessories.validate_devices(settings.get('devices'))
     if s['holder_sleeve'] not in ('no','yes'):raise ValueError('Choose whether to include a holder sleeve.')
     if s['nfc'] not in ('no','yes'):raise ValueError('Choose whether to add NFC tag pockets.')
     s['tag_size']=nfc.validate_tag(s['tag_size'])
+    s['printer']=PRINTER_ALIASES.get(s['printer'],s['printer'])
     if s['printer'] not in PRINTERS:raise ValueError('Choose an available printer.')
+    group=PRINTERS[s['printer']]
+    s['slicer']=s['slicer'] or DEFAULT_FOR_BRAND[group['brand']]
+    if s['slicer'] not in SLICERS:raise ValueError('Choose an available slicer.')
+    if s['multicolor'] not in ('no','yes'):raise ValueError('Choose whether the printer has a multi-color system.')
+    if group['multi']:s['multicolor']='yes'
+    elif s['multicolor']=='no':
+        # One filament at a time: the label is engraved into the clip body, so the whole batch prints in one filament.
+        s['style']='cut'
     if s['font'] not in FONTS:raise ValueError('Choose an available font.')
     for k in ('type_size','vendor_size','color_size'):
         s[k]=float(s[k]);
@@ -268,7 +279,7 @@ async def generate(key,ack=False):
             variants.append(dict(check=r,parts=standing_parts(parts,r['spool_profile'])))
     plates,extra=full_plan(checks,s)
     variants+=extra
-    write_batch(out/'Filament_Labels.3mf',variants,plates,s,PRINTERS[s['printer']],AUTHOR)
+    write_batch(out/'Filament_Labels.3mf',variants,plates,s,PRINTERS[s['printer']],AUTHOR,s['slicer'])
     with (out/'Labels.csv').open('w',encoding='utf-8-sig',newline='') as f:
         w=csv.writer(f);w.writerow(['manufacturer','filament_type','color_name','quantity'])
         for r in checks:
