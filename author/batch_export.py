@@ -19,7 +19,12 @@ def write_batch(path,variants,plates,settings,printer,author,slicer='bambu_studi
     for key,value in [('Title','Filament Labels'),('Application',target['app']),*target['extra'].items(),('BambuStudio:3mfVersion','1')]:ET.SubElement(model,q('metadata'),name=key).text=value
     res=ET.SubElement(model,q('resources'));build=ET.SubElement(model,q('build'));cfg=ET.Element('config')
     palette=[];slotmap={}
+    # A printer without a multi-color system prints each plate in one filament: every part uses the one slot.
+    single=settings.get('multicolor')=='no' and not printer.get('multi')
     def slot(role,color):
+        if single:
+            if not palette:palette.append((role,color))
+            return 1
         key=(role,color)
         if key not in slotmap:slotmap[key]=len(palette)+1;palette.append(key)
         return slotmap[key]
