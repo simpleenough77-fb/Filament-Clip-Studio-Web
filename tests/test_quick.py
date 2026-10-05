@@ -106,14 +106,14 @@ def test_accessories_plan_and_3mf():
     names = {a['name']: a['quantity'] for a in accessories.summary(devices)}
     assert names == {'AMS HT mounting template': 1, 'One-post holder': 2, 'AMS 2 Pro mounting template': 1,
                      'Four-post holder': 1, 'Creality SpacePi X4 mounting template': 1, 'Two-post holder': 2}
-    for printer in ('H2D', 'H2S', 'A2L'):
+    for printer in ('bambu-350x320', 'bambu-340x320', 'bambu-330x320'):
         variants, plates = accessories.plan(devices, g.PRINTERS[printer], 3)
         assert sum(len(p['items']) for p in plates) == 8, printer
         for p in plates:
             x0, y0, x1, y1 = p['area']
             for i in p['items']:
                 assert x0 - 1e-6 <= i['x'] and i['x'] + i['w'] <= x1 + 1e-6 and y0 - 1e-6 <= i['y'] and i['y'] + i['h'] <= y1 + 1e-6
-    for printer in ('X1 Carbon', 'P1S', 'A1 mini'):
+    for printer in ('bambu-256x256', 'bambu-180x180'):
         variants_s, plates_s = accessories.plan({'ams_2_pro': 1}, g.PRINTERS[printer], 0)
         names_s = [v['check']['lines'][0] for v in variants_s]
         assert 'Four-post holder' not in names_s and sum('Split four-post holder' in n for n in names_s) == 2, (printer, names_s)
@@ -122,22 +122,22 @@ def test_accessories_plan_and_3mf():
             x0, y0, x1, y1 = p['area']
             for i in p['items']:
                 assert x0 - 1e-6 <= i['x'] and i['x'] + i['w'] <= x1 + 1e-6 and y0 - 1e-6 <= i['y'] and i['y'] + i['h'] <= y1 + 1e-6
-    assert [v['check']['lines'][0] for v in accessories.plan({'ams_2_pro': 1}, g.PRINTERS['H2D'], 0)[0]][1] == 'Four-post holder'
+    assert [v['check']['lines'][0] for v in accessories.plan({'ams_2_pro': 1}, g.PRINTERS['bambu-350x320'], 0)[0]][1] == 'Four-post holder'
     pieces = accessories.load_pieces('Split_4_post_holder.stl')
     assert len(pieces) == 2 and all(abs(w - 163.3) < 0.5 and abs(h - 58.01) < 0.05 for _, _, w, h in pieces)
-    assert accessories.plan({'ams_ht': 1}, g.PRINTERS['A1 mini'], 0)[1]
+    assert accessories.plan({'ams_ht': 1}, g.PRINTERS['bambu-180x180'], 0)[1]
     for bad in ({'ams_ht': 21}, {'ams_ht': -1}, {'toaster': 1}, {'ams_ht': True}):
         try:
             accessories.validate_devices(bad)
         except ValueError:
             continue
         raise AssertionError(bad)
-    s = g.validate(dict(rows=[dict(product=g.CATALOG[0]['id'], quantity=1)], settings=dict(printer='H2D', devices=devices)))['settings']
-    variants, plates = accessories.plan(s['devices'], g.PRINTERS['H2D'], 0)
+    s = g.validate(dict(rows=[dict(product=g.CATALOG[0]['id'], quantity=1)], settings=dict(printer='bambu-350x320', devices=devices)))['settings']
+    variants, plates = accessories.plan(s['devices'], g.PRINTERS['bambu-350x320'], 0)
     for n, p in enumerate(plates):
         p['number'] = n + 1; p['origin'] = [n * 420, 0]
     out = Path(tempfile.mkdtemp()) / 'accessories.3mf'
-    write_batch(out, variants, plates, s, g.PRINTERS['H2D'], g.AUTHOR)
+    write_batch(out, variants, plates, s, g.PRINTERS['bambu-350x320'], g.AUTHOR)
     with zipfile.ZipFile(out) as z:
         assert z.testzip() is None
         model = ET.fromstring(z.read('3D/3dmodel.model'))
@@ -256,7 +256,7 @@ def test_label_styles_are_inlay_and_engraved_only():
     studio = (ROOT / 'studio.html').read_text(encoding='utf-8')
     assert 'value="modifier"' not in studio and 'value="part"' in studio and 'value="cut"' in studio
     try:
-        g.validate(dict(rows=[dict(product=g.CATALOG[0]['id'], quantity=1)], settings=dict(printer='H2D', style='modifier')))
+        g.validate(dict(rows=[dict(product=g.CATALOG[0]['id'], quantity=1)], settings=dict(printer='bambu-350x320', style='modifier')))
     except ValueError as e:
         assert 'label style' in str(e)
     else:
@@ -272,8 +272,8 @@ def test_nfc_pockets():
     assert not nfc.is_trimmed('Bambu Original', 25) and nfc.is_trimmed('Cookiecad', 25) and nfc.is_trimmed('Amolen 1kg', 25)
     assert not nfc.is_trimmed('Cookiecad', 15)
     assert 'intersection()' in nfc.sleeveless_cutter_scad('Cookiecad', 25) and 'intersection()' not in nfc.sleeveless_cutter_scad('Bambu Original', 25)
-    for printer in ('H2D', 'A1 mini'):
-        devices = accessories.validate_devices({'ams_2_pro': 1, 'spacepi_x4': 1} if printer == 'H2D' else {'ams_2_pro': 1})
+    for printer in ('bambu-350x320', 'bambu-180x180'):
+        devices = accessories.validate_devices({'ams_2_pro': 1, 'spacepi_x4': 1} if printer == 'bambu-350x320' else {'ams_2_pro': 1})
         variants, plates = accessories.plan(devices, g.PRINTERS[printer], 0, 25.0)
         assert any(n == nfc.NAME for v in variants for n, _ in v['parts']), printer
         for v in variants:
@@ -284,8 +284,101 @@ def test_nfc_pockets():
             for x, y, z in pockets[0][0]:
                 assert min(xs) < x < max(xs) and min(ys) < y < max(ys) and -1e-6 <= z <= nfc.DEPTH + 1e-6, v['check']['lines']
     devices = accessories.validate_devices({'ams_2_pro': 1})
-    off = accessories.plan(devices, g.PRINTERS['H2D'], 0)[0]
+    off = accessories.plan(devices, g.PRINTERS['bambu-350x320'], 0)[0]
     assert not any(n == nfc.NAME for v in off for n, _ in v['parts'])
+
+def test_printer_groups_are_by_brand_and_bed():
+    seen = set()
+    for gid, p in g.PRINTERS.items():
+        assert gid == p['id'] and gid not in seen; seen.add(gid)
+        assert p['brand'] in g.DEFAULT_FOR_BRAND, gid
+        w, d, h = p['bed']
+        assert gid.endswith(f'{w:g}x{d:g}') or '-dual' in gid, gid
+        assert p['usable'][2] <= w and p['usable'][3] <= d and p['single'][2] <= w and p['single'][3] <= d, gid
+        if p['brand'] == 'Bambu Lab':
+            assert p['multi'] and (g.AUTHOR / 'Printer_Settings' / p['settings']).exists(), gid
+        else:
+            assert not p['multi'] and p['settings'] is None, gid
+    assert {p['brand'] for p in g.PRINTERS.values()} == {'Bambu Lab', 'Creality', 'Elegoo', 'Anycubic', 'Prusa'}
+    for old, new in g.PRINTER_ALIASES.items():
+        assert new in g.PRINTERS, old
+
+
+def test_validate_picks_slicer_and_single_filament_style():
+    rows = [dict(product=g.CATALOG[0]['id'], quantity=1)]
+    s = g.validate(dict(rows=rows, settings=dict(printer='H2D')))['settings']          # old printer name from a saved draft
+    assert (s['printer'], s['slicer'], s['multicolor']) == ('bambu-350x320', 'bambu_studio', 'yes')
+    s = g.validate(dict(rows=rows, settings=dict(printer='prusa-250x210')))['settings']
+    assert (s['slicer'], s['multicolor'], s['style']) == ('prusa', 'yes', 'part')
+    s = g.validate(dict(rows=rows, settings=dict(printer='creality-220x220', multicolor='no', style='part')))['settings']
+    assert (s['slicer'], s['style']) == ('creality_print', 'cut')                      # one filament: engraved
+    s = g.validate(dict(rows=rows, settings=dict(printer='bambu-256x256', multicolor='no', style='part')))['settings']
+    assert (s['multicolor'], s['style']) == ('yes', 'part')                            # Bambu groups always have a color system
+    for bad in (dict(slicer='cura'), dict(multicolor='maybe'), dict(printer='nope')):
+        try:
+            g.validate(dict(rows=rows, settings=bad))
+        except ValueError:
+            continue
+        raise AssertionError(bad)
+
+
+def test_every_slicer_writes_a_matching_project():
+    import tempfile, zipfile
+    import xml.etree.ElementTree as ET
+    import accessories
+    from batch_export import write_batch
+    tmp = Path(tempfile.mkdtemp())
+    for gid in ('bambu-256x256', 'creality-220x220', 'elegoo-256x256', 'anycubic-255x255', 'prusa-250x210', 'prusa-180x180'):
+        printer = g.PRINTERS[gid]
+        for slicer in g.SLICERS:
+            for multicolor in ('yes', 'no'):
+                s = g.validate(dict(rows=[dict(product=g.CATALOG[0]['id'], quantity=1)],
+                                    settings=dict(printer=gid, slicer=slicer, multicolor=multicolor, devices=dict(ams_2_pro=1, ams_ht=1))))['settings']
+                variants, plates = accessories.plan(s['devices'], printer, 0)
+                for n, p in enumerate(plates):
+                    p['number'] = n + 1; p['origin'] = [n % 2 * printer['bed'][0] * 1.2, -(n // 2) * printer['bed'][1] * 1.2]
+                out = tmp / f'{gid}-{slicer}-{multicolor}.3mf'
+                write_batch(out, variants, plates, s, printer, g.AUTHOR, slicer)
+                if g.SLICERS[slicer]['family'] == 'prusa' and len(plates) > 1:
+                    files = sorted(tmp.glob(f'{gid}-{slicer}-{multicolor}_Plate_*.3mf'))
+                    assert len(files) == len(plates) and not out.exists(), (gid, slicer)
+                    for f in files:
+                        with zipfile.ZipFile(f) as z:
+                            assert z.testzip() is None and 'Metadata/Slic3r_PE.config' in z.namelist()
+                    continue
+                with zipfile.ZipFile(out) as z:
+                    assert z.testzip() is None
+                    name = f'{gid}/{slicer}/{multicolor}'
+                    model = ET.fromstring(z.read('3D/3dmodel.model'))
+                    ns = {'m': g.NS}
+                    items = model.findall('.//m:build/m:item', ns) if model.tag.startswith('{') else model.findall('.//build/item')
+                    assert len(items) == sum(len(p['items']) for p in plates), name
+                    app = [e.text for e in model.iter() if e.get('name') == 'Application'][0]
+                    assert app == g.SLICERS[slicer]['app'], name
+                    family = g.SLICERS[slicer]['family']
+                    if family == 'prusa':
+                        ini = dict(l[2:].split(' = ', 1) for l in z.read('Metadata/Slic3r_PE.config').decode().splitlines())
+                        w, d, _ = printer['bed']
+                        assert ini['bed_shape'] == f'0x0,{w:g}x0,{w:g}x{d:g},0x{d:g}', name
+                        cfg = ET.fromstring(z.read('Metadata/Slic3r_PE_model.config'))
+                        for obj in cfg.findall('object'):
+                            last = -1
+                            for vol in obj.findall('volume'):
+                                assert int(vol.get('firstid')) == last + 1, name
+                                last = int(vol.get('lastid'))
+                    else:
+                        proj = json.loads(z.read('Metadata/project_settings.config'))
+                        cfg = ET.fromstring(z.read('Metadata/model_settings.config'))
+                        assert len(cfg.findall('plate')) == len(plates), name
+                        slots = len(proj['filament_colour'])
+                        assert slots >= 1 and (multicolor == 'yes' or printer['multi'] or slots == 1), name
+                        if family == 'orca':
+                            w, d, _ = printer['bed']
+                            assert proj['printable_area'] == ['0x0', f'{w:g}x0', f'{w:g}x{d:g}', f'0x{d:g}'], name
+                            assert len(proj['filament_type']) == slots and len(proj['nozzle_temperature']) == slots, name
+                            assert len(proj['flush_volumes_matrix']) == slots * slots, name
+                            assert len(proj['wipe_tower_x']) == len(plates), name
+
 
 if __name__ == '__main__':
     failures = 0

@@ -1,0 +1,26 @@
+{
+ "bambu_studio": {
+  "label": "Bambu Studio",
+  "family": "bambu"
+ },
+ "orca": {
+  "label": "Orca Slicer",
+  "family": "orca"
+ },
+ "creality_print": {
+  "label": "Creality Print",
+  "family": "orca"
+ },
+ "elegoo": {
+  "label": "ElegooSlicer",
+  "family": "orca"
+ },
+ "anycubic": {
+  "label": "Anycubic Slicer Next",
+  "family": "orca"
+ },
+ "prusa": {
+  "label": "PrusaSlicer",
+  "family": "prusa"
+ }
+}

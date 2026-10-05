@@ -1,377 +1,819 @@
 {
-  "H2D": {
-    "id": "H2D",
-    "label": "H2D (Bed size 350 x 320 x 325 mm)",
-    "bed": [
-      350.0,
-      320.0,
-      325.0
-    ],
-    "usable": [
-      25.0,
-      0.0,
-      325.0,
-      320.0
-    ],
-    "single": [
-      0.0,
-      0.0,
-      325.0,
-      320.0
-    ],
-    "exclusions": [],
-    "settings": "H2D.json",
-    "dual": true,
-    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
-  },
-  "H2D Pro": {
-    "id": "H2D Pro",
-    "label": "H2D Pro (Bed size 350 x 320 x 325 mm)",
-    "bed": [
-      350.0,
-      320.0,
-      325.0
-    ],
-    "usable": [
-      25.0,
-      0.0,
-      325.0,
-      320.0
-    ],
-    "single": [
-      0.0,
-      0.0,
-      325.0,
-      320.0
-    ],
-    "exclusions": [],
-    "settings": "H2D_Pro.json",
-    "dual": true,
-    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
-  },
-  "H2S": {
-    "id": "H2S",
-    "label": "H2S (Bed size 340 x 320 x 340 mm)",
-    "bed": [
-      340.0,
-      320.0,
-      340.0
-    ],
-    "usable": [
-      0.0,
-      0.0,
-      340.0,
-      320.0
-    ],
-    "single": [
-      0.0,
-      0.0,
-      340.0,
-      320.0
-    ],
-    "exclusions": [],
-    "settings": "H2S.json",
-    "dual": false,
-    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
-  },
-  "H2C": {
-    "id": "H2C",
-    "label": "H2C (Bed size 330 x 320 x 325 mm)",
-    "bed": [
-      330.0,
-      320.0,
-      325.0
-    ],
-    "usable": [
-      25.0,
-      0.0,
-      325.0,
-      320.0
-    ],
-    "single": [
-      0.0,
-      0.0,
-      325.0,
-      320.0
-    ],
-    "exclusions": [],
-    "settings": "H2C.json",
-    "dual": true,
-    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
-  },
-  "X2D": {
-    "id": "X2D",
-    "label": "X2D (Bed size 256 x 256 x 260 mm)",
-    "bed": [
-      256.0,
-      256.0,
-      260
-    ],
-    "usable": [
-      20.5,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "single": [
-      0.0,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "exclusions": [],
-    "settings": "X2D.json",
-    "dual": true,
-    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
-  },
-  "X1 Carbon": {
-    "id": "X1 Carbon",
-    "label": "X1 Carbon (Bed size 256 x 256 x 250 mm)",
-    "bed": [
-      256.0,
-      256.0,
-      250.0
-    ],
-    "usable": [
-      0.0,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "single": [
-      0.0,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "exclusions": [
-      "0x0",
-      "18x0",
-      "18x28",
-      "0x28"
-    ],
-    "settings": "X1_Carbon.json",
-    "dual": false,
-    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
-  },
-  "X1E": {
-    "id": "X1E",
-    "label": "X1E (Bed size 256 x 256 x 250 mm)",
-    "bed": [
-      256.0,
-      256.0,
-      250.0
-    ],
-    "usable": [
-      0.0,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "single": [
-      0.0,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "exclusions": [
-      "0x0",
-      "18x0",
-      "18x28",
-      "0x28"
-    ],
-    "settings": "X1E.json",
-    "dual": false,
-    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
-  },
-  "X1": {
-    "id": "X1",
-    "label": "X1 (Bed size 256 x 256 x 250 mm)",
-    "bed": [
-      256.0,
-      256.0,
-      250.0
-    ],
-    "usable": [
-      0.0,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "single": [
-      0.0,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "exclusions": [
-      "0x0",
-      "18x0",
-      "18x28",
-      "0x28"
-    ],
-    "settings": "X1.json",
-    "dual": false,
-    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
-  },
-  "P2S": {
-    "id": "P2S",
-    "label": "P2S (Bed size 256 x 256 x 256 mm)",
-    "bed": [
-      256.0,
-      256.0,
-      256.0
-    ],
-    "usable": [
-      0.0,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "single": [
-      0.0,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "exclusions": [],
-    "settings": "P2S.json",
-    "dual": false,
-    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
-  },
-  "P1S": {
-    "id": "P1S",
-    "label": "P1S (Bed size 256 x 256 x 250 mm)",
-    "bed": [
-      256.0,
-      256.0,
-      250.0
-    ],
-    "usable": [
-      0.0,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "single": [
-      0.0,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "exclusions": [
-      "0x0",
-      "18x0",
-      "18x28",
-      "0x28"
-    ],
-    "settings": "P1S.json",
-    "dual": false,
-    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
-  },
-  "P1P": {
-    "id": "P1P",
-    "label": "P1P (Bed size 256 x 256 x 250 mm)",
-    "bed": [
-      256.0,
-      256.0,
-      250.0
-    ],
-    "usable": [
-      0.0,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "single": [
-      0.0,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "exclusions": [
-      "0x0",
-      "18x0",
-      "18x28",
-      "0x28"
-    ],
-    "settings": "P1P.json",
-    "dual": false,
-    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
-  },
-  "A1": {
-    "id": "A1",
-    "label": "A1 (Bed size 256 x 256 x 256 mm)",
-    "bed": [
-      256.0,
-      256.0,
-      256.0
-    ],
-    "usable": [
-      0.0,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "single": [
-      0.0,
-      0.0,
-      256.0,
-      256.0
-    ],
-    "exclusions": [],
-    "settings": "A1.json",
-    "dual": false,
-    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
-  },
-  "A1 mini": {
-    "id": "A1 mini",
-    "label": "A1 mini (Bed size 180 x 180 x 180 mm)",
-    "bed": [
-      180.0,
-      180.0,
-      180.0
-    ],
-    "usable": [
-      0.0,
-      0.0,
-      180.0,
-      180.0
-    ],
-    "single": [
-      0.0,
-      0.0,
-      180.0,
-      180.0
-    ],
-    "exclusions": [],
-    "settings": "A1_mini.json",
-    "dual": false,
-    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
-  },
-  "A2L": {
-    "id": "A2L",
-    "label": "A2L (Bed size 330 x 320 x 325 mm)",
-    "bed": [
-      330.0,
-      320.0,
-      325.0
-    ],
-    "usable": [
-      0.0,
-      0.0,
-      330.0,
-      320.0
-    ],
-    "single": [
-      0.0,
-      0.0,
-      330.0,
-      320.0
-    ],
-    "exclusions": [],
-    "settings": "A2L.json",
-    "dual": false,
-    "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles"
-  }
+ "bambu-180x180": {
+  "id": "bambu-180x180",
+  "brand": "Bambu Lab",
+  "models": "A1 mini",
+  "bed": [
+   180.0,
+   180.0,
+   180.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   180.0,
+   180.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   180.0,
+   180.0
+  ],
+  "exclusions": [],
+  "settings": "A1_mini.json",
+  "dual": false,
+  "multi": true,
+  "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles",
+  "label": "180 x 180 mm \u00b7 A1 mini",
+  "bed_label": "180 x 180 mm"
+ },
+ "bambu-256x256": {
+  "id": "bambu-256x256",
+  "brand": "Bambu Lab",
+  "models": "A1, P1P, P1S, P2S, X1, X1 Carbon, X1E",
+  "bed": [
+   256.0,
+   256.0,
+   250.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   256.0,
+   256.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   256.0,
+   256.0
+  ],
+  "exclusions": [
+   "0x0",
+   "18x0",
+   "18x28",
+   "0x28"
+  ],
+  "settings": "P1S.json",
+  "dual": false,
+  "multi": true,
+  "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles",
+  "label": "256 x 256 mm \u00b7 A1, P1P, P1S, P2S, X1, X1 Carbon, X1E",
+  "bed_label": "256 x 256 mm"
+ },
+ "bambu-256x256-dual": {
+  "id": "bambu-256x256-dual",
+  "brand": "Bambu Lab",
+  "models": "X2D",
+  "bed": [
+   256.0,
+   256.0,
+   260
+  ],
+  "usable": [
+   20.5,
+   0.0,
+   256.0,
+   256.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   256.0,
+   256.0
+  ],
+  "exclusions": [],
+  "settings": "X2D.json",
+  "dual": true,
+  "multi": true,
+  "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles",
+  "label": "256 x 256 mm \u00b7 X2D",
+  "bed_label": "256 x 256 mm"
+ },
+ "bambu-330x320": {
+  "id": "bambu-330x320",
+  "brand": "Bambu Lab",
+  "models": "A2L",
+  "bed": [
+   330.0,
+   320.0,
+   325.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   330.0,
+   320.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   330.0,
+   320.0
+  ],
+  "exclusions": [],
+  "settings": "A2L.json",
+  "dual": false,
+  "multi": true,
+  "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles",
+  "label": "330 x 320 mm \u00b7 A2L",
+  "bed_label": "330 x 320 mm"
+ },
+ "bambu-330x320-dual": {
+  "id": "bambu-330x320-dual",
+  "brand": "Bambu Lab",
+  "models": "H2C",
+  "bed": [
+   330.0,
+   320.0,
+   325.0
+  ],
+  "usable": [
+   25.0,
+   0.0,
+   325.0,
+   320.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   325.0,
+   320.0
+  ],
+  "exclusions": [],
+  "settings": "H2C.json",
+  "dual": true,
+  "multi": true,
+  "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles",
+  "label": "330 x 320 mm \u00b7 H2C",
+  "bed_label": "330 x 320 mm"
+ },
+ "bambu-340x320": {
+  "id": "bambu-340x320",
+  "brand": "Bambu Lab",
+  "models": "H2S",
+  "bed": [
+   340.0,
+   320.0,
+   340.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   340.0,
+   320.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   340.0,
+   320.0
+  ],
+  "exclusions": [],
+  "settings": "H2S.json",
+  "dual": false,
+  "multi": true,
+  "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles",
+  "label": "340 x 320 mm \u00b7 H2S",
+  "bed_label": "340 x 320 mm"
+ },
+ "bambu-350x320": {
+  "id": "bambu-350x320",
+  "brand": "Bambu Lab",
+  "models": "H2D, H2D Pro",
+  "bed": [
+   350.0,
+   320.0,
+   325.0
+  ],
+  "usable": [
+   25.0,
+   0.0,
+   325.0,
+   320.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   325.0,
+   320.0
+  ],
+  "exclusions": [],
+  "settings": "H2D.json",
+  "dual": true,
+  "multi": true,
+  "source": "Installed Bambu Studio 2.08.02.61 stock 0.4 mm profiles",
+  "label": "350 x 320 mm \u00b7 H2D, H2D Pro",
+  "bed_label": "350 x 320 mm"
+ },
+ "creality-220x215": {
+  "id": "creality-220x215",
+  "brand": "Creality",
+  "models": "K2 SE",
+  "bed": [
+   220.0,
+   215.0,
+   250.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   220.0,
+   215.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   220.0,
+   215.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "220 x 215 mm \u00b7 K2 SE",
+  "bed_label": "220 x 215 mm"
+ },
+ "creality-220x220": {
+  "id": "creality-220x220",
+  "brand": "Creality",
+  "models": "Ender-3 V3 / V3 SE / V3 KE, Ender-3 V2, Ender-5, K1",
+  "bed": [
+   220.0,
+   220.0,
+   250.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   220.0,
+   220.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   220.0,
+   220.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "220 x 220 mm \u00b7 Ender-3 V3 / V3 SE / V3 KE, Ender-3 V2, Ender-5, K1",
+  "bed_label": "220 x 220 mm"
+ },
+ "creality-250x250": {
+  "id": "creality-250x250",
+  "brand": "Creality",
+  "models": "",
+  "bed": [
+   250.0,
+   250.0,
+   250.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   250.0,
+   250.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   250.0,
+   250.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "250 x 250 mm \u00b7 other models with this bed",
+  "bed_label": "250 x 250 mm"
+ },
+ "creality-260x260": {
+  "id": "creality-260x260",
+  "brand": "Creality",
+  "models": "Hi, K2, SPARKX i7",
+  "bed": [
+   260.0,
+   260.0,
+   260.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   260.0,
+   260.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   260.0,
+   260.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "260 x 260 mm \u00b7 Hi, K2, SPARKX i7",
+  "bed_label": "260 x 260 mm"
+ },
+ "creality-300x300": {
+  "id": "creality-300x300",
+  "brand": "Creality",
+  "models": "K1 Max, K2 Pro, CR-10 V2 / V3, Ender-3 V3 Plus",
+  "bed": [
+   300.0,
+   300.0,
+   300.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   300.0,
+   300.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   300.0,
+   300.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "300 x 300 mm \u00b7 K1 Max, K2 Pro, CR-10 V2 / V3, Ender-3 V3 Plus",
+  "bed_label": "300 x 300 mm"
+ },
+ "creality-350x350": {
+  "id": "creality-350x350",
+  "brand": "Creality",
+  "models": "Ender-5 Plus, K2 Plus",
+  "bed": [
+   350.0,
+   350.0,
+   350.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   350.0,
+   350.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   350.0,
+   350.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "350 x 350 mm \u00b7 Ender-5 Plus, K2 Plus",
+  "bed_label": "350 x 350 mm"
+ },
+ "creality-400x400": {
+  "id": "creality-400x400",
+  "brand": "Creality",
+  "models": "",
+  "bed": [
+   400.0,
+   400.0,
+   400.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   400.0,
+   400.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   400.0,
+   400.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "400 x 400 mm \u00b7 other models with this bed",
+  "bed_label": "400 x 400 mm"
+ },
+ "elegoo-230x230": {
+  "id": "elegoo-230x230",
+  "brand": "Elegoo",
+  "models": "Neptune 3 Pro, Neptune 4, Neptune 4 Pro",
+  "bed": [
+   230.0,
+   230.0,
+   250.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   230.0,
+   230.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   230.0,
+   230.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "230 x 230 mm \u00b7 Neptune 3 Pro, Neptune 4, Neptune 4 Pro",
+  "bed_label": "230 x 230 mm"
+ },
+ "elegoo-256x256": {
+  "id": "elegoo-256x256",
+  "brand": "Elegoo",
+  "models": "Centauri, Centauri 2, Centauri Carbon, Centauri Carbon 2",
+  "bed": [
+   256.0,
+   256.0,
+   256.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   256.0,
+   256.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   256.0,
+   256.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "256 x 256 mm \u00b7 Centauri, Centauri 2, Centauri Carbon, Centauri Carbon 2",
+  "bed_label": "256 x 256 mm"
+ },
+ "elegoo-325x325": {
+  "id": "elegoo-325x325",
+  "brand": "Elegoo",
+  "models": "Neptune 3 Plus, Neptune 4 Plus",
+  "bed": [
+   325.0,
+   325.0,
+   320.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   325.0,
+   325.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   325.0,
+   325.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "325 x 325 mm \u00b7 Neptune 3 Plus, Neptune 4 Plus",
+  "bed_label": "325 x 325 mm"
+ },
+ "anycubic-220x220": {
+  "id": "anycubic-220x220",
+  "brand": "Anycubic",
+  "models": "Kobra, Kobra 2, Kobra 2 Neo, Kobra 2 Pro, Kobra Neo",
+  "bed": [
+   220.0,
+   220.0,
+   250.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   220.0,
+   220.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   220.0,
+   220.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "220 x 220 mm \u00b7 Kobra, Kobra 2, Kobra 2 Neo, Kobra 2 Pro, Kobra Neo",
+  "bed_label": "220 x 220 mm"
+ },
+ "anycubic-250x250": {
+  "id": "anycubic-250x250",
+  "brand": "Anycubic",
+  "models": "Kobra S1",
+  "bed": [
+   250.0,
+   250.0,
+   250.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   250.0,
+   250.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   250.0,
+   250.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "250 x 250 mm \u00b7 Kobra S1",
+  "bed_label": "250 x 250 mm"
+ },
+ "anycubic-255x255": {
+  "id": "anycubic-255x255",
+  "brand": "Anycubic",
+  "models": "Kobra 3",
+  "bed": [
+   255.0,
+   255.0,
+   260.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   255.0,
+   255.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   255.0,
+   255.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "255 x 255 mm \u00b7 Kobra 3",
+  "bed_label": "255 x 255 mm"
+ },
+ "anycubic-260x260": {
+  "id": "anycubic-260x260",
+  "brand": "Anycubic",
+  "models": "Kobra X",
+  "bed": [
+   260.0,
+   260.0,
+   260.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   260.0,
+   260.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   260.0,
+   260.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "260 x 260 mm \u00b7 Kobra X",
+  "bed_label": "260 x 260 mm"
+ },
+ "anycubic-300x300": {
+  "id": "anycubic-300x300",
+  "brand": "Anycubic",
+  "models": "",
+  "bed": [
+   300.0,
+   300.0,
+   300.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   300.0,
+   300.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   300.0,
+   300.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "300 x 300 mm \u00b7 other models with this bed",
+  "bed_label": "300 x 300 mm"
+ },
+ "anycubic-350x350": {
+  "id": "anycubic-350x350",
+  "brand": "Anycubic",
+  "models": "Kobra S1 Max",
+  "bed": [
+   350.0,
+   350.0,
+   350.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   350.0,
+   350.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   350.0,
+   350.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "350 x 350 mm \u00b7 Kobra S1 Max",
+  "bed_label": "350 x 350 mm"
+ },
+ "prusa-180x180": {
+  "id": "prusa-180x180",
+  "brand": "Prusa",
+  "models": "MINI",
+  "bed": [
+   180.0,
+   180.0,
+   180.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   180.0,
+   180.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   180.0,
+   180.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "180 x 180 mm \u00b7 MINI",
+  "bed_label": "180 x 180 mm"
+ },
+ "prusa-250x210": {
+  "id": "prusa-250x210",
+  "brand": "Prusa",
+  "models": "MK3.5, MK3S+, MK4, MK4S",
+  "bed": [
+   250.0,
+   210.0,
+   220.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   250.0,
+   210.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   250.0,
+   210.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "250 x 210 mm \u00b7 MK3.5, MK3S+, MK4, MK4S",
+  "bed_label": "250 x 210 mm"
+ },
+ "prusa-250x220": {
+  "id": "prusa-250x220",
+  "brand": "Prusa",
+  "models": "CORE One",
+  "bed": [
+   250.0,
+   220.0,
+   270.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   250.0,
+   220.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   250.0,
+   220.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "250 x 220 mm \u00b7 CORE One",
+  "bed_label": "250 x 220 mm"
+ },
+ "prusa-300x300": {
+  "id": "prusa-300x300",
+  "brand": "Prusa",
+  "models": "CORE One L",
+  "bed": [
+   300.0,
+   300.0,
+   330.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   300.0,
+   300.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   300.0,
+   300.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "300 x 300 mm \u00b7 CORE One L",
+  "bed_label": "300 x 300 mm"
+ },
+ "prusa-360x360": {
+  "id": "prusa-360x360",
+  "brand": "Prusa",
+  "models": "XL",
+  "bed": [
+   360.0,
+   360.0,
+   360.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   360.0,
+   360.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   360.0,
+   360.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from the vendor machine profiles bundled with Orca Slicer 2.4",
+  "label": "360 x 360 mm \u00b7 XL",
+  "bed_label": "360 x 360 mm"
+ }
 }

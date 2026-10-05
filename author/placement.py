@@ -19,21 +19,21 @@ def subtract(free, used):
         if Y>V:result.append([x,V,X,Y])
     return [a for i,a in enumerate(result) if a[2]-a[0]>1e-6 and a[3]-a[1]>1e-6 and not any(i!=j and b[0]<=a[0] and b[1]<=a[1] and b[2]>=a[2] and b[3]>=a[3] and (a!=b or j<i) for j,b in enumerate(result))]
 
-def space(printer, two_color):
+def space(printer, two_color, gap=GAP):
     r=printer['usable'] if two_color else printer['single']
     area=[r[0]+MARGIN,r[1]+MARGIN,r[2]-MARGIN,r[3]-MARGIN]
     blocks=[]
     if printer['exclusions']:
         pts=[list(map(float,s.lower().split('x'))) for s in printer['exclusions']]
-        blocks.append([min(p[0] for p in pts)-GAP,min(p[1] for p in pts)-GAP,max(p[0] for p in pts)+GAP,max(p[1] for p in pts)+GAP])
+        blocks.append([min(p[0] for p in pts)-gap,min(p[1] for p in pts)-gap,max(p[0] for p in pts)+gap,max(p[1] for p in pts)+gap])
     tower=None
     if two_color:
         # Leave a 76 x 76 mm rear corner for the 60 mm prime tower and brim.
         tower=[area[2]-76,area[3]-76,area[2],area[3]];blocks.append(tower)
     return area,blocks,tower
 
-def pack(items,printer,two_color=True):
-    area,blocks,tower=space(printer,two_color)
+def pack(items,printer,two_color=True,GAP=GAP):
+    area,blocks,tower=space(printer,two_color,GAP)
     initial=[area[:]]
     for b in blocks:initial=subtract(initial,b)
     trials=[]
@@ -79,6 +79,8 @@ def pack(items,printer,two_color=True):
     return min(trials,key=lambda x:x[0])[1]
 
 def plan(checks,settings,printer):
+    # PrusaSlicer's toolpath conflict check rejects supported clips closer than about 6 mm, so give them room there.
+    gap=6.0 if settings.get('slicer')=='prusa' and settings.get('holder_sleeve')=='yes' else GAP
     groups={}
     rainbow=settings['body_mode']=='filament' or (settings['text_mode']=='filament' and settings['style']!='cut')
     for i,r in enumerate(checks):
@@ -87,7 +89,7 @@ def plan(checks,settings,printer):
     plates=[]
     for key,items in groups.items():
         two_color=settings['style']!='cut' and not(settings['body_mode']==settings['text_mode']=='filament')
-        for p in pack(items,printer,two_color):
+        for p in pack(items,printer,two_color,gap):
             p['name']=' / '.join(checks[items[0]['variant']]['lines']) if rainbow else 'Mixed labels'
             plates.append(p)
     cols=math.ceil(math.sqrt(len(plates)))

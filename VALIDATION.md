@@ -39,3 +39,27 @@
 
 - The supplied `Filament_Labels-Sleeve.3mf` is now the geometry reference. Its sleeve bodies preserve a continuous plate, shorten the tunnel ends without a plate notch, use 4 mm tunnel blockers, and carry support painting onto the sleeve/retaining geometry.
 - Sleeve exports now force `enable_support=1` and `support_type=normal(manual)` whenever a tunnel blocker is present, even if the selected printer preset disables support.
+
+## Multi-slicer export (2026-10-05)
+
+Real exports from `tools/export_samples.py` (desktop OpenSCAD) were sliced with each slicer's command line on macOS (arm64):
+Bambu Studio 02.08, Orca Slicer 2.4.x, ElegooSlicer 1.5.x and PrusaSlicer 2.9.6.
+
+| Slicer | Printer groups tried | Result |
+| --- | --- | --- |
+| Bambu Studio | Bambu 350x320, 256x256 (sleeve), Creality 220x220, Prusa 250x210 (sleeve) | One G-code per plate; supports on sleeve files; tool changes on multi-color files |
+| Orca Slicer | Bambu 350x320 / 256x256, Creality 220x220 / 400x400, Anycubic 300x300, Prusa 250x210 and 180x180 | One G-code per plate; every move inside the bed |
+| ElegooSlicer | Bambu 256x256, Creality 220x220, Elegoo 256x256 / 325x325, Prusa 180x180 | One G-code per plate |
+| PrusaSlicer | Prusa 250x210 (plain, sleeve, single, multi-color), Creality 300x300, Bambu 350x320 | Sliced; supports present; tool changes on multi-color |
+| Creality Print 7.2.2 | not checked | Its command line crashes (SIGSEGV in `CLI::run`) even for `--info`, so only the version check could be exercised. |
+| Anycubic Slicer Next | not checked | Not installed (no Homebrew cask). Written as an Orca-family project. |
+
+GUI checks (PrusaSlicer 2.9.4, Orca Slicer): both recognize the file as a project (PrusaSlicer's "Open as project" prompt; Orca's "customized preset" notice for the generic printer), and PrusaSlicer shows the supports and tunnel blockers.
+
+Findings that shaped the writers:
+
+- Orca, ElegooSlicer and Creality Print compare the file's version tag with their own; a Bambu Studio 02.08 tag is rejected by all three. Each slicer gets its own tag (see `author/slicers.py`).
+- The full Bambu printer preset fails Orca's range checks (for example `tree_support_wall_count=-1`), and a project without settings loads "geometry only", which drops the plates. The Orca-family writer therefore carries a slim, valid config (about 70 settings).
+- Bambu Studio rejects `gcode_flavor=marlin2`; `marlin` is accepted by all.
+- PrusaSlicer 2.9 has one bed, so a batch with several plates is written as one project per plate. Supported clips need about 6 mm between them or its conflict check aborts.
+- PrusaSlicer's and Creality Print's command lines crash on toolpath conflicts and some inputs; treat their crashes as tool bugs, not file errors, unless the same file also fails in the app.
