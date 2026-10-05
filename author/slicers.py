@@ -29,7 +29,7 @@ def orca_settings(palette, plates, printer, support=None):
     """project_settings.config for an Orca-family slicer, sized to the palette (one entry per filament slot)."""
     n = len(palette); w, d, h = printer['bed']
     cfg = {'printable_area': ['0x0', f'{w:g}x0', f'{w:g}x{d:g}', f'0x{d:g}'], 'printable_height': f'{h:g}', 'nozzle_diameter': ['0.4'],
-           'gcode_flavor': 'marlin2', 'use_relative_e_distances': '1', 'layer_change_gcode': 'G92 E0', 'change_filament_gcode': 'M600',
+           'gcode_flavor': 'marlin', 'use_relative_e_distances': '1', 'layer_change_gcode': 'G92 E0', 'change_filament_gcode': 'M600',
            'machine_start_gcode': START_GCODE, 'machine_end_gcode': END_GCODE, 'single_extruder_multi_material': '1',
            'extruder_colour': [''], 'extruder_offset': ['0x0'], 'extruder_type': ['Direct Drive'], 'printer_extruder_id': ['1'],
            'nozzle_volume': ['0'], 'filament_colour': [c for _, c in palette], 'flush_multiplier': ['0.3'],
