@@ -1,6 +1,8 @@
 {
   "note": "Newest first. Add an entry at the top for every change visitors would notice. kind: New, Improved, Fixed or Removed. Dates are UTC (YYYY-MM-DD).",
   "entries": [
+    {"date": "2026-10-05", "kind": "Fixed", "title": "Homepage no longer says the file is only for Bambu Studio",
+     "details": ["The tag under the headline now reads One 3MF for your favorite slicer, since the studio also writes projects for Orca Slicer, Creality Print, ElegooSlicer, Anycubic Slicer Next and PrusaSlicer."]},
     {"date": "2026-10-05", "kind": "New", "title": "Creality, Elegoo, Anycubic and Prusa printers, and Orca Slicer",
      "details": ["The printer list is now grouped by brand and bed size instead of listing every model, so one choice covers all the models that share a bed. Bambu Lab, Creality, Elegoo, Anycubic and Prusa are included.",
                  "A new Open the project in choice writes the 3MF the way each slicer reads it: Bambu Studio, Orca Slicer, Creality Print, ElegooSlicer, Anycubic Slicer Next or PrusaSlicer. Orca Slicer works with any printer, including Bambu Lab.",
