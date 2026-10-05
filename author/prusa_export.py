@@ -90,11 +90,15 @@ def write_prusa(path, variants, plates, settings, printer, author):
         'extruder_colour': ';'.join(['""'] * n), 'filament_colour': ';'.join(c for _, c in palette) or '#FFFFFF',
         'temperature': ','.join(['210'] * n), 'first_layer_temperature': ','.join(['215'] * n), 'bed_temperature': ','.join(['60'] * n),
         'first_layer_bed_temperature': ','.join(['60'] * n), 'filament_diameter': ','.join(['1.75'] * n), 'extrusion_multiplier': ','.join(['1'] * n),
-        'filament_type': ';'.join(['PLA'] * n), 'brim_width': '0', 'skirts': '0', 'wipe_tower': '1' if n > 1 else '0', 'complete_objects': '0',
+        'filament_type': ';'.join(['PLA'] * n), 'brim_width': '0', 'skirts': '0', 'wipe_tower': '1' if n > 1 else '0', 'wipe_tower_width': '60', 'complete_objects': '0',
+        'use_relative_e_distances': '1', 'layer_gcode': 'G92 E0',
         'support_material': '1' if support else '0', 'support_material_auto': '0' if support else '1',
         'support_material_threshold': '0', 'support_material_buildplate_only': '0', 'support_material_contact_distance': '0.2',
         'support_material_extruder': '0', 'support_material_interface_extruder': '0',
     }
+    towers = [p['tower'] for p in plates if p['tower']]
+    if towers:
+        ini['wipe_tower_x'], ini['wipe_tower_y'] = f'{towers[0][0] + 8:g}', f'{towers[0][1] + 8:g}'
     config = '\n'.join(f'; {k} = {v}' for k, v in ini.items()) + '\n'
     with zipfile.ZipFile(path, 'w', zipfile.ZIP_DEFLATED) as z:
         z.writestr('[Content_Types].xml', '<?xml version="1.0" encoding="UTF-8"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="model" ContentType="application/vnd.ms-package.3dmanufacturing-3dmodel+xml"/></Types>')
