@@ -32,8 +32,12 @@ def make_native(cmd):
         source = target.with_suffix('.scad')
         source.write_text(code)
         args = ['--export-format', 'binstl'] if target.suffix == '.stl' else []
-        p = subprocess.run([*cmd, '--backend=Manifold', '--enable=textmetrics', *args, '-o', str(target), str(source)],
-                           capture_output=True, text=True, encoding='utf-8')
+        for attempt in range(3):
+            p = subprocess.run([*cmd, '--backend=Manifold', '--enable=textmetrics', *args, '-o', str(target), str(source)],
+                               capture_output=True, text=True, encoding='utf-8')
+            # The Intel OpenSCAD build occasionally crashes at start-up (a setlocale race under Rosetta); a retry is enough.
+            if p.returncode >= 0 or attempt == 2:
+                break
         assert p.returncode == 0 and 'ERROR:' not in p.stderr, p.stderr
         return p.stderr
     return native
