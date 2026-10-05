@@ -11,7 +11,7 @@
   if(typeof input!=='string'||!['/catalog','/library','/csv','/review','/generate'].includes(input))return nativeFetch(input,options);
   try{
    let value;
-   if(input==='/catalog'){const [cat,printers]=await Promise.all([nativeFetch('./author/Catalog.json').then(r=>r.json()),nativeFetch('./author/Printers.json').then(r=>r.json())]);value={products:cat.products,printers:Object.values(printers),fonts:['Liberation Sans:style=Bold','DejaVu Sans:style=Bold','Liberation Serif:style=Bold']};}
+   if(input==='/catalog'){const [cat,printers,slicers]=await Promise.all([nativeFetch('./author/Catalog.json').then(r=>r.json()),nativeFetch('./author/Printers.json').then(r=>r.json()),nativeFetch('./author/Slicers.json').then(r=>r.json())]);value={products:cat.products,printers:Object.values(printers),slicers:slicers,fonts:['Liberation Sans:style=Bold','DejaVu Sans:style=Bold','Liberation Serif:style=Bold']};}
    else if(input==='/library'&&!options.method)value=state();
    else {const d=JSON.parse(options.body||'{}');if(input==='/library')d._state=state();value=await request(input,d);if(input==='/library')localStorage.setItem(storageKey,JSON.stringify(value));if(value.archive){value.download=URL.createObjectURL(new Blob([value.archive],{type:'application/zip'}));delete value.archive;}}
    return new Response(JSON.stringify(value),{headers:{'Content-Type':'application/json'}});

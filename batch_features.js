@@ -14,11 +14,11 @@ function applyDraft(d){
  if(d.rows.some(r=>!Number.isInteger(r.quantity)||r.quantity<1)||d.rows.reduce((n,r)=>n+r.quantity,0)>100)throw Error('Batch quantities must be whole numbers, with no more than 100 clips.');
  rows=clone(d.rows);
  $('holder_sleeve').value=d.settings?.holder_sleeve||'no';
- for(const k of ['printer','font','type_size','vendor_size','color_size','style','holder_sleeve','nfc','tag_size','body_mode','text_mode']){
+ for(const k of ['printer','slicer','multicolor','font','type_size','vendor_size','color_size','style','holder_sleeve','nfc','tag_size','body_mode','text_mode']){
   if(d.settings?.[k]!==undefined){const el=$(k),v=String(d.settings[k]);if(el.tagName!=='SELECT'||[...el.options].some(o=>o.value===v))el.value=v;}
  }
  const dv=d.settings?.devices||{};for(const k of Object.keys(DEVICES))$('dev_'+k).value=dv[k]||0;updateDeviceSummary();updateNfcNote();
- renderRows();
+ renderRows();syncPrinter();
 }
 function rememberUndo(){undoDraft=draft();try{localStorage.setItem('clip-label-undo',JSON.stringify(undoDraft));}catch{}}
 function renderLibrary(){
@@ -63,8 +63,34 @@ $('pasteRows').onclick=()=>{$('pastePanel').classList.remove('hidden');$('pasteT
 $('cancelPaste').onclick=()=>{$('pasteText').value='';$('pastePanel').classList.add('hidden');};
 $('importPaste').onclick=()=>busy('Reading pasted rows…',async()=>{await importText(pastedTextToCsv($('pasteText').value));$('pasteText').value='';$('pastePanel').classList.add('hidden');});
 
+let printerList=[],slicerList={};
+const BRAND_SLICER={'Bambu Lab':'bambu_studio',Creality:'creality_print',Elegoo:'elegoo',Anycubic:'anycubic',Prusa:'prusa'};
+function currentPrinter(){return printerList.find(p=>p.id===$('printer').value)||printerList[0];}
+function fillPrinters(){
+ const brands=[...new Set(printerList.map(p=>p.brand))];
+ $('printer').innerHTML=brands.map(b=>`<optgroup label="${esc(b)}">${printerList.filter(p=>p.brand===b).map(p=>`<option value="${esc(p.id)}">${esc(p.label)}</option>`).join('')}</optgroup>`).join('');
+ $('slicer').innerHTML=Object.entries(slicerList).map(([id,s])=>`<option value="${esc(id)}">${esc(s.label)}</option>`).join('');
+ $('slicer').value=BRAND_SLICER[currentPrinter().brand];syncPrinter();
+}
+function syncPrinter(){
+ const p=currentPrinter();if(!p)return;
+ $('multiLabel').classList.toggle('hidden',p.multi);
+ if(p.multi)$('multicolor').value='yes';
+ const single=!p.multi&&$('multicolor').value==='no';
+ if(single)$('style').value='cut';
+ [...$('style').options].forEach(o=>{o.disabled=single&&o.value!=='cut';});
+ const s=$('slicer').value,sl=slicerList[s]||{},notes=[];
+ if(single)notes.push('<strong>One filament at a time:</strong> labels are engraved into the clip body, so each plate prints in a single filament. The plate names say which filament each plate is for.');
+ if(sl.family==='prusa')notes.push('<strong>PrusaSlicer:</strong> open the file as a project and keep the project settings. Plates are laid out as separate beds.');
+ else if(sl.family==='orca'&&p.brand==='Bambu Lab')notes.push('<strong>'+esc(sl.label)+':</strong> the project uses a generic printer. Choose your own printer profile after opening it; the plate layout stays.');
+ else if(sl.family==='orca')notes.push('<strong>'+esc(sl.label)+':</strong> open it as a project. The printer in the project is generic, so select your own printer profile after opening; the plate layout stays.');
+ $('slicerNote').innerHTML=notes.join(' ');$('slicerNote').classList.toggle('hidden',!notes.length);
+}
+$('printer').addEventListener('change',()=>{const p=currentPrinter();$('slicer').value=BRAND_SLICER[p.brand];if(!p.multi)$('multicolor').value='no';syncPrinter();});
+$('slicer').addEventListener('change',syncPrinter);$('multicolor').addEventListener('change',syncPrinter);
+
 Promise.all([fetch('/catalog').then(r=>r.json()),fetch('/library').then(r=>r.json())]).then(([d,library])=>{
- catalog=d.products;fonts=d.fonts;$('printer').innerHTML=d.printers.map(p=>`<option value="${esc(p.id)}">${esc(p.label)}</option>`).join('');$('font').innerHTML=options(fonts,fonts[0]);
+ catalog=d.products;fonts=d.fonts;printerList=d.printers;slicerList=d.slicers;fillPrinters();$('font').innerHTML=options(fonts,fonts[0]);
  rows=[catalog.find(p=>p.color_name==='Blue'&&p.manufacturer==='Bambu Lab'),catalog.find(p=>p.color_name==='Dark Magic'&&p.filament_type==='PLA')].map(p=>({product:p.id,quantity:1,swatch:p.swatch}));
  let saved;try{saved=JSON.parse(localStorage.getItem('clip-label-draft')||'null');}catch{}
  saved=saved||library.draft||d.draft;

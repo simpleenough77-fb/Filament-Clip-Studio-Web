@@ -83,7 +83,7 @@ def write_batch(path,variants,plates,settings,printer,author,slicer='bambu_studi
                     draw.polygon(pts,fill=color)
         b=io.BytesIO();im.save(b,format='PNG')
         for fn in [f'plate_{n}',f'plate_no_light_{n}',f'top_{n}']:images['Metadata/'+fn+'.png']=b.getvalue()
-    if target['family']=='bambu':
+    if target['family']=='bambu' and printer.get('settings'):
         cfgsettings=json.loads((author/'Printer_Settings'/printer['settings']).read_text())
         # Export the stock Standard nozzle variant for each material slot.
         variant_fields = {'nozzle_temperature','nozzle_temperature_initial_layer','slow_down_min_speed'}

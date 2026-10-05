@@ -1,10 +1,11 @@
-"""Regenerate author/Printers.json: one entry per brand and bed size.
+"""One-off: wrote author/Printers.json (one entry per brand and bed size) from the earlier per-model list.
+Kept as the record of where the bed sizes come from; edit Printers.json directly from now on.
 
 Bambu Lab groups keep a real stock profile (author/Printer_Settings) because Bambu Studio projects
 carry the full printer preset. Every other brand uses the generic bed-only configuration, so a group
 only needs its bed. Bed sizes come from the vendors' machine profiles bundled with Orca Slicer 2.4.
 """
-import json
+import json, sys
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parents[1] / 'author' / 'Printers.json'
@@ -54,4 +55,7 @@ ALIASES = {'H2D': 'bambu-350x320', 'H2D Pro': 'bambu-350x320', 'H2S': 'bambu-340
            'A1': 'bambu-256x256', 'A1 mini': 'bambu-180x180', 'A2L': 'bambu-330x320'}
 OUT.write_text(json.dumps(data, indent=1))
 (OUT.parent / 'Printer_Aliases.json').write_text(json.dumps(ALIASES, indent=1))
+sys.path.insert(0, str(OUT.parent))
+from slicers import SLICERS
+(OUT.parent / 'Slicers.json').write_text(json.dumps({k: dict(label=v['label'], family=v['family']) for k, v in SLICERS.items()}, indent=1))
 print(len(data), 'groups')
