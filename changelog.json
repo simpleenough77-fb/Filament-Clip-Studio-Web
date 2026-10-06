@@ -1,6 +1,8 @@
 {
   "note": "Newest first. Add an entry at the top for every change visitors would notice. kind: New, Improved, Fixed or Removed. Dates are UTC (YYYY-MM-DD).",
   "entries": [
+    {"date": "2026-10-06", "kind": "Improved", "title": "Sleeve supports checked in Orca Slicer and ElegooSlicer",
+     "details": ["Sleeve clip exports were opened and sliced in the Orca Slicer and ElegooSlicer apps, including ElegooSlicer with its own Centauri Carbon printer profile selected. Neither warns that supports are off, and plate 1 slices with manual supports in both. Creality Print and Anycubic Slicer Next have not been checked in their apps."]},
     {"date": "2026-10-06", "kind": "Fixed", "title": "Snapmaker Orca no longer warns that supports are off for sleeve clips",
      "details": ["Clips with a holder sleeve need manual supports. Snapmaker Orca swaps in its own print profile for the U1, which switched them off and showed support enforcers are used but support is not enabled. Each sleeve clip now carries its own Normal (manual) support setting, so supports stay on. Checked with the Snapmaker U1 profile in Snapmaker Orca 2.4.0. The same setting is written for Orca Slicer, Creality Print, ElegooSlicer and Anycubic Slicer Next, which are not yet checked."]},
     {"date": "2026-10-06", "kind": "New", "title": "Snapmaker printers and Snapmaker Orca",
