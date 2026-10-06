@@ -12,7 +12,7 @@ SLICERS = {
     'creality_print': dict(label='Creality Print', family='orca', app='CrealityPrint-7.2.0.0', extra={}),
     'elegoo': dict(label='ElegooSlicer', family='orca', app='ElegooSlicer-1.5.3.5', extra={}),
     'anycubic': dict(label='Anycubic Slicer Next', family='orca', app='BambuStudio-02.06.00.51', extra={'OrcaSlicer': '2.4.2'}),
-    'snapmaker_orca': dict(label='Snapmaker Orca', family='orca', app='Snapmaker_Orca-2.3.3', extra={'Snapmaker_Orca:3mfVersion': '1'}),
+    'snapmaker_orca': dict(label='Snapmaker Orca', family='orca', app='Snapmaker_Orca-01.10.00.00', extra={'Snapmaker_Orca:3mfVersion': '1'}),
     'prusa': dict(label='PrusaSlicer', family='prusa', app='PrusaSlicer-2.9.0', extra={}),
 }
 DEFAULT_FOR_BRAND = {'Bambu Lab': 'bambu_studio', 'Creality': 'creality_print', 'Elegoo': 'elegoo', 'Anycubic': 'anycubic', 'Snapmaker': 'snapmaker_orca', 'Prusa': 'prusa'}
