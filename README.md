@@ -4,7 +4,7 @@ Generate readable filament clips for Bambu Lab, Cookiecad, Amolen, Sunlu and Jay
 
 ## Use
 
-Choose filament combinations, import a CSV if desired, review labels and any shortened names, then download a ZIP containing one multi-plate 3MF and an import-ready CSV. Pick your printer by brand and bed size (Bambu Lab, Creality, Elegoo, Anycubic, Prusa) and the slicer to open the project in (Bambu Studio, Orca Slicer, Creality Print, ElegooSlicer, Anycubic Slicer Next, PrusaSlicer); the 3MF is written the way that slicer reads it. Assign the real printing filament presets and inspect the slice before printing.
+Choose filament combinations, import a CSV if desired, review labels and any shortened names, then download a ZIP containing one multi-plate 3MF and an import-ready CSV. Pick your printer by brand and bed size (Bambu Lab, Creality, Elegoo, Anycubic, Snapmaker, Prusa) and the slicer to open the project in (Bambu Studio, Orca Slicer, Creality Print, ElegooSlicer, Anycubic Slicer Next, Snapmaker Orca, PrusaSlicer); the 3MF is written the way that slicer reads it. Assign the real printing filament presets and inspect the slice before printing.
 
 The official catalog is maintained through this repository by its owner. Visitors can select catalog entries; there is no public catalog-writing endpoint. Forks may maintain their own catalogs under the license. Drafts and named batches are stored in browser local storage and do not synchronize between devices. Download CSV backups before clearing browser data.
 

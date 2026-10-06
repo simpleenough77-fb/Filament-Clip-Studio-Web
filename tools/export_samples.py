@@ -77,7 +77,7 @@ def main():
     ap.add_argument('--out', required=True)
     ap.add_argument('--name', default=None)
     ap.add_argument('--printer', default='bambu-350x320', help='printer group id from author/Printers.json')
-    ap.add_argument('--slicer', default='', help='bambu_studio, orca, creality_print, elegoo, anycubic or prusa (default: the brand\'s own)')
+    ap.add_argument('--slicer', default='', help='bambu_studio, orca, creality_print, elegoo, anycubic, snapmaker_orca or prusa (default: the brand\'s own)')
     ap.add_argument('--multicolor', default='yes', choices=['no', 'yes'])
     ap.add_argument('--sleeve', default='no', choices=['no', 'yes'])
     ap.add_argument('--style', default='part', choices=['part', 'cut'])

@@ -1,6 +1,8 @@
 {
   "note": "Newest first. Add an entry at the top for every change visitors would notice. kind: New, Improved, Fixed or Removed. Dates are UTC (YYYY-MM-DD).",
   "entries": [
+    {"date": "2026-10-06", "kind": "New", "title": "Snapmaker printers and Snapmaker Orca",
+     "details": ["The printer list now includes Snapmaker (A150, A250, A350, J1 / J1s, U1 and Artisan, grouped by bed size), and Snapmaker Orca is one of the slicers you can export for. Snapmaker Orca support has not yet been checked in the app itself, so tell us if a file does not open."]},
     {"date": "2026-10-05", "kind": "Fixed", "title": "Homepage no longer says the file is only for Bambu Studio",
      "details": ["The tag under the headline now reads One 3MF for your favorite slicer, and the studio and guide pages now say your slicer instead of Bambu Studio, since the studio also writes projects for Orca Slicer, Creality Print, ElegooSlicer, Anycubic Slicer Next and PrusaSlicer."]},
     {"date": "2026-10-05", "kind": "New", "title": "Creality, Elegoo, Anycubic and Prusa printers, and Orca Slicer",
