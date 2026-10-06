@@ -395,6 +395,31 @@ def test_orca_family_sleeve_projects_keep_manual_supports():
     assert plain['enable_support'] == '0' and plain['different_settings_to_system'][0] == ''
 
 
+def test_sleeve_objects_carry_their_own_manual_supports():
+    """The U1 profile replaces project-level support settings, so Orca-family sleeve objects keep them per object."""
+    import tempfile, zipfile
+    import xml.etree.ElementTree as ET
+    from batch_export import write_batch
+    tri = ([(0, 0, 0), (10, 0, 0), (0, 10, 0), (0, 0, 10)], [(0, 1, 2), (0, 1, 3), (0, 2, 3), (1, 2, 3)])
+    check = dict(filament_roles=['Body', 'Text'], body_color='#000000', text_color='#00AE42', lines=['A', 'B', 'C'])
+    plate = dict(number=1, name='Labels', tower=None, items=[dict(variant=0, x=10, y=10, w=20, h=20, rotated=False)], origin=[0, 0])
+    tmp = Path(tempfile.mkdtemp())
+
+    def object_meta(gid, slicer, parts):
+        out = tmp / f'{gid}-{slicer}-{len(parts)}.3mf'
+        var = dict(check=check, parts=parts, support_paint=[None] * 4)
+        write_batch(out, [var], [plate], dict(multicolor='yes', style='part', holder_sleeve='yes'), g.PRINTERS[gid], g.AUTHOR, slicer)
+        cfg = ET.fromstring(zipfile.ZipFile(out).read('Metadata/model_settings.config'))
+        return {e.get('key'): e.get('value') for o in cfg.findall('object') for e in o.findall('metadata')}
+
+    sleeve = [('Body', tri), ('Tunnel support blocker', tri)]
+    for slicer in ('snapmaker_orca', 'orca', 'creality_print'):
+        meta_ = object_meta('snapmaker-270x270', slicer, sleeve)
+        assert (meta_.get('enable_support'), meta_.get('support_type')) == ('1', 'normal(manual)'), slicer
+    assert 'enable_support' not in object_meta('snapmaker-270x270', 'snapmaker_orca', [('Body', tri)])   # no sleeve, no supports
+    assert 'enable_support' not in object_meta('bambu-256x256', 'bambu_studio', sleeve)                  # Bambu writer unchanged
+
+
 if __name__ == '__main__':
     failures = 0
     for name, fn in sorted(globals().items()):
