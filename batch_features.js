@@ -64,7 +64,7 @@ $('cancelPaste').onclick=()=>{$('pasteText').value='';$('pastePanel').classList.
 $('importPaste').onclick=()=>busy('Reading pasted rows…',async()=>{await importText(pastedTextToCsv($('pasteText').value));$('pasteText').value='';$('pastePanel').classList.add('hidden');});
 
 let printerList=[],slicerList={};
-const BRAND_SLICER={'Bambu Lab':'bambu_studio',Creality:'creality_print',Elegoo:'elegoo',Anycubic:'anycubic',Prusa:'prusa'};
+const BRAND_SLICER={'Bambu Lab':'bambu_studio',Creality:'creality_print',Elegoo:'elegoo',Anycubic:'anycubic',Snapmaker:'snapmaker_orca',Prusa:'prusa'};
 function currentPrinter(){return printerList.find(p=>p.id===$('printer').value)||printerList[0];}
 function fillPrinters(){
  const brands=[...new Set(printerList.map(p=>p.brand))];

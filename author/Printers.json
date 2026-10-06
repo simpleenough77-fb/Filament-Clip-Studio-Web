@@ -671,6 +671,180 @@
   "label": "350 x 350 mm \u00b7 Kobra S1 Max",
   "bed_label": "350 x 350 mm"
  },
+ "snapmaker-160x160": {
+  "id": "snapmaker-160x160",
+  "brand": "Snapmaker",
+  "models": "A150",
+  "bed": [
+   160.0,
+   160.0,
+   145.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   160.0,
+   160.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   160.0,
+   160.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from published Snapmaker specifications and the Snapmaker Orca U1 profile; the smaller figure where sources differ",
+  "label": "160 x 160 mm \u00b7 A150",
+  "bed_label": "160 x 160 mm"
+ },
+ "snapmaker-230x250": {
+  "id": "snapmaker-230x250",
+  "brand": "Snapmaker",
+  "models": "A250",
+  "bed": [
+   230.0,
+   250.0,
+   235.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   230.0,
+   250.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   230.0,
+   250.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from published Snapmaker specifications and the Snapmaker Orca U1 profile; the smaller figure where sources differ",
+  "label": "230 x 250 mm \u00b7 A250",
+  "bed_label": "230 x 250 mm"
+ },
+ "snapmaker-270x270": {
+  "id": "snapmaker-270x270",
+  "brand": "Snapmaker",
+  "models": "U1",
+  "bed": [
+   270.0,
+   270.0,
+   270.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   270.0,
+   270.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   270.0,
+   270.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from published Snapmaker specifications and the Snapmaker Orca U1 profile; the smaller figure where sources differ",
+  "label": "270 x 270 mm \u00b7 U1",
+  "bed_label": "270 x 270 mm"
+ },
+ "snapmaker-300x200": {
+  "id": "snapmaker-300x200",
+  "brand": "Snapmaker",
+  "models": "J1, J1s",
+  "bed": [
+   300.0,
+   200.0,
+   200.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   300.0,
+   200.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   300.0,
+   200.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from published Snapmaker specifications and the Snapmaker Orca U1 profile; the smaller figure where sources differ",
+  "label": "300 x 200 mm \u00b7 J1, J1s",
+  "bed_label": "300 x 200 mm"
+ },
+ "snapmaker-320x350": {
+  "id": "snapmaker-320x350",
+  "brand": "Snapmaker",
+  "models": "A350",
+  "bed": [
+   320.0,
+   350.0,
+   300.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   320.0,
+   350.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   320.0,
+   350.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from published Snapmaker specifications and the Snapmaker Orca U1 profile; the smaller figure where sources differ",
+  "label": "320 x 350 mm \u00b7 A350",
+  "bed_label": "320 x 350 mm"
+ },
+ "snapmaker-350x400": {
+  "id": "snapmaker-350x400",
+  "brand": "Snapmaker",
+  "models": "Artisan",
+  "bed": [
+   350.0,
+   400.0,
+   400.0
+  ],
+  "usable": [
+   0.0,
+   0.0,
+   350.0,
+   400.0
+  ],
+  "single": [
+   0.0,
+   0.0,
+   350.0,
+   400.0
+  ],
+  "exclusions": [],
+  "settings": null,
+  "dual": false,
+  "multi": false,
+  "source": "Bed size from published Snapmaker specifications and the Snapmaker Orca U1 profile; the smaller figure where sources differ",
+  "label": "350 x 400 mm \u00b7 Artisan",
+  "bed_label": "350 x 400 mm"
+ },
  "prusa-180x180": {
   "id": "prusa-180x180",
   "brand": "Prusa",

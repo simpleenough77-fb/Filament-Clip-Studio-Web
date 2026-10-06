@@ -52,6 +52,7 @@ Bambu Studio 02.08, Orca Slicer 2.4.x, ElegooSlicer 1.5.x and PrusaSlicer 2.9.6.
 | ElegooSlicer | Bambu 256x256, Creality 220x220, Elegoo 256x256 / 325x325, Prusa 180x180 | One G-code per plate |
 | PrusaSlicer | Prusa 250x210 (plain, sleeve, single, multi-color), Creality 300x300, Bambu 350x320 | Sliced; supports present; tool changes on multi-color |
 | Creality Print 7.2.2 | not checked | Its command line crashes (SIGSEGV in `CLI::run`) even for `--info`, so only the version check could be exercised. |
+| Snapmaker Orca | not checked | Not installed here. Written as an Orca-family project with its own `Snapmaker_Orca-` application tag; the tag and the 270 x 270 U1 / smaller-bed choices come from published sources, not from opening a file. |
 | Anycubic Slicer Next | not checked | Not installed (no Homebrew cask). Written as an Orca-family project. |
 
 GUI checks (PrusaSlicer 2.9.4, Orca Slicer): both recognize the file as a project (PrusaSlicer's "Open as project" prompt; Orca's "customized preset" notice for the generic printer), and PrusaSlicer shows the supports and tunnel blockers.

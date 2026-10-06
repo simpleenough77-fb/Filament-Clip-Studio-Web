@@ -299,7 +299,7 @@ def test_printer_groups_are_by_brand_and_bed():
             assert p['multi'] and (g.AUTHOR / 'Printer_Settings' / p['settings']).exists(), gid
         else:
             assert not p['multi'] and p['settings'] is None, gid
-    assert {p['brand'] for p in g.PRINTERS.values()} == {'Bambu Lab', 'Creality', 'Elegoo', 'Anycubic', 'Prusa'}
+    assert {p['brand'] for p in g.PRINTERS.values()} == {'Bambu Lab', 'Creality', 'Elegoo', 'Anycubic', 'Snapmaker', 'Prusa'}
     for old, new in g.PRINTER_ALIASES.items():
         assert new in g.PRINTERS, old
 
@@ -310,6 +310,8 @@ def test_validate_picks_slicer_and_single_filament_style():
     assert (s['printer'], s['slicer'], s['multicolor']) == ('bambu-350x320', 'bambu_studio', 'yes')
     s = g.validate(dict(rows=rows, settings=dict(printer='prusa-250x210')))['settings']
     assert (s['slicer'], s['multicolor'], s['style']) == ('prusa', 'yes', 'part')
+    s = g.validate(dict(rows=rows, settings=dict(printer='snapmaker-270x270')))['settings']
+    assert (s['slicer'], s['multicolor'], s['style']) == ('snapmaker_orca', 'yes', 'part')
     s = g.validate(dict(rows=rows, settings=dict(printer='creality-220x220', multicolor='no', style='part')))['settings']
     assert (s['slicer'], s['style']) == ('creality_print', 'cut')                      # one filament: engraved
     s = g.validate(dict(rows=rows, settings=dict(printer='bambu-256x256', multicolor='no', style='part')))['settings']
@@ -328,7 +330,7 @@ def test_every_slicer_writes_a_matching_project():
     import accessories
     from batch_export import write_batch
     tmp = Path(tempfile.mkdtemp())
-    for gid in ('bambu-256x256', 'creality-220x220', 'elegoo-256x256', 'anycubic-255x255', 'prusa-250x210', 'prusa-180x180'):
+    for gid in ('bambu-256x256', 'creality-220x220', 'elegoo-256x256', 'anycubic-255x255', 'snapmaker-270x270', 'snapmaker-300x200', 'prusa-250x210', 'prusa-180x180'):
         printer = g.PRINTERS[gid]
         for slicer in g.SLICERS:
             for multicolor in ('yes', 'no'):

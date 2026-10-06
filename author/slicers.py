@@ -2,7 +2,7 @@
 
 bambu    Bambu Studio project: full Bambu printer preset, flush matrices, prime tower, Bambu support settings.
 orca     Bambu-family project with a generic Marlin-style printer. Used by Orca Slicer and the Orca-based
-         forks (Creality Print, ElegooSlicer, Anycubic Slicer Next). Only the settings the batch needs are
+         forks (Creality Print, ElegooSlicer, Anycubic Slicer Next, Snapmaker Orca). Only the settings the batch needs are
          written; the slicer fills every other value from its own defaults and the user's own printer preset.
 prusa    PrusaSlicer project (Slic3r_PE config and model files).
 """
@@ -12,9 +12,10 @@ SLICERS = {
     'creality_print': dict(label='Creality Print', family='orca', app='CrealityPrint-7.2.0.0', extra={}),
     'elegoo': dict(label='ElegooSlicer', family='orca', app='ElegooSlicer-1.5.3.5', extra={}),
     'anycubic': dict(label='Anycubic Slicer Next', family='orca', app='BambuStudio-02.06.00.51', extra={'OrcaSlicer': '2.4.2'}),
+    'snapmaker_orca': dict(label='Snapmaker Orca', family='orca', app='Snapmaker_Orca-2.3.3', extra={'Snapmaker_Orca:3mfVersion': '1'}),
     'prusa': dict(label='PrusaSlicer', family='prusa', app='PrusaSlicer-2.9.0', extra={}),
 }
-DEFAULT_FOR_BRAND = {'Bambu Lab': 'bambu_studio', 'Creality': 'creality_print', 'Elegoo': 'elegoo', 'Anycubic': 'anycubic', 'Prusa': 'prusa'}
+DEFAULT_FOR_BRAND = {'Bambu Lab': 'bambu_studio', 'Creality': 'creality_print', 'Elegoo': 'elegoo', 'Anycubic': 'anycubic', 'Snapmaker': 'snapmaker_orca', 'Prusa': 'prusa'}
 
 START_GCODE = ('G28 ; home\nG90\nM83\nM140 S[bed_temperature_initial_layer_single]\nM104 S[nozzle_temperature_initial_layer]\n'
                'M190 S[bed_temperature_initial_layer_single]\nM109 S[nozzle_temperature_initial_layer]\nG92 E0')

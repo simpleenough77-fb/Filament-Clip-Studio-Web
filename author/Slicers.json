@@ -19,6 +19,10 @@
   "label": "Anycubic Slicer Next",
   "family": "orca"
  },
+ "snapmaker_orca": {
+  "label": "Snapmaker Orca",
+  "family": "orca"
+ },
  "prusa": {
   "label": "PrusaSlicer",
   "family": "prusa"
