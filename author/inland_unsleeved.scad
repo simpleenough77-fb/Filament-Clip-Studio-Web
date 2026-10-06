@@ -37,8 +37,10 @@ module underside_rim_relief(){
 }
 module pin(x,y){
   // Pins project from the underside into the cardboard flange holes.
-  translate([x,y,-pin_len+pin_clearance])
-    cylinder(h=pin_len,r=pin_d/2);
+  // Keep 0.25 mm of overlap inside the plate while leaving the full
+  // specified 3.5 mm exposed below it.
+  translate([x,y,-pin_len])
+    cylinder(h=pin_len+pin_clearance,r=pin_d/2);
 }
 difference(){
   union(){
