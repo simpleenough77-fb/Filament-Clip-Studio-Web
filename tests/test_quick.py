@@ -382,6 +382,19 @@ def test_every_slicer_writes_a_matching_project():
                             assert len(proj['wipe_tower_x']) == len(plates), name
 
 
+def test_orca_family_sleeve_projects_keep_manual_supports():
+    """A slicer that swaps in the user's own print profile on load must still see Normal (Manual) supports as overrides."""
+    from slicers import orca_settings
+    support = json.loads((g.AUTHOR / 'Tested_Support_Settings.json').read_text())
+    cfg = orca_settings([('A', '#000000'), ('B', '#00AE42')], [dict(tower=None)], dict(bed=[270, 270, 270]), support)
+    assert (cfg['enable_support'], cfg['support_type']) == ('1', 'normal(manual)')
+    overrides = cfg['different_settings_to_system'][0].split(';')
+    assert {'enable_support', 'support_type'} <= set(overrides)
+    assert len(cfg['different_settings_to_system']) == 4
+    plain = orca_settings([('A', '#000000')], [dict(tower=None)], dict(bed=[270, 270, 270]))
+    assert plain['enable_support'] == '0' and plain['different_settings_to_system'][0] == ''
+
+
 if __name__ == '__main__':
     failures = 0
     for name, fn in sorted(globals().items()):

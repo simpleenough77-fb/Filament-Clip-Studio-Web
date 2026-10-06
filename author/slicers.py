@@ -45,5 +45,8 @@ def orca_settings(palette, plates, printer, support=None):
         cfg[key] = [value] * n
     if support:
         cfg.update(support)
-        cfg.update(support_filament='0', support_interface_filament='0')
+        cfg.update(support_filament='0', support_interface_filament='0', enable_support='1', support_type='normal(manual)')
+        # List the support settings as overrides of the print preset. Without this, a slicer that swaps in the user's own
+        # printer profile on load (Snapmaker Orca does) drops them and warns that support enforcers need support enabled.
+        cfg['different_settings_to_system'][0] = ';'.join(sorted(set(support) | {'enable_support', 'support_type', 'support_filament', 'support_interface_filament'}))
     return cfg
