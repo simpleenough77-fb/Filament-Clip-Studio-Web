@@ -32,6 +32,10 @@ def write_batch(path,variants,plates,settings,printer,author,slicer='bambu_studi
     for var in variants:
         r=var['check'];body=slot(r['filament_roles'][0],r['body_color']);text=body if settings['style']=='cut' else slot(r['filament_roles'][1],r['text_color'])
         aid=oid+len(var['parts']);ids.append(aid);oc=ET.SubElement(cfg,'object',id=str(aid));meta(oc,'name',' - '.join(r['lines']));meta(oc,'extruder',body)
+        if target['family']=='orca' and (any(n=='Tunnel support blocker' for n,_ in var['parts']) or any(var.get('support_paint') or [])):
+            # Keep manual supports on the object itself. A slicer that replaces the project's print profile with the user's own
+            # (Snapmaker Orca does, for the U1) drops project-level support settings but keeps per-object ones.
+            meta(oc,'enable_support','1');meta(oc,'support_type','normal(manual)')
         partids=[]
         for i,(name,(verts,faces)) in enumerate(var['parts']):
             blocker=name=='Tunnel support blocker'
