@@ -48,8 +48,8 @@ Bambu Studio 02.08, Orca Slicer 2.4.x, ElegooSlicer 1.5.x and PrusaSlicer 2.9.6.
 | Slicer | Printer groups tried | Result |
 | --- | --- | --- |
 | Bambu Studio | Bambu 350x320, 256x256 (sleeve), Creality 220x220, Prusa 250x210 (sleeve) | One G-code per plate; supports on sleeve files; tool changes on multi-color files |
-| Orca Slicer | Bambu 350x320 / 256x256, Creality 220x220 / 400x400, Anycubic 300x300, Prusa 250x210 and 180x180 | One G-code per plate; every move inside the bed |
-| ElegooSlicer | Bambu 256x256, Creality 220x220, Elegoo 256x256 / 325x325, Prusa 180x180 | One G-code per plate |
+| Orca Slicer | Bambu 350x320 / 256x256, Creality 220x220 / 400x400, Anycubic 300x300, Prusa 250x210 and 180x180 | One G-code per plate; every move inside the bed. Sleeve batch also opened in the app (Orca Slicer, generic Marlin printer): no support warning, plate 1 slices with manual supports (26.85 g). |
+| ElegooSlicer | Bambu 256x256, Creality 220x220, Elegoo 256x256 / 325x325, Prusa 180x180 | One G-code per plate. Sleeve batch also opened in the app with the Elegoo Centauri Carbon system printer selected (which swaps the print profile): no support warning, plate 1 slices with manual supports (27.63 g). |
 | PrusaSlicer | Prusa 250x210 (plain, sleeve, single, multi-color), Creality 300x300, Bambu 350x320 | Sliced; supports present; tool changes on multi-color |
 | Creality Print 7.2.2 | not checked | Its command line crashes (SIGSEGV in `CLI::run`) even for `--info`, so only the version check could be exercised. |
 | Snapmaker Orca 2.4.0 | Snapmaker U1 (270x270): four-color batch; two-plate sleeve + holders batch | Opened in the app and sliced to U1 G-code with a prime tower, every object on the bed. The sleeve batch, with the U1 profile selected, shows no support warning and slices plate 1 with manual supports (16 g). Its command line segfaults on every file, even with edits, so only the app was used. Plate 2 (holders) was not seen to finish. |
