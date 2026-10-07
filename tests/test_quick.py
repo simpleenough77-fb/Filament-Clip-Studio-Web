@@ -2,8 +2,8 @@
 
   python tests/test_quick.py        (or: python -m pytest tests/test_quick.py)
 
-The geometry tests (test_standing_exports.py, test_sleeve_label_face.py) still need a local
-OpenSCAD install and are run by hand before accepting geometry changes.
+The geometry test (test_flat_exports.py) runs the studio's own WebAssembly OpenSCAD through Node (no OpenSCAD install
+needed) and is run by hand before accepting geometry changes.
 """
 import csv, io, json, re, sys
 from pathlib import Path
@@ -220,37 +220,59 @@ def test_catalog_names_are_safe_and_aliases_import():
     assert picked == [('PLA Clear', 'Cherry Pink'), ('PLA', 'Funfetti'), ('PLA Thermo', 'Red\u2192White')], picked
 
 def test_clip_bodies_loaded_and_clean():
+    """Each vendor ships its own flat, face-down body pair (clip only and with holder sleeve), merged into closed solids."""
     import struct
     sys.path.insert(0, str(ROOT / 'author'))
     import print_geometry
-    worker = (ROOT / 'compile-worker.js').read_text(encoding='utf-8')
+    assets = set(json.loads((ROOT / 'assets.json').read_text()))
+    provenance = json.loads((ROOT / 'author' / 'Bodies_Provenance.json').read_text())
+    stems = [spec['stem'] for spec in print_geometry.PROFILES.values()]
+    assert len(set(stems)) == len(stems), 'every vendor needs its own body files'
+    # The catalog's profiles are exactly the generator's profiles.
+    used = {p['spool_profile'] for p in json.loads((ROOT / 'author' / 'Catalog.json').read_text())['products']}
+    assert used == set(print_geometry.PROFILES), used ^ set(print_geometry.PROFILES)
     for profile, spec in print_geometry.PROFILES.items():
-        for name in (spec['stem'] + '.stl', spec['stem'] + '_tested_sleeve.stl'):
-            # OpenSCAD in the browser can only import bodies the compile worker copies in.
-            assert f"'{name}'" in worker, f'compile-worker.js does not load {name} ({profile})'
-            assert (ROOT / 'author' / name).is_file(), name
-    # Amolen bodies: no stray label-text shells in the bottom 0.6 mm, and the sleeve JSON matches its STL.
-    def shells(path):
-        raw = (ROOT / 'author' / path).read_bytes(); n = struct.unpack_from('<I', raw, 80)[0]
-        tris = [struct.unpack_from('<9f', raw, 84 + 50 * i + 12) for i in range(n)]
-        parent = {}
-        def find(x):
-            while parent.setdefault(x, x) != x:
-                parent[x] = parent[parent[x]]; x = parent[x]
-            return x
-        key = lambda t, i: (round(t[i], 4), round(t[i + 1], 4), round(t[i + 2], 4))
-        for tr in tris:
-            parent[find(key(tr, 3))] = find(key(tr, 0)); parent[find(key(tr, 6))] = find(key(tr, 0))
-        groups = {}
-        for tr in tris:
-            groups.setdefault(find(key(tr, 0)), []).append(max(tr[2], tr[5], tr[8]))
-        return n, [max(z) for z in groups.values()]
-    for name in ('amolen.stl', 'amolen_tested_sleeve.stl'):
-        n, tops = shells(name)
-        assert all(z > 0.61 for z in tops), f'{name} contains label-text shells'
-    sleeve = json.loads((ROOT / 'author' / 'Amolen_Sleeve.json').read_text())
-    assert len(sleeve['body']['faces']) == shells('amolen_tested_sleeve.stl')[0] == len(sleeve['body']['paint'])
-    assert sum(1 for p in sleeve['body']['paint'] if p) > 0 and len(sleeve['blocker']['faces']) > 0
+        for name in (spec['stem'] + '.stl', spec['stem'] + '_sleeve.stl'):
+            # The browser fetches bodies through assets.json (Python) and by the name in the OpenSCAD code.
+            assert f'author/{name}' in assets, f'assets.json does not list {name} ({profile})'
+            assert name in provenance, f'Bodies_Provenance.json has no record of {name}'
+            raw = (ROOT / 'author' / name).read_bytes(); n = struct.unpack_from('<I', raw, 80)[0]
+            assert 84 + 50 * n == len(raw), f'{name} is not a binary STL'
+            tris = [struct.unpack_from('<9f', raw, 84 + 50 * i + 12) for i in range(n)]
+            pts = [t[i:i + 3] for t in tris for i in (0, 3, 6)]
+            lo = [min(p[i] for p in pts) for i in range(3)]; hi = [max(p[i] for p in pts) for i in range(3)]
+            size = spec['size']
+            assert abs(lo[2]) < 1e-3 and abs(hi[2] - size[2]) < 2e-3, f'{name}: front face must lie on z = 0, depth {size[2]}'
+            assert all(abs((hi[i] - lo[i]) - size[i]) < 2e-3 for i in range(2)), f'{name}: footprint is not {size[:2]}'
+            assert all(abs(lo[i] + hi[i]) < 2e-3 for i in range(2)), f'{name}: body is not centred on X/Y'
+            # Closed, consistently wound surface: every directed edge appears once, with its opposite.
+            key = lambda p: tuple(p)   # shared corners were written from one vertex, so their float32 values are identical
+            edges = {}
+            for t in tris:
+                v = [key(t[i:i + 3]) for i in (0, 3, 6)]
+                for a, b in ((v[0], v[1]), (v[1], v[2]), (v[2], v[0])):
+                    edges[(a, b)] = edges.get((a, b), 0) + 1
+            assert all(c == 1 and (b, a) in edges for (a, b), c in edges.items()), f'{name} is not a closed surface'
+            # The label face (z = 0) is the broad outside face and points toward -Z; the last check also catches
+            # label-text shells left in a body (they would sit entirely inside the 0.6 mm inlay).
+            area = 0.0
+            for t in tris:
+                if max(abs(t[2]), abs(t[5]), abs(t[8])) < 1e-4:
+                    cross = (t[3] - t[0]) * (t[7] - t[1]) - (t[4] - t[1]) * (t[6] - t[0])
+                    assert cross < 0, f'{name}: label face must point toward -Z'
+                    area += abs(cross) / 2
+            assert area > 1900, f'{name}: label face area {area:.0f} mm2 is too small'
+            parent = {}
+            def find(x):
+                while parent.setdefault(x, x) != x:
+                    parent[x] = parent[parent[x]]; x = parent[x]
+                return x
+            for t in tris:
+                a, b, c = (key(t[i:i + 3]) for i in (0, 3, 6)); parent[find(b)] = find(a); parent[find(c)] = find(a)
+            tops = {}
+            for t in tris:
+                r = find(key(t[0:3])); tops[r] = max(tops.get(r, -1e9), t[2], t[5], t[8])
+            assert all(z > 0.61 for z in tops.values()), f'{name} contains label-text shells'
 
 def test_label_styles_are_inlay_and_engraved_only():
     studio = (ROOT / 'studio.html').read_text(encoding='utf-8')

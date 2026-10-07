@@ -1,21 +1,31 @@
-"""Author-approved body selection and a rigid side-standing print transform."""
-import json
+"""Owner-supplied clip bodies, one STL pair per vendor, and their footprints.
+
+Every body is modelled face down: the front (label) face lies on z = 0 and the legs rise from the back, so clips print flat
+on the bed with or without a holder sleeve. Bodies are centred on X/Y. `size` is the body's bounding box (x, y, z) in mm;
+`width` is the plate width the label text is fitted to (text gets width - 4 mm). `leg_inner` is the |x| of each leg's inner
+face and `sleeve_top` the height of the top of the sleeve plate (both used by the NFC pocket), measured from the shipped
+meshes. Each vendor has its own file pair (<stem>.stl, <stem>_sleeve.stl) so one vendor can change without touching another.
+"""
+def _p(stem,width,size,leg_inner,sleeve_top):
+    return dict(stem=stem,width=width,size=size,depth=size[2],leg_inner=leg_inner,sleeve_top=sleeve_top)
+_BAMBU=dict(width=68.0,size=(68.0,33.0,18.564),leg_inner=28.25,sleeve_top=13.25)
+_SUNLU=dict(width=68.0,size=(68.0,33.0,17.032),leg_inner=28.25,sleeve_top=13.1)
+_CARDBOARD=dict(width=67.0,size=(67.004,46.049,16.587),leg_inner=28.02,sleeve_top=13.1)
 PROFILES={
-    'Bambu Original':dict(width=68.0,depth=18.56409,sleeve_depth=18.5640869140625,stem='bambu'),
-    'Cookiecad':dict(width=62.5,depth=24.11825,sleeve_depth=24.11822509765625,stem='cookiecad'),
-    'Amolen 1kg':dict(width=61.0,depth=17.6,sleeve_depth=18.0,stem='amolen'),
+    'Bambu Original':_p('bambu',**_BAMBU),
+    'Cookiecad':_p('cookiecad',62.5,(62.5,33.0,24.118),24.0,13.25),
+    'Amolen 1kg':_p('amolen',61.0,(61.102,33.0,18.0),26.0,13.1),
+    'Sunlu 1kg':_p('sunlu',**_SUNLU),
+    'Jayo 1.1kg':_p('jayo',**_SUNLU),
+    'Polymaker 1kg':_p('polymaker',**_CARDBOARD),
+    'Panchroma 1kg':_p('panchroma',**_CARDBOARD),
+    'Inland 1kg':_p('inland',**_CARDBOARD),
 }
 def body_code(profile,sleeve=False):
     p=PROFILES[profile]
-    if sleeve:
-        return 'import("/author/'+p['stem']+'_tested_sleeve.stl");'
-    return 'import("/author/'+p['stem']+'.stl");'
+    return 'import("/author/'+p['stem']+('_sleeve' if sleeve else '')+'.stl");'
 def footprint(profile,sleeve=False):
-    p=PROFILES[profile]
+    """(x, y) the clip occupies on the plate. The sleeve version leaves room for the tunnel support blocker."""
+    w,h,_=PROFILES[profile]['size']
     # 0.01 mm on either side also contains engraving negative-part extensions.
-    return (p['width'],35.5) if sleeve else (p['width'],p['depth']+0.02)
-
-def standing_parts(parts,profile):
-    depth=PROFILES[profile]['depth']
-    return [(name,([(x,z-depth/2,16.5-y) for x,y,z in vertices],faces))
-            for name,(vertices,faces) in parts]
+    return (w+0.01,h+2.5) if sleeve else (w+0.01,h+0.02)

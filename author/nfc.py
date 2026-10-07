@@ -15,6 +15,7 @@ A pocket is the tag diameter plus CLEARANCE wide and DEPTH deep (default: a 25 m
 Measurements come from the shipped meshes; tests/test_quick.py re-checks them against the files.
 """
 import math
+from print_geometry import PROFILES
 
 NAME = 'NFC tag pocket'      # part name in the 3MF; batch_export treats it as a negative part
 DEFAULT_TAG = 25.0
@@ -27,8 +28,8 @@ SEGMENTS = 96
 
 PLATE_TOP = 3.6              # back of the faceplate (front face is z = 0)
 TUNNEL_HALF = 1.73           # half-width of the tunnel's footprint on the back of the faceplate
-LEG_INNER = {'Bambu Original': 28.25, 'Cookiecad': 24.0, 'Amolen 1kg': 26.0}   # |x| of each leg's inner face
-SLEEVE_TOP = {'Bambu Original': 13.25, 'Cookiecad': 13.25, 'Amolen 1kg': 13.1}  # top of the sleeve plate
+LEG_INNER = {name: p['leg_inner'] for name, p in PROFILES.items()}    # |x| of each leg's inner face
+SLEEVE_TOP = {name: p['sleeve_top'] for name, p in PROFILES.items()}  # top of the sleeve plate
 
 FRONT_MARGIN = 4.0           # holders: wall left between the pocket and the front edge
 # Holder post centres (mm from the left edge of the STL / of each half), measured from the shipped files.

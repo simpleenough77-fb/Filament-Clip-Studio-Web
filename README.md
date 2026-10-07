@@ -1,6 +1,6 @@
 # Filament Clip Studio — browser edition
 
-Generate readable filament clips for Bambu Lab, Cookiecad, Amolen, Sunlu and Jayo spools (each clip is fitted and tested for its brand's spool; Sunlu 1 kg rolls and Jayo 1.1 kg reusable spools use the Bambu Lab clip). Live at https://filamentclip.com: the front page is `index.html`, the generator is `studio.html`, plus `guide.html` and `accessories.html`. Spool requests use the GitHub issue form in `.github/ISSUE_TEMPLATE/spool-request.yml`. This free static application runs its calculations on your device, with no account, paid generation service, or uploaded batches.
+Generate readable filament clips for Bambu Lab, Cookiecad, Amolen, Sunlu, Jayo, Polymaker, Panchroma and Inland spools (each clip is fitted and tested for its brand's spool; Polymaker, Panchroma and Inland cardboard spools have their own clips too). Live at https://filamentclip.com: the front page is `index.html`, the generator is `studio.html`, plus `guide.html` and `accessories.html`. Spool requests use the GitHub issue form in `.github/ISSUE_TEMPLATE/spool-request.yml`. This free static application runs its calculations on your device, with no account, paid generation service, or uploaded batches.
 
 ## Use
 
@@ -8,7 +8,7 @@ Choose filament combinations, import a CSV if desired, review labels and any sho
 
 The official catalog is maintained through this repository by its owner. Visitors can select catalog entries; there is no public catalog-writing endpoint. Forks may maintain their own catalogs under the license. Drafts and named batches are stored in browser local storage and do not synchronize between devices. Download CSV backups before clearing browser data.
 
-The first visit downloads about 28 MB of application/runtime assets. A desktop browser is recommended for large batches. Quantity is limited to 100 clips. Three fonts, independent text parts, inlay/engraved styles, printer keep-outs and actual-filament plate grouping are supported. Clips are exported standing on their sides (33 mm tall), with plate layout based on their standing footprints. Choose **Holder sleeve → Include holder sleeve** to use the author-supplied collar models for AMS holders; the correct version is selected automatically for each spool. Spreadsheet CSV files are uploaded with Import CSV, or rows copied from a spreadsheet are added with Paste rows.
+The first visit downloads about 28 MB of application/runtime assets. A desktop browser is recommended for large batches. Quantity is limited to 100 clips. Three fonts, independent text parts, inlay/engraved styles, printer keep-outs and actual-filament plate grouping are supported. Every clip prints flat, front face down, with or without a holder sleeve, and the plate layout uses that flat footprint. In a Bambu Studio project each text line is an editable text part. Choose **Holder sleeve → Include holder sleeve** to use the author-supplied collar models for AMS holders; the correct version is selected automatically for each spool. Spreadsheet CSV files are uploaded with Import CSV, or rows copied from a spreadsheet are added with Paste rows.
 
 ## Local use and hosting
 
@@ -16,7 +16,7 @@ Serve this directory as static files (for example `python3 -m http.server 8000`)
 
 ## Mechanical lineage
 
-The accepted revision-10 `author/Accepted_Geometry.scad` is unchanged. Bambu width is 68 mm, Cookiecad 62.5 mm, plate thickness 3.6 mm, and retainer corner radius 3 mm. The owner accepted physical prototype fits and confirmed successful printing of the previous browser export. The new side-standing sleeve export still requires its own print/fit check. These clips are filament retainers, not spool carrying handles.
+The accepted revision-10 `author/Accepted_Geometry.scad` is unchanged. Bambu width is 68 mm, Cookiecad 62.5 mm, plate thickness 3.6 mm, and retainer corner radius 3 mm. The owner accepted physical prototype fits and confirmed successful printing of the previous browser export. The flat, face-down exports and the per-vendor clip bodies still require their own print/fit checks. These clips are filament retainers, not spool carrying handles.
 
 MGM86's excellent filament clips inspired the design and served as visual/dimensional references. See [MGM86](https://makerworld.com/en/@mgm86) and [Filament Clip with Label and Stock Indicator](https://makerworld.com/en/models/2163144-filament-clip-with-label-and-stock-indicator). No MGM mesh is bundled here. This attribution describes provenance; it is not an independent legal determination of originality.
 
@@ -37,7 +37,8 @@ GitHub Actions (`.github/workflows/pages.yml`) runs the fast checks on every pus
 - `python tests/test_quick.py` — catalog integrity, CSV import regressions and the catalog feed (no OpenSCAD needed).
 - `node tests/test_paste.mjs` — conversion of rows pasted from a spreadsheet.
 - `python tools/build_site.py` — writes `downloads/catalog.csv` (the Google Sheets builder imports it with `=IMPORTDATA`) and `SOURCE_HASHES.json`. The deploy also stamps the build badge with the commit and date. Both files are generated, not committed.
-- The geometry tests in `tests/test_standing_exports.py` and `tests/test_sleeve_label_face.py` need a local OpenSCAD install and are run by hand.
+- `python tests/test_flat_exports.py` exports every vendor's clip (with and without sleeve) through the studio's own WebAssembly OpenSCAD run by Node (no OpenSCAD install needed) and checks the 3MF; run it by hand after geometry changes (a minute or two).
+- `python tools/prepare_bodies.py "<folder of vendor STLs>"` rebuilds `author/<vendor>.stl` and `<vendor>_sleeve.stl` from the owner's STLs (merges shells, strips baked-in text, centres them) and records hashes in `author/Bodies_Provenance.json`.
 
 ## Change log
 

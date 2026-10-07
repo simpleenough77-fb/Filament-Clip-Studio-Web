@@ -7,7 +7,9 @@ self.onmessage=async({data})=>{
  for(const f of ['LiberationSans-Bold.ttf','LiberationSerif-Bold.ttf','DejaVuSans-Bold.ttf'])m.FS.writeFile('/fonts/'+f,new Uint8Array(await(await fetch('./fonts/'+f)).arrayBuffer()));
  m.FS.writeFile('/fonts/fonts.conf','<?xml version="1.0"?><!DOCTYPE fontconfig SYSTEM "fonts.dtd"><fontconfig><dir>/fonts</dir><cachedir>/fontcache</cachedir></fontconfig>');
  m.ENV.FONTCONFIG_PATH='/fonts';m.ENV.FONTCONFIG_FILE='/fonts/fonts.conf';
- for(const f of ['Labels.scad','Accepted_Geometry.scad','bambu.stl','cookiecad.stl','bambu_sleeve.stl','cookiecad_sleeve.stl','bambu_tested_sleeve.stl','cookiecad_tested_sleeve.stl','amolen.stl','amolen_tested_sleeve.stl'])m.FS.writeFile('/author/'+f,new Uint8Array(await(await fetch('./author/'+f)).arrayBuffer()));
+ // Copy in only what this job imports: the two scad libraries, plus the clip body STLs its code names.
+ const bodies=[...new Set([...data.code.matchAll(/\/author\/([\w.-]+\.stl)/g)].map(x=>x[1]))];
+ for(const f of ['Labels.scad','Accepted_Geometry.scad',...bodies])m.FS.writeFile('/author/'+f,new Uint8Array(await(await fetch('./author/'+f)).arrayBuffer()));
  m.FS.writeFile('/input.scad',data.code);
  const result=m.callMain(['/input.scad','--backend=Manifold','--enable=textmetrics','-o','/output'+data.ext]);
  if(result!==0||log.some(l=>/^ERROR:/.test(l)))throw Error(log.join('\n'));
