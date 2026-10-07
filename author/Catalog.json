@@ -1,7 +1,7 @@
 {
   "version": "3.5",
   "updated": "2026-10-07",
-  "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools use the Bambu Lab clip fit (owner-tested). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools use the Bambu Lab clip fit (owner-tested). Some long Bambu Lab, Cookiecad and Amolen names are shortened so they print in full on the clip; the manufacturer's original names are kept as label_aliases, so CSVs that use them still import. Polymaker and Panchroma entries are the 1 kg, 1.75 mm spools from the US Polymaker store (shop.polymaker.com), including sold-out colors; Panchroma lines are listed under the Panchroma name and all other Polymaker lines under Polymaker. Refills, 0.5/0.75/2/3/5 kg spools, 2.85 mm, bundles and multi-roll packs are excluded. Where a color exists in both old and new packaging or formula, only one entry is kept (the new one). Panchroma Matte PLA colors beyond the store feed's cutoff were taken from the product page and have no SKU.",
+  "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools use the Bambu Lab clip fit (owner-tested). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools use the Bambu Lab clip fit (owner-tested). Some long Bambu Lab, Cookiecad and Amolen names are shortened so they print in full on the clip; the manufacturer's original names are kept as label_aliases, so CSVs that use them still import. Polymaker and Panchroma entries are the 1 kg, 1.75 mm spools from the US Polymaker store (shop.polymaker.com), including sold-out colors; Panchroma lines are listed under the Panchroma name and all other Polymaker lines under Polymaker. Refills, 0.5/0.75/2/3/5 kg spools, 2.85 mm, bundles and multi-roll packs are excluded. Where a color exists in both old and new packaging or formula, only one entry is kept (the new one). Panchroma Matte PLA colors beyond the store feed's cutoff were taken from the product page and have no SKU. Inland entries are the 1 kg (1.0 kg, 2.2 lbs.) 1.75 mm filaments whose Micro Center product title says Cardboard Spool (microcenter.com), read from each product page on 2026-10-07; plastic-spool rolls, rolls whose title does not name the spool, 0.5 kg and larger rolls, multi-packs and resins are excluded. Availability was not recorded per store, so every entry is marked available.",
   "products": [
     {
       "id": "bambu-petg-hf-blue",
@@ -40741,6 +40741,3087 @@
       ],
       "swatch_method": "Polymaker 1 kg US variant; swatch is a screen approximation from the color name",
       "available_at_refresh": false
+    },
+    {
+      "id": "inland-503741",
+      "manufacturer": "Inland",
+      "filament_type": "PETG",
+      "color_name": "White",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/503741",
+      "source_date": "2026-10-07",
+      "source_color_name": "White",
+      "source_sku": "503741",
+      "swatch": "#F4F4F0",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F4F4F0"
+      ]
+    },
+    {
+      "id": "inland-503746",
+      "manufacturer": "Inland",
+      "filament_type": "PETG",
+      "color_name": "Transparent",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/503746",
+      "source_date": "2026-10-07",
+      "source_color_name": "Transparent",
+      "source_sku": "503746",
+      "swatch": "#DCE6EA",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#DCE6EA"
+      ]
+    },
+    {
+      "id": "inland-503749",
+      "manufacturer": "Inland",
+      "filament_type": "PETG",
+      "color_name": "Gray",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/503749",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gray",
+      "source_sku": "503749",
+      "swatch": "#8E8E8E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8E8E8E"
+      ]
+    },
+    {
+      "id": "inland-503779",
+      "manufacturer": "Inland",
+      "filament_type": "PETG",
+      "color_name": "Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/503779",
+      "source_date": "2026-10-07",
+      "source_color_name": "Red",
+      "source_sku": "503779",
+      "swatch": "#C62828",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-503780",
+      "manufacturer": "Inland",
+      "filament_type": "PETG",
+      "color_name": "Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/503780",
+      "source_date": "2026-10-07",
+      "source_color_name": "Blue",
+      "source_sku": "503780",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF"
+      ]
+    },
+    {
+      "id": "inland-503782",
+      "manufacturer": "Inland",
+      "filament_type": "PETG",
+      "color_name": "Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/503782",
+      "source_date": "2026-10-07",
+      "source_color_name": "Green",
+      "source_sku": "503782",
+      "swatch": "#2E9A4A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#2E9A4A"
+      ]
+    },
+    {
+      "id": "inland-606542",
+      "manufacturer": "Inland",
+      "filament_type": "PETG",
+      "color_name": "Translucent Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/606542",
+      "source_date": "2026-10-07",
+      "source_color_name": "Translucent Green",
+      "source_sku": "606542",
+      "swatch": "#2E9A4A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#2E9A4A"
+      ]
+    },
+    {
+      "id": "inland-607523",
+      "manufacturer": "Inland",
+      "filament_type": "PETG",
+      "color_name": "Translucent Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/607523",
+      "source_date": "2026-10-07",
+      "source_color_name": "Translucent Red",
+      "source_sku": "607523",
+      "swatch": "#C62828",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-607524",
+      "manufacturer": "Inland",
+      "filament_type": "PETG",
+      "color_name": "Translucent Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/607524",
+      "source_date": "2026-10-07",
+      "source_color_name": "Translucent Blue",
+      "source_sku": "607524",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF"
+      ]
+    },
+    {
+      "id": "inland-675750",
+      "manufacturer": "Inland",
+      "filament_type": "PETG",
+      "color_name": "Dark Gray",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/675750",
+      "source_date": "2026-10-07",
+      "source_color_name": "Dark Gray",
+      "source_sku": "675750",
+      "swatch": "#8E8E8E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8E8E8E"
+      ]
+    },
+    {
+      "id": "inland-503745",
+      "manufacturer": "Inland",
+      "filament_type": "PETG",
+      "color_name": "Black",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/503745",
+      "source_date": "2026-10-07",
+      "source_color_name": "Black",
+      "source_sku": "503745",
+      "swatch": "#161616",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#161616"
+      ]
+    },
+    {
+      "id": "inland-675749",
+      "manufacturer": "Inland",
+      "filament_type": "PETG",
+      "color_name": "Dark Purple",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/675749",
+      "source_date": "2026-10-07",
+      "source_color_name": "Dark Purple",
+      "source_sku": "675749",
+      "swatch": "#40255E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#40255E"
+      ]
+    },
+    {
+      "id": "inland-639678",
+      "manufacturer": "Inland",
+      "filament_type": "PETG-ESD",
+      "color_name": "Black",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/639678",
+      "source_date": "2026-10-07",
+      "source_color_name": "Black",
+      "source_sku": "639678",
+      "swatch": "#161616",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#161616"
+      ]
+    },
+    {
+      "id": "inland-512131",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Light Brown",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512131",
+      "source_date": "2026-10-07",
+      "source_color_name": "Light Brown",
+      "source_sku": "512131",
+      "swatch": "#6B4A32",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6B4A32"
+      ]
+    },
+    {
+      "id": "inland-512132",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Turquoise",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512132",
+      "source_date": "2026-10-07",
+      "source_color_name": "Turquoise",
+      "source_sku": "512132",
+      "swatch": "#30D5C8",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#30D5C8"
+      ]
+    },
+    {
+      "id": "inland-512133",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Black",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512133",
+      "source_date": "2026-10-07",
+      "source_color_name": "Black",
+      "source_sku": "512133",
+      "swatch": "#161616",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#161616"
+      ]
+    },
+    {
+      "id": "inland-512135",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Brown",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512135",
+      "source_date": "2026-10-07",
+      "source_color_name": "Brown",
+      "source_sku": "512135",
+      "swatch": "#6B4A32",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6B4A32"
+      ]
+    },
+    {
+      "id": "inland-512136",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512136",
+      "source_date": "2026-10-07",
+      "source_color_name": "Green",
+      "source_sku": "512136",
+      "swatch": "#2E9A4A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#2E9A4A"
+      ]
+    },
+    {
+      "id": "inland-512138",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Natural",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512138",
+      "source_date": "2026-10-07",
+      "source_color_name": "Natural",
+      "source_sku": "512138",
+      "swatch": "#E6DDC4",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#E6DDC4"
+      ]
+    },
+    {
+      "id": "inland-512932",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512932",
+      "source_date": "2026-10-07",
+      "source_color_name": "Blue",
+      "source_sku": "512932",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF"
+      ]
+    },
+    {
+      "id": "inland-512933",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512933",
+      "source_date": "2026-10-07",
+      "source_color_name": "Red",
+      "source_sku": "512933",
+      "swatch": "#C62828",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-512934",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "White",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512934",
+      "source_date": "2026-10-07",
+      "source_color_name": "White",
+      "source_sku": "512934",
+      "swatch": "#F4F4F0",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F4F4F0"
+      ]
+    },
+    {
+      "id": "inland-512935",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Silver",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512935",
+      "source_date": "2026-10-07",
+      "source_color_name": "Silver",
+      "source_sku": "512935",
+      "swatch": "#C0C0C4",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C0C0C4"
+      ]
+    },
+    {
+      "id": "inland-512937",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Pink",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512937",
+      "source_date": "2026-10-07",
+      "source_color_name": "Pink",
+      "source_sku": "512937",
+      "swatch": "#F08CB4",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F08CB4"
+      ]
+    },
+    {
+      "id": "inland-512938",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Light Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512938",
+      "source_date": "2026-10-07",
+      "source_color_name": "Light Blue",
+      "source_sku": "512938",
+      "swatch": "#9CCBEA",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#9CCBEA"
+      ]
+    },
+    {
+      "id": "inland-512939",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Purple",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512939",
+      "source_date": "2026-10-07",
+      "source_color_name": "Purple",
+      "source_sku": "512939",
+      "swatch": "#6A3D9A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6A3D9A"
+      ]
+    },
+    {
+      "id": "inland-512940",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Pea Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512940",
+      "source_date": "2026-10-07",
+      "source_color_name": "Pea Green",
+      "source_sku": "512940",
+      "swatch": "#8DB255",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8DB255"
+      ]
+    },
+    {
+      "id": "inland-512941",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Yellow",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512941",
+      "source_date": "2026-10-07",
+      "source_color_name": "Yellow",
+      "source_sku": "512941",
+      "swatch": "#F2C811",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F2C811"
+      ]
+    },
+    {
+      "id": "inland-512943",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Gold",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512943",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gold",
+      "source_sku": "512943",
+      "swatch": "#C9A227",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C9A227"
+      ]
+    },
+    {
+      "id": "inland-602293",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Egyptian Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/602293",
+      "source_date": "2026-10-07",
+      "source_color_name": "Egyptian Blue",
+      "source_sku": "602293",
+      "swatch": "#1034A6",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1034A6"
+      ]
+    },
+    {
+      "id": "inland-606619",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Orange",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/606619",
+      "source_date": "2026-10-07",
+      "source_color_name": "Orange",
+      "source_sku": "606619",
+      "swatch": "#F07C1C",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F07C1C"
+      ]
+    },
+    {
+      "id": "inland-606620",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Gray",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/606620",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gray",
+      "source_sku": "606620",
+      "swatch": "#8E8E8E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8E8E8E"
+      ]
+    },
+    {
+      "id": "inland-616609",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "White Marble",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/616609",
+      "source_date": "2026-10-07",
+      "source_color_name": "White Marble",
+      "source_sku": "616609",
+      "swatch": "#ECEBEA",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#ECEBEA"
+      ]
+    },
+    {
+      "id": "inland-635856",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "True Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/635856",
+      "source_date": "2026-10-07",
+      "source_color_name": "True Green",
+      "source_sku": "635856",
+      "swatch": "#1E9E3A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1E9E3A"
+      ]
+    },
+    {
+      "id": "inland-635857",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Cornflower Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/635857",
+      "source_date": "2026-10-07",
+      "source_color_name": "Cornflower Blue",
+      "source_sku": "635857",
+      "swatch": "#6495ED",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6495ED"
+      ]
+    },
+    {
+      "id": "inland-635858",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Coral",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/635858",
+      "source_date": "2026-10-07",
+      "source_color_name": "Coral",
+      "source_sku": "635858",
+      "swatch": "#F4776A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F4776A"
+      ]
+    },
+    {
+      "id": "inland-638638",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "True Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/638638",
+      "source_date": "2026-10-07",
+      "source_color_name": "True Red",
+      "source_sku": "638638",
+      "swatch": "#C62828",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-638640",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Military Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/638640",
+      "source_date": "2026-10-07",
+      "source_color_name": "Military Green",
+      "source_sku": "638640",
+      "swatch": "#4B5320",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#4B5320"
+      ]
+    },
+    {
+      "id": "inland-638641",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Khaki",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/638641",
+      "source_date": "2026-10-07",
+      "source_color_name": "Khaki",
+      "source_sku": "638641",
+      "swatch": "#C3B091",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C3B091"
+      ]
+    },
+    {
+      "id": "inland-638642",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Sand",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/638642",
+      "source_date": "2026-10-07",
+      "source_color_name": "Sand",
+      "source_sku": "638642",
+      "swatch": "#D8C190",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#D8C190"
+      ]
+    },
+    {
+      "id": "inland-638643",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Raspberry Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/638643",
+      "source_date": "2026-10-07",
+      "source_color_name": "Raspberry Red",
+      "source_sku": "638643",
+      "swatch": "#B3123F",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#B3123F"
+      ]
+    },
+    {
+      "id": "inland-664852",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Inland Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/664852",
+      "source_date": "2026-10-07",
+      "source_color_name": "Inland Blue",
+      "source_sku": "664852",
+      "swatch": "#1B5FA8",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1B5FA8"
+      ]
+    },
+    {
+      "id": "inland-675751",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Olive Brown",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/675751",
+      "source_date": "2026-10-07",
+      "source_color_name": "Olive Brown",
+      "source_sku": "675751",
+      "swatch": "#6E5C3A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6E5C3A"
+      ]
+    },
+    {
+      "id": "inland-675752",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Dark Gray Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/675752",
+      "source_date": "2026-10-07",
+      "source_color_name": "Dark Gray Green",
+      "source_sku": "675752",
+      "swatch": "#4B5648",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#4B5648"
+      ]
+    },
+    {
+      "id": "inland-692935",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Basic",
+      "color_name": "Black",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/692935",
+      "source_date": "2026-10-07",
+      "source_color_name": "Black",
+      "source_sku": "692935",
+      "swatch": "#161616",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#161616"
+      ]
+    },
+    {
+      "id": "inland-692936",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Basic",
+      "color_name": "White",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/692936",
+      "source_date": "2026-10-07",
+      "source_color_name": "White",
+      "source_sku": "692936",
+      "swatch": "#F4F4F0",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F4F4F0"
+      ]
+    },
+    {
+      "id": "inland-692937",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Basic",
+      "color_name": "Gray",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/692937",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gray",
+      "source_sku": "692937",
+      "swatch": "#8E8E8E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8E8E8E"
+      ]
+    },
+    {
+      "id": "inland-692940",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Basic",
+      "color_name": "True Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/692940",
+      "source_date": "2026-10-07",
+      "source_color_name": "True Red",
+      "source_sku": "692940",
+      "swatch": "#C62828",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-702116",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Basic",
+      "color_name": "Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/702116",
+      "source_date": "2026-10-07",
+      "source_color_name": "Blue",
+      "source_sku": "702116",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF"
+      ]
+    },
+    {
+      "id": "inland-512137",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Glow",
+      "color_name": "Luminous",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/512137",
+      "source_date": "2026-10-07",
+      "source_color_name": "Luminous",
+      "source_sku": "512137",
+      "swatch": "#C8F5A8",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C8F5A8"
+      ]
+    },
+    {
+      "id": "inland-623234",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Silk",
+      "color_name": "Pewter",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/623234",
+      "source_date": "2026-10-07",
+      "source_color_name": "Pewter",
+      "source_sku": "623234",
+      "swatch": "#8C8C90",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8C8C90"
+      ]
+    },
+    {
+      "id": "inland-660577",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Silk",
+      "color_name": "Black",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/660577",
+      "source_date": "2026-10-07",
+      "source_color_name": "Black",
+      "source_sku": "660577",
+      "swatch": "#161616",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#161616"
+      ]
+    },
+    {
+      "id": "inland-650238",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Silk Dual",
+      "color_name": "Blue-Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/650238",
+      "source_date": "2026-10-07",
+      "source_color_name": "Blue-Green",
+      "source_sku": "650238",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF",
+        "#2E9A4A"
+      ]
+    },
+    {
+      "id": "inland-650239",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Silk Dual",
+      "color_name": "Gray-Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/650239",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gray-Green",
+      "source_sku": "650239",
+      "swatch": "#8E8E8E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8E8E8E",
+        "#2E9A4A"
+      ]
+    },
+    {
+      "id": "inland-650240",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Silk Dual",
+      "color_name": "Gold-Gray",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/650240",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gold-Gray",
+      "source_sku": "650240",
+      "swatch": "#C9A227",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C9A227",
+        "#8E8E8E"
+      ]
+    },
+    {
+      "id": "inland-650241",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Silk Dual",
+      "color_name": "Gold-Magenta",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/650241",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gold-Magenta",
+      "source_sku": "650241",
+      "swatch": "#C9A227",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C9A227",
+        "#C2187E"
+      ]
+    },
+    {
+      "id": "inland-650242",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Silk Dual",
+      "color_name": "Lime-Magenta",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/650242",
+      "source_date": "2026-10-07",
+      "source_color_name": "Lime-Magenta",
+      "source_sku": "650242",
+      "swatch": "#8CC63F",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8CC63F",
+        "#C2187E"
+      ]
+    },
+    {
+      "id": "inland-650243",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Silk Dual",
+      "color_name": "Gold-Silver",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/650243",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gold-Silver",
+      "source_sku": "650243",
+      "swatch": "#C9A227",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C9A227",
+        "#C0C0C4"
+      ]
+    },
+    {
+      "id": "inland-650245",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Silk Dual",
+      "color_name": "Black-Silver",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/650245",
+      "source_date": "2026-10-07",
+      "source_color_name": "Black-Silver",
+      "source_sku": "650245",
+      "swatch": "#161616",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#161616",
+        "#C0C0C4"
+      ]
+    },
+    {
+      "id": "inland-650246",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Silk Dual",
+      "color_name": "Blue-Yellow",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/650246",
+      "source_date": "2026-10-07",
+      "source_color_name": "Blue-Yellow",
+      "source_sku": "650246",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF",
+        "#F2C811"
+      ]
+    },
+    {
+      "id": "inland-650247",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Silk Dual",
+      "color_name": "Gold-Purple",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/650247",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gold-Purple",
+      "source_sku": "650247",
+      "swatch": "#C9A227",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C9A227",
+        "#6A3D9A"
+      ]
+    },
+    {
+      "id": "inland-650248",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Silk Dual",
+      "color_name": "Gold-Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/650248",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gold-Red",
+      "source_sku": "650248",
+      "swatch": "#C9A227",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C9A227",
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-649904",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Marble",
+      "color_name": "Slate Gray",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/649904",
+      "source_date": "2026-10-07",
+      "source_color_name": "Slate Gray",
+      "source_sku": "649904",
+      "swatch": "#8E8E8E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8E8E8E"
+      ]
+    },
+    {
+      "id": "inland-664836",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Marble",
+      "color_name": "Pink",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/664836",
+      "source_date": "2026-10-07",
+      "source_color_name": "Pink",
+      "source_sku": "664836",
+      "swatch": "#F08CB4",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F08CB4"
+      ]
+    },
+    {
+      "id": "inland-664837",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Marble",
+      "color_name": "Purple",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/664837",
+      "source_date": "2026-10-07",
+      "source_color_name": "Purple",
+      "source_sku": "664837",
+      "swatch": "#6A3D9A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6A3D9A"
+      ]
+    },
+    {
+      "id": "inland-664838",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Marble",
+      "color_name": "Yellow",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/664838",
+      "source_date": "2026-10-07",
+      "source_color_name": "Yellow",
+      "source_sku": "664838",
+      "swatch": "#F2C811",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F2C811"
+      ]
+    },
+    {
+      "id": "inland-664839",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Marble",
+      "color_name": "Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/664839",
+      "source_date": "2026-10-07",
+      "source_color_name": "Blue",
+      "source_sku": "664839",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF"
+      ]
+    },
+    {
+      "id": "inland-662232",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte Dual",
+      "color_name": "Blue-Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/662232",
+      "source_date": "2026-10-07",
+      "source_color_name": "Blue-Red",
+      "source_sku": "662232",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF",
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-662233",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte Dual",
+      "color_name": "Green-Brown",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/662233",
+      "source_date": "2026-10-07",
+      "source_color_name": "Green-Brown",
+      "source_sku": "662233",
+      "swatch": "#2E9A4A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#2E9A4A",
+        "#6B4A32"
+      ]
+    },
+    {
+      "id": "inland-662234",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte Dual",
+      "color_name": "Gray-Purple",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/662234",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gray-Purple",
+      "source_sku": "662234",
+      "swatch": "#8E8E8E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8E8E8E",
+        "#6A3D9A"
+      ]
+    },
+    {
+      "id": "inland-662235",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte Dual",
+      "color_name": "Black-White",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/662235",
+      "source_date": "2026-10-07",
+      "source_color_name": "Black-White",
+      "source_sku": "662235",
+      "swatch": "#161616",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#161616",
+        "#F4F4F0"
+      ]
+    },
+    {
+      "id": "inland-662236",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte Dual",
+      "color_name": "Blue-Light Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/662236",
+      "source_date": "2026-10-07",
+      "source_color_name": "Blue-Light Blue",
+      "source_sku": "662236",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF",
+        "#9CCBEA"
+      ]
+    },
+    {
+      "id": "inland-642917",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Orange",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/642917",
+      "source_date": "2026-10-07",
+      "source_color_name": "Orange",
+      "source_sku": "642917",
+      "swatch": "#F07C1C",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F07C1C"
+      ]
+    },
+    {
+      "id": "inland-642918",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Brown",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/642918",
+      "source_date": "2026-10-07",
+      "source_color_name": "Brown",
+      "source_sku": "642918",
+      "swatch": "#6B4A32",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6B4A32"
+      ]
+    },
+    {
+      "id": "inland-642919",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/642919",
+      "source_date": "2026-10-07",
+      "source_color_name": "Blue",
+      "source_sku": "642919",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF"
+      ]
+    },
+    {
+      "id": "inland-642920",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Lulz Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/642920",
+      "source_date": "2026-10-07",
+      "source_color_name": "Lulz Green",
+      "source_sku": "642920",
+      "swatch": "#6CBF1E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6CBF1E"
+      ]
+    },
+    {
+      "id": "inland-642921",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/642921",
+      "source_date": "2026-10-07",
+      "source_color_name": "Green",
+      "source_sku": "642921",
+      "swatch": "#2E9A4A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#2E9A4A"
+      ]
+    },
+    {
+      "id": "inland-642922",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "White",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/642922",
+      "source_date": "2026-10-07",
+      "source_color_name": "White",
+      "source_sku": "642922",
+      "swatch": "#F4F4F0",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F4F4F0"
+      ]
+    },
+    {
+      "id": "inland-642923",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/642923",
+      "source_date": "2026-10-07",
+      "source_color_name": "Red",
+      "source_sku": "642923",
+      "swatch": "#C62828",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-642924",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Pink",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/642924",
+      "source_date": "2026-10-07",
+      "source_color_name": "Pink",
+      "source_sku": "642924",
+      "swatch": "#F08CB4",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F08CB4"
+      ]
+    },
+    {
+      "id": "inland-642926",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Gray",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/642926",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gray",
+      "source_sku": "642926",
+      "swatch": "#8E8E8E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8E8E8E"
+      ]
+    },
+    {
+      "id": "inland-642927",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Light Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/642927",
+      "source_date": "2026-10-07",
+      "source_color_name": "Light Blue",
+      "source_sku": "642927",
+      "swatch": "#9CCBEA",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#9CCBEA"
+      ]
+    },
+    {
+      "id": "inland-642928",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Black",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/642928",
+      "source_date": "2026-10-07",
+      "source_color_name": "Black",
+      "source_sku": "642928",
+      "swatch": "#161616",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#161616"
+      ]
+    },
+    {
+      "id": "inland-647839",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Rainbow",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/647839",
+      "source_date": "2026-10-07",
+      "source_color_name": "Rainbow",
+      "source_sku": "647839",
+      "swatch": "#E53935",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#E53935",
+        "#FDD835",
+        "#43A047",
+        "#1E88E5",
+        "#8E24AA"
+      ]
+    },
+    {
+      "id": "inland-660541",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Purple",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/660541",
+      "source_date": "2026-10-07",
+      "source_color_name": "Purple",
+      "source_sku": "660541",
+      "swatch": "#6A3D9A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6A3D9A"
+      ]
+    },
+    {
+      "id": "inland-660542",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Chocolate",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/660542",
+      "source_date": "2026-10-07",
+      "source_color_name": "Chocolate",
+      "source_sku": "660542",
+      "swatch": "#5A3A28",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#5A3A28"
+      ]
+    },
+    {
+      "id": "inland-660543",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Banana",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/660543",
+      "source_date": "2026-10-07",
+      "source_color_name": "Banana",
+      "source_sku": "660543",
+      "swatch": "#F5E27A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F5E27A"
+      ]
+    },
+    {
+      "id": "inland-660544",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Pastel Pink",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/660544",
+      "source_date": "2026-10-07",
+      "source_color_name": "Pastel Pink",
+      "source_sku": "660544",
+      "swatch": "#F08CB4",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F08CB4"
+      ]
+    },
+    {
+      "id": "inland-660545",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Peach",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/660545",
+      "source_date": "2026-10-07",
+      "source_color_name": "Peach",
+      "source_sku": "660545",
+      "swatch": "#F8C8A8",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F8C8A8"
+      ]
+    },
+    {
+      "id": "inland-660546",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Mint Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/660546",
+      "source_date": "2026-10-07",
+      "source_color_name": "Mint Green",
+      "source_sku": "660546",
+      "swatch": "#A8E6C8",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#A8E6C8"
+      ]
+    },
+    {
+      "id": "inland-660547",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Red Heather",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/660547",
+      "source_date": "2026-10-07",
+      "source_color_name": "Red Heather",
+      "source_sku": "660547",
+      "swatch": "#B5646A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#B5646A"
+      ]
+    },
+    {
+      "id": "inland-660548",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Denim",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/660548",
+      "source_date": "2026-10-07",
+      "source_color_name": "Denim",
+      "source_sku": "660548",
+      "swatch": "#4A6A8E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#4A6A8E"
+      ]
+    },
+    {
+      "id": "inland-660549",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Brick Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/660549",
+      "source_date": "2026-10-07",
+      "source_color_name": "Brick Red",
+      "source_sku": "660549",
+      "swatch": "#9A3B2E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#9A3B2E"
+      ]
+    },
+    {
+      "id": "inland-660550",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Wood Brown",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/660550",
+      "source_date": "2026-10-07",
+      "source_color_name": "Wood Brown",
+      "source_sku": "660550",
+      "swatch": "#8A6A44",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8A6A44"
+      ]
+    },
+    {
+      "id": "inland-660551",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Light Pink",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/660551",
+      "source_date": "2026-10-07",
+      "source_color_name": "Light Pink",
+      "source_sku": "660551",
+      "swatch": "#F6CBD6",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F6CBD6"
+      ]
+    },
+    {
+      "id": "inland-660552",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Army Beige",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/660552",
+      "source_date": "2026-10-07",
+      "source_color_name": "Army Beige",
+      "source_sku": "660552",
+      "swatch": "#C8B68E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C8B68E"
+      ]
+    },
+    {
+      "id": "inland-670192",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Black",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670192",
+      "source_date": "2026-10-07",
+      "source_color_name": "Black",
+      "source_sku": "670192",
+      "swatch": "#161616",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#161616"
+      ]
+    },
+    {
+      "id": "inland-670193",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "White",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670193",
+      "source_date": "2026-10-07",
+      "source_color_name": "White",
+      "source_sku": "670193",
+      "swatch": "#F4F4F0",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F4F4F0"
+      ]
+    },
+    {
+      "id": "inland-670194",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Milky White",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670194",
+      "source_date": "2026-10-07",
+      "source_color_name": "Milky White",
+      "source_sku": "670194",
+      "swatch": "#EDEBE4",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#EDEBE4"
+      ]
+    },
+    {
+      "id": "inland-670195",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Grey",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670195",
+      "source_date": "2026-10-07",
+      "source_color_name": "Grey",
+      "source_sku": "670195",
+      "swatch": "#8E8E8E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8E8E8E"
+      ]
+    },
+    {
+      "id": "inland-670196",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670196",
+      "source_date": "2026-10-07",
+      "source_color_name": "Blue",
+      "source_sku": "670196",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF"
+      ]
+    },
+    {
+      "id": "inland-670197",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "True Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670197",
+      "source_date": "2026-10-07",
+      "source_color_name": "True Red",
+      "source_sku": "670197",
+      "swatch": "#C62828",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-670198",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670198",
+      "source_date": "2026-10-07",
+      "source_color_name": "Red",
+      "source_sku": "670198",
+      "swatch": "#C62828",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-670199",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Silver",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670199",
+      "source_date": "2026-10-07",
+      "source_color_name": "Silver",
+      "source_sku": "670199",
+      "swatch": "#C0C0C4",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C0C0C4"
+      ]
+    },
+    {
+      "id": "inland-670200",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Orange",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670200",
+      "source_date": "2026-10-07",
+      "source_color_name": "Orange",
+      "source_sku": "670200",
+      "swatch": "#F07C1C",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F07C1C"
+      ]
+    },
+    {
+      "id": "inland-670201",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Yellow",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670201",
+      "source_date": "2026-10-07",
+      "source_color_name": "Yellow",
+      "source_sku": "670201",
+      "swatch": "#F2C811",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F2C811"
+      ]
+    },
+    {
+      "id": "inland-670202",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Olive Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670202",
+      "source_date": "2026-10-07",
+      "source_color_name": "Olive Green",
+      "source_sku": "670202",
+      "swatch": "#6B7A3A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6B7A3A"
+      ]
+    },
+    {
+      "id": "inland-670203",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Light Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670203",
+      "source_date": "2026-10-07",
+      "source_color_name": "Light Blue",
+      "source_sku": "670203",
+      "swatch": "#9CCBEA",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#9CCBEA"
+      ]
+    },
+    {
+      "id": "inland-670204",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Purple",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670204",
+      "source_date": "2026-10-07",
+      "source_color_name": "Purple",
+      "source_sku": "670204",
+      "swatch": "#6A3D9A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6A3D9A"
+      ]
+    },
+    {
+      "id": "inland-670205",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Forest Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670205",
+      "source_date": "2026-10-07",
+      "source_color_name": "Forest Green",
+      "source_sku": "670205",
+      "swatch": "#2F5E3A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#2F5E3A"
+      ]
+    },
+    {
+      "id": "inland-670206",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Neon Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670206",
+      "source_date": "2026-10-07",
+      "source_color_name": "Neon Green",
+      "source_sku": "670206",
+      "swatch": "#39FF14",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#39FF14"
+      ]
+    },
+    {
+      "id": "inland-670207",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Periwinkle Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670207",
+      "source_date": "2026-10-07",
+      "source_color_name": "Periwinkle Blue",
+      "source_sku": "670207",
+      "swatch": "#8E9BEA",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8E9BEA"
+      ]
+    },
+    {
+      "id": "inland-670208",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Space Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670208",
+      "source_date": "2026-10-07",
+      "source_color_name": "Space Blue",
+      "source_sku": "670208",
+      "swatch": "#1B2A5C",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1B2A5C"
+      ]
+    },
+    {
+      "id": "inland-670209",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Bone White",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670209",
+      "source_date": "2026-10-07",
+      "source_color_name": "Bone White",
+      "source_sku": "670209",
+      "swatch": "#E8E2D0",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#E8E2D0"
+      ]
+    },
+    {
+      "id": "inland-670210",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Dark Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670210",
+      "source_date": "2026-10-07",
+      "source_color_name": "Dark Blue",
+      "source_sku": "670210",
+      "swatch": "#1B2F6B",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1B2F6B"
+      ]
+    },
+    {
+      "id": "inland-670211",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Beige",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670211",
+      "source_date": "2026-10-07",
+      "source_color_name": "Beige",
+      "source_sku": "670211",
+      "swatch": "#D8C8A8",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#D8C8A8"
+      ]
+    },
+    {
+      "id": "inland-670212",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Magenta",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670212",
+      "source_date": "2026-10-07",
+      "source_color_name": "Magenta",
+      "source_sku": "670212",
+      "swatch": "#C2187E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C2187E"
+      ]
+    },
+    {
+      "id": "inland-670213",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Brown",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670213",
+      "source_date": "2026-10-07",
+      "source_color_name": "Brown",
+      "source_sku": "670213",
+      "swatch": "#6B4A32",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6B4A32"
+      ]
+    },
+    {
+      "id": "inland-670214",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Light Brown",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670214",
+      "source_date": "2026-10-07",
+      "source_color_name": "Light Brown",
+      "source_sku": "670214",
+      "swatch": "#6B4A32",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6B4A32"
+      ]
+    },
+    {
+      "id": "inland-670215",
+      "manufacturer": "Inland",
+      "filament_type": "HS PLA+",
+      "color_name": "Pink",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670215",
+      "source_date": "2026-10-07",
+      "source_color_name": "Pink",
+      "source_sku": "670215",
+      "swatch": "#F08CB4",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F08CB4"
+      ]
+    },
+    {
+      "id": "inland-670217",
+      "manufacturer": "Inland",
+      "filament_type": "HS PETG+",
+      "color_name": "White",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670217",
+      "source_date": "2026-10-07",
+      "source_color_name": "White",
+      "source_sku": "670217",
+      "swatch": "#F4F4F0",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F4F4F0"
+      ]
+    },
+    {
+      "id": "inland-670220",
+      "manufacturer": "Inland",
+      "filament_type": "HS PETG+",
+      "color_name": "Silver",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670220",
+      "source_date": "2026-10-07",
+      "source_color_name": "Silver",
+      "source_sku": "670220",
+      "swatch": "#C0C0C4",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C0C0C4"
+      ]
+    },
+    {
+      "id": "inland-670221",
+      "manufacturer": "Inland",
+      "filament_type": "HS PETG+",
+      "color_name": "Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670221",
+      "source_date": "2026-10-07",
+      "source_color_name": "Red",
+      "source_sku": "670221",
+      "swatch": "#C62828",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-670222",
+      "manufacturer": "Inland",
+      "filament_type": "HS PETG+",
+      "color_name": "Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670222",
+      "source_date": "2026-10-07",
+      "source_color_name": "Blue",
+      "source_sku": "670222",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF"
+      ]
+    },
+    {
+      "id": "inland-670223",
+      "manufacturer": "Inland",
+      "filament_type": "HS PETG+",
+      "color_name": "Transparent Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670223",
+      "source_date": "2026-10-07",
+      "source_color_name": "Transparent Green",
+      "source_sku": "670223",
+      "swatch": "#DCE6EA",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#DCE6EA"
+      ]
+    },
+    {
+      "id": "inland-670227",
+      "manufacturer": "Inland",
+      "filament_type": "HS ABS+",
+      "color_name": "White",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670227",
+      "source_date": "2026-10-07",
+      "source_color_name": "White",
+      "source_sku": "670227",
+      "swatch": "#F4F4F0",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F4F4F0"
+      ]
+    },
+    {
+      "id": "inland-670228",
+      "manufacturer": "Inland",
+      "filament_type": "HS ABS+",
+      "color_name": "True Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670228",
+      "source_date": "2026-10-07",
+      "source_color_name": "True Red",
+      "source_sku": "670228",
+      "swatch": "#C62828",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-670229",
+      "manufacturer": "Inland",
+      "filament_type": "HS ABS+",
+      "color_name": "Gray",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670229",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gray",
+      "source_sku": "670229",
+      "swatch": "#8E8E8E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8E8E8E"
+      ]
+    },
+    {
+      "id": "inland-670230",
+      "manufacturer": "Inland",
+      "filament_type": "HS ABS+",
+      "color_name": "Natural",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670230",
+      "source_date": "2026-10-07",
+      "source_color_name": "Natural",
+      "source_sku": "670230",
+      "swatch": "#E6DDC4",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#E6DDC4"
+      ]
+    },
+    {
+      "id": "inland-670231",
+      "manufacturer": "Inland",
+      "filament_type": "HS ABS+",
+      "color_name": "Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670231",
+      "source_date": "2026-10-07",
+      "source_color_name": "Blue",
+      "source_sku": "670231",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF"
+      ]
+    },
+    {
+      "id": "inland-670232",
+      "manufacturer": "Inland",
+      "filament_type": "HS ABS+",
+      "color_name": "Silver",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670232",
+      "source_date": "2026-10-07",
+      "source_color_name": "Silver",
+      "source_sku": "670232",
+      "swatch": "#C0C0C4",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C0C0C4"
+      ]
+    },
+    {
+      "id": "inland-670233",
+      "manufacturer": "Inland",
+      "filament_type": "HS ABS+",
+      "color_name": "Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670233",
+      "source_date": "2026-10-07",
+      "source_color_name": "Red",
+      "source_sku": "670233",
+      "swatch": "#C62828",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-670234",
+      "manufacturer": "Inland",
+      "filament_type": "HS ABS+",
+      "color_name": "Orange",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670234",
+      "source_date": "2026-10-07",
+      "source_color_name": "Orange",
+      "source_sku": "670234",
+      "swatch": "#F07C1C",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F07C1C"
+      ]
+    },
+    {
+      "id": "inland-670235",
+      "manufacturer": "Inland",
+      "filament_type": "HS ABS+",
+      "color_name": "Yellow",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670235",
+      "source_date": "2026-10-07",
+      "source_color_name": "Yellow",
+      "source_sku": "670235",
+      "swatch": "#F2C811",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F2C811"
+      ]
+    },
+    {
+      "id": "inland-674663",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Translucent",
+      "color_name": "Winter Blue-White",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/674663",
+      "source_date": "2026-10-07",
+      "source_color_name": "Winter Blue-White",
+      "source_sku": "674663",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF",
+        "#F4F4F0"
+      ]
+    },
+    {
+      "id": "inland-674664",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Translucent",
+      "color_name": "Summer Blue-Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/674664",
+      "source_date": "2026-10-07",
+      "source_color_name": "Summer Blue-Green",
+      "source_sku": "674664",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF",
+        "#2E9A4A"
+      ]
+    },
+    {
+      "id": "inland-674665",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Translucent",
+      "color_name": "Autumn Orange-Gray",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/674665",
+      "source_date": "2026-10-07",
+      "source_color_name": "Autumn Orange-Gray",
+      "source_sku": "674665",
+      "swatch": "#F07C1C",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F07C1C",
+        "#8E8E8E"
+      ]
+    },
+    {
+      "id": "inland-674666",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Translucent",
+      "color_name": "Spring Yellow-Green-Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/674666",
+      "source_date": "2026-10-07",
+      "source_color_name": "Spring Yellow-Green-Blue",
+      "source_sku": "674666",
+      "swatch": "#F2C811",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F2C811"
+      ]
+    },
+    {
+      "id": "inland-674667",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Translucent",
+      "color_name": "Blue-Purple",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/674667",
+      "source_date": "2026-10-07",
+      "source_color_name": "Blue-Purple",
+      "source_sku": "674667",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF",
+        "#6A3D9A"
+      ]
+    },
+    {
+      "id": "inland-674668",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Translucent",
+      "color_name": "Rainbow Style 1",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/674668",
+      "source_date": "2026-10-07",
+      "source_color_name": "Rainbow Style 1",
+      "source_sku": "674668",
+      "swatch": "#E53935",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#E53935",
+        "#FDD835",
+        "#43A047",
+        "#1E88E5",
+        "#8E24AA"
+      ]
+    },
+    {
+      "id": "inland-674669",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Translucent",
+      "color_name": "Rainbow Style 2",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/674669",
+      "source_date": "2026-10-07",
+      "source_color_name": "Rainbow Style 2",
+      "source_sku": "674669",
+      "swatch": "#E53935",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#E53935",
+        "#FDD835",
+        "#43A047",
+        "#1E88E5",
+        "#8E24AA"
+      ]
+    },
+    {
+      "id": "inland-675734",
+      "manufacturer": "Inland",
+      "filament_type": "ASA",
+      "color_name": "Vibrant Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/675734",
+      "source_date": "2026-10-07",
+      "source_color_name": "Vibrant Blue",
+      "source_sku": "675734",
+      "swatch": "#1F6BFF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F6BFF"
+      ]
+    },
+    {
+      "id": "inland-675735",
+      "manufacturer": "Inland",
+      "filament_type": "ASA",
+      "color_name": "Vibrant Pink",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/675735",
+      "source_date": "2026-10-07",
+      "source_color_name": "Vibrant Pink",
+      "source_sku": "675735",
+      "swatch": "#FF4F9A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#FF4F9A"
+      ]
+    },
+    {
+      "id": "inland-675736",
+      "manufacturer": "Inland",
+      "filament_type": "ASA",
+      "color_name": "Vibrant Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/675736",
+      "source_date": "2026-10-07",
+      "source_color_name": "Vibrant Green",
+      "source_sku": "675736",
+      "swatch": "#2ED35A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#2ED35A"
+      ]
+    },
+    {
+      "id": "inland-675737",
+      "manufacturer": "Inland",
+      "filament_type": "ASA",
+      "color_name": "Jet Black",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/675737",
+      "source_date": "2026-10-07",
+      "source_color_name": "Jet Black",
+      "source_sku": "675737",
+      "swatch": "#0E0E0E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#0E0E0E"
+      ]
+    },
+    {
+      "id": "inland-675738",
+      "manufacturer": "Inland",
+      "filament_type": "ASA",
+      "color_name": "Olive Brown",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/675738",
+      "source_date": "2026-10-07",
+      "source_color_name": "Olive Brown",
+      "source_sku": "675738",
+      "swatch": "#6E5C3A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6E5C3A"
+      ]
+    },
+    {
+      "id": "inland-675739",
+      "manufacturer": "Inland",
+      "filament_type": "ASA",
+      "color_name": "Dark Gray and Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/675739",
+      "source_date": "2026-10-07",
+      "source_color_name": "Dark Gray and Green",
+      "source_sku": "675739",
+      "swatch": "#8E8E8E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8E8E8E"
+      ]
+    },
+    {
+      "id": "inland-675740",
+      "manufacturer": "Inland",
+      "filament_type": "ABS",
+      "color_name": "Dark Purple",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/675740",
+      "source_date": "2026-10-07",
+      "source_color_name": "Dark Purple",
+      "source_sku": "675740",
+      "swatch": "#40255E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#40255E"
+      ]
+    },
+    {
+      "id": "inland-675741",
+      "manufacturer": "Inland",
+      "filament_type": "ABS",
+      "color_name": "Neon Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/675741",
+      "source_date": "2026-10-07",
+      "source_color_name": "Neon Green",
+      "source_sku": "675741",
+      "swatch": "#39FF14",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#39FF14"
+      ]
+    },
+    {
+      "id": "inland-675742",
+      "manufacturer": "Inland",
+      "filament_type": "ABS",
+      "color_name": "Galaxy Black",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/675742",
+      "source_date": "2026-10-07",
+      "source_color_name": "Galaxy Black",
+      "source_sku": "675742",
+      "swatch": "#1A1A22",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1A1A22"
+      ]
+    },
+    {
+      "id": "inland-701510",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Galaxy",
+      "color_name": "Purple",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701510",
+      "source_date": "2026-10-07",
+      "source_color_name": "Purple",
+      "source_sku": "701510",
+      "swatch": "#6A3D9A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6A3D9A"
+      ]
+    },
+    {
+      "id": "inland-701512",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Galaxy",
+      "color_name": "Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701512",
+      "source_date": "2026-10-07",
+      "source_color_name": "Red",
+      "source_sku": "701512",
+      "swatch": "#C62828",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-701513",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Galaxy",
+      "color_name": "Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701513",
+      "source_date": "2026-10-07",
+      "source_color_name": "Green",
+      "source_sku": "701513",
+      "swatch": "#2E9A4A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#2E9A4A"
+      ]
+    },
+    {
+      "id": "inland-701514",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Galaxy",
+      "color_name": "Gray",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701514",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gray",
+      "source_sku": "701514",
+      "swatch": "#8E8E8E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8E8E8E"
+      ]
+    },
+    {
+      "id": "inland-701515",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Galaxy",
+      "color_name": "Gradient",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701515",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gradient",
+      "source_sku": "701515",
+      "swatch": "#2B2B6B",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#2B2B6B",
+        "#7A5CC4",
+        "#C9B2F5"
+      ]
+    },
+    {
+      "id": "inland-701516",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Galaxy",
+      "color_name": "Green-Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701516",
+      "source_date": "2026-10-07",
+      "source_color_name": "Green-Blue",
+      "source_sku": "701516",
+      "swatch": "#2E9A4A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#2E9A4A",
+        "#1F5FBF"
+      ]
+    },
+    {
+      "id": "inland-701517",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Galaxy",
+      "color_name": "Gradient Black-Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701517",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gradient Black-Blue",
+      "source_sku": "701517",
+      "swatch": "#161616",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#161616",
+        "#1F5FBF"
+      ]
+    },
+    {
+      "id": "inland-701518",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Frosty",
+      "color_name": "Rainbow",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701518",
+      "source_date": "2026-10-07",
+      "source_color_name": "Rainbow",
+      "source_sku": "701518",
+      "swatch": "#E53935",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#E53935",
+        "#FDD835",
+        "#43A047",
+        "#1E88E5",
+        "#8E24AA"
+      ]
+    },
+    {
+      "id": "inland-687096",
+      "manufacturer": "Inland",
+      "filament_type": "PLA-CF",
+      "color_name": "Green",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/687096",
+      "source_date": "2026-10-07",
+      "source_color_name": "Green",
+      "source_sku": "687096",
+      "swatch": "#2E9A4A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#2E9A4A"
+      ]
+    },
+    {
+      "id": "inland-687097",
+      "manufacturer": "Inland",
+      "filament_type": "PLA-CF",
+      "color_name": "Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/687097",
+      "source_date": "2026-10-07",
+      "source_color_name": "Red",
+      "source_sku": "687097",
+      "swatch": "#C62828",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-687098",
+      "manufacturer": "Inland",
+      "filament_type": "PLA-CF",
+      "color_name": "Purple",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/687098",
+      "source_date": "2026-10-07",
+      "source_color_name": "Purple",
+      "source_sku": "687098",
+      "swatch": "#6A3D9A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6A3D9A"
+      ]
+    },
+    {
+      "id": "inland-701526",
+      "manufacturer": "Inland",
+      "filament_type": "TPU MFS",
+      "color_name": "Black",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701526",
+      "source_date": "2026-10-07",
+      "source_color_name": "Black",
+      "source_sku": "701526",
+      "swatch": "#161616",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#161616"
+      ]
+    },
+    {
+      "id": "inland-701527",
+      "manufacturer": "Inland",
+      "filament_type": "TPU MFS",
+      "color_name": "White",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701527",
+      "source_date": "2026-10-07",
+      "source_color_name": "White",
+      "source_sku": "701527",
+      "swatch": "#F4F4F0",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F4F4F0"
+      ]
+    },
+    {
+      "id": "inland-701528",
+      "manufacturer": "Inland",
+      "filament_type": "TPU MFS",
+      "color_name": "Gray",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701528",
+      "source_date": "2026-10-07",
+      "source_color_name": "Gray",
+      "source_sku": "701528",
+      "swatch": "#8E8E8E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8E8E8E"
+      ]
+    },
+    {
+      "id": "inland-701529",
+      "manufacturer": "Inland",
+      "filament_type": "TPU MFS",
+      "color_name": "Red",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701529",
+      "source_date": "2026-10-07",
+      "source_color_name": "Red",
+      "source_sku": "701529",
+      "swatch": "#C62828",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#C62828"
+      ]
+    },
+    {
+      "id": "inland-701530",
+      "manufacturer": "Inland",
+      "filament_type": "TPU MFS",
+      "color_name": "Blue",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701530",
+      "source_date": "2026-10-07",
+      "source_color_name": "Blue",
+      "source_sku": "701530",
+      "swatch": "#1F5FBF",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF"
+      ]
+    },
+    {
+      "id": "inland-701531",
+      "manufacturer": "Inland",
+      "filament_type": "TPU MFS",
+      "color_name": "Yellow",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701531",
+      "source_date": "2026-10-07",
+      "source_color_name": "Yellow",
+      "source_sku": "701531",
+      "swatch": "#F2C811",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F2C811"
+      ]
+    },
+    {
+      "id": "inland-701532",
+      "manufacturer": "Inland",
+      "filament_type": "TPU MFS",
+      "color_name": "Orange",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701532",
+      "source_date": "2026-10-07",
+      "source_color_name": "Orange",
+      "source_sku": "701532",
+      "swatch": "#F07C1C",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F07C1C"
+      ]
+    },
+    {
+      "id": "inland-701533",
+      "manufacturer": "Inland",
+      "filament_type": "TPU MFS",
+      "color_name": "Purple",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/701533",
+      "source_date": "2026-10-07",
+      "source_color_name": "Purple",
+      "source_sku": "701533",
+      "swatch": "#6A3D9A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6A3D9A"
+      ]
     }
   ]
 }
