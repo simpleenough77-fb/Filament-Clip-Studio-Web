@@ -67,9 +67,10 @@ let printerList=[],slicerList={};
 const BRAND_SLICER={'Bambu Lab':'bambu_studio',Creality:'creality_print',Elegoo:'elegoo',Anycubic:'anycubic',Snapmaker:'snapmaker_orca',Prusa:'prusa'};
 function currentPrinter(){return printerList.find(p=>p.id===$('printer').value)||printerList[0];}
 function fillPrinters(){
- const brands=[...new Set(printerList.map(p=>p.brand))];
- $('printer').innerHTML=brands.map(b=>`<optgroup label="${esc(b)}">${printerList.filter(p=>p.brand===b).map(p=>`<option value="${esc(p.id)}">${esc(p.label)}</option>`).join('')}</optgroup>`).join('');
- $('slicer').innerHTML=Object.entries(slicerList).map(([id,s])=>`<option value="${esc(id)}">${esc(s.label)}</option>`).join('');
+ const defaultPrinter=printerList[0].id;const brands=sortAZ([...new Set(printerList.map(p=>p.brand))]);
+ $('printer').innerHTML=brands.map(b=>`<optgroup label="${esc(b)}">${printerList.filter(p=>p.brand===b).sort((x,y)=>collator.compare(x.label,y.label)).map(p=>`<option value="${esc(p.id)}">${esc(p.label)}</option>`).join('')}</optgroup>`).join('');
+ $('printer').value=defaultPrinter;
+ $('slicer').innerHTML=Object.entries(slicerList).sort((x,y)=>collator.compare(x[1].label,y[1].label)).map(([id,s])=>`<option value="${esc(id)}">${esc(s.label)}</option>`).join('');
  $('slicer').value=BRAND_SLICER[currentPrinter().brand];syncPrinter();
 }
 function syncPrinter(){
@@ -90,7 +91,7 @@ $('printer').addEventListener('change',()=>{const p=currentPrinter();$('slicer')
 $('slicer').addEventListener('change',syncPrinter);$('multicolor').addEventListener('change',syncPrinter);
 
 Promise.all([fetch('/catalog').then(r=>r.json()),fetch('/library').then(r=>r.json())]).then(([d,library])=>{
- catalog=d.products;fonts=d.fonts;printerList=d.printers;slicerList=d.slicers;fillPrinters();$('font').innerHTML=options(fonts,fonts[0]);
+ catalog=d.products;fonts=d.fonts;printerList=d.printers;slicerList=d.slicers;fillPrinters();$('font').innerHTML=options(sortAZ(fonts),fonts[0]);
  rows=[catalog.find(p=>p.color_name==='Blue'&&p.manufacturer==='Bambu Lab'),catalog.find(p=>p.color_name==='Dark Magic'&&p.filament_type==='PLA')].map(p=>({product:p.id,quantity:1,swatch:p.swatch}));
  let saved;try{saved=JSON.parse(localStorage.getItem('clip-label-draft')||'null');}catch{}
  saved=saved||library.draft||d.draft;
