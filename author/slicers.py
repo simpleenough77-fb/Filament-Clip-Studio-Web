@@ -5,15 +5,18 @@ orca     Bambu-family project with a generic Marlin-style printer. Used by Orca 
          forks (Creality Print, ElegooSlicer, Anycubic Slicer Next, Snapmaker Orca). Only the settings the batch needs are
          written; the slicer fills every other value from its own defaults and the user's own printer preset.
 prusa    PrusaSlicer project (Slic3r_PE config and model files).
+
+`text` says how a slicer keeps text lines editable (see batch_export.editable_text): 'bambu' = Bambu Studio's text_info record,
+'orca' = the slic3rpe:shape / slic3rpe:text records Orca Slicer writes. None = plain meshes (no editable text).
 """
 SLICERS = {
-    'bambu_studio': dict(label='Bambu Studio', family='bambu', app='BambuStudio-02.08.02.61', extra={}),
-    'orca': dict(label='Orca Slicer', family='orca', app='BambuStudio-02.06.00.51', extra={'OrcaSlicer': '2.4.2'}),
-    'creality_print': dict(label='Creality Print', family='orca', app='CrealityPrint-7.2.0.0', extra={}),
-    'elegoo': dict(label='ElegooSlicer', family='orca', app='ElegooSlicer-1.5.3.5', extra={}),
-    'anycubic': dict(label='Anycubic Slicer Next', family='orca', app='BambuStudio-02.06.00.51', extra={'OrcaSlicer': '2.4.2'}),
-    'snapmaker_orca': dict(label='Snapmaker Orca', family='orca', app='Snapmaker_Orca-01.10.00.00', extra={'Snapmaker_Orca:3mfVersion': '1'}),
-    'prusa': dict(label='PrusaSlicer', family='prusa', app='PrusaSlicer-2.9.0', extra={}),
+    'bambu_studio': dict(label='Bambu Studio', family='bambu', text='bambu', app='BambuStudio-02.08.02.61', extra={}),
+    'orca': dict(label='Orca Slicer', family='orca', text='orca', app='BambuStudio-02.06.00.51', extra={'OrcaSlicer': '2.4.2'}),
+    'creality_print': dict(text=None, label='Creality Print', family='orca', app='CrealityPrint-7.2.0.0', extra={}),
+    'elegoo': dict(text=None, label='ElegooSlicer', family='orca', app='ElegooSlicer-1.5.3.5', extra={}),
+    'anycubic': dict(text=None, label='Anycubic Slicer Next', family='orca', app='BambuStudio-02.06.00.51', extra={'OrcaSlicer': '2.4.2'}),
+    'snapmaker_orca': dict(text=None, label='Snapmaker Orca', family='orca', app='Snapmaker_Orca-01.10.00.00', extra={'Snapmaker_Orca:3mfVersion': '1'}),
+    'prusa': dict(text=None, label='PrusaSlicer', family='prusa', app='PrusaSlicer-2.9.0', extra={}),
 }
 DEFAULT_FOR_BRAND = {'Bambu Lab': 'bambu_studio', 'Creality': 'creality_print', 'Elegoo': 'elegoo', 'Anycubic': 'anycubic', 'Snapmaker': 'snapmaker_orca', 'Prusa': 'prusa'}
 

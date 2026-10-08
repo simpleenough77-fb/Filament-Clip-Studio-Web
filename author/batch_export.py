@@ -15,16 +15,28 @@ def safe_name(value):
 # bed side, so its +Z points into the clip), covering [-embedded, +thickness] around the local origin.
 OPENSCAD_TO_EM=100/72      # OpenSCAD's text size is the letter height; Bambu Studio's font_size is the font's em size
 TEXT_FLOOR=0.015           # Bambu Studio offsets text meshes by this much along its Z
-def editable_text(verts,info):
-    """(part-local vertices, 3MF component transform, 4x4 matrix string, text_info attributes) for a text part."""
+def editable_text(verts,info,kind):
+    """(part-local vertices, 3MF component transform, 4x4 matrix string, [(tag, attributes)]) for an editable text part.
+
+    kind 'bambu': Bambu Studio's text_info. kind 'orca': Orca Slicer's slic3rpe:shape and slic3rpe:text records. Both keep the
+    text part-local, turned 180 degrees about Y so it reads from the bed side; they differ in where the local origin sits
+    along Z (Bambu Studio spans [-embedded, +thickness] around it, Orca [0, depth], both less the floor offset)."""
     xs=[v[0] for v in verts];ys=[v[1] for v in verts]
     cx=(min(xs)+max(xs))/2;cy=(min(ys)+max(ys))/2
-    half=info['depth']/2;tz=half-TEXT_FLOOR     # puts the part-local range [-half-floor, half-floor] on world z [0, depth]
+    depth=info['depth'];em=info['size']*OPENSCAD_TO_EM
+    tz=(depth/2-TEXT_FLOOR) if kind=='bambu' else (depth-TEXT_FLOOR)   # world z of the local origin; text spans world z [0, depth]
     local=[(cx-x,y-cy,tz-z) for x,y,z in verts]
     transform=f'-1 0 0 0 1 0 0 0 -1 {cx:.6f} {cy:.6f} {tz:.6f}'
     matrix=f'-1 0 0 {cx:.6f} 0 1 0 {cy:.6f} 0 0 -1 {tz:.6f} 0 0 0 1'
-    attrs=dict(text=info['text'],font_name=info['font'],font_version='',style_name='Recommend',boldness='0',skew='0',font_index='-1',font_size=f"{info['size']*OPENSCAD_TO_EM:.4f}".rstrip('0').rstrip('.'),thickness=f'{half:g}',embeded_depth=f'{half:g}',rotate_angle='0',text_gap='0',bold='0',italic='0',surface_type='1',hit_mesh='0',hit_position='0 0 0',hit_normal='0 0 0')
-    return local,transform,matrix,attrs
+    if kind=='bambu':
+        half=depth/2
+        records=[('text_info',dict(text=info['text'],font_name=info['font'],font_version='',style_name='Recommend',boldness='0',skew='0',font_index='-1',font_size=f'{em:.4f}'.rstrip('0').rstrip('.'),thickness=f'{half:g}',embeded_depth=f'{half:g}',rotate_angle='0',text_gap='0',bold='0',italic='0',surface_type='1',hit_mesh='0',hit_position='0 0 0',hit_normal='0 0 0'))]
+    else:
+        # Orca's shape record: `scale` is the em size over the font's 2048 units per em (shapes are stored x1000), `depth` the
+        # emboss depth, and `transform` the centre of the text mesh in the part's frame.
+        records=[('slic3rpe:shape',dict(scale=repr(em/2048/1000),depth=f'{depth:g}',transform=f'1 0 0 0 1 0 0 0 1 0 0 {depth/2-TEXT_FLOOR:.9g}')),
+                 ('slic3rpe:text',dict(text=info['text'],style_name='NORMAL',line_height=f'{em:.4f}'.rstrip('0').rstrip('.'),horizontal='center',vertical='middle',family='swiss',face_name=info['font']))]
+    return local,transform,matrix,records
 def meta(n,k,v):ET.SubElement(n,'metadata',key=k,value=safe_name(v) if k in ('name','plater_name') else str(v))
 def write_batch(path,variants,plates,settings,printer,author,slicer='bambu_studio'):
     target=SLICERS[slicer]
@@ -56,8 +68,8 @@ def write_batch(path,variants,plates,settings,printer,author,slicer='bambu_studi
         for i,(name,(verts,faces)) in enumerate(var['parts']):
             blocker=name=='Tunnel support blocker'
             textpart=None
-            if target['family']=='bambu' and var.get('text') and 1<=i<=len(var['text']) and not blocker and name!=NFC_NAME:
-                verts,transforms[oid],matrix,attrs=editable_text(verts,var['text'][i-1]);textpart=(matrix,attrs)
+            if target.get('text') and var.get('text') and 1<=i<=len(var['text']) and not blocker and name!=NFC_NAME:
+                verts,transforms[oid],matrix,records=editable_text(verts,var['text'][i-1],target['text']);textpart=(matrix,records)
             partids.append(oid);obj=ET.SubElement(res,q('object'),id=str(oid),type='model',name=safe_name(name),pid='1',pindex=str((body if i==0 else text)-1))
             mesh=ET.SubElement(obj,q('mesh'));vnode=ET.SubElement(mesh,q('vertices'));tnode=ET.SubElement(mesh,q('triangles'))
             for x,y,z in verts:ET.SubElement(vnode,q('vertex'),x=str(x),y=str(y),z=str(z))
@@ -69,7 +81,8 @@ def write_batch(path,variants,plates,settings,printer,author,slicer='bambu_studi
             kind='negative_part' if pocket or (i and settings['style']=='cut') else 'normal_part'
             if blocker:kind='support_blocker'
             pc=ET.SubElement(oc,'part',id=str(oid),subtype=kind);meta(pc,'name',name+' | '+r['filament_roles'][0 if i==0 else 1]);meta(pc,'extruder',0 if blocker else body if i==0 or pocket else text);meta(pc,'matrix',textpart[0] if textpart else '1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1')
-            if textpart:ET.SubElement(pc,'text_info',**textpart[1])
+            if textpart:
+                for tag,attrs in textpart[1]:ET.SubElement(pc,tag,**attrs)
             ET.SubElement(pc,'mesh_stat',face_count=str(len(faces)),edges_fixed='0',degenerate_facets='0',facets_removed='0',facets_reversed='0',backwards_edges='0');oid+=1
         assembly=ET.SubElement(res,q('object'),id=str(aid),type='model',name=safe_name(' - '.join(r['lines'])));comp=ET.SubElement(assembly,q('components'))
         for pid in partids:ET.SubElement(comp,q('component'),objectid=str(pid),**({'transform':transforms[pid]} if pid in transforms else {}))

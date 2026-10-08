@@ -53,7 +53,8 @@ def check(z, sleeve, style, slicer):
     objects = {o.get('id'): o for o in model.findall('m:resources/m:object', ns)}
     assemblies = [o for o in objects.values() if o.find('m:components', ns) is not None]
     assert len(assemblies) == len(rows)
-    config = ET.fromstring(z.read('Metadata/model_settings.config'))
+    # Orca writes its slic3rpe: text records without declaring the prefix; declare it so a namespace-aware parser accepts them.
+    config = ET.fromstring(z.read('Metadata/model_settings.config').replace(b'<config>', b'<config xmlns:slic3rpe="urn:slic3rpe">', 1))
     cfg_objects = config.findall('object')
     body_bounds = []
     for variant, asm in enumerate(assemblies):
@@ -77,23 +78,31 @@ def check(z, sleeve, style, slicer):
             assert len(blockers) == 1
         else:
             assert not paint and not blockers
-        texts = [p for p in parts if p.find('text_info') is not None]
         for c, p in zip(comps[1:4], parts[1:4]):
             obj = objects[c.get('objectid')]; assert manifold(obj), f'{profile}: text part is not a closed surface'
             tb = bounds(vertices(obj), c.get('transform'))
             assert tb[2][0] > -0.011 and tb[2][1] < 0.611 + 1e-6, (profile, tb[2])
-            ti = p.find('text_info')
-            if slicer == 'bambu_studio':
-                assert ti is not None, f'{profile}: text is not editable'
+            editable = slicer in ('bambu_studio', 'orca')
+            if editable:
                 matrix = {m.get('key'): m.get('value') for m in p.findall('metadata')}['matrix'].split()
                 t = c.get('transform').split()
                 # part matrix (4x4 rows, translation last) must agree with the component transform (3x4, translation last)
                 assert [float(x) for x in (matrix[0:3] + matrix[4:7] + matrix[8:11] + [matrix[3], matrix[7], matrix[11]])] == [float(x) for x in t]
-                assert ti.get('text') and float(ti.get('thickness')) + float(ti.get('embeded_depth')) == 0.6
+                if slicer == 'bambu_studio':
+                    ti = p.find('text_info')
+                    assert ti is not None and ti.get('text'), f'{profile}: text is not editable'
+                    assert float(ti.get('thickness')) + float(ti.get('embeded_depth')) == 0.6
+                else:
+                    shape = p.find('{urn:slic3rpe}shape'); text = p.find('{urn:slic3rpe}text')
+                    assert shape is not None and text is not None and text.get('text'), f'{profile}: text is not editable'
+                    assert float(shape.get('depth')) == 0.6 and text.get('face_name')
+                    # the local mesh sits on [-0.015, depth - 0.015], as Orca builds it
+                    lz = bounds(vertices(obj))[2]
+                    assert abs(lz[0] + 0.015) < 2e-3 and abs(lz[1] - 0.585) < 2e-3, lz
             else:
-                assert ti is None and c.get('transform') is None
-        if slicer == 'bambu_studio':
-            assert len(texts) == 3
+                assert p.find('text_info') is None and p.find('{urn:slic3rpe}text') is None and c.get('transform') is None
+        if slicer in ('bambu_studio', 'orca'):
+            assert len([p for p in parts if p.find('text_info') is not None or p.find('{urn:slic3rpe}text') is not None]) == 3
         for oid in [c.get('objectid') for c in comps]:
             vz = bounds(vertices(objects[oid]), next((c.get('transform') for c in comps if c.get('objectid') == oid), None))[2]
             assert vz[0] > -0.011 and vz[1] < 26, 'a part sticks out of the flat print'
@@ -121,6 +130,10 @@ async def main():
                 assert project, names
                 with zipfile.ZipFile(z.open(project[0])) as p:
                     assert p.testzip() is None and 'Metadata/Slic3r_PE_model.config' in p.namelist()
+                    cfg = ET.fromstring(p.read('Metadata/Slic3r_PE_model.config').replace(b'<config>', b'<config xmlns:slic3rpe="urn:slic3rpe">', 1))
+                    texts = cfg.findall('.//{urn:slic3rpe}text')
+                    assert texts and len(texts) % 3 == 0, len(texts)
+                    assert len(cfg.findall('.//{urn:slic3rpe}shape')) == len(texts)
             else:
                 with zipfile.ZipFile(z.open('Filament_Labels.3mf')) as p:
                     assert p.testzip() is None
