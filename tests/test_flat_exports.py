@@ -97,9 +97,10 @@ def check(z, sleeve, style, slicer):
                     assert shape is not None and text is not None and text.get('text'), f'{profile}: text is not editable'
                     assert float(shape.get('depth')) == 0.6 and text.get('face_name') == 'Helvetica'
                     assert 'NSFontNameAttribute' in text.get('font_descriptor') and text.get('font_descriptor_type') == 'wxFontDescriptor_MacOsX'
-                    # the local mesh sits on [-0.015, depth - 0.015], as Orca builds it
+                    # the local mesh spans [-depth, 0] with its origin on the face, as Orca rebuilds an edited line
                     lz = bounds(vertices(obj))[2]
-                    assert abs(lz[0] + 0.015) < 2e-3 and abs(lz[1] - 0.585) < 2e-3, lz
+                    assert abs(lz[0] + 0.6) < 2e-3 and abs(lz[1]) < 2e-3, lz
+                    assert abs(float(shape.get('transform').split()[-1]) + 0.3) < 1e-6
             else:
                 assert p.find('text_info') is None and p.find('{urn:slic3rpe}text') is None and c.get('transform') is None
         if slicer in ('bambu_studio', 'orca'):

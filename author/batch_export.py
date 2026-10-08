@@ -28,11 +28,11 @@ def editable_text(verts,info,kind):
 
     kind 'bambu': Bambu Studio's text_info. kind 'orca': Orca Slicer's slic3rpe:shape and slic3rpe:text records. Both keep the
     text part-local, turned 180 degrees about Y so it reads from the bed side; they differ in where the local origin sits
-    along Z (Bambu Studio spans [-embedded, +thickness] around it, Orca [0, depth], both less the floor offset)."""
+    along Z (Bambu Studio spans [-embedded, +thickness] around it less the floor offset; Orca spans [-depth, 0], the way its own text tool rebuilds an edited line)."""
     xs=[v[0] for v in verts];ys=[v[1] for v in verts]
     cx=(min(xs)+max(xs))/2;cy=(min(ys)+max(ys))/2
     depth=info['depth'];em=info['size']*OPENSCAD_TO_EM
-    tz=(depth/2-TEXT_FLOOR) if kind=='bambu' else (depth-TEXT_FLOOR)   # world z of the local origin; text spans world z [0, depth]
+    tz=(depth/2-TEXT_FLOOR) if kind=='bambu' else 0.0   # world z of the local origin; text spans world z [0, depth]. Orca puts it on the face and builds the text from there
     local=[(cx-x,y-cy,tz-z) for x,y,z in verts]
     transform=f'-1 0 0 0 1 0 0 0 -1 {cx:.6f} {cy:.6f} {tz:.6f}'
     matrix=f'-1 0 0 {cx:.6f} 0 1 0 {cy:.6f} 0 0 -1 {tz:.6f} 0 0 0 1'
@@ -42,7 +42,7 @@ def editable_text(verts,info,kind):
     else:
         # Orca's shape record: `scale` is the em size over the font's 2048 units per em (shapes are stored x1000), `depth` the
         # emboss depth, and `transform` the centre of the text mesh in the part's frame.
-        records=[('slic3rpe:shape',dict(scale=repr(em/2048/1000),depth=f'{depth:g}',transform=f'1 0 0 0 1 0 0 0 1 0 0 {depth/2-TEXT_FLOOR:.9g}')),
+        records=[('slic3rpe:shape',dict(scale=repr(em/2048/1000),depth=f'{depth:g}',transform=f'1 0 0 0 1 0 0 0 1 0 0 {-depth/2:.9g}')),
                  ('slic3rpe:text',dict(text=info['text'],style_name='NORMAL',line_height=f'{em:.4f}'.rstrip('0').rstrip('.'),horizontal='center',vertical='middle',family='swiss',face_name=orca_font(info['font'])[1],**orca_font(info['font'])[0]))]
     return local,transform,matrix,records
 def meta(n,k,v):ET.SubElement(n,'metadata',key=k,value=safe_name(v) if k in ('name','plater_name') else str(v))
