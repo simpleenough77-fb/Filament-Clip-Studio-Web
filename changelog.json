@@ -1,6 +1,10 @@
 {
   "note": "Newest first. Add an entry at the top for every change visitors would notice. kind: New, Improved, Fixed or Removed. Dates are UTC (YYYY-MM-DD).",
   "entries": [
+    {"date": "2026-10-07", "kind": "New", "title": "Polymaker, Panchroma and Inland spools", "details": ["Polymaker and Panchroma 1 kg spools and Inland cardboard spools each have their own fitted clip and a full catalog of types and colors. Inland is cardboard-only."]},
+    {"date": "2026-10-07", "kind": "Improved", "title": "Improved clip STLs for every brand", "details": ["Every clip body now comes from a fresh, improved STL, one per brand, so a change to one brand never affects another. Sunlu and Jayo now have their own clips instead of sharing the Bambu Lab one.", "Holder sleeves carry rebuilt support painting and the tunnel support blocker for each brand."]},
+    {"date": "2026-10-07", "kind": "Improved", "title": "Every clip prints face down", "details": ["Clips print flat with the label face on the plate, with or without a holder sleeve, and the plate layout uses that flat footprint. In Bambu Studio projects each text line is an editable text part."]},
+    {"date": "2026-10-07", "kind": "Improved", "title": "Brands and types are listed alphabetically", "details": ["The brand and type dropdowns in the studio are now in alphabetical order."]},
     {"date": "2026-10-06", "kind": "Improved", "title": "Sleeve supports checked in Orca Slicer and ElegooSlicer",
      "details": ["Sleeve clip exports were opened and sliced in the Orca Slicer and ElegooSlicer apps, including ElegooSlicer with its own Centauri Carbon printer profile selected. Neither warns that supports are off, and plate 1 slices with manual supports in both. Creality Print and Anycubic Slicer Next have not been checked in their apps."]},
     {"date": "2026-10-06", "kind": "Fixed", "title": "Snapmaker Orca no longer warns that supports are off for sleeve clips",

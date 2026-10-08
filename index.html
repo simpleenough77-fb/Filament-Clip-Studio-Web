@@ -66,13 +66,16 @@ a.button.secondary{background:#243141;color:#e5ebf3}a.text{color:#83b0ea}
 </div><video class="anim" width="640" height="480" autoplay loop muted playsinline preload="metadata" poster="./images/animations/Filament-Clip-Spool-v5-poster.jpg" aria-label="Animation: slide the clip onto the spool, guide the loose filament end to the tunnel and thread it through"><source src="./images/animations/Filament-Clip-Spool-v5.mp4" type="video/mp4"></video><p class="anim-cap">Slide the clip onto the spool, then thread the loose end through the tunnel to hold it in place.</p></section>
 
 <section class="panel" id="spools"><h2>Supported spools</h2>
-<p>Each clip is shaped and physically tested for one brand&rsquo;s spool, so support grows one fitted brand at a time. Some spools share a fit: Sunlu&rsquo;s 1&nbsp;kg rolls and Jayo&rsquo;s 1.1&nbsp;kg reusable spools use the Bambu Lab clip. For every supported brand, the catalog lists every public type and color the manufacturer shows on its website, with a link to the source.</p>
+<p>Each clip is shaped and physically tested for one brand&rsquo;s spool, so support grows one fitted brand at a time. Sunlu&rsquo;s 1&nbsp;kg rolls and Jayo&rsquo;s 1.1&nbsp;kg reusable spools have their own fitted clips. For every supported brand, the catalog lists every public type and color the manufacturer shows on its website, with a link to the source.</p>
 <div class="brands" id="brandList">
 <div class="brand-card"><h3>Bambu Lab</h3><div class="count">Fitted and tested</div></div>
 <div class="brand-card"><h3>Cookiecad</h3><div class="count">Fitted and tested</div></div>
 <div class="brand-card"><h3>Amolen</h3><div class="count">Fitted and tested</div></div>
-<div class="brand-card"><h3>Sunlu</h3><div class="count">1 kg rolls &middot; uses the Bambu Lab clip</div></div>
-<div class="brand-card"><h3>Jayo</h3><div class="count">1.1 kg reusable spools &middot; uses the Bambu Lab clip</div></div>
+<div class="brand-card"><h3>Sunlu</h3><div class="count">1 kg rolls &middot; fitted and tested</div></div>
+<div class="brand-card"><h3>Jayo</h3><div class="count">1.1 kg reusable spools &middot; fitted and tested</div></div>
+<div class="brand-card"><h3>Polymaker</h3><div class="count">1 kg spools &middot; fitted and tested</div></div>
+<div class="brand-card"><h3>Panchroma</h3><div class="count">1 kg spools &middot; fitted and tested</div></div>
+<div class="brand-card"><h3>Inland</h3><div class="count">Cardboard spools &middot; fitted and tested</div></div>
 </div>
 <div class="brands">
 <div class="brand-card soon"><h3>Creality</h3><div class="count">Coming next</div></div>
@@ -112,7 +115,7 @@ a.button.secondary{background:#243141;color:#e5ebf3}a.text{color:#83b0ea}
   for(const r of rows.slice(1)){if(!r[0])continue;const b=by.get(r[0])||{types:new Set(),n:0};b.types.add(r[1]);b.n++;by.set(r[0],b);}
   if(!by.size)return;
   const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  document.getElementById('brandList').innerHTML=[...by].map(([m,b])=>`<div class="brand-card"><h3>${esc(m)}</h3><div class="count">${({Sunlu:'1 kg rolls &middot; uses the Bambu Lab clip',Jayo:'1.1 kg reusable spools &middot; uses the Bambu Lab clip'})[m]||'Fitted and tested'} &middot; ${b.types.size} types &middot; ${b.n} colors</div></div>`).join('');
+  document.getElementById('brandList').innerHTML=[...by].map(([m,b])=>`<div class="brand-card"><h3>${esc(m)}</h3><div class="count">${({Sunlu:'1 kg rolls',Jayo:'1.1 kg reusable spools',Polymaker:'1 kg spools',Panchroma:'1 kg spools',Inland:'Cardboard spools'}[m]||'')?({Sunlu:'1 kg rolls',Jayo:'1.1 kg reusable spools',Polymaker:'1 kg spools',Panchroma:'1 kg spools',Inland:'Cardboard spools'}[m])+' &middot; fitted and tested':'Fitted and tested'} &middot; ${b.types.size} types &middot; ${b.n} colors</div></div>`).join('');
  }catch(e){/* keep the static list */}
 })();
 </script>
