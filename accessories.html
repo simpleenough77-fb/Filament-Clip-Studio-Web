@@ -19,7 +19,7 @@
 .photos{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:700px){.photos{grid-template-columns:1fr}}
 figure{margin:0}figure img{width:100%;border-radius:10px;display:block;aspect-ratio:4/3;object-fit:cover;background:#0f1721}figcaption{font-size:13px;color:#8d9caf;margin-top:6px}
 figure.missing img{display:none}figure .ph{display:none}figure.missing .ph{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;border:2px dashed #3e4c5e;border-radius:10px;color:#6d7c8f;font-size:14px;background:#0f1721}
-.support{margin-top:34px;padding:22px 24px;background:#18212d;border:1px solid #2e3a4a;border-radius:16px}.support h2{font-size:19px;margin:0 0 8px;color:#f1f5fa}.support p{color:#b3becc;line-height:1.6;margin:0 0 12px;font-size:14px}.support p:last-child{margin:0}.support a.kofi{background:#83b0ea;color:#101a26;font:600 14px system-ui;border-radius:8px;padding:10px 16px;text-decoration:none;display:inline-block}.support a.text{color:#83b0ea}</style>
+.support{margin-top:34px;padding:22px 24px;background:#18212d;border:1px solid #2e3a4a;border-radius:16px}.support h2{font-size:19px;margin:0 0 8px;color:#f1f5fa}.support p{color:#b3becc;line-height:1.6;margin:0 0 12px;font-size:14px}.support p:last-child{margin:0}.support a.kofi{background:#83b0ea;color:#101a26;font:600 14px system-ui;border-radius:8px;padding:10px 16px;text-decoration:none;display:inline-block}.support a.text{color:#83b0ea}.anim{display:block;width:100%;max-width:640px;height:auto;margin:16px auto 0;border-radius:12px;background:#f2f2f0}.anim-cap{font-size:13px;color:#8d9caf;text-align:center;margin:8px 0 0}</style>
 </head>
 <body><main>
 <a href="./" aria-label="Clip Studio home" style="display:inline-block;margin-bottom:14px"><img src="./images/brand/reverse-transparent.svg" alt="Clip Studio" height="34" style="display:block;height:34px;width:auto"></a><br>
@@ -29,6 +29,7 @@ figure.missing img{display:none}figure .ph{display:none}figure.missing .ph{displ
 <p>Clip holders mount on AMS units, filament dryers and shelves so each spool's label sits right where you load it. Mounting templates center a holder on a specific device. Print them in any filament; they are attached with 24&nbsp;mm double-sided nano tape.</p>
 <p class="notice">Easiest: in the studio, enter how many AMS HT, AMS 2 Pro and SpacePi X4 units you have. The batch then includes one template per device type and the holders each device needs: one one-post holder per AMS HT, one four-post holder per AMS 2 Pro and two two-post holders per SpacePi X4. The STLs below are for printing them on their own.</p>
 <p class="notice">Clips that go in a holder need the <strong>holder sleeve</strong>, a collar on the clip that secures it in the holder. The studio switches it on automatically when you enter AMS or dryer units.</p>
+<video class="anim" width="640" height="480" autoplay loop muted playsinline preload="metadata" poster="./images/animations/Filament-Clip-Holder-v1-poster.jpg" aria-label="Animation: a clip with a holder sleeve sliding into a holder"><source src="./images/animations/Filament-Clip-Holder-v1.mp4" type="video/mp4"></video><p class="anim-cap">The holder sleeve on the clip slides into the holder and locks it in place.</p>
 <div class="links"><a class="button" href="./studio.html">Open the studio</a><a class="button" href="./guide.html">User guide</a></div>
 
 <section class="panel"><h2>In use</h2>
@@ -46,6 +47,7 @@ figure.missing img{display:none}figure .ph{display:none}figure.missing .ph{displ
 <p class="notice small">For every device: clean both surfaces, the spot on the device and the back of the holder, with isopropyl alcohol and let them dry. Dry-fit before you tape, because tape is hard to reposition once it has bonded.</p>
 
 <div class="device" id="ams-2-pro-fit"><h3>Bambu Lab AMS 2 Pro &middot; one four-post holder</h3>
+<video class="anim" width="768" height="480" autoplay loop muted playsinline preload="metadata" poster="./images/animations/AMS-2-Pro-Holder-Mounting-v3-poster.jpg" aria-label="Animation: mounting the four-post holder on an AMS 2 Pro, sliding the template cutout under the center latch and pressing the holder into place"><source src="./images/animations/AMS-2-Pro-Holder-Mounting-v3.mp4" type="video/mp4"></video><p class="anim-cap">Mounting the four-post holder on an AMS 2 Pro.</p>
 <p class="small">Printing on a bed smaller than 320&nbsp;mm? Use the split four-post holder: slide its two halves together at the dovetail in the middle, then follow the same steps.</p>
 <p>The template has three narrow arms, one at each end and one in the middle. They slot into the three narrow slots in the four-post holder, locking the template onto the holder. The notch on top of the template fits over the top latch on the AMS 2 Pro, which centers the holder on the unit.</p>
 <ol>
@@ -108,4 +110,4 @@ figure.missing img{display:none}figure .ph{display:none}figure.missing .ph{displ
  }catch(e){for(const id of ['holders','templates'])document.getElementById(id).innerHTML='<p class="small">Unable to load the accessory list: '+esc(e.message)+'</p>';}
 })();
 </script>
-</body></html>
+<script>if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.querySelectorAll('video.anim').forEach(v=>{v.removeAttribute('autoplay');v.pause();v.controls=true})</script></body></html>
