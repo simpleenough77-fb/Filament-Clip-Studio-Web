@@ -41,7 +41,7 @@ a.button.secondary{background:#243141;color:#e5ebf3}a.text{color:#83b0ea}
 .notice{border-left:3px solid #7398c8;padding-left:13px}.small{font-size:13px}
 .support{margin-top:34px;padding:22px 24px;background:#18212d;border:1px solid #2e3a4a;border-radius:16px}.support h2{font-size:19px;margin:0 0 8px;color:#f1f5fa}.support p{color:#b3becc;line-height:1.6;margin:0 0 12px;font-size:14px}.support p:last-child{margin:0}.support a.kofi{background:#83b0ea;color:#101a26;font:600 14px system-ui;border-radius:8px;padding:10px 16px;text-decoration:none;display:inline-block}.support a.text{color:#83b0ea}
 @media(max-width:820px){.hero,.split{grid-template-columns:1fr}.steps{grid-template-columns:1fr}h1{font-size:34px}nav .brand{flex-basis:100%}}
-</style>
+.anim{display:block;width:100%;max-width:640px;height:auto;margin:16px auto 0;border-radius:12px;background:#f2f2f0}.anim-cap{font-size:13px;color:#8d9caf;text-align:center;margin:8px 0 0}</style>
 </head>
 <body><main>
 <nav><a class="brand" href="./" aria-label="Clip Studio home"><img src="./images/brand/reverse-transparent.svg" alt="Clip Studio" height="46" style="display:block;height:46px;width:auto"></a><a href="./studio.html">Studio</a><a href="./accessories.html">Holders &amp; templates</a><a href="./guide.html">Guide</a><a href="./changelog.html">Change log</a></nav>
@@ -63,16 +63,19 @@ a.button.secondary{background:#243141;color:#e5ebf3}a.text{color:#83b0ea}
 <div class="step"><div class="n">1 &middot; PICK</div><h3>Choose your filaments</h3><p>Select brand, type and color from the catalog, import a CSV, or paste rows from a spreadsheet. Up to 100 clips per batch.</p></div>
 <div class="step"><div class="n">2 &middot; PRINT</div><h3>Download one 3MF</h3><p>The studio lays out every clip on print plates for your printer (Bambu Lab, Creality, Elegoo, Anycubic, Snapmaker or Prusa) and writes the file for your slicer. Enter your AMS and dryer counts to add the holders and mounting templates they need.</p></div>
 <div class="step"><div class="n">3 &middot; CLIP</div><h3>Label and mount</h3><p>Clip a label onto each spool. When a spool goes into an AMS or dryer, its clip goes in the holder on the front, where a sleeve on the clip secures it.</p></div>
-</div></section>
+</div><video class="anim" width="640" height="480" autoplay loop muted playsinline preload="metadata" poster="./images/animations/Filament-Clip-Spool-v5-poster.jpg" aria-label="Animation: slide the clip onto the spool, guide the loose filament end to the tunnel and thread it through"><source src="./images/animations/Filament-Clip-Spool-v5.mp4" type="video/mp4"></video><p class="anim-cap">Slide the clip onto the spool, then thread the loose end through the tunnel to hold it in place.</p></section>
 
 <section class="panel" id="spools"><h2>Supported spools</h2>
-<p>Each clip is shaped and physically tested for one brand&rsquo;s spool, so support grows one fitted brand at a time. Some spools share a fit: Sunlu&rsquo;s 1&nbsp;kg rolls and Jayo&rsquo;s 1.1&nbsp;kg reusable spools use the Bambu Lab clip. For every supported brand, the catalog lists every public type and color the manufacturer shows on its website, with a link to the source.</p>
+<p>Each clip is shaped and physically tested for one brand&rsquo;s spool, so support grows one fitted brand at a time. Sunlu&rsquo;s 1&nbsp;kg rolls and Jayo&rsquo;s 1.1&nbsp;kg reusable spools have their own fitted clips. For every supported brand, the catalog lists every public type and color the manufacturer shows on its website, with a link to the source.</p>
 <div class="brands" id="brandList">
 <div class="brand-card"><h3>Bambu Lab</h3><div class="count">Fitted and tested</div></div>
 <div class="brand-card"><h3>Cookiecad</h3><div class="count">Fitted and tested</div></div>
 <div class="brand-card"><h3>Amolen</h3><div class="count">Fitted and tested</div></div>
-<div class="brand-card"><h3>Sunlu</h3><div class="count">1 kg rolls &middot; uses the Bambu Lab clip</div></div>
-<div class="brand-card"><h3>Jayo</h3><div class="count">1.1 kg reusable spools &middot; uses the Bambu Lab clip</div></div>
+<div class="brand-card"><h3>Sunlu</h3><div class="count">1 kg rolls &middot; fitted and tested</div></div>
+<div class="brand-card"><h3>Jayo</h3><div class="count">1.1 kg reusable spools &middot; fitted and tested</div></div>
+<div class="brand-card"><h3>Polymaker</h3><div class="count">1 kg spools &middot; fitted and tested</div></div>
+<div class="brand-card"><h3>Panchroma</h3><div class="count">1 kg spools &middot; fitted and tested</div></div>
+<div class="brand-card"><h3>Inland</h3><div class="count">Cardboard spools &middot; fitted and tested</div></div>
 </div>
 <div class="brands">
 <div class="brand-card soon"><h3>Creality</h3><div class="count">Coming next</div></div>
@@ -112,7 +115,7 @@ a.button.secondary{background:#243141;color:#e5ebf3}a.text{color:#83b0ea}
   for(const r of rows.slice(1)){if(!r[0])continue;const b=by.get(r[0])||{types:new Set(),n:0};b.types.add(r[1]);b.n++;by.set(r[0],b);}
   if(!by.size)return;
   const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  document.getElementById('brandList').innerHTML=[...by].map(([m,b])=>`<div class="brand-card"><h3>${esc(m)}</h3><div class="count">${({Sunlu:'1 kg rolls &middot; uses the Bambu Lab clip',Jayo:'1.1 kg reusable spools &middot; uses the Bambu Lab clip'})[m]||'Fitted and tested'} &middot; ${b.types.size} types &middot; ${b.n} colors</div></div>`).join('');
+  document.getElementById('brandList').innerHTML=[...by].map(([m,b])=>`<div class="brand-card"><h3>${esc(m)}</h3><div class="count">${({Sunlu:'1 kg rolls',Jayo:'1.1 kg reusable spools',Polymaker:'1 kg spools',Panchroma:'1 kg spools',Inland:'Cardboard spools'}[m]||'')?({Sunlu:'1 kg rolls',Jayo:'1.1 kg reusable spools',Polymaker:'1 kg spools',Panchroma:'1 kg spools',Inland:'Cardboard spools'}[m])+' &middot; fitted and tested':'Fitted and tested'} &middot; ${b.types.size} types &middot; ${b.n} colors</div></div>`).join('');
  }catch(e){/* keep the static list */}
 })();
 </script>
@@ -130,4 +133,4 @@ a.button.secondary{background:#243141;color:#e5ebf3}a.text{color:#83b0ea}
  }catch(e){/* keep it hidden */}
 })();
 </script>
-</body></html>
+<script>if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.querySelectorAll('video.anim').forEach(v=>{v.removeAttribute('autoplay');v.pause();v.controls=true})</script></body></html>

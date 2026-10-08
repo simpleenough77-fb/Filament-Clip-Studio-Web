@@ -73,9 +73,13 @@ def _write_one(path, variants, plates, settings, printer, author):
             pocket = name == NFC_NAME
             kind = 'SupportBlocker' if blocker else 'NegativeVolume' if pocket or (i and settings['style'] == 'cut') else 'ModelPart'
             vc = ET.SubElement(oc, 'volume', firstid=str(tcount), lastid=str(tcount + len(faces) - 1))
-            for key, value in [('name', safe_name(name)), ('volume_type', kind), ('matrix', '1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1')] + \
+            records = None
+            for key, value in [('name', safe_name(name)), ('volume_type', kind), ('matrix', matrix if records else '1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1')] + \
+                    ([('source_is_builtin_volume', '1')] if records else []) + \
                     ([] if blocker else [('extruder', str(body if i == 0 or pocket else text))]):
                 ET.SubElement(vc, 'metadata', type='volume', key=key, value=value)
+            for tag, attrs in records or []:
+                ET.SubElement(vc, tag, **attrs)
             ET.SubElement(vc, 'mesh', edges_fixed='0', degenerate_facets='0', facets_removed='0', facets_reversed='0', backwards_edges='0')
             voffset += len(verts)
             tcount += len(faces)

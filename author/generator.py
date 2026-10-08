@@ -12,7 +12,7 @@ PRINTERS=json.loads((AUTHOR/'Printers.json').read_text())
 PRINTER_ALIASES=json.loads((AUTHOR/'Printer_Aliases.json').read_text())
 from slicers import SLICERS,DEFAULT_FOR_BRAND
 from placement import plan
-from print_geometry import body_code,standing_parts
+from print_geometry import PROFILES,body_code
 import batch_library
 import accessories
 import nfc
@@ -68,7 +68,7 @@ def validate(data, allow_empty=False):
         if r.get('product') not in PRODUCTS:raise ValueError('A product is not in the approved catalog.')
         p=PRODUCTS[r['product']]
         profile=p['spool_profile'] # Author-maintained manufacturer/spool mapping
-        if profile not in ('Bambu Original','Cookiecad','Amolen 1kg'):raise ValueError('Choose an accepted spool profile.')
+        if profile not in PROFILES:raise ValueError('Choose an accepted spool profile.')
         n=r.get('quantity',1)
         if isinstance(n,bool) or str(n)!=str(int(n)) or not 1<=int(n)<=100:raise ValueError('Quantities must be whole numbers from 1 to 100.')
         swatch=r.get('swatch') or p.get('swatch')
@@ -124,7 +124,7 @@ async def preflight(data):
     data=validate(data);s=data['settings'];sizes=[s['vendor_size'],s['type_size'],s['color_size']]
     checks=[];code=includes()
     for i,r in enumerate(data['rows']):
-        p=PRODUCTS[r['product']];lines=[p['manufacturer'],p['filament_type'],p['color_name']];width={'Bambu Original':68,'Cookiecad':62.5,'Amolen 1kg':61}[r['spool_profile']]-4
+        p=PRODUCTS[r['product']];lines=[p['manufacturer'],p['filament_type'],p['color_name']];width=PROFILES[r['spool_profile']]['width']-4
         for j,t in enumerate(lines):
             code+=f'let(t={json.dumps(t)},sz={sizes[j]},font={json.dumps(s["font"])},f=label_fit(t,sz,font,{width}),m=textmetrics(f,size=sz,font=font)) echo([{i},{j},t,f,m.size.x,m.size.y]);\n'
         checks.append(dict(**r,lines=lines,display=[],width=width,body_color=colors(r,s)[0],text_color=colors(r,s)[1],filament_roles=filament_roles(r,s),swatch_palette=palette(r),swatch_effects=p.get('swatch_effects',[]),swatch_description=p.get('swatch_description',''),body_actual=s['body_mode']=='filament',text_actual=s['text_mode']=='filament'))
@@ -253,11 +253,10 @@ async def generate(key,ack=False):
     for index,r in enumerate(checks):
         params=f'lines={json.dumps(r["lines"],ensure_ascii=False)}; sizes={json.dumps(sizes)}; font={json.dumps(s["font"])}; width={r["width"]};\n'
         base=includes()+params;geometry=body_code(r['spool_profile'],s['holder_sleeve']=='yes')
-        # Use the owner-tested sleeve mesh directly. Running it through the
+        # Use the owner's sleeve mesh directly. Running it through the
         # label Boolean can recreate the small tunnel/plate notch.
         if s['holder_sleeve']=='yes':
-            from tested_sleeves import body_mesh
-            bodymesh=body_mesh(r['spool_profile'])
+            bodymesh=load_stl(AUTHOR/(PROFILES[r['spool_profile']]['stem']+'_sleeve.stl'))
         else:
             cutter=nfc.sleeveless_cutter_scad(r['spool_profile'],s['tag_size']) if s['nfc']=='yes' else ''
             if s['style']=='part':bodycode=base+'difference(){'+geometry+'translate([0,0,-.01])label_all(lines,sizes,font,width,.61);'+cutter+'}'
@@ -269,14 +268,17 @@ async def generate(key,ack=False):
             path=meshdir/f'{index}_{i}.stl'
             code=base+(f'translate([0,0,-.01])label_line(lines,sizes,font,width,{i},.61);' if s['style']=='cut' else f'label_line(lines,sizes,font,width,{i},.6);')
             await run_scad(code,path);parts.append((label+' - '+r['display'][i],load_stl(path)))
+        # What a slicer's text tool needs to keep each line editable (the 3MF writer decides whether it can use it).
+        text_info=[dict(text=r['display'][i],font=s['font'].split(':')[0],size=sizes[i],depth=.6) for i in range(3)]
         if s['holder_sleeve']=='yes':
             from tested_sleeves import sleeve_parts
-            flags,blocker=sleeve_parts(r['spool_profile'],parts[0][1])
+            flags,blocker=sleeve_parts(PROFILES[r['spool_profile']],parts[0][1])
             parts.append(blocker)
             if s['nfc']=='yes':parts.append((nfc.NAME,nfc.sleeve_pocket_mesh(r['spool_profile'],s['tag_size'])))
-            variants.append(dict(check=r,parts=parts,support_paint=flags))
+            variants.append(dict(check=r,parts=parts,support_paint=flags,text=text_info))
         else:
-            variants.append(dict(check=r,parts=standing_parts(parts,r['spool_profile'])))
+            # Clips print flat, front face down, with or without a sleeve.
+            variants.append(dict(check=r,parts=parts,text=text_info))
     plates,extra=full_plan(checks,s)
     variants+=extra
     write_batch(out/'Filament_Labels.3mf',variants,plates,s,PRINTERS[s['printer']],AUTHOR,s['slicer'])

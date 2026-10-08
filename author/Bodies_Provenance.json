@@ -1,0 +1,114 @@
+{
+  "bambu.stl": {
+    "source": "Bambu Lab clip only.stl",
+    "source_sha256": "b3d4f04a1e113cfc7e993664b3a36b39699ad7191b4a6fa72eb8ae7e045bad29",
+    "sha256": "53f26c8ef581042971eac89ddb7de2d8a28578cfcb002f900320debaa129af2c",
+    "triangles": 22794,
+    "label_text_shells_dropped": 0
+  },
+  "bambu_sleeve.stl": {
+    "source": "Bambu Lab with sleeve.stl",
+    "source_sha256": "82290c8a35e32e9bed2951a375cc221f4bfbbf878d150f64883fe352aa49478e",
+    "sha256": "ba24bf34dad817f30261d7a0e5a98f03b0fe1882f67e0b971a9628793ea7ed94",
+    "triangles": 23342,
+    "label_text_shells_dropped": 0
+  },
+  "cookiecad.stl": {
+    "source": "Cookiecad clip only.stl",
+    "source_sha256": "d8ebdc5d4eeb46d88de0bbc4049b94055f81cf0c5777b7e100a674fb13ce8c16",
+    "sha256": "cf905faa50b099cfe14439e3d2f87319058bff5552a1e0282d9d929247239617",
+    "triangles": 22720,
+    "label_text_shells_dropped": 0
+  },
+  "cookiecad_sleeve.stl": {
+    "source": "Cookiecad with sleeve.stl",
+    "source_sha256": "9e0f01c188c18c595c5e13b8e6c411fe9e3a5abff72dbd5170289c3137bc0ff2",
+    "sha256": "6ea605b0440e07d3ec904fc3caf0488787c2c06145178e168860375b4ef38a9b",
+    "triangles": 23300,
+    "label_text_shells_dropped": 0
+  },
+  "amolen.stl": {
+    "source": "Amolen clip only.stl",
+    "source_sha256": "5db8260937a563ea85e51ce781068b11c086de3e111000eb5470530ed274ab48",
+    "sha256": "44a6b6943dd08eace847129399f53722ce353c6ce23a67ed8d08c3be35baff5a",
+    "triangles": 3212,
+    "label_text_shells_dropped": 25
+  },
+  "amolen_sleeve.stl": {
+    "source": "Amolen with sleeve.stl",
+    "source_sha256": "8710448da38fe801e2e6abe27fc2b88d72a28fea96d09f66730e5234387ede90",
+    "sha256": "ca14ff28b24974d4a1a403d1efd9ffb3e1e6f930fa52b90e1a8bd3f646d66d32",
+    "triangles": 3216,
+    "label_text_shells_dropped": 25
+  },
+  "sunlu.stl": {
+    "source": "Sunlu clip only.stl",
+    "source_sha256": "076b478c9b5a4608f502908c58a97acc372d8d5569f4ed169d074cc25029c22e",
+    "sha256": "db54ee19b9aa1333b7291f54501f8caf6167f72835e8de7714aa894aec4d0f8f",
+    "triangles": 25114,
+    "label_text_shells_dropped": 0
+  },
+  "sunlu_sleeve.stl": {
+    "source": "Sunlu with sleeve.stl",
+    "source_sha256": "912316180f0aef117bd705ef2960307db49eb7d25b0048cb1be0f7a527d95c01",
+    "sha256": "00485d6dbf8ddcf614b65cdbc84ad22a38d4418ae0368c9520070c45cd01f128",
+    "triangles": 26122,
+    "label_text_shells_dropped": 0
+  },
+  "jayo.stl": {
+    "source": "Jayo clip only.stl",
+    "source_sha256": "03085140148b656f3a25a7ebd49f2ecd380cb0384dcd6e8c250c8f1cad3ba937",
+    "sha256": "df7b9f9b2d8e1d16d91f794cdaaf01f662db53ba0095d0471655cb5ad6bd70a7",
+    "triangles": 25078,
+    "label_text_shells_dropped": 0
+  },
+  "jayo_sleeve.stl": {
+    "source": "Jayo with Sleeve.stl",
+    "source_sha256": "730a61bc1c7e5cabf62b21324441e29bf16ab8fd790758a4ad4ad2a4303a8d6e",
+    "sha256": "2c0da3d564c807cb5aa6354172f2aa04e72344bfdcbb9d2375f8e512660e3c08",
+    "triangles": 26068,
+    "label_text_shells_dropped": 0
+  },
+  "polymaker.stl": {
+    "source": "Polymaker clip only.stl",
+    "source_sha256": "6ed0fa9c035c62f5c7a21d0c746997e9785552b2daf502155e61466322b8d2a6",
+    "sha256": "bdaa7685f24a780b5158ce48c469264b2040af97d15cab637e6cf7b9c2678388",
+    "triangles": 19412,
+    "label_text_shells_dropped": 0
+  },
+  "polymaker_sleeve.stl": {
+    "source": "Polymaker with sleeve.stl",
+    "source_sha256": "518889cf875ffbbe3f01122a54ff13585879a94aee67d7302b64b2507f34bab3",
+    "sha256": "d06e2a211aa08dcb3c4727329eb80e1f6b9b415e7847818124cfaa95e7868689",
+    "triangles": 17362,
+    "label_text_shells_dropped": 0
+  },
+  "panchroma.stl": {
+    "source": "Panchroma clip only.stl",
+    "source_sha256": "c1fe90e4d8eb8da3cb40ea404452dd1fc95b4c58da7b4563b0f35f7e85a31b67",
+    "sha256": "9f4f8ea885c3b24c27b677ab075fbd53edcf7d878df0467abee6a5f8155dcf7c",
+    "triangles": 19410,
+    "label_text_shells_dropped": 0
+  },
+  "panchroma_sleeve.stl": {
+    "source": "Panchroma with sleeve.stl",
+    "source_sha256": "db467ff72c9baf4d651ba96a3f972f7bd8f43e05bc8a6f0aaa04ce97c2b781f3",
+    "sha256": "bce388f541fe987ee428930a68925b9c31e84ec476e4b5532ae5dd4860539803",
+    "triangles": 17362,
+    "label_text_shells_dropped": 0
+  },
+  "inland.stl": {
+    "source": "Inland clip only.stl",
+    "source_sha256": "90d414cc51a2e278f2f5a30a8ebff1e0fc8c108597c15fcf4f6b3ccb01824c6b",
+    "sha256": "bbe73f0bf1d54b39a87ff251c9830e80bff8e4f5e0833244101c454179b3f679",
+    "triangles": 19394,
+    "label_text_shells_dropped": 0
+  },
+  "inland_sleeve.stl": {
+    "source": "Inland with sleeve.stl",
+    "source_sha256": "d6e191fc6ff132cd00c3bd5085a1458b2dea4105d80490d3e28952c9b0597a68",
+    "sha256": "1e9cd1480ee8e80fb35976dd7f48248cf133595f4ff41bbb0b819d1c00162ac0",
+    "triangles": 17346,
+    "label_text_shells_dropped": 0
+  }
+}

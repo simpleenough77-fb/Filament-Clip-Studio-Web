@@ -9,6 +9,27 @@ def q(n):return '{'+NS+'}'+n
 def safe_name(value):
     # Bambu Studio applies filename-style restrictions to object and plate names.
     return re.sub(r'\s+', ' ', re.sub(r'[<>:/\\|?*"\x00-\x1f]', '-', str(value))).strip(' .') or 'Label'
+# Bambu Studio keeps a text part editable when the part carries a text_info record (text, font, size, thickness,
+# embedded depth) next to its mesh. The mesh stays what the generator made until the user edits the text, when Bambu Studio
+# rebuilds it from the record. Its text frame is a part-local frame turned 180 degrees about Y (the text reads from the
+# bed side, so its +Z points into the clip), covering [-embedded, +thickness] around the local origin.
+OPENSCAD_TO_EM=100/72      # OpenSCAD's text size is the letter height; Bambu Studio's font_size is the font's em size
+TEXT_FLOOR=0.015           # Bambu Studio offsets text meshes by this much along its Z
+def editable_text(verts,info,kind='bambu'):
+    """(part-local vertices, 3MF component transform, 4x4 matrix string, [(tag, attributes)]) for an editable Bambu Studio text part.
+
+    Bambu Studio keeps the text part-local, turned 180 degrees about Y so it reads from the bed side, spanning [-embedded, +thickness]
+    around the local origin less the floor offset. Orca and PrusaSlicer rebuild an edited line mirrored and displaced, so they get plain text."""
+    xs=[v[0] for v in verts];ys=[v[1] for v in verts]
+    cx=(min(xs)+max(xs))/2;cy=(min(ys)+max(ys))/2
+    depth=info['depth'];em=info['size']*OPENSCAD_TO_EM
+    tz=depth/2-TEXT_FLOOR   # world z of the local origin; text spans world z [0, depth]
+    local=[(cx-x,y-cy,tz-z) for x,y,z in verts]
+    transform=f'-1 0 0 0 1 0 0 0 -1 {cx:.6f} {cy:.6f} {tz:.6f}'
+    matrix=f'-1 0 0 {cx:.6f} 0 1 0 {cy:.6f} 0 0 -1 {tz:.6f} 0 0 0 1'
+    half=depth/2
+    records=[('text_info',dict(text=info['text'],font_name=info['font'],font_version='',style_name='Recommend',boldness='0',skew='0',font_index='-1',font_size=f'{em:.4f}'.rstrip('0').rstrip('.'),thickness=f'{half:g}',embeded_depth=f'{half:g}',rotate_angle='0',text_gap='0',bold='0',italic='0',surface_type='1',hit_mesh='0',hit_position='0 0 0',hit_normal='0 0 0'))]
+    return local,transform,matrix,records
 def meta(n,k,v):ET.SubElement(n,'metadata',key=k,value=safe_name(v) if k in ('name','plater_name') else str(v))
 def write_batch(path,variants,plates,settings,printer,author,slicer='bambu_studio'):
     target=SLICERS[slicer]
@@ -36,9 +57,12 @@ def write_batch(path,variants,plates,settings,printer,author,slicer='bambu_studi
             # Keep manual supports on the object itself. A slicer that replaces the project's print profile with the user's own
             # (Snapmaker Orca does, for the U1) drops project-level support settings but keeps per-object ones.
             meta(oc,'enable_support','1');meta(oc,'support_type','normal(manual)')
-        partids=[]
+        partids=[];transforms={}
         for i,(name,(verts,faces)) in enumerate(var['parts']):
             blocker=name=='Tunnel support blocker'
+            textpart=None
+            if target.get('text') and var.get('text') and 1<=i<=len(var['text']) and not blocker and name!=NFC_NAME:
+                verts,transforms[oid],matrix,records=editable_text(verts,var['text'][i-1],target['text']);textpart=(matrix,records)
             partids.append(oid);obj=ET.SubElement(res,q('object'),id=str(oid),type='model',name=safe_name(name),pid='1',pindex=str((body if i==0 else text)-1))
             mesh=ET.SubElement(obj,q('mesh'));vnode=ET.SubElement(mesh,q('vertices'));tnode=ET.SubElement(mesh,q('triangles'))
             for x,y,z in verts:ET.SubElement(vnode,q('vertex'),x=str(x),y=str(y),z=str(z))
@@ -49,10 +73,12 @@ def write_batch(path,variants,plates,settings,printer,author,slicer='bambu_studi
             pocket=name==NFC_NAME
             kind='negative_part' if pocket or (i and settings['style']=='cut') else 'normal_part'
             if blocker:kind='support_blocker'
-            pc=ET.SubElement(oc,'part',id=str(oid),subtype=kind);meta(pc,'name',name+' | '+r['filament_roles'][0 if i==0 else 1]);meta(pc,'extruder',0 if blocker else body if i==0 or pocket else text);meta(pc,'matrix','1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1')
+            pc=ET.SubElement(oc,'part',id=str(oid),subtype=kind);meta(pc,'name',name+' | '+r['filament_roles'][0 if i==0 else 1]);meta(pc,'extruder',0 if blocker else body if i==0 or pocket else text);meta(pc,'matrix',textpart[0] if textpart else '1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1')
+            if textpart:
+                for tag,attrs in textpart[1]:ET.SubElement(pc,tag,**attrs)
             ET.SubElement(pc,'mesh_stat',face_count=str(len(faces)),edges_fixed='0',degenerate_facets='0',facets_removed='0',facets_reversed='0',backwards_edges='0');oid+=1
         assembly=ET.SubElement(res,q('object'),id=str(aid),type='model',name=safe_name(' - '.join(r['lines'])));comp=ET.SubElement(assembly,q('components'))
-        for pid in partids:ET.SubElement(comp,q('component'),objectid=str(pid))
+        for pid in partids:ET.SubElement(comp,q('component'),objectid=str(pid),**({'transform':transforms[pid]} if pid in transforms else {}))
         oid+=1
     mats=ET.Element(q('basematerials'),id='1');res.insert(0,mats)
     for role,color in palette:ET.SubElement(mats,q('base'),name=safe_name(role),displaycolor=color+'FF')
