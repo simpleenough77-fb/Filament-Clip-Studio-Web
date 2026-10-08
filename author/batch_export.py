@@ -14,36 +14,21 @@ def safe_name(value):
 # rebuilds it from the record. Its text frame is a part-local frame turned 180 degrees about Y (the text reads from the
 # bed side, so its +Z points into the clip), covering [-embedded, +thickness] around the local origin.
 OPENSCAD_TO_EM=100/72      # OpenSCAD's text size is the letter height; Bambu Studio's font_size is the font's em size
-# Orca on macOS finds a text's font only through this descriptor (copied from a project Orca saved; the plist names the font),
-# and asks the person to pick a font when it is missing. Other platforms ignore it and use face_name.
-SLICER_FONT={'Liberation Sans':'Helvetica','DejaVu Sans':'Helvetica','Liberation Serif':'Times'}   # the slicer's name for the face the model was cut in
-def orca_font(name):
-    """Orca/Prusa font fields for a text line. The geometry is cut in a font bundled with the generator (Liberation Sans is
-    metric-compatible with Helvetica/Arial); the record names the system font the slicer should use when the line is edited."""
-    face=SLICER_FONT.get(name,name)
-    return dict(font_descriptor=f'3;90;0;0;43;<plist version="1.0"><dict><key>NSFontNameAttribute</key><string>{face}</string><key>NSFontSizeAttribute</key><real>13</real></dict></plist>',font_descriptor_type='wxFontDescriptor_MacOsX'),face
 TEXT_FLOOR=0.015           # Bambu Studio offsets text meshes by this much along its Z
-def editable_text(verts,info,kind):
-    """(part-local vertices, 3MF component transform, 4x4 matrix string, [(tag, attributes)]) for an editable text part.
+def editable_text(verts,info,kind='bambu'):
+    """(part-local vertices, 3MF component transform, 4x4 matrix string, [(tag, attributes)]) for an editable Bambu Studio text part.
 
-    kind 'bambu': Bambu Studio's text_info. kind 'orca': Orca Slicer's slic3rpe:shape and slic3rpe:text records. Both keep the
-    text part-local, turned 180 degrees about Y so it reads from the bed side; they differ in where the local origin sits
-    along Z (Bambu Studio spans [-embedded, +thickness] around it less the floor offset; Orca spans [-depth, 0], the way its own text tool rebuilds an edited line)."""
+    Bambu Studio keeps the text part-local, turned 180 degrees about Y so it reads from the bed side, spanning [-embedded, +thickness]
+    around the local origin less the floor offset. Orca and PrusaSlicer rebuild an edited line mirrored and displaced, so they get plain text."""
     xs=[v[0] for v in verts];ys=[v[1] for v in verts]
     cx=(min(xs)+max(xs))/2;cy=(min(ys)+max(ys))/2
     depth=info['depth'];em=info['size']*OPENSCAD_TO_EM
-    tz=(depth/2-TEXT_FLOOR) if kind=='bambu' else 0.0   # world z of the local origin; text spans world z [0, depth]. Orca puts it on the face and builds the text from there
+    tz=depth/2-TEXT_FLOOR   # world z of the local origin; text spans world z [0, depth]
     local=[(cx-x,y-cy,tz-z) for x,y,z in verts]
     transform=f'-1 0 0 0 1 0 0 0 -1 {cx:.6f} {cy:.6f} {tz:.6f}'
     matrix=f'-1 0 0 {cx:.6f} 0 1 0 {cy:.6f} 0 0 -1 {tz:.6f} 0 0 0 1'
-    if kind=='bambu':
-        half=depth/2
-        records=[('text_info',dict(text=info['text'],font_name=info['font'],font_version='',style_name='Recommend',boldness='0',skew='0',font_index='-1',font_size=f'{em:.4f}'.rstrip('0').rstrip('.'),thickness=f'{half:g}',embeded_depth=f'{half:g}',rotate_angle='0',text_gap='0',bold='0',italic='0',surface_type='1',hit_mesh='0',hit_position='0 0 0',hit_normal='0 0 0'))]
-    else:
-        # Orca's shape record: `scale` is the em size over the font's 2048 units per em (shapes are stored x1000), `depth` the
-        # emboss depth, and `transform` the centre of the text mesh in the part's frame.
-        records=[('slic3rpe:shape',dict(scale=repr(em/2048/1000),depth=f'{depth:g}',transform=f'1 0 0 0 1 0 0 0 1 0 0 {-depth/2:.9g}')),
-                 ('slic3rpe:text',dict(text=info['text'],style_name='NORMAL',line_height=f'{em:.4f}'.rstrip('0').rstrip('.'),horizontal='center',vertical='middle',family='swiss',face_name=orca_font(info['font'])[1],**orca_font(info['font'])[0]))]
+    half=depth/2
+    records=[('text_info',dict(text=info['text'],font_name=info['font'],font_version='',style_name='Recommend',boldness='0',skew='0',font_index='-1',font_size=f'{em:.4f}'.rstrip('0').rstrip('.'),thickness=f'{half:g}',embeded_depth=f'{half:g}',rotate_angle='0',text_gap='0',bold='0',italic='0',surface_type='1',hit_mesh='0',hit_position='0 0 0',hit_normal='0 0 0'))]
     return local,transform,matrix,records
 def meta(n,k,v):ET.SubElement(n,'metadata',key=k,value=safe_name(v) if k in ('name','plater_name') else str(v))
 def write_batch(path,variants,plates,settings,printer,author,slicer='bambu_studio'):

@@ -7,11 +7,11 @@ orca     Bambu-family project with a generic Marlin-style printer. Used by Orca 
 prusa    PrusaSlicer project (Slic3r_PE config and model files).
 
 `text` says how a slicer keeps text lines editable (see batch_export.editable_text): 'bambu' = Bambu Studio's text_info record,
-'orca' = the slic3rpe:shape / slic3rpe:text records Orca Slicer writes. None = plain meshes (no editable text).
+None = plain meshes (no editable text). Orca and PrusaSlicer rebuild an edited line in their own frame (mirrored and displaced), so they get plain text.
 """
 SLICERS = {
     'bambu_studio': dict(label='Bambu Studio', family='bambu', text='bambu', app='BambuStudio-02.08.02.61', extra={}),
-    'orca': dict(label='Orca Slicer', family='orca', text='orca', app='BambuStudio-02.06.00.51', extra={'OrcaSlicer': '2.4.2'}),
+    'orca': dict(label='Orca Slicer', family='orca', text=None, app='BambuStudio-02.06.00.51', extra={'OrcaSlicer': '2.4.2'}),
     'creality_print': dict(text=None, label='Creality Print', family='orca', app='CrealityPrint-7.2.0.0', extra={}),
     'elegoo': dict(text=None, label='ElegooSlicer', family='orca', app='ElegooSlicer-1.5.3.5', extra={}),
     'anycubic': dict(text=None, label='Anycubic Slicer Next', family='orca', app='BambuStudio-02.06.00.51', extra={'OrcaSlicer': '2.4.2'}),

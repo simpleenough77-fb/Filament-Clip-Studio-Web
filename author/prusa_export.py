@@ -6,7 +6,7 @@ PrusaSlicer stores one mesh per object and marks volumes as triangle ranges. Rel
 import io, json, zipfile
 import xml.etree.ElementTree as ET
 from nfc import NAME as NFC_NAME
-from batch_export import safe_name, editable_text
+from batch_export import safe_name
 
 MODEL_NS = 'http://schemas.microsoft.com/3dmanufacturing/core/2015/02'
 MAX_EXTRUDERS = 5  # one MMU3 / XL toolhead set
@@ -73,13 +73,7 @@ def _write_one(path, variants, plates, settings, printer, author):
             pocket = name == NFC_NAME
             kind = 'SupportBlocker' if blocker else 'NegativeVolume' if pocket or (i and settings['style'] == 'cut') else 'ModelPart'
             vc = ET.SubElement(oc, 'volume', firstid=str(tcount), lastid=str(tcount + len(faces) - 1))
-            # A text line stays editable: PrusaSlicer keeps the mesh as made (stored in object coordinates) and takes the text
-            # frame from the volume matrix, which turns the text 180 degrees about Y so it reads from the bed side.
             records = None
-            if var.get('text') and 1 <= i <= len(var['text']) and not blocker and not pocket:
-                _, _, matrix, records = editable_text(verts, var['text'][i - 1], 'orca')
-                shape = dict(records[0][1], transform='-1 0 0 0 1 0 0 0 -1 0 0 ' + records[0][1]['transform'].split()[-1])
-                records = [('slic3rpe:shape', shape), records[1]]
             for key, value in [('name', safe_name(name)), ('volume_type', kind), ('matrix', matrix if records else '1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1')] + \
                     ([('source_is_builtin_volume', '1')] if records else []) + \
                     ([] if blocker else [('extruder', str(body if i == 0 or pocket else text))]):

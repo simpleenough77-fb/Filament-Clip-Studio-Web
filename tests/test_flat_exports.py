@@ -82,7 +82,7 @@ def check(z, sleeve, style, slicer):
             obj = objects[c.get('objectid')]; assert manifold(obj), f'{profile}: text part is not a closed surface'
             tb = bounds(vertices(obj), c.get('transform'))
             assert tb[2][0] > -0.011 and tb[2][1] < 0.611 + 1e-6, (profile, tb[2])
-            editable = slicer in ('bambu_studio', 'orca')
+            editable = slicer == 'bambu_studio'   # Orca and PrusaSlicer rebuild an edited line mirrored and displaced, so they get plain text
             if editable:
                 matrix = {m.get('key'): m.get('value') for m in p.findall('metadata')}['matrix'].split()
                 t = c.get('transform').split()
@@ -92,19 +92,10 @@ def check(z, sleeve, style, slicer):
                     ti = p.find('text_info')
                     assert ti is not None and ti.get('text'), f'{profile}: text is not editable'
                     assert float(ti.get('thickness')) + float(ti.get('embeded_depth')) == 0.6
-                else:
-                    shape = p.find('{urn:slic3rpe}shape'); text = p.find('{urn:slic3rpe}text')
-                    assert shape is not None and text is not None and text.get('text'), f'{profile}: text is not editable'
-                    assert float(shape.get('depth')) == 0.6 and text.get('face_name') == 'Helvetica'
-                    assert 'NSFontNameAttribute' in text.get('font_descriptor') and text.get('font_descriptor_type') == 'wxFontDescriptor_MacOsX'
-                    # the local mesh spans [-depth, 0] with its origin on the face, as Orca rebuilds an edited line
-                    lz = bounds(vertices(obj))[2]
-                    assert abs(lz[0] + 0.6) < 2e-3 and abs(lz[1]) < 2e-3, lz
-                    assert abs(float(shape.get('transform').split()[-1]) + 0.3) < 1e-6
             else:
                 assert p.find('text_info') is None and p.find('{urn:slic3rpe}text') is None and c.get('transform') is None
-        if slicer in ('bambu_studio', 'orca'):
-            assert len([p for p in parts if p.find('text_info') is not None or p.find('{urn:slic3rpe}text') is not None]) == 3
+        if slicer == 'bambu_studio':
+            assert len([p for p in parts if p.find('text_info') is not None]) == 3
         for oid in [c.get('objectid') for c in comps]:
             vz = bounds(vertices(objects[oid]), next((c.get('transform') for c in comps if c.get('objectid') == oid), None))[2]
             assert vz[0] > -0.011 and vz[1] < 26, 'a part sticks out of the flat print'
@@ -132,10 +123,7 @@ async def main():
                 assert project, names
                 with zipfile.ZipFile(z.open(project[0])) as p:
                     assert p.testzip() is None and 'Metadata/Slic3r_PE_model.config' in p.namelist()
-                    cfg = ET.fromstring(p.read('Metadata/Slic3r_PE_model.config').replace(b'<config>', b'<config xmlns:slic3rpe="urn:slic3rpe">', 1))
-                    texts = cfg.findall('.//{urn:slic3rpe}text')
-                    assert texts and len(texts) % 3 == 0, len(texts)
-                    assert len(cfg.findall('.//{urn:slic3rpe}shape')) == len(texts)
+                    assert b'slic3rpe:text' not in p.read('Metadata/Slic3r_PE_model.config')
             else:
                 with zipfile.ZipFile(z.open('Filament_Labels.3mf')) as p:
                     assert p.testzip() is None
