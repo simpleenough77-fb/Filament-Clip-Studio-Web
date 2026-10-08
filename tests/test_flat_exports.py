@@ -96,6 +96,7 @@ def check(z, sleeve, style, slicer):
                     shape = p.find('{urn:slic3rpe}shape'); text = p.find('{urn:slic3rpe}text')
                     assert shape is not None and text is not None and text.get('text'), f'{profile}: text is not editable'
                     assert float(shape.get('depth')) == 0.6 and text.get('face_name')
+                    assert 'NSFontNameAttribute' in text.get('font_descriptor') and text.get('font_descriptor_type') == 'wxFontDescriptor_MacOsX'
                     # the local mesh sits on [-0.015, depth - 0.015], as Orca builds it
                     lz = bounds(vertices(obj))[2]
                     assert abs(lz[0] + 0.015) < 2e-3 and abs(lz[1] - 0.585) < 2e-3, lz

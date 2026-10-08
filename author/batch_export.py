@@ -14,6 +14,9 @@ def safe_name(value):
 # rebuilds it from the record. Its text frame is a part-local frame turned 180 degrees about Y (the text reads from the
 # bed side, so its +Z points into the clip), covering [-embedded, +thickness] around the local origin.
 OPENSCAD_TO_EM=100/72      # OpenSCAD's text size is the letter height; Bambu Studio's font_size is the font's em size
+# Orca on macOS finds a text's font only through this descriptor (copied from a project Orca saved; the plist names the font),
+# and asks the person to pick a font when it is missing. Other platforms ignore it and use face_name.
+ORCA_MAC_FONT=dict(font_descriptor='3;90;0;0;43;<plist version="1.0"><dict><key>NSFontNameAttribute</key><string>Helvetica</string><key>NSFontSizeAttribute</key><real>13</real></dict></plist>',font_descriptor_type='wxFontDescriptor_MacOsX')
 TEXT_FLOOR=0.015           # Bambu Studio offsets text meshes by this much along its Z
 def editable_text(verts,info,kind):
     """(part-local vertices, 3MF component transform, 4x4 matrix string, [(tag, attributes)]) for an editable text part.
@@ -35,7 +38,7 @@ def editable_text(verts,info,kind):
         # Orca's shape record: `scale` is the em size over the font's 2048 units per em (shapes are stored x1000), `depth` the
         # emboss depth, and `transform` the centre of the text mesh in the part's frame.
         records=[('slic3rpe:shape',dict(scale=repr(em/2048/1000),depth=f'{depth:g}',transform=f'1 0 0 0 1 0 0 0 1 0 0 {depth/2-TEXT_FLOOR:.9g}')),
-                 ('slic3rpe:text',dict(text=info['text'],style_name='NORMAL',line_height=f'{em:.4f}'.rstrip('0').rstrip('.'),horizontal='center',vertical='middle',family='swiss',face_name=info['font']))]
+                 ('slic3rpe:text',dict(text=info['text'],style_name='NORMAL',line_height=f'{em:.4f}'.rstrip('0').rstrip('.'),horizontal='center',vertical='middle',family='swiss',face_name=info['font'],**ORCA_MAC_FONT))]
     return local,transform,matrix,records
 def meta(n,k,v):ET.SubElement(n,'metadata',key=k,value=safe_name(v) if k in ('name','plater_name') else str(v))
 def write_batch(path,variants,plates,settings,printer,author,slicer='bambu_studio'):
