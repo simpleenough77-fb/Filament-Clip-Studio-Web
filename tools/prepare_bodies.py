@@ -17,7 +17,8 @@ import manifold3d as m3d
 ROOT = Path(__file__).resolve().parent.parent
 AUTHOR = ROOT / 'author'
 VENDORS = {'bambu': 'Bambu Lab', 'cookiecad': 'Cookiecad', 'amolen': 'Amolen', 'sunlu': 'Sunlu', 'jayo': 'Jayo',
-           'polymaker': 'Polymaker', 'panchroma': 'Panchroma', 'inland': 'Inland'}
+           'polymaker': 'Polymaker', 'panchroma': 'Panchroma', 'inland': 'Inland',
+           'protopasta': 'Protopasta', 'geeetech': 'Geeetech', 'creality': 'Creality'}
 LABEL_INLAY = 0.61
 
 
@@ -91,7 +92,7 @@ def main(folder):
         cv, cf, cdrop = merged(clip)
         centre = (cv.min(0) + cv.max(0)) / 2
         shift = np.array([centre[0], centre[1], 0.0])
-        for source, name in ((clip, stem), (sleeve, stem + '_sleeve')):
+        for source, name in [(clip, stem)] + ([(sleeve, stem + '_sleeve')]):
             v, f, dropped = (cv, cf, cdrop) if source == clip else merged(source)
             write(AUTHOR / f'{name}.stl', v - shift, f)
             record[f'{name}.stl'] = dict(source=source.name, source_sha256=sha(source), sha256=sha(AUTHOR / f'{name}.stl'),

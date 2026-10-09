@@ -16,7 +16,7 @@ out = Path(tempfile.mkdtemp(prefix='clip-flat-test-'))
 g.CACHE = out / 'cache'; g.GENERATED = out / 'generated'; g.CACHE.mkdir(exist_ok=True); g.GENERATED.mkdir(exist_ok=True)
 g.run_scad = scad_node.runner(out)
 
-VENDORS = ['Bambu Lab', 'Cookiecad', 'Amolen', 'Sunlu', 'Jayo', 'Polymaker', 'Panchroma', 'Inland']
+VENDORS = ['Bambu Lab', 'Cookiecad', 'Amolen', 'Sunlu', 'Jayo', 'Polymaker', 'Panchroma', 'Inland', 'Protopasta', 'Geeetech', 'Creality']
 rows = [dict(product=next(p['id'] for p in g.CATALOG if p['manufacturer'] == m), quantity=2) for m in VENDORS]
 profile_of = [g.PRODUCTS[r['product']]['spool_profile'] for r in rows]
 assert len(set(profile_of)) == len(VENDORS), 'each vendor must have its own profile'
@@ -64,6 +64,7 @@ def check(z, sleeve, style, slicer):
         assert len(comps) == len(parts)
         body = objects[comps[0].get('objectid')]
         assert body.get('name').startswith('Clip body') and profile in body.get('name'), body.get('name')
+        assert ('with holder sleeve' in body.get('name')) == (sleeve == 'yes'), body.get('name')
         vs = vertices(body); b = bounds(vs)
         # flat and face down: the front face is on z = 0 and the whole clip is only as tall as its body is deep
         assert abs(b[2][0]) < 1e-3 and abs(b[2][1] - spec['size'][2]) < 2e-3, (profile, b[2])

@@ -1,6 +1,6 @@
 # Filament Clip Studio — browser edition
 
-Generate readable filament clips for Bambu Lab, Cookiecad, Amolen, Sunlu, Jayo, Polymaker, Panchroma and Inland spools (each clip is fitted and tested for its brand's spool; Polymaker, Panchroma and Inland cardboard spools have their own clips too). Live at https://filamentclip.com: the front page is `index.html`, the generator is `studio.html`, plus `guide.html` and `accessories.html`. Spool requests use the GitHub issue form in `.github/ISSUE_TEMPLATE/spool-request.yml`. This free static application runs its calculations on your device, with no account, paid generation service, or uploaded batches.
+Generate readable filament clips for Bambu Lab, Cookiecad, Amolen, Sunlu, Jayo, Polymaker, Panchroma, Inland, Protopasta, Geeetech and Creality spools (each clip is fitted and tested for its brand's spool; Polymaker, Panchroma, Inland and Protopasta cardboard spools have their own clips too). Live at https://filamentclip.com: the front page is `index.html`, the generator is `studio.html`, plus `guide.html` and `accessories.html`. Spool requests use the GitHub issue form in `.github/ISSUE_TEMPLATE/spool-request.yml`. This free static application runs its calculations on your device, with no account, paid generation service, or uploaded batches.
 
 ## Use
 

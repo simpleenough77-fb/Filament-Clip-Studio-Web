@@ -1,4 +1,4 @@
-// PRIVATE. Accepted revision 10 geometry, unchanged.
+// PRIVATE. Accepted geometry, unchanged.
 module accepted_body(profile="Bambu Original") {
 spool=profile; tunnel_alignment="Center";
 // Owner-controlled parameters. All dimensions in mm.
