@@ -1,4 +1,4 @@
-// Anonymous usage count: after a batch is generated, send totals (clip count, vendor mix, printer, option flags).
+// Anonymous usage count: after a batch is generated, send totals (clip count, vendor mix, printer group, slicer, option flags).
 // Never sends label text, filenames, CSV contents or anything that identifies the visitor.
 // Fire-and-forget: a failure here must never affect generating or downloading.
 window.reportUsage=function(review){
@@ -11,6 +11,8 @@ window.reportUsage=function(review){
    holders:(review?.accessories||[]).reduce((n,a)=>n+(a.quantity||0),0),
    plates:review?.plates?.length||0,
    printer:s.printer,
+   slicer:s.slicer,
+   multicolor:s.multicolor==='yes',
    nfc:s.nfc==='yes',
    sleeve:s.holder_sleeve==='yes',
    vendors
