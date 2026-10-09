@@ -29,7 +29,8 @@ SEGMENTS = 96
 PLATE_TOP = 3.6              # back of the faceplate (front face is z = 0)
 TUNNEL_HALF = 1.73           # half-width of the tunnel's footprint on the back of the faceplate
 LEG_INNER = {name: p['leg_inner'] for name, p in PROFILES.items()}    # |x| of each leg's inner face
-SLEEVE_TOP = {name: p['sleeve_top'] for name, p in PROFILES.items()}  # top of the sleeve plate
+SLEEVE_TOP = {name: p['sleeve_top'] for name, p in PROFILES.items() if p['sleeve']}  # top of the sleeve plate
+PLATE = {name: p['plate'] for name, p in PROFILES.items()}               # back of the faceplate, per vendor
 
 FRONT_MARGIN = 4.0           # holders: wall left between the pocket and the front edge
 # Holder post centres (mm from the left edge of the STL / of each half), measured from the shipped files.
@@ -71,7 +72,7 @@ def sleeveless_cutter_scad(profile, tag):
     d = diameter(tag)
     lo, hi = sleeveless_strip(profile)
     cx = (lo + hi) / 2
-    cylinder = f'translate([{cx:.4f},0,{PLATE_TOP - DEPTH:.4f}]) cylinder(d={d:.4f},h={DEPTH + 0.01:.4f},$fn={SEGMENTS});'
+    cylinder = f'translate([{cx:.4f},0,{PLATE[profile] - DEPTH:.4f}]) cylinder(d={d:.4f},h={DEPTH + 0.01:.4f},$fn={SEGMENTS});'
     if hi - lo < d - 1e-9:
         return f'intersection(){{{cylinder} translate([{lo:.4f},-20,0]) cube([{hi - lo:.4f},40,10]);}}'
     return cylinder

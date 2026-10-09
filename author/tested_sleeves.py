@@ -22,7 +22,7 @@ BAR_Z=(9.0,12.0)    # underside of the sleeve bar lies in this height band
 BLOCKER_Z=5.6       # axis height of the blocker cylinder
 BLOCKER_PAD=1.0     # blocker runs this far past each end of the clip
 
-def support_paint(vertices,faces,leg_inner):
+def support_paint(vertices,faces,leg_inner,bore_z=BORE_AXIS_Z):
     """paint_supports code (or '') for each face of a sleeve body in the centred clip frame."""
     flags=[]
     for f in faces:
@@ -34,18 +34,18 @@ def support_paint(vertices,faces,leg_inner):
             nx,ny,nz=nx/ln,ny/ln,nz/ln
             cx,cy,cz=(a[0]+b[0]+c[0])/3,(a[1]+b[1]+c[1])/3,(a[2]+b[2]+c[2])/3
             if nz<-0.99 and BAR_Z[0]<=cz<=BAR_Z[1] and abs(cx)<=leg_inner-1:code=ENFORCER
-            elif abs(ny)<0.3 and math.hypot(cx,cz-BORE_AXIS_Z)<=BORE_RADIUS and (abs(cy)<=BORE_HALF_LENGTH or max(a[1],b[1],c[1])-min(a[1],b[1],c[1])>=BORE_LONG_FACE):code=BLOCKER
+            elif abs(ny)<0.3 and math.hypot(cx,cz-bore_z)<=BORE_RADIUS and (abs(cy)<=BORE_HALF_LENGTH or max(a[1],b[1],c[1])-min(a[1],b[1],c[1])>=BORE_LONG_FACE):code=BLOCKER
         flags.append(code)
     return flags
 
-def tunnel_blocker(height):
+def tunnel_blocker(height,bore_z=BORE_AXIS_Z):
     """Support-blocker cylinder along the tunnel (Y axis), `height` being the clip's Y size."""
     verts,faces=nfc.cylinder_mesh([(0.0,0.0)],-(height/2+BLOCKER_PAD),height/2+BLOCKER_PAD,BLOCKER_D,48)
     # cylinder_mesh runs along Z; turn it to run along Y (swapping two axes mirrors it, so flip the winding back)
-    verts=[(x,z,y+BLOCKER_Z) for x,y,z in verts];faces=[[a,c,b] for a,b,c in faces]
+    verts=[(x,z,y+bore_z+(BLOCKER_Z-BORE_AXIS_Z)) for x,y,z in verts];faces=[[a,c,b] for a,b,c in faces]
     return verts,faces
 
 def sleeve_parts(spec,body_mesh):
     """(paint flags for the body, blocker part) for a sleeve body."""
     vertices,faces=body_mesh
-    return support_paint(vertices,faces,spec['leg_inner']),('Tunnel support blocker',tunnel_blocker(spec['size'][1]))
+    return support_paint(vertices,faces,spec['leg_inner'],spec['bore_z']),('Tunnel support blocker',tunnel_blocker(spec['size'][1],spec['bore_z']))
