@@ -232,10 +232,7 @@ def test_clip_bodies_loaded_and_clean():
     used = {p['spool_profile'] for p in json.loads((ROOT / 'author' / 'Catalog.json').read_text())['products']}
     assert used == set(print_geometry.PROFILES), used ^ set(print_geometry.PROFILES)
     for profile, spec in print_geometry.PROFILES.items():
-        if not spec['sleeve']:
-            assert not (ROOT / 'author' / (spec['stem'] + '_sleeve.stl')).exists(), f'{profile} has no sleeve version'
-            assert not print_geometry.uses_sleeve(profile, True) and print_geometry.footprint(profile, True) == print_geometry.footprint(profile, False)
-        for name in (spec['stem'] + '.stl',) + ((spec['stem'] + '_sleeve.stl',) if spec['sleeve'] else ()):
+        for name in (spec['stem'] + '.stl', spec['stem'] + '_sleeve.stl'):
             # The browser fetches bodies through assets.json (Python) and by the name in the OpenSCAD code.
             assert f'author/{name}' in assets, f'assets.json does not list {name} ({profile})'
             assert name in provenance, f'Bodies_Provenance.json has no record of {name}'

@@ -132,11 +132,25 @@
     "triangles": 15790,
     "label_text_shells_dropped": 0
   },
+  "geeetech_sleeve.stl": {
+    "source": "Geeetech with sleeve.stl",
+    "source_sha256": "30ce07d9e7c81a1dd42ec7d90fa273373b7a700ce0b6bbc035a965e136527729",
+    "sha256": "bf40d5695105ffa019cf391aa4d92a98e362bd42d1be7e09af6d07d98f745f62",
+    "triangles": 14626,
+    "label_text_shells_dropped": 0
+  },
   "creality.stl": {
     "source": "Creality clip only.stl",
     "source_sha256": "9fdcd571675d1d8db8c63d4fd4f11bc61596ee74bceb19def0854aaddedcc84b",
     "sha256": "d742edd1d9ae2531cc61602433022b57a891aa037d9424f51eaafac214c081df",
     "triangles": 34062,
+    "label_text_shells_dropped": 0
+  },
+  "creality_sleeve.stl": {
+    "source": "Creality with sleeve.stl",
+    "source_sha256": "b107d57d6587ed0a73b92ebd9e058cc40251577862851e3278aa5087197662b9",
+    "sha256": "96c03dda6f77c2c933300726bc302388a96a7ae5ad47c280942b7d690d5e308a",
+    "triangles": 34102,
     "label_text_shells_dropped": 0
   }
 }

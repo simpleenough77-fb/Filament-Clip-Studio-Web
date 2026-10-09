@@ -2,7 +2,7 @@
 
     python tools/prepare_bodies.py "/path/to/Clip STLs"          # needs numpy and manifold3d (pip install manifold3d numpy)
 
-Each vendor has two source files (Geeetech and Creality only the first), "<Vendor> clip only.stl" and "<Vendor> with sleeve.stl" (Jayo's is "Jayo with Sleeve.stl").
+Each vendor has two source files, "<Vendor> clip only.stl" and "<Vendor> with sleeve.stl" (Jayo's is "Jayo with Sleeve.stl").
 The owner models every clip face down: front (label) face on z = 0, legs rising from the back. This script
   * merges the separate overlapping shells a CAD export leaves behind into one watertight solid (union),
   * drops label text baked into the face (shells no taller than the 0.6 mm label inlay; the Amolen files contain some),
@@ -19,7 +19,6 @@ AUTHOR = ROOT / 'author'
 VENDORS = {'bambu': 'Bambu Lab', 'cookiecad': 'Cookiecad', 'amolen': 'Amolen', 'sunlu': 'Sunlu', 'jayo': 'Jayo',
            'polymaker': 'Polymaker', 'panchroma': 'Panchroma', 'inland': 'Inland',
            'protopasta': 'Protopasta', 'geeetech': 'Geeetech', 'creality': 'Creality'}
-NO_SLEEVE = {'geeetech', 'creality'}   # vendors supplied without a holder-sleeve version
 LABEL_INLAY = 0.61
 
 
@@ -89,11 +88,11 @@ def main(folder):
     record = {}
     for stem, vendor in VENDORS.items():
         clip = folder / f'{vendor} clip only.stl'
-        sleeve = None if stem in NO_SLEEVE else next(p for p in folder.glob('*.stl') if p.name.lower() == f'{vendor} with sleeve.stl'.lower())
+        sleeve = next(p for p in folder.glob('*.stl') if p.name.lower() == f'{vendor} with sleeve.stl'.lower())
         cv, cf, cdrop = merged(clip)
         centre = (cv.min(0) + cv.max(0)) / 2
         shift = np.array([centre[0], centre[1], 0.0])
-        for source, name in [(clip, stem)] + ([(sleeve, stem + '_sleeve')] if sleeve else []):
+        for source, name in [(clip, stem)] + ([(sleeve, stem + '_sleeve')]):
             v, f, dropped = (cv, cf, cdrop) if source == clip else merged(source)
             write(AUTHOR / f'{name}.stl', v - shift, f)
             record[f'{name}.stl'] = dict(source=source.name, source_sha256=sha(source), sha256=sha(AUTHOR / f'{name}.stl'),

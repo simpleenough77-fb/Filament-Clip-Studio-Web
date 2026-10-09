@@ -64,7 +64,7 @@ def check(z, sleeve, style, slicer):
         assert len(comps) == len(parts)
         body = objects[comps[0].get('objectid')]
         assert body.get('name').startswith('Clip body') and profile in body.get('name'), body.get('name')
-        assert ('with holder sleeve' in body.get('name')) == (sleeve == 'yes' and spec['sleeve']), body.get('name')
+        assert ('with holder sleeve' in body.get('name')) == (sleeve == 'yes'), body.get('name')
         vs = vertices(body); b = bounds(vs)
         # flat and face down: the front face is on z = 0 and the whole clip is only as tall as its body is deep
         assert abs(b[2][0]) < 1e-3 and abs(b[2][1] - spec['size'][2]) < 2e-3, (profile, b[2])
@@ -74,7 +74,7 @@ def check(z, sleeve, style, slicer):
         triangles = body.findall('m:mesh/m:triangles/m:triangle', ns)
         paint = collections.Counter(t.get('paint_supports') for t in triangles if t.get('paint_supports'))
         blockers = [p for p in parts if p.get('subtype') == 'support_blocker']
-        if sleeve == 'yes' and spec['sleeve']:
+        if sleeve == 'yes':
             assert paint['4'] > 0 and paint['8'] > 0, (profile, dict(paint))
             assert len(blockers) == 1
         else:
