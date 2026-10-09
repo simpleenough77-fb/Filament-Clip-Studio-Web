@@ -11,6 +11,8 @@ const json = (body, status = 200, extra = {}) =>
     headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', ...extra },
   });
 
+const SLICERS = new Set(['bambu_studio', 'orca', 'creality_print', 'elegoo', 'anycubic', 'prusa']);
+
 const int = (v, min, max) => (Number.isInteger(v) && v >= min && v <= max ? v : null);
 
 function clean(body) {
@@ -20,13 +22,14 @@ function clean(body) {
   const plates = int(body.plates ?? 0, 0, 50);
   if (holders === null || plates === null) return null;
   const printer = typeof body.printer === 'string' && /^[A-Za-z0-9_ .-]{1,24}$/.test(body.printer) ? body.printer : null;
+  const slicer = SLICERS.has(body.slicer) ? body.slicer : null;
   const vendors = {};
   if (body.vendors && typeof body.vendors === 'object' && !Array.isArray(body.vendors)) {
     for (const [name, n] of Object.entries(body.vendors).slice(0, 12)) {
       if (/^[\p{L}\p{N} .&+'-]{1,40}$/u.test(name) && int(n, 1, 100) !== null) vendors[name] = n;
     }
   }
-  return { clips, holders, plates, printer, nfc: body.nfc ? 1 : 0, sleeve: body.sleeve ? 1 : 0, vendors: JSON.stringify(vendors) };
+  return { clips, holders, plates, printer, slicer, multicolor: body.multicolor ? 1 : 0, nfc: body.nfc ? 1 : 0, sleeve: body.sleeve ? 1 : 0, vendors: JSON.stringify(vendors) };
 }
 
 async function record(request, env) {
@@ -44,8 +47,8 @@ async function record(request, env) {
   if (recent && recent.n >= MAX_PER_MINUTE) return json({ ok: false }, 429, { 'Retry-After': '60' });
 
   await env.DB.prepare(
-    'INSERT INTO events (ts, clips, holders, plates, printer, nfc, sleeve, vendors) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
-  ).bind(now, e.clips, e.holders, e.plates, e.printer, e.nfc, e.sleeve, e.vendors).run();
+    'INSERT INTO events (ts, clips, holders, plates, printer, slicer, multicolor, nfc, sleeve, vendors) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+  ).bind(now, e.clips, e.holders, e.plates, e.printer, e.slicer, e.multicolor, e.nfc, e.sleeve, e.vendors).run();
   return json({ ok: true }, 202);
 }
 
@@ -64,6 +67,8 @@ async function stats(request, env, ctx) {
   ctx.waitUntil(cache.put(key, res.clone()));
   return res;
 }
+
+export { clean };
 
 export default {
   async fetch(request, env, ctx) {
