@@ -124,7 +124,7 @@ async def preflight(data):
     data=validate(data);s=data['settings'];sizes=[s['vendor_size'],s['type_size'],s['color_size']]
     checks=[];code=includes()
     for i,r in enumerate(data['rows']):
-        p=PRODUCTS[r['product']];lines=[p['manufacturer'],p['filament_type'],p['color_name']];width=PROFILES[r['spool_profile']]['width']-4
+        p=PRODUCTS[r['product']];lines=[p.get('label_manufacturer',p['manufacturer']),p['filament_type'],p['color_name']];width=PROFILES[r['spool_profile']]['width']-4
         for j,t in enumerate(lines):
             code+=f'let(t={json.dumps(t)},sz={sizes[j]},font={json.dumps(s["font"])},f=label_fit(t,sz,font,{width}),m=textmetrics(f,size=sz,font=font)) echo([{i},{j},t,f,m.size.x,m.size.y]);\n'
         checks.append(dict(**r,lines=lines,display=[],width=width,body_color=colors(r,s)[0],text_color=colors(r,s)[1],filament_roles=filament_roles(r,s),swatch_palette=palette(r),swatch_effects=p.get('swatch_effects',[]),swatch_description=p.get('swatch_description',''),body_actual=s['body_mode']=='filament',text_actual=s['text_mode']=='filament'))

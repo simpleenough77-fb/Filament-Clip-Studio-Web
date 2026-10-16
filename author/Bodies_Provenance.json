@@ -154,14 +154,14 @@
     "label_text_shells_dropped": 0
   },
   "protopasta_plastic.stl": {
-    "source": "Protopasta Plastic Spool clip only.stl",
+    "source": "Protopasta Plastic clip only.stl",
     "source_sha256": "ee9cb9fa071088b81a59a0e5e4d8d40491bcb9be33b3137b9971d5edc0546aa9",
     "sha256": "8f700b1ad6a5f57346a99cccfd99041e9e94815a71241bc5dcf2f976e5eb948f",
     "triangles": 12778,
     "label_text_shells_dropped": 0
   },
   "protopasta_plastic_sleeve.stl": {
-    "source": "Protopasta Plastic Spool with sleeve.stl",
+    "source": "Protopasta Plastic with sleeve.stl",
     "source_sha256": "e1731cb270ecda4ab8df417556d93acca927486e3347502864ecbdd68282aa69",
     "sha256": "ccf574df5f366a26612683a59f225015844cd530e45075974b22e7a913db6f14",
     "triangles": 12864,

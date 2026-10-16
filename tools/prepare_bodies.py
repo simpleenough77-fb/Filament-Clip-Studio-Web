@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent
 AUTHOR = ROOT / 'author'
 VENDORS = {'bambu': 'Bambu Lab', 'cookiecad': 'Cookiecad', 'amolen': 'Amolen', 'sunlu': 'Sunlu', 'jayo': 'Jayo',
            'polymaker': 'Polymaker', 'panchroma': 'Panchroma', 'inland': 'Inland',
-           'protopasta': 'Protopasta', 'protopasta_plastic': 'Protopasta Plastic Spool',
+           'protopasta': 'Protopasta', 'protopasta_plastic': 'Protopasta Plastic',
            'geeetech': 'Geeetech', 'creality': 'Creality'}
 LABEL_INLAY = 0.61
 
