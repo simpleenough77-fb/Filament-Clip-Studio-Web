@@ -16,7 +16,7 @@ out = Path(tempfile.mkdtemp(prefix='clip-flat-test-'))
 g.CACHE = out / 'cache'; g.GENERATED = out / 'generated'; g.CACHE.mkdir(exist_ok=True); g.GENERATED.mkdir(exist_ok=True)
 g.run_scad = scad_node.runner(out)
 
-VENDORS = ['Bambu Lab', 'Cookiecad', 'Amolen', 'Sunlu', 'Jayo', 'Polymaker', 'Panchroma', 'Inland', 'Protopasta', 'Geeetech', 'Creality']
+VENDORS = ['Bambu Lab', 'Cookiecad', 'Amolen', 'Sunlu', 'Jayo', 'Polymaker', 'Panchroma', 'Inland', 'Protopasta Cardboard', 'Protopasta Plastic', 'Geeetech', 'Creality']
 rows = [dict(product=next(p['id'] for p in g.CATALOG if p['manufacturer'] == m), quantity=2) for m in VENDORS]
 profile_of = [g.PRODUCTS[r['product']]['spool_profile'] for r in rows]
 assert len(set(profile_of)) == len(VENDORS), 'each vendor must have its own profile'

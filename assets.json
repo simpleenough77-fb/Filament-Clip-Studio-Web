@@ -39,6 +39,8 @@
   "author/polymaker_sleeve.stl",
   "author/protopasta.stl",
   "author/protopasta_sleeve.stl",
+  "author/protopasta_plastic.stl",
+  "author/protopasta_plastic_sleeve.stl",
   "author/sunlu.stl",
   "author/sunlu_sleeve.stl",
   "author/batch_export.py",
