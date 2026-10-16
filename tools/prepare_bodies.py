@@ -1,6 +1,7 @@
 """Turn the owner's per-vendor clip STLs into the bodies the studio ships (author/<vendor>.stl and <vendor>_sleeve.stl).
 
     python tools/prepare_bodies.py "/path/to/Clip STLs"          # needs numpy and manifold3d (pip install manifold3d numpy)
+    python tools/prepare_bodies.py "/path/to/Clip STLs" protopasta_plastic   # rebuild only the named vendor stems
 
 Each vendor has two source files, "<Vendor> clip only.stl" and "<Vendor> with sleeve.stl" (Jayo's is "Jayo with Sleeve.stl").
 The owner models every clip face down: front (label) face on z = 0, legs rising from the back. This script
@@ -18,7 +19,8 @@ ROOT = Path(__file__).resolve().parent.parent
 AUTHOR = ROOT / 'author'
 VENDORS = {'bambu': 'Bambu Lab', 'cookiecad': 'Cookiecad', 'amolen': 'Amolen', 'sunlu': 'Sunlu', 'jayo': 'Jayo',
            'polymaker': 'Polymaker', 'panchroma': 'Panchroma', 'inland': 'Inland',
-           'protopasta': 'Protopasta', 'geeetech': 'Geeetech', 'creality': 'Creality'}
+           'protopasta': 'Protopasta', 'protopasta_plastic': 'Protopasta Plastic Spool',
+           'geeetech': 'Geeetech', 'creality': 'Creality'}
 LABEL_INLAY = 0.61
 
 
@@ -83,10 +85,13 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def main(folder):
+def main(folder, only=()):
     folder = Path(folder)
-    record = {}
+    prov = AUTHOR / 'Bodies_Provenance.json'
+    record = json.loads(prov.read_text()) if only and prov.exists() else {}
     for stem, vendor in VENDORS.items():
+        if only and stem not in only:
+            continue
         clip = folder / f'{vendor} clip only.stl'
         sleeve = next(p for p in folder.glob('*.stl') if p.name.lower() == f'{vendor} with sleeve.stl'.lower())
         cv, cf, cdrop = merged(clip)
@@ -98,8 +103,8 @@ def main(folder):
             record[f'{name}.stl'] = dict(source=source.name, source_sha256=sha(source), sha256=sha(AUTHOR / f'{name}.stl'),
                                          triangles=int(len(f)), label_text_shells_dropped=dropped)
             print(f'{name}.stl: {len(f)} triangles, {dropped} label shells dropped')
-    (AUTHOR / 'Bodies_Provenance.json').write_text(json.dumps(record, indent=2) + '\n')
+    prov.write_text(json.dumps(record, indent=2) + '\n')
 
 
 if __name__ == '__main__':
-    main(sys.argv[1])
+    main(sys.argv[1], tuple(sys.argv[2:]))
