@@ -1,7 +1,7 @@
 {
-  "version": "3.6",
-  "updated": "2026-10-09",
-  "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix, plus the vendor lists below. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools have their own clip body (Sunlu 1kg). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools have their own clip body (Jayo 1.1kg). Some long Bambu Lab, Cookiecad and Amolen names are shortened so they print in full on the clip; the manufacturer's original names are kept as label_aliases, so CSVs that use them still import. Polymaker and Panchroma entries are the 1 kg, 1.75 mm spools from the US Polymaker store (shop.polymaker.com), including sold-out colors; Panchroma lines are listed under the Panchroma name and all other Polymaker lines under Polymaker. Refills, 0.5/0.75/2/3/5 kg spools, 2.85 mm, bundles and multi-roll packs are excluded. Where a color exists in both old and new packaging or formula, only one entry is kept (the new one). Panchroma Matte PLA colors beyond the store feed's cutoff were taken from the product page and have no SKU. Inland entries are the 1 kg (1.0 kg, 2.2 lbs.) 1.75 mm filaments whose Micro Center product title says Cardboard Spool (microcenter.com), read from each product page on 2026-10-07; plastic-spool rolls, rolls whose title does not name the spool, 0.5 kg and larger rolls, multi-packs and resins are excluded. Availability was not recorded per store, so every entry is marked available. Protopasta entries are 1.75 mm spools from the Protopasta store (protopasta.com), read from its product feed on 2026-10-09, including sold-out colors, using the 1 kg spool; 50 g and 100 g coils, 500 g, 2 kg and larger spools, cases, 2.85 mm, subscriptions, digital items and non-filament products are excluded. The Protopasta clip fits the cardboard spool, which is the one currently shipping (Protopasta is moving to a plastic spool; it will need its own clip body). Creality entries are the single 1 kg spools on the US Creality store (store.creality.com) on 2026-10-09, including sold-out colors; spool-free refills, multi-packs and bundles are excluded. Creality 1 kg spools have their own clip body (Creality 1kg). Geeetech entries are the single 1 kg, 1.75 mm spools on the US Geeetech store (geeetech.com) on 2026-10-09, including sold-out colors; multi-packs and bundles are excluded. Geeetech 1 kg spools have their own clip body (Geeetech 1kg). Swatches for the new vendors are screen approximations from the color names.",
+  "version": "3.7",
+  "updated": "2026-10-15",
+  "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix, plus the vendor lists below. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools have their own clip body (Sunlu 1kg). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools have their own clip body (Jayo 1.1kg). Some long Bambu Lab, Cookiecad and Amolen names are shortened so they print in full on the clip; the manufacturer's original names are kept as label_aliases, so CSVs that use them still import. Polymaker and Panchroma entries are the 1 kg, 1.75 mm spools from the US Polymaker store (shop.polymaker.com), including sold-out colors; Panchroma lines are listed under the Panchroma name and all other Polymaker lines under Polymaker. Refills, 0.5/0.75/2/3/5 kg spools, 2.85 mm, bundles and multi-roll packs are excluded. Where a color exists in both old and new packaging or formula, only one entry is kept (the new one). Panchroma Matte PLA colors beyond the store feed's cutoff were taken from the product page and have no SKU. Inland entries are the 1 kg (1.0 kg, 2.2 lbs.) 1.75 mm filaments whose Micro Center product title says Cardboard Spool (microcenter.com), read from each product page on 2026-10-07; plastic-spool rolls, rolls whose title does not name the spool, 0.5 kg and larger rolls, multi-packs and resins are excluded. Availability was not recorded per store, so every entry is marked available. Protopasta entries are 1.75 mm spools from the Protopasta store (protopasta.com), read from its product feed on 2026-10-09, including sold-out colors, using the 1 kg spool; 50 g and 100 g coils, 500 g, 2 kg and larger spools, cases, 2.85 mm, subscriptions, digital items and non-filament products are excluded. The Protopasta clip fits the cardboard spool; Protopasta is moving gradually to plastic spools, so those entries stay in the catalog while stock lasts. Protopasta Plastic Spool entries are the 64 1 kg spool products in the \"Now on plastic spools\" collection on proto-pasta.com (1 kg Spool filter, read from the collection pages on 2026-10-15); each repeats its Protopasta cardboard-spool entry (same SKU) where one exists, and Composite Copper, Steel and Iron PETG are new. Protopasta Plastic Spool has its own clip body. Creality entries are the single 1 kg spools on the US Creality store (store.creality.com) on 2026-10-09, including sold-out colors; spool-free refills, multi-packs and bundles are excluded. Creality 1 kg spools have their own clip body (Creality 1kg). Geeetech entries are the single 1 kg, 1.75 mm spools on the US Geeetech store (geeetech.com) on 2026-10-09, including sold-out colors; multi-packs and bundles are excluded. Geeetech 1 kg spools have their own clip body (Geeetech 1kg). Swatches for the new vendors are screen approximations from the color names.",
   "products": [
     {
       "id": "bambu-petg-hf-blue",
@@ -47774,6 +47774,1479 @@
       "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
       "available_at_refresh": true,
       "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/CFP11705STORAGE.jpg?v=1658270192"
+    },
+    {
+      "id": "protopasta-plastic-fep11710",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Metal Composite PLA",
+      "color_name": "Iron",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/magnetic-iron-pla",
+      "source_title": "Iron-filled Metal Composite PLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "FEP11710",
+      "source_variant_id": 46824413987064,
+      "swatch": "#5A5F64",
+      "preview_palette": [
+        "#5A5F64"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/FEP11705STORAGE.jpg?v=1658270356"
+    },
+    {
+      "id": "protopasta-plastic-cdp11710",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Conductive PLA",
+      "color_name": "Black",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/conductive-pla",
+      "source_title": "Electrically Conductive Composite PLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "CDP11710",
+      "source_variant_id": 43265594589432,
+      "swatch": "#1E1E1E",
+      "preview_palette": [
+        "#1E1E1E"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/CDP11705STORAGE.jpg?v=1654732036"
+    },
+    {
+      "id": "protopasta-plastic-ssp11710",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Metal Composite PLA",
+      "color_name": "Steel",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/stainless-steel-pla",
+      "source_title": "Steel-filled Metal Composite PLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "SSP11710",
+      "source_variant_id": 46890740941048,
+      "swatch": "#A8ADB2",
+      "preview_palette": [
+        "#A8ADB2"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/ssp_stainless-steel-pla-filament-3d-print.jpg?v=1596508185"
+    },
+    {
+      "id": "protopasta-plastic-htpc1710-cu",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Metal Composite HTPLA",
+      "color_name": "Copper",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/copper-metal-composite-htpla",
+      "source_title": "Copper-filled Metal Composite HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTPC1710-CU",
+      "source_variant_id": 46586442842360,
+      "swatch": "#B8643A",
+      "preview_palette": [
+        "#B8643A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTPC1705-CUSTORAGE.jpg?v=1659377691"
+    },
+    {
+      "id": "protopasta-plastic-htpm1710-hfb",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Joel's Highfive Blue",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/metallic-htpla-v3-highfive-blue",
+      "source_title": "Joel's Highfive Blue HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTPM1710-HFB",
+      "source_variant_id": 42492431827192,
+      "swatch": "#2F6FD8",
+      "preview_palette": [
+        "#2F6FD8"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTPM1710-HFBSPOOL.jpg?v=1659384896"
+    },
+    {
+      "id": "protopasta-plastic-htp21710-ice",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Iridescent Ice Clear",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/high-temp-pla-v2-0",
+      "source_title": "Iridescent Ice Clear Translucent HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTP21710-ICE",
+      "source_variant_id": 43261903241464,
+      "swatch": "#E6F0F2",
+      "preview_palette": [
+        "#E6F0F2",
+        "#C8E0F0",
+        "#F0D8F0"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Protopasta",
+          "HTPLA",
+          "Iridescent Ice Clear Translucent"
+        ]
+      ],
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTP21710-ICESPOOL.jpg?v=1659367399"
+    },
+    {
+      "id": "protopasta-plastic-htp21710-neb",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Original Nebula",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/nebula-multicolor-htpla",
+      "source_title": "The Original Nebula Multicolor HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTP21710-NEB",
+      "source_variant_id": 43254827352312,
+      "swatch": "#6A4CC8",
+      "preview_palette": [
+        "#6A4CC8",
+        "#2B8FD0",
+        "#D04FA0"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Protopasta",
+          "HTPLA",
+          "The Original Nebula Multicolor"
+        ]
+      ],
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTP21705-NEBSTORAGE.jpg?v=1659368155"
+    },
+    {
+      "id": "protopasta-plastic-htpc1710-bra",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Metal Composite HTPLA",
+      "color_name": "Brass",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/brass-metal-composite-htpla",
+      "source_title": "Brass-filled Metal Composite HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTPC1710-BRA",
+      "source_variant_id": 46586450280696,
+      "swatch": "#B5A642",
+      "preview_palette": [
+        "#B5A642"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTPC1705-BRASTORAGE.jpg?v=1659377160"
+    },
+    {
+      "id": "protopasta-plastic-sub21710-bme",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Blood of My Enemies Red",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/amies-blood-of-my-enemies-htpla",
+      "source_title": "Amie's \"Blood of My Enemies\" Translucent Red HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "SUB21710-BME",
+      "source_variant_id": 43020814024952,
+      "swatch": "#C0182B",
+      "preview_palette": [
+        "#C0182B"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Protopasta",
+          "HTPLA",
+          "Amie's \"Blood of My Enemies\" Translucent Red"
+        ]
+      ],
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/SUB21710-BMESPOOL.jpg?v=1659389494"
+    },
+    {
+      "id": "protopasta-plastic-htpc1710-bro",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Metal Composite HTPLA",
+      "color_name": "Bronze",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/bronze-metal-composite-htpla",
+      "source_title": "Bronze-filled Metal Composite HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTPC1710-BRO",
+      "source_variant_id": 46642533040376,
+      "swatch": "#A8732C",
+      "preview_palette": [
+        "#A8732C"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTPC1705-BROSTORAGE.jpg?v=1659377598"
+    },
+    {
+      "id": "protopasta-plastic-htpm1710-clg",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Cloverleaf Green",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/cloverleaf-metallic-green-htpla",
+      "source_title": "Cloverleaf Metallic Green HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTPM1710-CLG",
+      "source_variant_id": 43261922181368,
+      "swatch": "#2E8F3F",
+      "preview_palette": [
+        "#2E8F3F"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Protopasta",
+          "HTPLA",
+          "Cloverleaf Metallic Green"
+        ]
+      ],
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTPM1710-CLGSPOOL.jpg?v=1659377886"
+    },
+    {
+      "id": "protopasta-plastic-htp31710-blk",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Black Opaque",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/premium-htpla-v3-black",
+      "source_title": "Black Opaque HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTP31710-BLK",
+      "source_variant_id": 36660020936,
+      "swatch": "#1A1A1A",
+      "preview_palette": [
+        "#1A1A1A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTP31710-BLKSPOOL.jpg?v=1659373053"
+    },
+    {
+      "id": "protopasta-plastic-htpm1710-mtt",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Mermaid's Tale Teal",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/mermaids-tale-metallic-teal-htpla",
+      "source_title": "Mermaid's Tale Metallic Teal HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTPM1710-MTT",
+      "source_variant_id": 43118523089144,
+      "swatch": "#1BA89A",
+      "preview_palette": [
+        "#1BA89A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Protopasta",
+          "HTPLA",
+          "Mermaid's Tale Metallic Teal"
+        ]
+      ],
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTPM1710-MTTSPOOL-2.jpg"
+    },
+    {
+      "id": "protopasta-plastic-rpla1710-bla",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Recycled PLA",
+      "color_name": "Black",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/recycled-pla-bla",
+      "source_title": "Black Recycled PLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "RPLA1710-BLA",
+      "source_variant_id": 41145165217953,
+      "swatch": "#1A1A1A",
+      "preview_palette": [
+        "#1A1A1A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/RPLA1710-BLKSPOOL.jpg?v=1659388516"
+    },
+    {
+      "id": "protopasta-plastic-htpm1710-tom",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Tom's Tangerine Orange",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/tangerine-orange-metallic-gold-htpla",
+      "source_title": "Tom's Tangerine Orange Metallic Gold HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTPM1710-TOM",
+      "source_variant_id": 43261900685560,
+      "swatch": "#F58A1B",
+      "preview_palette": [
+        "#F58A1B",
+        "#D4A82A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Protopasta",
+          "HTPLA",
+          "Tom's Tangerine Orange Metallic Gold"
+        ]
+      ],
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTPM1710-TOMSPOOL.jpg?v=1659386917"
+    },
+    {
+      "id": "protopasta-plastic-htgl1710-whm",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "White Marble",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/white-marble-htpla",
+      "source_title": "White Marble HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTGL1710-WHM",
+      "source_variant_id": 43261891838200,
+      "swatch": "#EDEDED",
+      "preview_palette": [
+        "#EDEDED",
+        "#9A9DA1"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTGL1710-WHM-SPOOL.jpg?v=1658868916"
+    },
+    {
+      "id": "protopasta-plastic-htgl1710-cso",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Citrus Sunrise Orange",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/citrus-sunrise-orange-multicolor-htpla",
+      "source_title": "Citrus Sunrise Orange Multicolor HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTGL1710-CSO",
+      "source_variant_id": 44240721871096,
+      "swatch": "#F58A1B",
+      "preview_palette": [
+        "#F58A1B",
+        "#F2D31B",
+        "#E8472A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Protopasta",
+          "HTPLA",
+          "Citrus Sunrise Orange Multicolor"
+        ]
+      ],
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTGL1705-CSOSTORAGE.jpg?v=1658329447"
+    },
+    {
+      "id": "protopasta-plastic-pla11710-blk",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Premium Basic PLA",
+      "color_name": "Black",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/back-to-basics-black-4043d-pla",
+      "source_title": "Black PLA - Premium Basic PLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "PLA11710-BLK",
+      "source_variant_id": 35490745876641,
+      "swatch": "#1A1A1A",
+      "preview_palette": [
+        "#1A1A1A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/PLA11710-BLKSPOOL.jpg?v=1659388302"
+    },
+    {
+      "id": "protopasta-plastic-htp21710-smk",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Silver Smoke Grey",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/high-performance-htpla-silver-smoke",
+      "source_title": "Silver Smoke Grey Translucent HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTP21710-SMK",
+      "source_variant_id": 44125182230776,
+      "swatch": "#8A8D91",
+      "preview_palette": [
+        "#8A8D91"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Protopasta",
+          "HTPLA",
+          "Silver Smoke Grey Translucent"
+        ]
+      ],
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTP21705-SMKSTORAGE.jpg?v=1659372591"
+    },
+    {
+      "id": "protopasta-plastic-htgl1710-mdb",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Marine Dream Blue",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/marine-dream-blue-multicolor-htpla",
+      "source_title": "Marine Dream Blue Multicolor HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTGL1710-MDB",
+      "source_variant_id": 44386097987832,
+      "swatch": "#1F6FB0",
+      "preview_palette": [
+        "#1F6FB0",
+        "#2AC4B5",
+        "#14305A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Protopasta",
+          "HTPLA",
+          "Marine Dream Blue Multicolor"
+        ]
+      ],
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTGL1705-MDBSTORAGE.jpg"
+    },
+    {
+      "id": "protopasta-plastic-pla11710-nat",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Premium Basic PLA",
+      "color_name": "Natural",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/back-to-basics-natural-pla",
+      "source_title": "Natural PLA - Premium Basic PLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "PLA11710-NAT",
+      "source_variant_id": 32969030795395,
+      "swatch": "#E8E2D0",
+      "preview_palette": [
+        "#E8E2D0"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/PLA11710-NATSPOOL.jpg?v=1659388386"
+    },
+    {
+      "id": "protopasta-plastic-htpm1710-gld",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Good as Gold",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/good-as-gold-htpla",
+      "source_title": "Good as Gold HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTPM1710-GLD",
+      "source_variant_id": 44295163904248,
+      "swatch": "#D4A82A",
+      "preview_palette": [
+        "#D4A82A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTPM1705-GLDSTORAGE.jpg?v=1659383860"
+    },
+    {
+      "id": "protopasta-plastic-htgl1710-nng",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Nebula Night Glow",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/nebula-night-glow-fluorescent-multicolor-htpla",
+      "source_title": "Nebula Night Glow Fluorescent Multicolor HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTGL1710-NNG",
+      "source_variant_id": 43436151865592,
+      "swatch": "#6A2FD0",
+      "preview_palette": [
+        "#6A2FD0",
+        "#2FD0A8",
+        "#E02FA0"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Protopasta",
+          "HTPLA",
+          "Nebula Night Glow Fluorescent Multicolor"
+        ]
+      ],
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTGL1710-NNG-SPOOL.jpg?v=1667339319"
+    },
+    {
+      "id": "protopasta-plastic-htgl1710-ffr",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Fleck 'n Fire Red",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/fleckn-fire-red-glitter-htpla",
+      "source_title": "Fleck 'n Fire Red Glitter HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTGL1710-FFR",
+      "source_variant_id": 44257385742584,
+      "swatch": "#C8262B",
+      "preview_palette": [
+        "#C8262B",
+        "#FF9A4A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Protopasta",
+          "HTPLA",
+          "Fleck 'n Fire Red Glitter"
+        ]
+      ],
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTGL1705-FFRSTORAGE.jpg?v=1658352150"
+    },
+    {
+      "id": "protopasta-plastic-htpm1710-smg",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "What Karat? Smooth Gold",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/what-karat-smooth-gold-htpla",
+      "source_title": "What Karat? Smooth Gold HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTPM1710-SMG",
+      "source_variant_id": 42807525409016,
+      "swatch": "#D9B02B",
+      "preview_palette": [
+        "#D9B02B"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTPM1710-SMGSPOOL.jpg?v=1659372181"
+    },
+    {
+      "id": "protopasta-plastic-petg1710-blk",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "PETG",
+      "color_name": "Black",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/simply-black-petg",
+      "source_title": "Black PETG *new low price*",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "PETG1710-BLK",
+      "source_variant_id": 42305158611192,
+      "swatch": "#1A1A1A",
+      "preview_palette": [
+        "#1A1A1A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/PETG1710-BLKSPOOL.jpg?v=1659387539"
+    },
+    {
+      "id": "protopasta-plastic-htgl1710-wob",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Wonder Black Rainbow",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/wonder-black-rainbow-glitter-htpla",
+      "source_title": "Wonder Black Rainbow Glitter HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTGL1710-WOB",
+      "source_variant_id": 43567790096632,
+      "swatch": "#1A1A1A",
+      "preview_palette": [
+        "#1A1A1A",
+        "#E04FA0",
+        "#4FA0E0"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Protopasta",
+          "HTPLA",
+          "Wonder Black Rainbow Glitter"
+        ]
+      ],
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTGL1710-WOBSPOOL.jpg?v=1673297490"
+    },
+    {
+      "id": "protopasta-plastic-htp21710-log",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Lootsef Green",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/lootsef-green-htpla",
+      "source_title": "Lootsef Green HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTP21710-LOG",
+      "source_variant_id": 42516958281976,
+      "swatch": "#3FA84F",
+      "preview_palette": [
+        "#3FA84F"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTP21710-LOGSTORAGE.jpg?v=1659367967"
+    },
+    {
+      "id": "protopasta-plastic-htgl1710-tex",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Texas Tea Black/Gold",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/texas-tea-black-with-gold-glitter",
+      "source_title": "Texas Tea Black with Gold Glitter",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTGL1710-TEX",
+      "source_variant_id": 44140407488760,
+      "swatch": "#1A1A1A",
+      "preview_palette": [
+        "#1A1A1A",
+        "#D4A82A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Protopasta",
+          "HTPLA",
+          "Texas Tea Black w/ Gold Glitter"
+        ]
+      ],
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HTGL-TEX-filament.jpg?v=1700100257"
+    },
+    {
+      "id": "protopasta-plastic-petg1710-bme",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "PETG",
+      "color_name": "Blood of My Enemies Red",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/amies-blood-of-my-enemies-translucent-red-petg",
+      "source_title": "Amie's \"Blood of My Enemies\" Translucent Red PETG",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "PETG1710-BME",
+      "source_variant_id": 43335780696312,
+      "swatch": "#C0182B",
+      "preview_palette": [
+        "#C0182B"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Protopasta",
+          "PETG",
+          "Amie's \"Blood of My Enemies\" Translucent Red"
+        ]
+      ],
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/SUB21710-BMESPOOL_37310b1b-3bfe-458d-92b0-a34a0ebc5c37.jpg?v=1664923545"
+    },
+    {
+      "id": "protopasta-plastic-htpc1710-hss",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "High Density HTPLA",
+      "color_name": "Stainless Steel",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/high-density-steel-filled-htpla",
+      "source_title": "High Density Stainless Steel-filled HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTPC1710-HSS",
+      "source_variant_id": 46946235973880,
+      "swatch": "#9AA0A6",
+      "preview_palette": [
+        "#9AA0A6"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/ssp_stainless-steel-pla-filament-3d-print.jpg?v=1596508185"
+    },
+    {
+      "id": "protopasta-plastic-petg1710-clr",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "PETG",
+      "color_name": "Clear",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/simply-clear-petg",
+      "source_title": "Clear PETG *new low price*",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "PETG1710-CLR",
+      "source_variant_id": 42364430385400,
+      "swatch": "#E6EEF0",
+      "preview_palette": [
+        "#E6EEF0"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/PETG1710-CLRSPOOL.jpg?v=1659387730"
+    },
+    {
+      "id": "protopasta-plastic-htgl1710-fnf",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Fleck 'n Forest Green",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/fleck-n-forest-green-glitter-htpla",
+      "source_title": "Fleck 'n Forest Green Glitter HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTGL1710-FNF",
+      "source_variant_id": 43567850160376,
+      "swatch": "#1F6B3A",
+      "preview_palette": [
+        "#1F6B3A",
+        "#9AE0A8"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Protopasta",
+          "HTPLA",
+          "Fleck 'n Forest Green Glitter"
+        ]
+      ],
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/HTGL1710-FNFSPOOL.jpg?v=1673300726"
+    },
+    {
+      "id": "protopasta-plastic-pla11710-esd",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Static Dissipative PLA",
+      "color_name": "Black",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/static-dissipative-pla",
+      "source_title": "Static Dissipative PLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "PLA11710-ESD",
+      "source_variant_id": 46005100708088,
+      "swatch": "#1E1E1E",
+      "preview_palette": [
+        "#1E1E1E"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": false,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/cdp_conductive-pla-filament_1f81551f-ab68-4ef8-92ab-44096b42ff62.jpg?v=1684799063"
+    },
+    {
+      "id": "protopasta-plastic-htpc1710-hfe",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "High Density HTPLA",
+      "color_name": "Iron",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/high-density-iron-filled-metal-composite-htpla",
+      "source_title": "High Density Iron-filled HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTPC1710-HFE",
+      "source_variant_id": 46933811527928,
+      "swatch": "#5E6368",
+      "preview_palette": [
+        "#5E6368"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/fep_magnetic-iron-pla-filament.jpg?v=1597851594"
+    },
+    {
+      "id": "protopasta-plastic-qpla1710-red",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Red Quantum Dot",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/red-quantum-dot-htpla",
+      "source_title": "Red Quantum Dot HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "QPLA1710-RED",
+      "source_variant_id": 48256199065848,
+      "swatch": "#E02B2B",
+      "preview_palette": [
+        "#E02B2B"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/QPLA-RED-filament-daynight.png?v=1787601119"
+    },
+    {
+      "id": "protopasta-plastic-mpla1710-tco",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "c-Matte PLA",
+      "color_name": "Terracotta",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/terracotta-c-matte-pla",
+      "source_title": "Terracotta c-Matte PLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "MPLA1710-TCO",
+      "source_variant_id": 46515681427704,
+      "swatch": "#C26A43",
+      "preview_palette": [
+        "#C26A43"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/MPLA-TCO-3dprinting-filament.png?v=1749247002"
+    },
+    {
+      "id": "protopasta-plastic-qpla1710-grn",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Green Quantum Dot",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/green-quantum-dot-htpla",
+      "source_title": "Green Quantum Dot HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "QPLA1710-GRN",
+      "source_variant_id": 48256365920504,
+      "swatch": "#39D26A",
+      "preview_palette": [
+        "#39D26A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/QPLA-GRN-filament-daynight.png?v=1787600835"
+    },
+    {
+      "id": "protopasta-plastic-qpla1710-orn",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Orange Quantum Dot",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/orange-quantum-dot-htpla",
+      "source_title": "Orange Quantum Dot HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "QPLA1710-ORN",
+      "source_variant_id": 48256362643704,
+      "swatch": "#F58A1B",
+      "preview_palette": [
+        "#F58A1B"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/QPLA-ORN-filament-daynight.png?v=1787601051"
+    },
+    {
+      "id": "protopasta-plastic-plac1710-c60",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Calcium Carbonate PLA",
+      "color_name": "White",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/calcium-carbonate-pla-composite",
+      "source_title": "Calcium Carbonate PLA Composite",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "PLAC1710-C60",
+      "source_variant_id": 46519266115832,
+      "swatch": "#EDEBE6",
+      "preview_palette": [
+        "#EDEBE6"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/PLAC-C60-3dprinting-filament.png?v=1749431145"
+    },
+    {
+      "id": "protopasta-plastic-qpla1710-yel",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Yellow Quantum Dot",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/yellow-quantum-dot-htpla",
+      "source_title": "Yellow Quantum Dot HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "QPLA1710-YEL",
+      "source_variant_id": 48256365134072,
+      "swatch": "#F5D41B",
+      "preview_palette": [
+        "#F5D41B"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/QPLA-YEL-filament-daynight.png?v=1787600934"
+    },
+    {
+      "id": "protopasta-plastic-petg1710-esd",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Static Dissipative PETG",
+      "color_name": "Black",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/static-dissipative-petg",
+      "source_title": "Static Dissipative PETG",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "PETG1710-ESD",
+      "source_variant_id": 46011579072760,
+      "swatch": "#1E1E1E",
+      "preview_palette": [
+        "#1E1E1E"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/htp3-blk_opaque-black-htpla-filament.jpg?v=1596508087"
+    },
+    {
+      "id": "protopasta-plastic-cfp11710-esd",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Static Dissipative CF PLA",
+      "color_name": "Black",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/static-dissipative-carbon-fiber-pla",
+      "source_title": "Static Dissipative Carbon Fiber PLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "CFP11710-ESD",
+      "source_variant_id": 46007749247224,
+      "swatch": "#222222",
+      "preview_palette": [
+        "#222222"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/cfp_black-carbon-fiber-pla-filament.jpg?v=1614324881"
+    },
+    {
+      "id": "protopasta-plastic-htgf1710-wht",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Glass Fiber HTPLA",
+      "color_name": "White",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/white-glass-fiber-htpla",
+      "source_title": "White Glass Fiber HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTGF1710-WHT",
+      "source_variant_id": 46701562593528,
+      "swatch": "#F2F2F2",
+      "preview_palette": [
+        "#F2F2F2"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HTGF-WHT-3dprinting-filament.png?v=1772066259"
+    },
+    {
+      "id": "protopasta-plastic-pgcf1710-hsb",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Carbon Fiber PCTG",
+      "color_name": "Black High Strength",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/black-high-strength-carbon-fiber-pctg",
+      "source_title": "Black High Strength Carbon Fiber PCTG",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "PGCF1710-HSB",
+      "source_variant_id": 50083195879672,
+      "swatch": "#1A1A1A",
+      "preview_palette": [
+        "#1A1A1A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/htp2-cf_black-carbon-fiber-htpla-filament_860x_3814a6d0-9b40-4ec5-99c0-29489fa7e9b7.jpg?v=1772066287"
+    },
+    {
+      "id": "protopasta-plastic-pctg1710-clr",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "PCTG",
+      "color_name": "Clear",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/clear-pctg",
+      "source_title": "Clear PCTG",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "PCTG1710-CLR",
+      "source_variant_id": 50083201122552,
+      "swatch": "#DCEBEF",
+      "preview_palette": [
+        "#DCEBEF"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/products/cpe2-clr_post-industrial-petg-filament_16f221e5-7e12-4419-965d-38afa5b9b617.jpg?v=1772066274"
+    },
+    {
+      "id": "protopasta-plastic-htp21710-flb",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Fluorescent Blue",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/fluorescent-blue-htpla",
+      "source_title": "Fluorescent Blue HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTP21710-FLB",
+      "source_variant_id": 50224642031864,
+      "swatch": "#1F8BFF",
+      "preview_palette": [
+        "#1F8BFF"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HTP2-FLB-filament-daynight.png?v=1787601432"
+    },
+    {
+      "id": "protopasta-plastic-pgcf1710-hig",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Carbon Fiber PCTG",
+      "color_name": "Gray High Impact",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/gray-high-impact-carbon-fiber-pctg",
+      "source_title": "Gray High Impact Carbon Fiber PCTG",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "PGCF1710-HIG",
+      "source_variant_id": 50083197681912,
+      "swatch": "#6E7176",
+      "preview_palette": [
+        "#6E7176"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/htmf-gry_gray-matte-fiber-htpla-filament.jpg?v=1772064726"
+    },
+    {
+      "id": "protopasta-plastic-htp21710-flp",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Fluorescent Pink",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/fluorescent-pink-htpla",
+      "source_title": "Fluorescent Pink HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTP21710-FLP",
+      "source_variant_id": 50223590834424,
+      "swatch": "#FF3EA5",
+      "preview_palette": [
+        "#FF3EA5"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HTP2-FLP-filament-pink-daynight.png?v=1787597673"
+    },
+    {
+      "id": "protopasta-plastic-htp21710-flr",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Fluorescent Red",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/fluorescent-red-htpla",
+      "source_title": "Fluorescent Red HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTP21710-FLR",
+      "source_variant_id": 50224582885624,
+      "swatch": "#FF2A2A",
+      "preview_palette": [
+        "#FF2A2A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HTP2-FLR-filament-daynight.png?v=1787601260"
+    },
+    {
+      "id": "protopasta-plastic-htp21710-ngl",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Nebula Glow",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/nebula-glow-in-the-dark",
+      "source_title": "Nebula Glow HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTP21710-NGL",
+      "source_variant_id": 50224718381304,
+      "swatch": "#6A4CC8",
+      "preview_palette": [
+        "#6A4CC8",
+        "#C58BFF",
+        "#3A2A80"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HTP2-NGL-filament-daynight.png?v=1787609681"
+    },
+    {
+      "id": "protopasta-plastic-htp21710-flu",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Fluorescent Purple",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/fluorescent-purple-htpla",
+      "source_title": "Fluorescent Purple HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTP21710-FLU",
+      "source_variant_id": 50534961578232,
+      "swatch": "#A233FF",
+      "preview_palette": [
+        "#A233FF"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HTP2-FLU-filament-daynight.png?v=1789695404"
+    },
+    {
+      "id": "protopasta-plastic-htgf1710-lsr",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Glass Fiber HTPLA",
+      "color_name": "Laser Gray",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/laser-gray-glass-fiber-htpla",
+      "source_title": "Laser Gray Glass Fiber HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTGF1710-LSR",
+      "source_variant_id": 50227814990072,
+      "swatch": "#7C8085",
+      "preview_palette": [
+        "#7C8085"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HTGF-LSR-filament.png?v=1787619801"
+    },
+    {
+      "id": "protopasta-plastic-htgl1710-fgl",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Forest Fantasy Glow",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/forest-fantasy-glow",
+      "source_title": "Forest Fantasy Glow HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTGL1710-FGL",
+      "source_variant_id": 50227802145016,
+      "swatch": "#2E8B57",
+      "preview_palette": [
+        "#2E8B57",
+        "#8FE3A8",
+        "#1B5E3A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HTGL-FGL-filament-daynight.png?v=1787619191"
+    },
+    {
+      "id": "protopasta-plastic-htp21710-crg",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Candy Rainbow Glow",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/candy-rainbow-glow",
+      "source_title": "Candy Rainbow Glow HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTP21710-CRG",
+      "source_variant_id": 50227796115704,
+      "swatch": "#FF8BD0",
+      "preview_palette": [
+        "#FF8BD0",
+        "#8BE0FF",
+        "#FFE98B"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HTP2-CRG-filament-daynight.png?v=1787618613"
+    },
+    {
+      "id": "protopasta-plastic-htp21710-flg",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Fluorescent Green",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/fluorescent-green-htpla",
+      "source_title": "Fluorescent Green HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTP21710-FLG",
+      "source_variant_id": 50534958596344,
+      "swatch": "#39FF14",
+      "preview_palette": [
+        "#39FF14"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HTP2-FLG-filament-daynight.png?v=1789695167"
+    },
+    {
+      "id": "protopasta-plastic-htp21710-flo",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "HTPLA",
+      "color_name": "Fluorescent Orange",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/fluorescent-orange-htpla",
+      "source_title": "Fluorescent Orange HTPLA",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HTP21710-FLO",
+      "source_variant_id": 50534947750136,
+      "swatch": "#FF7A00",
+      "preview_palette": [
+        "#FF7A00"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HTP2-FLO-filament-daynight_d08f41d9-c6e4-4479-938b-a806d37b4404.png?v=1789694542"
+    },
+    {
+      "id": "protopasta-plastic-hpcf1710-hig",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Carbon Fiber HTPETG",
+      "color_name": "Galaxy Black High Impact",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/galaxy-black-high-impact-carbon-fiber-htpetg",
+      "source_title": "Galaxy Black High Impact Carbon Fiber HTPETG",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HPCF1710-HIG",
+      "source_variant_id": 50222926889208,
+      "swatch": "#1C1C24",
+      "preview_palette": [
+        "#1C1C24",
+        "#3A3A52"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HPCF-HIG-filament.png?v=1787593156"
+    },
+    {
+      "id": "protopasta-plastic-hpgf1710-hfb",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Glass Fiber HTPETG",
+      "color_name": "Highfive Blue",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/highfive-blue-glass-fiber-htpetg",
+      "source_title": "Highfive Blue Glass Fiber HTPETG",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HPGF1710-HFB",
+      "source_variant_id": 50222839922936,
+      "swatch": "#2F6FD8",
+      "preview_palette": [
+        "#2F6FD8"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HPGF-HFB-filament.png?v=1787592620"
+    },
+    {
+      "id": "protopasta-plastic-hpcf1710-hsb",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Carbon Fiber HTPETG",
+      "color_name": "Black High Strength",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/black-high-strength-carbon-fiber-htpetg",
+      "source_title": "Black High Strength Carbon Fiber HTPETG",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HPCF1710-HSB",
+      "source_variant_id": 50223026667768,
+      "swatch": "#1A1A1A",
+      "preview_palette": [
+        "#1A1A1A"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HPCF-HSB-filament.png?v=1787593827"
+    },
+    {
+      "id": "protopasta-plastic-petg1710-cu",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Metal Composite PETG",
+      "color_name": "Copper",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://proto-pasta.com/products/composite-copper-petg",
+      "source_title": "Composite Copper PETG",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "PETG1710-CU",
+      "source_variant_id": 67611485896952,
+      "swatch": "#B87333",
+      "preview_palette": [
+        "#B87333"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "http://proto-pasta.com/cdn/shop/products/htpc-cu_copper-htpla-3d-print.jpg?v=1596507712"
+    },
+    {
+      "id": "protopasta-plastic-petg1710-ss",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Metal Composite PETG",
+      "color_name": "Steel",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://proto-pasta.com/products/composite-steel-petg",
+      "source_title": "Composite Steel PETG",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "PETG1710-SS",
+      "source_variant_id": 67587616735480,
+      "swatch": "#A8ADB2",
+      "preview_palette": [
+        "#A8ADB2"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "http://proto-pasta.com/cdn/shop/products/ssp_stainless-steel-pla-filament-3d-print.jpg?v=1596508185"
+    },
+    {
+      "id": "protopasta-plastic-hpgf1710-wht",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Glass Fiber HTPETG",
+      "color_name": "White",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://www.protopasta.com/products/white-glass-fiber-htpetg",
+      "source_title": "White Glass Fiber HTPETG",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "HPGF1710-WHT",
+      "source_variant_id": 50216345305336,
+      "swatch": "#F2F2F2",
+      "preview_palette": [
+        "#F2F2F2"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "https://cdn.shopify.com/s/files/1/0717/9095/files/HPGF-WHT-filament_cd1c525f-c2ec-4ed0-9955-bbe5280a65ab.png?v=1787590659"
+    },
+    {
+      "id": "protopasta-plastic-petg1710-fe",
+      "manufacturer": "Protopasta Plastic Spool",
+      "filament_type": "Metal Composite PETG",
+      "color_name": "Iron",
+      "spool_profile": "Protopasta Plastic Spool",
+      "spool_weight_g": 1000,
+      "source": "https://proto-pasta.com/products/composite-iron-petg",
+      "source_title": "Composite Iron PETG",
+      "source_date": "2026-10-15",
+      "source_color_name": "1.75mm / 1kg Spool",
+      "source_sku": "PETG1710-FE",
+      "source_variant_id": 67611503329528,
+      "swatch": "#5A5F64",
+      "preview_palette": [
+        "#5A5F64"
+      ],
+      "swatch_method": "Protopasta store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true,
+      "swatch_source": "http://proto-pasta.com/cdn/shop/products/fep_magnetic-iron-pla-3d-print.jpg?v=1596507935"
     },
     {
       "id": "geeetech-us700-001-0431",

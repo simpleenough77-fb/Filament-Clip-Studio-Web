@@ -70,7 +70,26 @@ def merged(path):
     return np.array(mesh.vert_properties)[:, :3].astype(float), np.array(mesh.tri_verts), len(parts) - len(kept)
 
 
+def collapse_slivers(verts, faces, max_aspect=1e-6):
+    """Collapse the shortest edge of any near-zero-area triangle. A CAD union can leave one: its float32 corners are
+    almost collinear, so it can be wound the wrong way and then shows up as a backwards face in the slicer."""
+    verts = np.asarray(verts, dtype=float); faces = np.array(faces)
+    while True:
+        p = verts[faces]
+        area = np.linalg.norm(np.cross(p[:, 1] - p[:, 0], p[:, 2] - p[:, 0]), axis=1) / 2
+        longest = np.max(np.linalg.norm(p - np.roll(p, 1, axis=1), axis=2), axis=1)
+        bad = np.flatnonzero(area < max_aspect * longest ** 2)   # area / longest edge squared: only needle-thin triangles
+        if not len(bad):
+            return verts, faces
+        f = faces[bad[0]]
+        edges = [(np.linalg.norm(verts[f[i]] - verts[f[(i + 1) % 3]]), f[i], f[(i + 1) % 3]) for i in range(3)]
+        _, a, b = min(edges)
+        faces = np.where(faces == b, a, faces)
+        faces = faces[(faces[:, 0] != faces[:, 1]) & (faces[:, 1] != faces[:, 2]) & (faces[:, 0] != faces[:, 2])]
+
+
 def write(path, verts, faces):
+    verts, faces = collapse_slivers(verts, faces)
     out = bytearray(b'Filament Clip Studio body (merged shells, centred on X/Y, front face at z=0)'.ljust(80, b' '))
     out += struct.pack('<I', len(faces))
     for a, b, c in faces:
