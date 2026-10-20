@@ -36,9 +36,38 @@ GitHub Actions (`.github/workflows/pages.yml`) runs the fast checks on every pus
 
 - `python tests/test_quick.py` — catalog integrity, CSV import regressions and the catalog feed (no OpenSCAD needed).
 - `node tests/test_paste.mjs` — conversion of rows pasted from a spreadsheet.
+- `node tests/test_feedback.mjs` — the anonymous feedback endpoint (validation, normalization, moderation, XSS and injection payloads, rate limits) and a check that `feedback.js` never writes visitor text as markup.
 - `python tools/build_site.py` — writes `downloads/catalog.csv` (the Google Sheets builder imports it with `=IMPORTDATA`) and `SOURCE_HASHES.json`. The deploy also stamps the build badge with the commit and date. Both files are generated, not committed.
 - `python tests/test_flat_exports.py` exports every vendor's clip (with and without sleeve) through the studio's own WebAssembly OpenSCAD run by Node (no OpenSCAD install needed) and checks the 3MF; run it by hand after geometry changes (a minute or two).
 - `python tools/prepare_bodies.py "<folder of vendor STLs>"` rebuilds `author/<vendor>.stl` and `<vendor>_sleeve.stl` from the owner's STLs (merges shells, strips baked-in text, centres them) and records hashes in `author/Bodies_Provenance.json`.
+
+## Feedback
+
+After a ZIP download the studio offers an optional, anonymous rating (`feedback.js`, `feedback.css`, shown by `#feedbackPrompt` in `studio.html`), and `feedback.html` hosts the same form. Responses go to `POST /api/feedback` (`worker/feedback.js`, routed from `worker/stat.js`) and are stored in the D1 table `feedback` (`worker/0003_create_feedback.sql`): timestamp, source, 1-5 rating, allowlisted topic ids and a plain-text comment of up to 500 characters. Nothing identifies the visitor. The Feedback page lists the latest 100 responses and a rating summary from `GET /api/feedback` (cached for a minute, no CORS headers), showing only date, stars, topics and comment, set with `textContent` in `feedback_list.js` and never as markup. The server normalizes comments again on the way out, so even a row edited by hand in the console cannot carry markup. Comments are normalized on the server (Unicode NFKC, whitespace collapsed, control and invisible characters and angle brackets removed, a leading `=`, `+`, `-` or `@` defused for spreadsheet exports) and every query is parameterized.
+
+The migrations (`0003` creates the table, `0004` adds the `hidden` switch, `0005` adds the `flag` column used for held comments) are not applied by the deploy. Apply them once to the same D1 database as the others (`npx wrangler d1 migrations apply clip-studio-usage --remote`, or paste the file into the D1 console). Held comments: the Worker checks each comment for links and contact details, a short list of abusive words (`PROFANITY` in `worker/feedback.js`; whole words only, and look-alike spellings like `sh1t` or `f u c k` are caught), spam phrases and runs of one character, all-caps text, and the same comment sent twice in a day. A flagged comment (`flag` = `link`, `language`, `spam`, `caps` or `duplicate`) is still stored, but its text is withheld from the page; its rating and topics still show. `spam` rows are hidden entirely (`hidden` = 1). The visitor always sees the same "thanks", so nobody learns what tripped the filter. Review what is being held and decide:
+
+```
+SELECT id, flag, comment FROM feedback WHERE flag IS NOT NULL AND hidden = 0
+UPDATE feedback SET flag = NULL WHERE id = 42     -- approve: the comment is published
+UPDATE feedback SET hidden = 1 WHERE id = 42      -- remove the whole response
+```
+
+The filter is deliberately short and simple, and no word list is complete; the real safety nets are that everything is shown as inert text and that nothing is published until you clear it.
+
+Spam volume: add a Cloudflare rate limiting rule in the dashboard (Security, WAF, Rate limiting rules) for requests where the URI path equals `/api/feedback` and the method is `POST`, counted per IP address (the limits you can choose depend on your plan). Cloudflare enforces it at the edge, so the site still never stores an IP. Cloudflare Turnstile is the next step if spam gets through.
+
+To hide an abusive or personal response from the page (it stays in the table), set its flag, then it disappears from the list and the counts within a minute:
+
+```
+npx wrangler d1 execute clip-studio-usage --remote --command "UPDATE feedback SET hidden = 1 WHERE id = 42"
+```
+
+To read responses, including their ids, use the D1 console or:
+
+```
+npx wrangler d1 execute clip-studio-usage --remote --command "SELECT id, datetime(ts,'unixepoch') AS at, source, rating, tags, comment, flag, hidden FROM feedback ORDER BY id DESC LIMIT 50"
+```
 
 ## Change log
 
