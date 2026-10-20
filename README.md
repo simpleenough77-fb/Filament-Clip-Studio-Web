@@ -36,9 +36,20 @@ GitHub Actions (`.github/workflows/pages.yml`) runs the fast checks on every pus
 
 - `python tests/test_quick.py` — catalog integrity, CSV import regressions and the catalog feed (no OpenSCAD needed).
 - `node tests/test_paste.mjs` — conversion of rows pasted from a spreadsheet.
+- `node tests/test_feedback.mjs` — the anonymous feedback endpoint (validation, normalization, XSS and injection payloads, rate limits) and a check that `feedback.js` never writes visitor text as markup.
 - `python tools/build_site.py` — writes `downloads/catalog.csv` (the Google Sheets builder imports it with `=IMPORTDATA`) and `SOURCE_HASHES.json`. The deploy also stamps the build badge with the commit and date. Both files are generated, not committed.
 - `python tests/test_flat_exports.py` exports every vendor's clip (with and without sleeve) through the studio's own WebAssembly OpenSCAD run by Node (no OpenSCAD install needed) and checks the 3MF; run it by hand after geometry changes (a minute or two).
 - `python tools/prepare_bodies.py "<folder of vendor STLs>"` rebuilds `author/<vendor>.stl` and `<vendor>_sleeve.stl` from the owner's STLs (merges shells, strips baked-in text, centres them) and records hashes in `author/Bodies_Provenance.json`.
+
+## Feedback
+
+After a ZIP download the studio offers an optional, anonymous rating (`feedback.js`, `feedback.css`, shown by `#feedbackPrompt` in `studio.html`), and `feedback.html` hosts the same form. Responses go to `POST /api/feedback` (`worker/feedback.js`, routed from `worker/stat.js`) and are stored in the D1 table `feedback` (`worker/0003_create_feedback.sql`): timestamp, source, 1-5 rating, allowlisted topic ids and a plain-text comment of up to 500 characters. Nothing identifies the visitor, and nothing stored is ever rendered or served back: there is no read endpoint. Comments are normalized on the server (Unicode NFKC, whitespace collapsed, control and invisible characters and angle brackets removed, a leading `=`, `+`, `-` or `@` defused for spreadsheet exports) and every query is parameterized.
+
+The migration is not applied by the deploy. Apply it once to the same D1 database as the others (`npx wrangler d1 migrations apply clip-studio-usage --remote`, or paste the file into the D1 console). To read responses, use the D1 console or:
+
+```
+npx wrangler d1 execute clip-studio-usage --remote --command "SELECT datetime(ts,'unixepoch') AS at, source, rating, tags, comment FROM feedback ORDER BY id DESC LIMIT 50"
+```
 
 ## Change log
 

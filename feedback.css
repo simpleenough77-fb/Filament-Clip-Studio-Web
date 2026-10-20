@@ -1,0 +1,25 @@
+/* Anonymous feedback form, shared by studio.html (after a download) and feedback.html.
+   Selectors are prefixed with .fb so they win over the studio's generic button and input styles. */
+.fb{margin-top:10px}
+.fb [hidden]{display:none!important}
+.fb .fb-ask{margin:0 0 6px;font-size:14px;color:#c6cfdc}
+.fb .fb-stars{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 4px}
+.fb button.fb-star{width:52px;height:52px;padding:0;border-radius:12px;background:#101a26;color:#5f7084;border:1px solid #2e3a4a;font:400 28px/1 system-ui,sans-serif;cursor:pointer}
+.fb button.fb-star.on{color:#f4c95d;border-color:#7d6a32}
+.fb button.fb-star:hover,.fb button.fb-star:focus-visible{border-color:#83b0ea;outline:0}
+.fb .fb-hint{min-height:1.4em;margin:0 0 6px;font-size:13px;color:#8d9caf}
+.fb .fb-chips{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+.fb button.fb-chip{padding:7px 14px;border-radius:20px;background:#18212d;color:#c8d1dc;border:1px solid #2e3a4a;font:600 13px system-ui,sans-serif;cursor:pointer}
+.fb button.fb-chip[aria-pressed="true"]{background:#83b0ea;color:#101a26;border-color:#83b0ea}
+.fb button.fb-chip:focus-visible{outline:2px solid #83b0ea;outline-offset:2px}
+.fb label.fb-comment{display:block;font-size:13px;color:#c6cfdc}
+.fb textarea{display:block;width:100%;box-sizing:border-box;min-height:84px;margin-top:8px;padding:10px;background:#0f1721;color:#eff3f8;border:1px solid #3e4c5e;border-radius:7px;font:14px/1.5 system-ui,sans-serif;resize:vertical}
+.fb .fb-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.fb button.fb-send{padding:11px 18px;border-radius:8px;background:#83b0ea;color:#101a26;border:0;font:600 14px system-ui,sans-serif;cursor:pointer}
+.fb button.fb-send:disabled{opacity:.4;cursor:default}
+.fb button.fb-skip{padding:11px 18px;border-radius:8px;background:#2e3c4f;color:#fff;border:0;font:600 14px system-ui,sans-serif;cursor:pointer}
+.fb .fb-status{font-size:13px;color:#b3becc}
+.fb .fb-note{margin:12px 0 0;font-size:12px;color:#8d9caf}
+.fb .fb-thanks{margin:6px 0 0;font-size:16px;color:#edf0f3}
+/* Honeypot: invisible to people, tempting to bots. */
+.fb .fb-hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0;overflow:hidden}

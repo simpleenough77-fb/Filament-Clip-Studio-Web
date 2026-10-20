@@ -153,7 +153,7 @@ def test_github_pages_redirect_stub():
     assert (out / 'downloads' / 'catalog.csv').read_text() == build_site.catalog_csv_text()
 
 def test_support_footer_on_public_pages():
-    for name in ('index.html', 'studio.html', 'guide.html', 'accessories.html', 'changelog.html'):
+    for name in ('index.html', 'studio.html', 'guide.html', 'accessories.html', 'changelog.html', 'feedback.html'):
         html = (ROOT / name).read_text(encoding='utf-8')
         assert html.count('class="support"') == 1, name
         assert 'href="https://ko-fi.com/clipstudio"' in html, name
@@ -175,7 +175,7 @@ def test_front_page_and_studio():
     studio = (ROOT / 'studio.html').read_text(encoding='utf-8')
     assert 'studio-worker' not in home and 'bridge.js' not in home, 'front page must stay light'
     assert 'bridge.js' in studio and re.search(r'>Build [^<]*</span>', studio), 'studio keeps the app and build badge'
-    for name in ('index.html', 'studio.html', 'guide.html', 'accessories.html', 'changelog.html'):
+    for name in ('index.html', 'studio.html', 'guide.html', 'accessories.html', 'changelog.html', 'feedback.html'):
         page = (ROOT / name).read_text(encoding='utf-8')
         assert 'og:image' in page and '<meta name="description"' in page, name + ' needs share metadata'
         for href in re.findall(r'href="\./([\w-]+\.html)', page):
@@ -184,6 +184,19 @@ def test_front_page_and_studio():
     for brand in catalog_brands:
         assert brand in home, 'front page supported-spools list is missing ' + brand
     assert (ROOT / '.github' / 'ISSUE_TEMPLATE' / 'spool-request.yml').is_file()
+
+def test_feedback_page_and_prompt():
+    studio = (ROOT / 'studio.html').read_text(encoding='utf-8')
+    page = (ROOT / 'feedback.html').read_text(encoding='utf-8')
+    # The studio offers the form only after the ZIP is downloaded (feedback.js listens on #download) and it starts hidden.
+    assert re.search(r'<section id="feedbackPrompt" class="panel hidden"', studio) and 'data-source="download"' in studio
+    assert 'src="./feedback.js' in studio and 'href="./feedback.css' in studio
+    assert 'data-source="page"' in page and 'src="./feedback.js' in page and 'href="./feedback.css' in page
+    for name in ('index.html', 'studio.html', 'guide.html', 'accessories.html', 'changelog.html'):
+        assert 'feedback.html' in (ROOT / name).read_text(encoding='utf-8'), name + ' should link to the Feedback page'
+    assert (ROOT / 'worker' / '0003_create_feedback.sql').is_file()
+    # The studio privacy note must mention feedback now that it is collected.
+    assert 'anonymous feedback' in studio
 
 def test_changelog():
     import datetime, json
