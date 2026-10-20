@@ -23,3 +23,22 @@
 .fb .fb-thanks{margin:6px 0 0;font-size:16px;color:#edf0f3}
 /* Honeypot: invisible to people, tempting to bots. */
 .fb .fb-hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0;overflow:hidden}
+
+/* Public list on feedback.html (feedback_list.js). */
+.fb-summary{display:grid;grid-template-columns:minmax(150px,200px) 1fr;gap:22px;align-items:center;background:#18212d;border:1px solid #2e3a4a;border-radius:14px;padding:18px 20px;margin:12px 0 18px}
+.fb-average{display:flex;flex-direction:column;gap:4px}
+.fb-average strong{font-size:40px;letter-spacing:-1px;color:#f1f5fa;line-height:1}
+.fb-stars-static{color:#f4c95d;letter-spacing:2px;font-size:18px}
+.fb-bars{display:flex;flex-direction:column;gap:6px}
+.fb-bar-row{display:grid;grid-template-columns:34px 1fr 34px;gap:10px;align-items:center}
+.fb-bar-row .small:last-child{text-align:right}
+.fb-bar{height:8px;border-radius:6px;background:#101a26;overflow:hidden}
+.fb-bar-fill{height:100%;background:#83b0ea}
+.fb-items{display:flex;flex-direction:column;gap:10px}
+.fb-item{background:#18212d;border:1px solid #2e3a4a;border-radius:14px;padding:14px 18px}
+.fb-item-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.fb-item-head time{color:#8d9caf;margin-left:auto}
+.fb-chip-list{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.fb-chip-static{font-size:12px;font-weight:600;color:#a3c4ef;background:#22334a;border-radius:20px;padding:4px 10px}
+.fb-comment-text{margin:10px 0 0;color:#dbe3ec;line-height:1.55;overflow-wrap:anywhere;white-space:normal}
+@media(max-width:600px){.fb-summary{grid-template-columns:1fr}}

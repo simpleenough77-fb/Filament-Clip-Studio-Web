@@ -1,11 +1,13 @@
 // Anonymous feedback form for filamentclip.com. Mounts into every [data-feedback-form] element:
 //   data-source="download"  the prompt in studio.html, shown after the ZIP is downloaded
 //   data-source="page"      the form on feedback.html
+// Responses appear, anonymously and as plain text, on the Feedback page (feedback_list.js).
 // Sends only: rating, source, chosen topic ids, and the typed comment, to POST /api/feedback. Nothing identifies the visitor.
 // Everything is built with createElement/textContent and the visitor's text is never put into markup, so there is nothing
 // to inject into. Fire-and-forget on failure: this can never affect generating or downloading.
 (() => {
   const TAGS = [["easy","Easy to use"],["fit","Clips fit my spools"],["readable","Labels are readable"],["holders","Holders & templates"],["slicer","Opens in my slicer"],["slow","Too slow"],["confusing","Confusing"],["missing","Missing a spool or brand"],["bug","Something broke"]];
+  window.clipFeedbackTags = Object.fromEntries(TAGS); // labels for feedback_list.js
   const LABELS = ['Poor', 'Fair', 'Okay', 'Good', 'Great'];
   const SENT_KEY = 'clip-studio-feedback-sent';
   const REASK_MS = 30 * 24 * 60 * 60 * 1000; // after sending, the download prompt stays away for 30 days
@@ -121,7 +123,7 @@
       }
     });
 
-    more.append(chips, commentLabel, hp, actions, el('p', 'fb-note', 'Anonymous: no account, email or IP address is saved. Please do not include personal details. Feedback is never shown on this site.'));
+    more.append(chips, commentLabel, hp, actions, el('p', 'fb-note', 'Anonymous: no account, email or IP address is saved. Your rating, topics and note appear on the Feedback page with only the date, so please leave out personal details.'));
     root.append(stars, hint, more);
     host.replaceChildren(root);
   }

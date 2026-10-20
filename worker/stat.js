@@ -2,8 +2,9 @@
 // Only /api/* reaches this Worker (assets.run_worker_first in wrangler.jsonc); everything else is static.
 //   POST /api/stat   one event per generated batch (fire-and-forget from the studio)
 //   GET  /api/stats  public totals, cached for 5 minutes
-//   POST /api/feedback  anonymous rating and comment (worker/feedback.js); there is deliberately no way to read it back
-import { handleFeedback } from './feedback.js';
+//   POST /api/feedback  anonymous rating and comment (worker/feedback.js)
+//   GET  /api/feedback  public summary and latest responses for the Feedback page (cached for 1 minute)
+import { handleFeedback, listFeedback } from './feedback.js';
 
 const HOSTS = new Set(['filamentclip.com', 'www.filamentclip.com']);
 const MAX_PER_MINUTE = 120; // global circuit breaker; no per-visitor tracking
@@ -80,6 +81,7 @@ export default {
       if (pathname === '/api/stat' && request.method === 'POST') return await record(request, env);
       if (pathname === '/api/stats' && request.method === 'GET') return await stats(request, env, ctx);
       if (pathname === '/api/feedback' && request.method === 'POST') return await handleFeedback(request, env, { HOSTS, json });
+      if (pathname === '/api/feedback' && request.method === 'GET') return await listFeedback(request, env, ctx, { json });
     } catch (err) {
       console.error('usage counter error', String(err));
       return json({ ok: false }, 500);

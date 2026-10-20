@@ -194,7 +194,9 @@ def test_feedback_page_and_prompt():
     assert 'data-source="page"' in page and 'src="./feedback.js' in page and 'href="./feedback.css' in page
     for name in ('index.html', 'studio.html', 'guide.html', 'accessories.html', 'changelog.html'):
         assert 'feedback.html' in (ROOT / name).read_text(encoding='utf-8'), name + ' should link to the Feedback page'
-    assert (ROOT / 'worker' / '0003_create_feedback.sql').is_file()
+    assert 'id="feedbackList"' in page and 'src="./feedback_list.js' in page, 'the Feedback page lists responses'
+    assert 'feedback_list.js' not in studio, 'the studio only collects feedback, it does not list it'
+    assert (ROOT / 'worker' / '0003_create_feedback.sql').is_file() and 'hidden' in (ROOT / 'worker' / '0004_add_feedback_hidden.sql').read_text(encoding='utf-8')
     # The studio privacy note must mention feedback now that it is collected.
     assert 'anonymous feedback' in studio
 
