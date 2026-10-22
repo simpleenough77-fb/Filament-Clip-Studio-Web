@@ -1,7 +1,7 @@
 {
-  "version": "3.7",
-  "updated": "2026-10-15",
-  "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix, plus the vendor lists below. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools have their own clip body (Sunlu 1kg). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools have their own clip body (Jayo 1.1kg). Some long Bambu Lab, Cookiecad and Amolen names are shortened so they print in full on the clip; the manufacturer's original names are kept as label_aliases, so CSVs that use them still import. Polymaker and Panchroma entries are the 1 kg, 1.75 mm spools from the US Polymaker store (shop.polymaker.com), including sold-out colors; Panchroma lines are listed under the Panchroma name and all other Polymaker lines under Polymaker. Refills, 0.5/0.75/2/3/5 kg spools, 2.85 mm, bundles and multi-roll packs are excluded. Where a color exists in both old and new packaging or formula, only one entry is kept (the new one). Panchroma Matte PLA colors beyond the store feed's cutoff were taken from the product page and have no SKU. Inland entries are the 1 kg (1.0 kg, 2.2 lbs.) 1.75 mm filaments whose Micro Center product title says Cardboard Spool (microcenter.com), read from each product page on 2026-10-07; plastic-spool rolls, rolls whose title does not name the spool, 0.5 kg and larger rolls, multi-packs and resins are excluded. Availability was not recorded per store, so every entry is marked available. Protopasta entries are 1.75 mm spools from the Protopasta store (protopasta.com), read from its product feed on 2026-10-09, including sold-out colors, using the 1 kg spool; 50 g and 100 g coils, 500 g, 2 kg and larger spools, cases, 2.85 mm, subscriptions, digital items and non-filament products are excluded. Protopasta Cardboard entries use the cardboard-spool clip; Protopasta is moving gradually to plastic spools, so those entries stay in the catalog while stock lasts. Protopasta Plastic entries are the 64 1 kg spool products in the \"Now on plastic spools\" collection on proto-pasta.com (1 kg Spool filter, read from the collection pages on 2026-10-15); each repeats its Protopasta cardboard-spool entry (same SKU) where one exists, and Composite Copper, Steel and Iron PETG are new. Protopasta Plastic has its own clip body. Both print \"Protopasta\" as the manufacturer line on the clip (label_manufacturer); CSVs that say just Protopasta import as the cardboard entry (label_aliases). Creality entries are the single 1 kg spools on the US Creality store (store.creality.com) on 2026-10-09, including sold-out colors; spool-free refills, multi-packs and bundles are excluded. Creality 1 kg spools have their own clip body (Creality 1kg). Geeetech entries are the single 1 kg, 1.75 mm spools on the US Geeetech store (geeetech.com) on 2026-10-09, including sold-out colors; multi-packs and bundles are excluded. Geeetech 1 kg spools have their own clip body (Geeetech 1kg). Swatches for the new vendors are screen approximations from the color names.",
+  "version": "3.8",
+  "updated": "2026-10-22",
+  "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix, plus the vendor lists below. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools have their own clip body (Sunlu 1kg). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools have their own clip body (Jayo 1.1kg). Some long Bambu Lab, Cookiecad and Amolen names are shortened so they print in full on the clip; the manufacturer's original names are kept as label_aliases, so CSVs that use them still import. Polymaker and Panchroma entries are the 1 kg, 1.75 mm spools from the US Polymaker store (shop.polymaker.com), including sold-out colors; Panchroma lines are listed under the Panchroma name and all other Polymaker lines under Polymaker. Refills, 0.5/0.75/2/3/5 kg spools, 2.85 mm, bundles and multi-roll packs are excluded. Where a color exists in both old and new packaging or formula, only one entry is kept (the new one). Panchroma Matte PLA colors beyond the store feed's cutoff were taken from the product page and have no SKU. Inland entries are the 1 kg (1.0 kg, 2.2 lbs.) 1.75 mm filaments whose Micro Center product title says Cardboard Spool (microcenter.com), read from each product page on 2026-10-07; plastic-spool rolls, rolls whose title does not name the spool, 0.5 kg and larger rolls, multi-packs and resins are excluded. Availability was not recorded per store, so every entry is marked available. Protopasta entries are 1.75 mm spools from the Protopasta store (protopasta.com), read from its product feed on 2026-10-09, including sold-out colors, using the 1 kg spool; 50 g and 100 g coils, 500 g, 2 kg and larger spools, cases, 2.85 mm, subscriptions, digital items and non-filament products are excluded. Protopasta Cardboard entries use the cardboard-spool clip; Protopasta is moving gradually to plastic spools, so those entries stay in the catalog while stock lasts. Protopasta Plastic entries are the 64 1 kg spool products in the \"Now on plastic spools\" collection on proto-pasta.com (1 kg Spool filter, read from the collection pages on 2026-10-15); each repeats its Protopasta cardboard-spool entry (same SKU) where one exists, and Composite Copper, Steel and Iron PETG are new. Protopasta Plastic has its own clip body. Both print \"Protopasta\" as the manufacturer line on the clip (label_manufacturer); CSVs that say just Protopasta import as the cardboard entry (label_aliases). Creality entries are the single 1 kg spools on the US Creality store (store.creality.com) on 2026-10-09, including sold-out colors; spool-free refills, multi-packs and bundles are excluded. Creality 1 kg spools have their own clip body (Creality 1kg). Geeetech entries are the single 1 kg, 1.75 mm spools on the US Geeetech store (geeetech.com) on 2026-10-09, including sold-out colors; multi-packs and bundles are excluded. Geeetech 1 kg spools have their own clip body (Geeetech 1kg). Swatches for the new vendors are screen approximations from the color names. The catalog is refreshed every day from the manufacturers' stores (tools/refresh_catalog.py): new colors are added and nothing is ever removed, so saved batches keep working. Cookiecad, Creality and Inland cannot be read automatically and are updated by hand.",
   "products": [
     {
       "id": "bambu-petg-hf-blue",
@@ -6688,6 +6688,198 @@
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
       "swatch_description": "Yellow \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-petg-matte-white",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "PETG Matte",
+      "color_name": "White",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/petg-matte",
+      "source_date": "2026-10-22",
+      "source_color_name": "White(35100)",
+      "source_color_code": "35100",
+      "source_sku_ids": [
+        "773790146574200846",
+        "773790146574200852"
+      ],
+      "swatch_source": "https://store.bblcdn.com/s7/default/0cfe7e85ecb74e1b8f16d00ad5c87ac4/Rectangle_160419.png",
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#FFFFFF",
+      "preview_palette": [
+        "#FFFFFF"
+      ],
+      "swatch_method": "Approximate colors sampled from manufacturer swatch image",
+      "swatch_description": "White \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-petg-matte-black",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "PETG Matte",
+      "color_name": "Black",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/petg-matte",
+      "source_date": "2026-10-22",
+      "source_color_name": "Black(35101)",
+      "source_color_code": "35101",
+      "source_sku_ids": [
+        "773790146574200858",
+        "773790146574200864"
+      ],
+      "swatch_source": "https://store.bblcdn.com/s7/default/fe560812baf944389e16446ef16646a5/Rectangle_160417.png",
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#000000",
+      "preview_palette": [
+        "#000000"
+      ],
+      "swatch_method": "Approximate colors sampled from manufacturer swatch image",
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-petg-matte-lime",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "PETG Matte",
+      "color_name": "Lime",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/petg-matte",
+      "source_date": "2026-10-22",
+      "source_color_name": "Lime(35500)",
+      "source_color_code": "35500",
+      "source_sku_ids": [
+        "773790146574200870",
+        "773790146574200876"
+      ],
+      "swatch_source": "https://store.bblcdn.com/s7/default/f68befc09f984d4ba70712689c57bd0d/Rectangle_160418.png",
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#C0DF16",
+      "preview_palette": [
+        "#C0DF16"
+      ],
+      "swatch_method": "Approximate colors sampled from manufacturer swatch image",
+      "swatch_description": "Lime \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-petg-matte-gray",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "PETG Matte",
+      "color_name": "Gray",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/petg-matte",
+      "source_date": "2026-10-22",
+      "source_color_name": "Gray(35102)",
+      "source_color_code": "35102",
+      "source_sku_ids": [
+        "773790146574200882",
+        "773790146574200888"
+      ],
+      "swatch_source": "https://store.bblcdn.com/s7/default/84049435df5e495e9f84e263b6a773f6/Rectangle_160420.png",
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#7F7E83",
+      "preview_palette": [
+        "#7F7E83"
+      ],
+      "swatch_method": "Approximate colors sampled from manufacturer swatch image",
+      "swatch_description": "Gray \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-petg-matte-pink",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "PETG Matte",
+      "color_name": "Pink",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/petg-matte",
+      "source_date": "2026-10-22",
+      "source_color_name": "Pink(35700)",
+      "source_color_code": "35700",
+      "source_sku_ids": [
+        "773790146574200894",
+        "773790146574200900"
+      ],
+      "swatch_source": "https://store.bblcdn.com/s7/default/9e3f194a85204214a301b8d38fc44fa2/Rectangle_160421.png",
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#FABBCB",
+      "preview_palette": [
+        "#FABBCB"
+      ],
+      "swatch_method": "Approximate colors sampled from manufacturer swatch image",
+      "swatch_description": "Pink \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-petg-matte-baby-blue",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "PETG Matte",
+      "color_name": "Baby Blue",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/petg-matte",
+      "source_date": "2026-10-22",
+      "source_color_name": "Baby Blue(35600)",
+      "source_color_code": "35600",
+      "source_sku_ids": [
+        "773790146574200906",
+        "773790146574200912"
+      ],
+      "swatch_source": "https://store.bblcdn.com/s7/default/5562a89ad97f480ea88c081afbf1f14e/Rectangle_160422.png",
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#B9D9EB",
+      "preview_palette": [
+        "#B9D9EB"
+      ],
+      "swatch_method": "Approximate colors sampled from manufacturer swatch image",
+      "swatch_description": "Baby Blue \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-petg-matte-violet",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "PETG Matte",
+      "color_name": "Violet",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/petg-matte",
+      "source_date": "2026-10-22",
+      "source_color_name": "Violet(35702)",
+      "source_color_code": "35702",
+      "source_sku_ids": [
+        "773790146574200918",
+        "773790146574200924"
+      ],
+      "swatch_source": "https://store.bblcdn.com/s7/default/d96720556bef484ba8bf503858b1d295/Rectangle_160423.png",
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#A7A4E0",
+      "preview_palette": [
+        "#A7A4E0"
+      ],
+      "swatch_method": "Approximate colors sampled from manufacturer swatch image",
+      "swatch_description": "Violet \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-petg-matte-avocado-green",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "PETG Matte",
+      "color_name": "Avocado Green",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/petg-matte",
+      "source_date": "2026-10-22",
+      "source_color_name": "Avocado Green(35501)",
+      "source_color_code": "35501",
+      "source_sku_ids": [
+        "773790146574200930",
+        "773790146574200936"
+      ],
+      "swatch_source": "https://store.bblcdn.com/s7/default/0473b7b12d4b470a975dc0c77998fdaa/Rectangle_160424.png",
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#BCE194",
+      "preview_palette": [
+        "#BCE194"
+      ],
+      "swatch_method": "Approximate colors sampled from manufacturer swatch image",
+      "swatch_description": "Avocado Green \u2014 approximate manufacturer swatch"
     },
     {
       "id": "cookiecad-858d592987",
@@ -52579,6 +52771,166 @@
       "available_at_refresh": true
     },
     {
+      "id": "geeetech-us700-001-2150",
+      "manufacturer": "Geeetech",
+      "filament_type": "PETG",
+      "color_name": "Olive Green",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/petg-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH PETG 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-10-22",
+      "source_color_name": "Olive Green",
+      "source_sku": "US700-001-2150",
+      "source_variant_id": 67613943103736,
+      "swatch": "#6B7A2E",
+      "preview_palette": [
+        "#6B7A2E"
+      ],
+      "swatch_method": "Approximate color from the color name (same name elsewhere in the catalog)",
+      "available_at_refresh": true
+    },
+    {
+      "id": "geeetech-us700-001-2191",
+      "manufacturer": "Geeetech",
+      "filament_type": "PETG",
+      "color_name": "Beige",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/petg-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH PETG 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-10-22",
+      "source_color_name": "Beige",
+      "source_sku": "US700-001-2191",
+      "source_variant_id": 67613943234808,
+      "swatch": "#D8C8A8",
+      "preview_palette": [
+        "#D8C8A8"
+      ],
+      "swatch_method": "Approximate color from the color name (same name elsewhere in the catalog)",
+      "available_at_refresh": true
+    },
+    {
+      "id": "geeetech-us700-001-2207",
+      "manufacturer": "Geeetech",
+      "filament_type": "PETG",
+      "color_name": "Army Green",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/petg-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH PETG 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-10-22",
+      "source_color_name": "Army Green",
+      "source_sku": "US700-001-2207",
+      "source_variant_id": 67613943365880,
+      "swatch": "#4B5A3A",
+      "preview_palette": [
+        "#4B5A3A"
+      ],
+      "swatch_method": "Approximate color from the color name (same name elsewhere in the catalog)",
+      "available_at_refresh": true
+    },
+    {
+      "id": "geeetech-us700-001-2145",
+      "manufacturer": "Geeetech",
+      "filament_type": "PETG",
+      "color_name": "Transparent Red",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/petg-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH PETG 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-10-22",
+      "source_color_name": "Transparent Red",
+      "source_sku": "US700-001-2145",
+      "source_variant_id": 67614049730808,
+      "swatch": "#E57373",
+      "preview_palette": [
+        "#E57373"
+      ],
+      "swatch_method": "Approximate color from the color name (same name elsewhere in the catalog)",
+      "available_at_refresh": true
+    },
+    {
+      "id": "geeetech-us700-001-2146",
+      "manufacturer": "Geeetech",
+      "filament_type": "PETG",
+      "color_name": "Transparent Blue",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/petg-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH PETG 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-10-22",
+      "source_color_name": "Transparent Blue",
+      "source_sku": "US700-001-2146",
+      "source_variant_id": 67614049861880,
+      "swatch": "#7FB8F0",
+      "preview_palette": [
+        "#7FB8F0"
+      ],
+      "swatch_method": "Approximate color from the color name (same name elsewhere in the catalog)",
+      "available_at_refresh": true
+    },
+    {
+      "id": "geeetech-us700-001-2210",
+      "manufacturer": "Geeetech",
+      "filament_type": "PETG",
+      "color_name": "Transparent Purple",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/petg-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH PETG 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-10-22",
+      "source_color_name": "Transparent Purple",
+      "source_sku": "US700-001-2210",
+      "source_variant_id": 67614049992952,
+      "swatch": "#B58BDB",
+      "preview_palette": [
+        "#B58BDB"
+      ],
+      "swatch_method": "Approximate color from the color name (same name elsewhere in the catalog)",
+      "available_at_refresh": true
+    },
+    {
+      "id": "geeetech-us700-001-2212",
+      "manufacturer": "Geeetech",
+      "filament_type": "PETG",
+      "color_name": "Transparent Pink",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/petg-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH PETG 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-10-22",
+      "source_color_name": "Transparent Pink",
+      "source_sku": "US700-001-2212",
+      "source_variant_id": 67614094950648,
+      "swatch": "#F4A0C4",
+      "preview_palette": [
+        "#F4A0C4"
+      ],
+      "swatch_method": "Approximate color from the color name (same name elsewhere in the catalog)",
+      "available_at_refresh": true
+    },
+    {
+      "id": "geeetech-us700-001-2209",
+      "manufacturer": "Geeetech",
+      "filament_type": "PETG",
+      "color_name": "Transparent Orange",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/petg-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH PETG 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-10-22",
+      "source_color_name": "Transparent Orange",
+      "source_sku": "US700-001-2209",
+      "source_variant_id": 67744487637240,
+      "swatch": "#F5A85C",
+      "preview_palette": [
+        "#F5A85C"
+      ],
+      "swatch_method": "Approximate color from the color name (same name elsewhere in the catalog)",
+      "available_at_refresh": true
+    },
+    {
       "id": "geeetech-us700-001-2036",
       "manufacturer": "Geeetech",
       "filament_type": "PETG Metal",
@@ -52676,6 +53028,66 @@
         "#2E9E4F"
       ],
       "swatch_method": "Geeetech store variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "geeetech-us700-001-2039",
+      "manufacturer": "Geeetech",
+      "filament_type": "PETG Metal",
+      "color_name": "Pink",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/petg-metal-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH PETG Metal 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-10-22",
+      "source_color_name": "Pink",
+      "source_sku": "US700-001-2039",
+      "source_variant_id": 67613907255544,
+      "swatch": "#F06EAA",
+      "preview_palette": [
+        "#F06EAA"
+      ],
+      "swatch_method": "Approximate color from the color name (same name elsewhere in the catalog)",
+      "available_at_refresh": true
+    },
+    {
+      "id": "geeetech-us700-001-2042",
+      "manufacturer": "Geeetech",
+      "filament_type": "PETG Metal",
+      "color_name": "Rose gold",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/petg-metal-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH PETG Metal 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-10-22",
+      "source_color_name": "Rose gold",
+      "source_sku": "US700-001-2042",
+      "source_variant_id": 67613907386616,
+      "swatch": "#BA9594",
+      "preview_palette": [
+        "#BA9594"
+      ],
+      "swatch_method": "Approximate color from the color name (same name elsewhere in the catalog)",
+      "available_at_refresh": true
+    },
+    {
+      "id": "geeetech-us700-001-2206",
+      "manufacturer": "Geeetech",
+      "filament_type": "PETG Metal",
+      "color_name": "Gold",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/petg-metal-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH PETG Metal 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-10-22",
+      "source_color_name": "Gold",
+      "source_sku": "US700-001-2206",
+      "source_variant_id": 67614362861816,
+      "swatch": "#D4AF37",
+      "preview_palette": [
+        "#D4AF37"
+      ],
+      "swatch_method": "Approximate color from the color name (same name elsewhere in the catalog)",
       "available_at_refresh": true
     },
     {

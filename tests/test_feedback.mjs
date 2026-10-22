@@ -157,7 +157,7 @@ stored = [
   { ts: 1792000000, rating: 5, tags: '["fit","easy"]', comment: evil },                  // a row someone edited by hand
   { ts: 1791990000, rating: 3, tags: '["<script>","fit","fit",7,"constructor"]', comment: null },
   { ts: 1791980000, rating: 9, tags: '[]', comment: 'bad rating row is dropped' },
-  { ts: 1791970000, rating: 5, tags: 'not json', comment: "'=1+1" },
+  { ts: 1791970000, rating: 5, tags: 'not json', comment: "'=1+1", reply: '<b>Thanks</b>\u202E for the reminder', reply_ts: 1792100000 },
 ];
 res = await get({ Origin: 'https://evil.example' });
 assert.equal(res.status, 200);
@@ -173,6 +173,7 @@ assert.ok(!/[<>]/.test(JSON.stringify(list)), 'no angle bracket can come out of 
 assert.ok(!/[\u0000-\u001F\u200B-\u200F\u202A-\u202E]/.test(list.items[0].comment));
 assert.deepEqual(list.items[1].tags, ['fit']); assert.equal(list.items[1].comment, null);
 assert.deepEqual(list.items[2].tags, []); assert.equal(list.items[2].comment, "'=1+1"); // already-defused text is stable
+assert.equal(list.items[2].reply, 'bThanks/b for the reminder'); assert.equal(list.items[2].reply_date, '2026-10-15'); assert.ok(!('reply' in list.items[0]));
 assert.deepEqual(Object.keys(list.items[0]).sort(), ['comment', 'date', 'rating', 'tags']); // no id, no time of day, no source
 assert.equal(publicItem({ ts: 0, rating: 4, tags: '[]', comment: normalizeComment('=SUM(1)') }).comment, "'=SUM(1)"); // idempotent
 assert.equal(publicItem(null), null); assert.equal(publicItem({ rating: 'x' }), null);

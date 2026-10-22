@@ -29,6 +29,8 @@ jobs:
       - run: pip install pillow
       - name: Catalog, CSV import and build checks
         run: python tests/test_quick.py
+      - name: Catalog refresh tool checks
+        run: python tests/test_refresh.py
       - name: Paste import checks
         run: node tests/test_paste.mjs
       - name: Usage worker checks

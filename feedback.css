@@ -42,3 +42,6 @@
 .fb-chip-static{font-size:12px;font-weight:600;color:#a3c4ef;background:#22334a;border-radius:20px;padding:4px 10px}
 .fb-comment-text{margin:10px 0 0;color:#dbe3ec;line-height:1.55;overflow-wrap:anywhere;white-space:normal}
 @media(max-width:600px){.fb-summary{grid-template-columns:1fr}}
+.fb-reply{margin:12px 0 0;padding:8px 0 0 12px;border-left:3px solid #4aa3ff}
+.fb-reply-head{margin:0;color:#8fb8e8;font-weight:600}
+.fb-reply .fb-comment-text{margin-top:4px}
