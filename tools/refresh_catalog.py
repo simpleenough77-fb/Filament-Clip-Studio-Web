@@ -46,7 +46,7 @@ def keep_amolen(o): return o.get('delivery option', '') == 'U.S. to U.S.'
 def keep_geeetech(o): return o.get('ship from', '') == 'US'
 def keep_polymaker(o):
     return (o.get('diameter', '1.75mm') == '1.75mm' and o.get('net weight', o.get('weight', '1kg')) == '1kg'
-            and not o.get('type', '').casefold().startswith('old'))
+            and not any('old packaging' in v.casefold() or v.casefold().startswith('old') for k, v in o.items() if k != 'color'))
 
 # Automatic Shopify vendors: which feed, which variants are the spool the catalog lists, how entry ids are built.
 AUTO_SHOPIFY = {
@@ -60,6 +60,11 @@ WATCH_SHOPIFY = {'Sunlu': 'store.sunlu.com', 'Jayo': 'store.jayo3d.com', 'Protop
 FEED_VENDORS = {'Amolen': ['Amolen'], 'Geeetech': ['Geeetech'], 'Polymaker': ['Polymaker', 'Panchroma'],
                 'Sunlu': ['Sunlu'], 'Jayo': ['Jayo'], 'Protopasta': ['Protopasta Cardboard', 'Protopasta Plastic']}
 FEED_HOSTS = {'Amolen': 'www.amolen.com', 'Geeetech': 'www.geeetech.com', 'Polymaker': 'shop.polymaker.com', **WATCH_SHOPIFY}
+
+
+# Listings that mix several filament types; they were checked by hand and every US color is already in the catalog
+# (Geeetech PLA and PLA Carbon Fiber), so the report does not mention them. Re-check by hand if Geeetech adds colors there.
+CHECKED_BY_HAND = {'pla-3d-printer-filament-1-75mm-1kg-roll'}
 
 
 class FetchError(Exception):
@@ -293,11 +298,14 @@ def refresh_feed(feed, data, fetcher, state, report, today, wanted):
             types = {e['filament_type'] for e in entries}
             names = [o['name'].strip().casefold() for o in product['options']]
             color_opt = next((i for i, n in enumerate(names) if n in ('color', 'colour')), None)
+            if h in CHECKED_BY_HAND:
+                continue
             if len(types) != 1 or color_opt is None:
                 report.review.append(f'{vendor}: `{h}` cannot be read automatically ({"several types" if len(types) != 1 else "no Color option"}).')
                 continue
             ftype = next(iter(types))
             known = known_colors(entries)
+            known_skus = {e.get('source_sku') for e in products if e['manufacturer'] == vendor} - {None}
             profile = collections.Counter(e['spool_profile'] for e in entries).most_common(1)[0][0]
             weight = entries[0].get('spool_weight_g')
             added, placeholders, seen = [], [], set()
@@ -308,6 +316,8 @@ def refresh_feed(feed, data, fetcher, state, report, today, wanted):
                 key = norm(color)
                 if not color or key in known or key in seen or (vendor, ftype, key) in triples:
                     continue
+                if (v.get('sku') or '').strip() in known_skus:
+                    continue  # same product under a new name
                 seen.add(key)
                 if not safe_name(color):
                     report.review.append(f'{vendor} {ftype}: color name {color!r} has characters the labels cannot print; add it by hand.')
@@ -318,7 +328,7 @@ def refresh_feed(feed, data, fetcher, state, report, today, wanted):
                     report.review.append(f'{vendor} {ftype}: new color “{color}” has no known swatch; add it by hand with a color.')
                     continue
                 sku = (v.get('sku') or '').strip()
-                ident = f'{slug(vendor)}-{slug(sku)}' if cfg['ids'] == 'sku' and sku else f'{slug(vendor)}-{slug(ftype)}-{slug(color)}'
+                ident = f'{slug(vendor)}-{slug(sku)}' if cfg['ids'] == 'sku' and sku else f'{slug(vendor)}-{h}-{slug(color)}'
                 taken, n = {p['id'] for p in products}, 2
                 base = ident
                 while ident in taken:
