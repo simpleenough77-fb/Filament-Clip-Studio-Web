@@ -60,6 +60,13 @@
         card.append(chips);
       }
       if (typeof item.comment === 'string' && item.comment) card.append(el('p', 'fb-comment-text', item.comment));
+      if (typeof item.reply === 'string' && item.reply) {
+        const r = el('div', 'fb-reply');
+        const who = el('p', 'fb-reply-head small', 'Reply from Clip Studio');
+        if (typeof item.reply_date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(item.reply_date)) who.append(' \u00b7 ', el('time', '', item.reply_date));
+        r.append(who, el('p', 'fb-comment-text', item.reply));
+        card.append(r);
+      }
       list.append(card);
     }
     host.replaceChildren(summary, list);

@@ -15,14 +15,15 @@ const MAX_PER_DAY = 1000;
 // Plain text only: Unicode NFKC (so look-alike and full-width characters become ordinary ones), all whitespace
 // collapsed to single spaces, control / invisible / bidi-override / private-use characters removed, angle brackets
 // removed, a leading spreadsheet-formula character defused, and a hard length cap in characters.
-export function normalizeComment(input) {
+export const MAX_REPLY = 600;
+export function normalizeComment(input, max = MAX_COMMENT) {
   if (typeof input !== 'string') return null;
-  let s = input.slice(0, MAX_COMMENT * 4).normalize('NFKC');
+  let s = input.slice(0, max * 4).normalize('NFKC');
   s = s.replace(/[\p{Cf}\p{Co}\p{Cs}\p{Cn}]/gu, '');   // invisible, bidi-override, private-use and unassigned characters
   s = s.replace(/\s+/gu, ' ');                           // newlines, tabs and odd spaces become one plain space
   s = s.replace(/\p{Cc}/gu, '');                         // any remaining control characters (NUL, BEL, ...)
   s = s.replace(/[<>]/g, '').trim();
-  s = [...s].slice(0, MAX_COMMENT).join('').trim();
+  s = [...s].slice(0, max).join('').trim();
   if (/^[=+\-@]/.test(s)) s = "'" + s; // keeps CSV and Google Sheets exports from treating it as a formula
   return s === '' ? null : s;
 }
@@ -161,7 +162,14 @@ export function publicItem(row) {
     if (Array.isArray(parsed)) tags = [...new Set(parsed.filter((t) => typeof t === 'string' && TAGS.has(t)))].sort();
   } catch { /* unreadable tags are shown as none */ }
   const date = Number.isFinite(row.ts) ? new Date(row.ts * 1000).toISOString().slice(0, 10) : null;
-  return { date, rating: row.rating, tags, comment: normalizeComment(row.comment) };
+  const item = { date, rating: row.rating, tags, comment: normalizeComment(row.comment) };
+  // The owner's reply (README, "Feedback"), written by hand in the D1 console; it gets the same cleaning as visitor text.
+  const reply = normalizeComment(row.reply, MAX_REPLY);
+  if (reply) {
+    item.reply = reply;
+    item.reply_date = Number.isFinite(row.reply_ts) ? new Date(row.reply_ts * 1000).toISOString().slice(0, 10) : null;
+  }
+  return item;
 }
 
 export async function listFeedback(request, env, ctx, { json }) {
@@ -172,7 +180,7 @@ export async function listFeedback(request, env, ctx, { json }) {
     'SELECT COUNT(*) AS n, COALESCE(AVG(rating), 0) AS average, COALESCE(SUM(rating = 1), 0) AS r1, COALESCE(SUM(rating = 2), 0) AS r2, COALESCE(SUM(rating = 3), 0) AS r3, COALESCE(SUM(rating = 4), 0) AS r4, COALESCE(SUM(rating = 5), 0) AS r5 FROM feedback WHERE hidden = 0'
   ).first();
   const { results } = await env.DB.prepare(
-    'SELECT ts, rating, tags, CASE WHEN flag IS NULL THEN comment END AS comment FROM feedback WHERE hidden = 0 ORDER BY id DESC LIMIT ?'
+    'SELECT ts, rating, tags, CASE WHEN flag IS NULL THEN comment END AS comment, reply, reply_ts FROM feedback WHERE hidden = 0 ORDER BY id DESC LIMIT ?'
   ).bind(LIST_LIMIT).all();
   const body = {
     count: total ? total.n : 0,

@@ -6,7 +6,8 @@ from urllib.parse import urlparse
 
 ROOT=Path(__file__).resolve().parent.parent
 AUTHOR=ROOT/'author'; GENERATED=ROOT/'Generated'; CACHE=ROOT/'.cache'
-CATALOG=json.loads((AUTHOR/'Catalog.json').read_text())['products']
+_CATALOG_FILE=json.loads((AUTHOR/'Catalog.json').read_text())
+CATALOG=_CATALOG_FILE['products']; CATALOG_UPDATED=_CATALOG_FILE.get('updated','')
 PRODUCTS={p['id']:p for p in CATALOG}
 PRINTERS=json.loads((AUTHOR/'Printers.json').read_text())
 PRINTER_ALIASES=json.loads((AUTHOR/'Printer_Aliases.json').read_text())
@@ -291,6 +292,63 @@ async def generate(key,ack=False):
         for file in out.iterdir():z.write(file,file.name)
     return dict(download='/generated/'+archive.name,plates=len(plates),total=sum(r['quantity'] for r in checks))
 
+def _norm(s):return re.sub(r'[^a-z0-9]+',' ',str(s).casefold()).strip()
+def _closest(word,options,n=3,cutoff=0.55):
+    # Compare ignoring case and punctuation ("petg-matte" ~ "PETG Matte"); return the catalog's own spellings, best first.
+    import difflib
+    names={}
+    for o in options:names.setdefault(_norm(o),o)
+    target=_norm(word)
+    scored=sorted(((difflib.SequenceMatcher(None,target,k).ratio(),k) for k in names),reverse=True)
+    return [(names[k],r) for r,k in scored[:n] if r>=cutoff]
+def _names(entries,index):
+    # Catalog names plus the alternative names (label_aliases) that CSVs may use.
+    out={}
+    for p in entries:
+        out.setdefault(_norm(p[['manufacturer','filament_type','color_name'][index]]),p[['manufacturer','filament_type','color_name'][index]])
+        for a in p.get('label_aliases',[]):out.setdefault(_norm(a[index]),a[index])
+    return out
+def _show(s):
+    # Whatever a row said is repeated back in the message: plain text only, no angle brackets, no control characters, short.
+    s=re.sub(r'[<>]','',re.sub(r'[\x00-\x1f\x7f]+',' ',str(s)));s=re.sub(r'\s+',' ',s).strip()
+    return s if len(s)<=60 else s[:59]+'…'
+def explain_unknown(manufacturer,filament_type,color_name):
+    """Say which part of a CSV row is not in the catalog, with the closest matches, so a typo can be told from a missing product."""
+    m,t,c=[re.sub(r'\s+',' ',x or '').strip() for x in (manufacturer,filament_type,color_name)]
+    ms,ts,cs=_show(m),_show(t),_show(c)
+    since=f' The catalog was last refreshed {CATALOG_UPDATED}; a very new product may not be added yet.' if CATALOG_UPDATED else ''
+    makers=sorted({p['manufacturer'] for p in CATALOG},key=str.casefold)
+    if not m:return 'The manufacturer is blank. Supported manufacturers: '+', '.join(makers)+'.'
+    known=_names(CATALOG,0)
+    if _norm(m) not in known:
+        near=_closest(m,makers,1,0.6)
+        return f'Manufacturer “{ms}” is not in the catalog.'+(f' Did you mean “{near[0][0]}”?' if near else '')+' Supported manufacturers: '+', '.join(makers)+'.'
+    canonical=known[_norm(m)]
+    mine=[p for p in CATALOG if p['manufacturer']==canonical or any(_norm(a[0])==_norm(m) for a in p.get('label_aliases',[]))]
+    types=_names(mine,1)
+    if _norm(t) not in types:
+        near=_closest(t,sorted(set(types.values()),key=str.casefold),3,0.5)
+        elsewhere=sorted({p['manufacturer'] for p in CATALOG if _norm(p['filament_type'])==_norm(t) and p['manufacturer']!=canonical},key=str.casefold)
+        text=f'{canonical} has no filament type “{ts}” in the catalog.'
+        if near and near[0][1]>=0.8:text+=f' Did you mean “{near[0][0]}”?'
+        elif near:text+=' Closest '+canonical+' types: '+', '.join(n for n,_ in near)+'.'
+        else:text+=' '+canonical+' types: '+', '.join(sorted(set(types.values()),key=str.casefold)[:10])+('…' if len(set(types.values()))>10 else '')+'.'
+        if elsewhere:text+=f' “{ts}” is listed under {", ".join(elsewhere)}.'
+        return text+('' if near and near[0][1]>=0.8 else since)
+    typed=[p for p in mine if _norm(t) in {_norm(p['filament_type'])}|{_norm(a[1]) for a in p.get('label_aliases',[])}]
+    canon_type=types[_norm(t)]
+    colors=_names(typed,2)
+    if _norm(c) not in colors:
+        near=_closest(c,sorted(set(colors.values()),key=str.casefold),3,0.6)
+        other=sorted({p['filament_type'] for p in mine if _norm(p['color_name'])==_norm(c) and p['filament_type']!=canon_type},key=str.casefold)
+        text=f'{canonical} {canon_type} has no color “{cs}” in the catalog.'
+        if near and near[0][1]>=0.8:text+=f' Did you mean “{near[0][0]}”?'
+        elif near:text+=' Closest colors: '+', '.join(n for n,_ in near)+'.'
+        else:text+=' It has '+str(len(set(colors.values())))+' colors in the catalog.'
+        if other:text+=f' “{cs}” exists as {canonical} '+', '.join(other[:4])+'.'
+        return text+('' if near and near[0][1]>=0.8 else since)
+    return 'This manufacturer, type and color matches more than one catalog entry; choose it from the lists instead.'
+
 def import_csv(text, capacity=100):
     reader=csv.reader(io.StringIO(text.lstrip('\ufeff')))
     header=next(reader,None)
@@ -304,10 +362,16 @@ def import_csv(text, capacity=100):
         if not any(v.strip() for v in values):continue
         record=dict(zip(header,values));record['_extra']=values[len(header):]
         reason=None
-        triple=[(record.get(k) or '').strip().casefold() for k in required[:3]]
+        triple_raw=[(record.get(k) or '').strip() for k in required[:3]]
+        triple=[x.casefold() for x in triple_raw]
         match=[p for p in CATALOG if triple==[p[k].casefold() for k in required[:3]] or triple in [[v.casefold() for v in a] for a in p.get('label_aliases',[])]]
+        if not match:
+            # "pla-basic" or "PLA  Basic" for "PLA Basic": accept a spelling that differs only in case, spaces or punctuation, when it is unambiguous.
+            loose=[_norm(x) for x in triple_raw]
+            match=[p for p in CATALOG if loose==[_norm(p[k]) for k in required[:3]] or loose in [[_norm(v) for v in a] for a in p.get('label_aliases',[])]]
+            if len(match)>1:match=[]
         if record.get('_extra'):reason='Extra CSV fields; quote names containing commas.'
-        elif len(match)!=1:reason='Manufacturer, type and color combination not found.'
+        elif len(match)!=1:reason=explain_unknown(*triple_raw)
         try:
             qty=(record.get('quantity') or '').strip()
             if not re.fullmatch(r'[0-9]+',qty) or not 1<=int(qty)<=100:raise ValueError()
@@ -317,4 +381,4 @@ def import_csv(text, capacity=100):
         if not reason and (total+qty>capacity or len(rows)>=100):reason='This row would exceed the 100-clip batch limit; reduce quantities or choose Replace current batch.'
         if reason:skipped.append(dict(row=line,**{k:record.get(k) or '' for k in required},reason=reason));continue
         rows.append(dict(product=match[0]['id'],quantity=qty,swatch=match[0]['swatch']));total+=qty
-    return dict(rows=rows,skipped=skipped,imported=len(rows),total=total)
+    return dict(rows=rows,skipped=skipped,imported=len(rows),total=total,catalog_updated=CATALOG_UPDATED)

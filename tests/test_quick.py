@@ -46,6 +46,30 @@ def test_csv_import_matches_browser_regression():
     assert [r['row'] for r in result['skipped']] == [3, 5]
 
 
+def _skip_reason(manufacturer, filament_type, color_name):
+    out = g.import_csv('manufacturer,filament_type,color_name,quantity\n' + ','.join(f'"{x}"' for x in (manufacturer, filament_type, color_name)) + ',1\n')
+    return out['skipped'][0]['reason'] if out['skipped'] else None
+
+def test_rejections_say_what_did_not_match():
+    # Typo in the manufacturer: the exact mistake from a visitor's feedback ("Bambu Labs").
+    r = _skip_reason('Bambu Labs', 'PLA Basic', 'Black')
+    assert 'Manufacturer \u201cBambu Labs\u201d is not in the catalog' in r and 'Did you mean \u201cBambu Lab\u201d' in r and 'Sunlu' in r
+    # Typo in the type, and in the color: a confident suggestion, no "very new product" noise.
+    r = _skip_reason('Bambu Lab', 'PLA Basik', 'Black'); assert 'Did you mean \u201cPLA Basic\u201d' in r and 'refreshed' not in r
+    r = _skip_reason('Bambu Lab', 'PLA Basic', 'Blak'); assert 'no color \u201cBlak\u201d' in r and 'Did you mean \u201cBlack\u201d' in r
+    # Nothing close: say so, and say when the catalog was last refreshed so a new product can be told from a typo.
+    r = _skip_reason('Bambu Lab', 'Unobtainium', 'Black'); assert 'no filament type' in r and 'last refreshed ' + g.CATALOG_UPDATED in r
+    # Right name, wrong manufacturer.
+    r = _skip_reason('Bambu Lab', 'CoPE', 'Black'); assert 'listed under Panchroma' in r
+    assert _skip_reason('', 'PLA', 'Black').startswith('The manufacturer is blank.')
+    # Reasons are plain text that the page escapes; they never contain markup of their own.
+    assert not re.search(r'[<>]', _skip_reason('<b>x</b>', '<img src=x>', '<script>'))
+
+def test_import_accepts_spelling_that_differs_only_in_case_and_punctuation():
+    for spelling in (('bambu lab', 'pla-basic', 'black'), ('Bambu  Lab', 'PLA   Basic', 'BLACK')):
+        assert _skip_reason(*spelling) is None, spelling
+    assert _skip_reason('Bambu Lab', 'PLA Basic', 'Black') is None
+
 def test_csv_import_limits_and_headers():
     over = g.import_csv('manufacturer,filament_type,color_name,quantity\nBambu Lab,PETG-HF,Blue,60\nBambu Lab,PETG-HF,Blue,60\n')
     assert over['total'] == 60 and len(over['skipped']) == 1
