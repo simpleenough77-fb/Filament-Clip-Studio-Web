@@ -1,6 +1,7 @@
 {
   "note": "Newest first. Add an entry at the top for every change visitors would notice. kind: New, Improved, Fixed or Removed. Dates are UTC (YYYY-MM-DD).",
   "entries": [
+    {"date": "2026-10-22", "kind": "New", "title": "A few more colors", "details": ["Added Amolen Silk S-Series Gold/Red/Green, Geeetech PETG Transparent Emerald Green and Transparent Grey, and Geeetech Silk PLA Sparkly Silver. Preview colors for these are approximations from the vendors' photos."]},
     {"date": "2026-10-22", "kind": "Improved", "title": "Clearer messages when a spool is not found", "details": ["When a CSV or pasted row is skipped, the studio now says what did not match and suggests the closest brand, type or color, for example \"Bambu Labs\" becomes a suggestion for \"Bambu Lab\". Spellings that differ only in capitals or punctuation now import on their own."]},
     {"date": "2026-10-22", "kind": "New", "title": "Catalog refreshed, and refreshed daily", "details": ["Bambu Lab PETG Matte (8 colors) and new Geeetech PETG and PETG Metal colors are in. The catalog is now checked against the manufacturers' stores every day; Cookiecad, Creality and Inland still have to be updated by hand."]},
     {"date": "2026-10-22", "kind": "New", "title": "Replies on the Feedback page", "details": ["We can now answer feedback in public. Replies appear under the comment they respond to."]},

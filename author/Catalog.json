@@ -1,5 +1,5 @@
 {
-  "version": "3.8",
+  "version": "3.9",
   "updated": "2026-10-22",
   "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix, plus the vendor lists below. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools have their own clip body (Sunlu 1kg). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools have their own clip body (Jayo 1.1kg). Some long Bambu Lab, Cookiecad and Amolen names are shortened so they print in full on the clip; the manufacturer's original names are kept as label_aliases, so CSVs that use them still import. Polymaker and Panchroma entries are the 1 kg, 1.75 mm spools from the US Polymaker store (shop.polymaker.com), including sold-out colors; Panchroma lines are listed under the Panchroma name and all other Polymaker lines under Polymaker. Refills, 0.5/0.75/2/3/5 kg spools, 2.85 mm, bundles and multi-roll packs are excluded. Where a color exists in both old and new packaging or formula, only one entry is kept (the new one). Panchroma Matte PLA colors beyond the store feed's cutoff were taken from the product page and have no SKU. Inland entries are the 1 kg (1.0 kg, 2.2 lbs.) 1.75 mm filaments whose Micro Center product title says Cardboard Spool (microcenter.com), read from each product page on 2026-10-07; plastic-spool rolls, rolls whose title does not name the spool, 0.5 kg and larger rolls, multi-packs and resins are excluded. Availability was not recorded per store, so every entry is marked available. Protopasta entries are 1.75 mm spools from the Protopasta store (protopasta.com), read from its product feed on 2026-10-09, including sold-out colors, using the 1 kg spool; 50 g and 100 g coils, 500 g, 2 kg and larger spools, cases, 2.85 mm, subscriptions, digital items and non-filament products are excluded. Protopasta Cardboard entries use the cardboard-spool clip; Protopasta is moving gradually to plastic spools, so those entries stay in the catalog while stock lasts. Protopasta Plastic entries are the 64 1 kg spool products in the \"Now on plastic spools\" collection on proto-pasta.com (1 kg Spool filter, read from the collection pages on 2026-10-15); each repeats its Protopasta cardboard-spool entry (same SKU) where one exists, and Composite Copper, Steel and Iron PETG are new. Protopasta Plastic has its own clip body. Both print \"Protopasta\" as the manufacturer line on the clip (label_manufacturer); CSVs that say just Protopasta import as the cardboard entry (label_aliases). Creality entries are the single 1 kg spools on the US Creality store (store.creality.com) on 2026-10-09, including sold-out colors; spool-free refills, multi-packs and bundles are excluded. Creality 1 kg spools have their own clip body (Creality 1kg). Geeetech entries are the single 1 kg, 1.75 mm spools on the US Geeetech store (geeetech.com) on 2026-10-09, including sold-out colors; multi-packs and bundles are excluded. Geeetech 1 kg spools have their own clip body (Geeetech 1kg). Swatches for the new vendors are screen approximations from the color names. The catalog is refreshed every day from the manufacturers' stores (tools/refresh_catalog.py): new colors are added and nothing is ever removed, so saved batches keep working. Cookiecad, Creality and Inland cannot be read automatically and are updated by hand.",
   "products": [
@@ -12141,6 +12141,34 @@
           "Amolen",
           "PLA Silk S-Series",
           "Blue Pink Green"
+        ]
+      ]
+    },
+    {
+      "id": "amolen-pla-silk-s-series-gold-red-green",
+      "manufacturer": "Amolen",
+      "filament_type": "Silk S-Series",
+      "color_name": "Gold/Red/Green",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-s-series",
+      "source_date": "2026-10-22",
+      "source_color_name": "Gold Red Green",
+      "source_sku": "#1-3DSILKSSSCSGRG-1",
+      "source_variant_id": 45672288419863,
+      "swatch": "#D4A017",
+      "preview_palette": [
+        "#D4A017",
+        "#C62828",
+        "#2E7D32"
+      ],
+      "swatch_method": "Official Amolen 1 kg variant; swatch is a screen preview approximation from the vendor product photo",
+      "available_at_refresh": true,
+      "label_aliases": [
+        [
+          "Amolen",
+          "PLA Silk S-Series",
+          "Gold Red Green"
         ]
       ]
     },
@@ -51695,6 +51723,26 @@
       "available_at_refresh": false
     },
     {
+      "id": "geeetech-us700-001-1236",
+      "manufacturer": "Geeetech",
+      "filament_type": "Silk PLA",
+      "color_name": "Sparkly Silver",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/pla-silk-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH PLA Silk 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-10-22",
+      "source_color_name": "Sparkly Silver",
+      "source_sku": "US700-001-1236",
+      "source_variant_id": 67674624688376,
+      "swatch": "#B4B8BE",
+      "preview_palette": [
+        "#B4B8BE"
+      ],
+      "swatch_method": "Geeetech store variant; swatch is a screen approximation from the vendor product photo",
+      "available_at_refresh": true
+    },
+    {
       "id": "geeetech-us700-001-1574",
       "manufacturer": "Geeetech",
       "filament_type": "Silk PLA Dual Color",
@@ -52928,6 +52976,46 @@
         "#F5A85C"
       ],
       "swatch_method": "Approximate color from the color name (same name elsewhere in the catalog)",
+      "available_at_refresh": true
+    },
+    {
+      "id": "geeetech-us700-001-2213",
+      "manufacturer": "Geeetech",
+      "filament_type": "PETG",
+      "color_name": "Transparent Emerald Green",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/petg-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH PETG 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-10-22",
+      "source_color_name": "Transparent Emerald Green",
+      "source_sku": "US700-001-2213",
+      "source_variant_id": 67614050255096,
+      "swatch": "#2FA35A",
+      "preview_palette": [
+        "#2FA35A"
+      ],
+      "swatch_method": "Geeetech store variant; swatch is a screen approximation from the vendor product photo",
+      "available_at_refresh": true
+    },
+    {
+      "id": "geeetech-us700-001-2211",
+      "manufacturer": "Geeetech",
+      "filament_type": "PETG",
+      "color_name": "Transparent Grey",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/petg-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH PETG 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-10-22",
+      "source_color_name": "Transparent Grey",
+      "source_sku": "US700-001-2211",
+      "source_variant_id": 67614050124024,
+      "swatch": "#B0B7BC",
+      "preview_palette": [
+        "#B0B7BC"
+      ],
+      "swatch_method": "Geeetech store variant; no vendor photo yet, swatch is a screen approximation from the color name",
       "available_at_refresh": true
     },
     {
