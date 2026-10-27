@@ -1,6 +1,6 @@
 {
-  "version": "3.9",
-  "updated": "2026-10-22",
+  "version": "3.10",
+  "updated": "2026-10-27",
   "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix, plus the vendor lists below. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools have their own clip body (Sunlu 1kg). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools have their own clip body (Jayo 1.1kg). Some long Bambu Lab, Cookiecad and Amolen names are shortened so they print in full on the clip; the manufacturer's original names are kept as label_aliases, so CSVs that use them still import. Polymaker and Panchroma entries are the 1 kg, 1.75 mm spools from the US Polymaker store (shop.polymaker.com), including sold-out colors; Panchroma lines are listed under the Panchroma name and all other Polymaker lines under Polymaker. Refills, 0.5/0.75/2/3/5 kg spools, 2.85 mm, bundles and multi-roll packs are excluded. Where a color exists in both old and new packaging or formula, only one entry is kept (the new one). Panchroma Matte PLA colors beyond the store feed's cutoff were taken from the product page and have no SKU. Inland entries are the 1 kg (1.0 kg, 2.2 lbs.) 1.75 mm filaments whose Micro Center product title says Cardboard Spool (microcenter.com), read from each product page on 2026-10-07; plastic-spool rolls, rolls whose title does not name the spool, 0.5 kg and larger rolls, multi-packs and resins are excluded. Availability was not recorded per store, so every entry is marked available. Protopasta entries are 1.75 mm spools from the Protopasta store (protopasta.com), read from its product feed on 2026-10-09, including sold-out colors, using the 1 kg spool; 50 g and 100 g coils, 500 g, 2 kg and larger spools, cases, 2.85 mm, subscriptions, digital items and non-filament products are excluded. Protopasta Cardboard entries use the cardboard-spool clip; Protopasta is moving gradually to plastic spools, so those entries stay in the catalog while stock lasts. Protopasta Plastic entries are the 64 1 kg spool products in the \"Now on plastic spools\" collection on proto-pasta.com (1 kg Spool filter, read from the collection pages on 2026-10-15); each repeats its Protopasta cardboard-spool entry (same SKU) where one exists, and Composite Copper, Steel and Iron PETG are new. Protopasta Plastic has its own clip body. Both print \"Protopasta\" as the manufacturer line on the clip (label_manufacturer); CSVs that say just Protopasta import as the cardboard entry (label_aliases). Creality entries are the single 1 kg spools on the US Creality store (store.creality.com) on 2026-10-09, including sold-out colors; spool-free refills, multi-packs and bundles are excluded. Creality 1 kg spools have their own clip body (Creality 1kg). Geeetech entries are the single 1 kg, 1.75 mm spools on the US Geeetech store (geeetech.com) on 2026-10-09, including sold-out colors; multi-packs and bundles are excluded. Geeetech 1 kg spools have their own clip body (Geeetech 1kg). Swatches for the new vendors are screen approximations from the color names. The catalog is refreshed every day from the manufacturers' stores (tools/refresh_catalog.py): new colors are added and nothing is ever removed, so saved batches keep working. Cookiecad, Creality and Inland cannot be read automatically and are updated by hand.",
   "products": [
     {
@@ -6880,6 +6880,204 @@
       ],
       "swatch_method": "Approximate colors sampled from manufacturer swatch image",
       "swatch_description": "Avocado Green \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-tpu-75a-2-85mm-red",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "TPU 75A (2.85mm)",
+      "color_name": "Red",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/tpu-75a-2-85mm",
+      "source_date": "2026-10-27",
+      "source_color_name": "Red(56200)",
+      "source_color_code": "56200",
+      "source_sku_ids": [
+        "784659041048600590"
+      ],
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#D32941",
+      "preview_palette": [
+        "#D32941"
+      ],
+      "swatch_method": "Approximate color from the color name; no manufacturer swatch image was available",
+      "swatch_description": "Red \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-tpu-75a-2-85mm-pink",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "TPU 75A (2.85mm)",
+      "color_name": "Pink",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/tpu-75a-2-85mm",
+      "source_date": "2026-10-27",
+      "source_color_name": "Pink(56701)",
+      "source_color_code": "56701",
+      "source_sku_ids": [
+        "784659041048600596"
+      ],
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#F9C1BD",
+      "preview_palette": [
+        "#F9C1BD"
+      ],
+      "swatch_method": "Approximate color from the color name; no manufacturer swatch image was available",
+      "swatch_description": "Pink \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-tpu-75a-2-85mm-purple",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "TPU 75A (2.85mm)",
+      "color_name": "Purple",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/tpu-75a-2-85mm",
+      "source_date": "2026-10-27",
+      "source_color_name": "Purple(56700)",
+      "source_color_code": "56700",
+      "source_sku_ids": [
+        "784659041048600602"
+      ],
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#D6ABFF",
+      "preview_palette": [
+        "#D6ABFF"
+      ],
+      "swatch_method": "Approximate color from the color name; no manufacturer swatch image was available",
+      "swatch_description": "Purple \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-tpu-75a-2-85mm-mandarin-orange",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "TPU 75A (2.85mm)",
+      "color_name": "Mandarin Orange",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/tpu-75a-2-85mm",
+      "source_date": "2026-10-27",
+      "source_color_name": "Mandarin Orange(56300)",
+      "source_color_code": "56300",
+      "source_sku_ids": [
+        "784659041048600608"
+      ],
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#F99963",
+      "preview_palette": [
+        "#F99963"
+      ],
+      "swatch_method": "Approximate color from the color name; no manufacturer swatch image was available",
+      "swatch_description": "Mandarin Orange \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-tpu-75a-2-85mm-grass-green",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "TPU 75A (2.85mm)",
+      "color_name": "Grass Green",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/tpu-75a-2-85mm",
+      "source_date": "2026-10-27",
+      "source_color_name": "Grass Green(56501)",
+      "source_color_code": "56501",
+      "source_sku_ids": [
+        "784659041048600614"
+      ],
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#61C680",
+      "preview_palette": [
+        "#61C680"
+      ],
+      "swatch_method": "Approximate color from the color name; no manufacturer swatch image was available",
+      "swatch_description": "Grass Green \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-tpu-75a-2-85mm-dark-green",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "TPU 75A (2.85mm)",
+      "color_name": "Dark Green",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/tpu-75a-2-85mm",
+      "source_date": "2026-10-27",
+      "source_color_name": "Dark Green(56500)",
+      "source_color_code": "56500",
+      "source_sku_ids": [
+        "784659041048600620"
+      ],
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#68724D",
+      "preview_palette": [
+        "#68724D"
+      ],
+      "swatch_method": "Approximate color from the color name; no manufacturer swatch image was available",
+      "swatch_description": "Dark Green \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-tpu-75a-2-85mm-lemon-yellow",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "TPU 75A (2.85mm)",
+      "color_name": "Lemon Yellow",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/tpu-75a-2-85mm",
+      "source_date": "2026-10-27",
+      "source_color_name": "Lemon Yellow(56400)",
+      "source_color_code": "56400",
+      "source_sku_ids": [
+        "784659041048600632"
+      ],
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#F7D959",
+      "preview_palette": [
+        "#F7D959"
+      ],
+      "swatch_method": "Approximate color from the color name; no manufacturer swatch image was available",
+      "swatch_description": "Lemon Yellow \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-tpu-75a-2-85mm-black",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "TPU 75A (2.85mm)",
+      "color_name": "Black",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/tpu-75a-2-85mm",
+      "source_date": "2026-10-27",
+      "source_color_name": "Black(56100)",
+      "source_color_code": "56100",
+      "source_sku_ids": [
+        "784659041048600638"
+      ],
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#000000",
+      "preview_palette": [
+        "#000000"
+      ],
+      "swatch_method": "Approximate color from the color name; no manufacturer swatch image was available",
+      "swatch_description": "Black \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-tpu-75a-2-85mm-cyan",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "TPU 75A (2.85mm)",
+      "color_name": "Cyan",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/tpu-75a-2-85mm",
+      "source_date": "2026-10-27",
+      "source_color_name": "Cyan(56600)",
+      "source_color_code": "56600",
+      "source_sku_ids": [
+        "784659041048600644"
+      ],
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#0086D6",
+      "preview_palette": [
+        "#0086D6"
+      ],
+      "swatch_method": "Approximate color from the color name; no manufacturer swatch image was available",
+      "swatch_description": "Cyan \u2014 approximate manufacturer swatch"
     },
     {
       "id": "cookiecad-858d592987",

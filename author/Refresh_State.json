@@ -45,7 +45,7 @@
    "pla-silk-dual-pack": 5,
    "pla-silk-dual-sample": 1,
    "pla-silk-glow-in-the-dark-variety-pack-4x200g": 1,
-   "pla-silk-quad-color-1-75mm-1kg-2-2lb": 4,
+   "pla-silk-quad-color-1-75mm-1kg-2-2lb": 6,
    "pla-silk-quad-variety-pack-4x200g-1-75mm": 2,
    "pla-silk-rainbow": 10,
    "pla-silk-rainbow-variety-pack-4x200g-1-75mm": 6,
@@ -74,7 +74,8 @@
    "tpu-transparent-1-75mm-1kg-2-2lb": 10
   },
   "Bambu Lab": {
-   "petg-matte": "added"
+   "petg-matte": "added",
+   "tpu-75a-2-85mm": "added"
   },
   "Geeetech": {
    "10kg-10rolls-pla-3d-printer-filament-1-75mm-1kg-roll": 52,
@@ -91,9 +92,13 @@
    "free-gift-2-rolls-salessss": 1,
    "free-gift-3-rolls": 1,
    "free-gift-sale": 1,
-   "geeetech-10kg-10-rolls-petg-filament-1-75mm-1kg-spool-3d-printer-filament": 32,
+   "geeetech-10kg-10-rolls-petg-filament-1-75mm-1kg-spool-3d-printer-filament": 36,
    "geeetech-abs-3d-printer-filament-1-75mm-1kg-spool-12-rolls-bundle": 52,
+   "geeetech-petg-3d-printer-filament-1-75mm-1kg-spool-100-rolls-bundle": 14,
+   "geeetech-petg-3d-printer-filament-1-75mm-1kg-spool-50-rolls-bundle-1": 14,
+   "geeetech-pla-3d-printer-filament-1-75mm-1kg-spool-100-rolls-bundle": 17,
    "geeetech-pla-3d-printer-filament-1-75mm-1kg-spool-20-rolls-bundle": 3,
+   "geeetech-pla-3d-printer-filament-1-75mm-1kg-spool-50-rolls-bundle": 17,
    "geeetech-pla-3d-printer-filament-1-75mm-1kg-spool-8-rolls-bundle": 12,
    "geeetech-silk-pla-3d-printer-filament-1-75mm-1kg-spool-10-rolls-bundle": 16,
    "geeetech-silk-pla-3d-printer-filament-1-75mm-1kg-spool-20-rolls-bundle": 4,
@@ -544,7 +549,7 @@
    "1-75mm-sunlu-pla-plus-3d-printer-filament-5kg-roll-5kg-spool": 10,
    "1-75mm-sunlu-regular16m-or-upgraded8m-rainbow-3d-printer-filament-1kg-roll": 50,
    "1-75mm-sunlu-tpu-silk-3d-printer-filament-1kg-roll": 20,
-   "10x1000g-of-sunlu-standard-3d-resin-lcd-uv-curing-405nm-standard-photopolymer-resin": 82,
+   "10x1000g-of-sunlu-standard-3d-resin-lcd-uv-curing-405nm-standard-photopolymer-resin": 84,
    "250g-spool-3d-printing-filaments-0-25kg-per-roll": 16,
    "3000g-standard-resin-abs-like-resin-waterwash-standard-resin-high-tough-resin-standard-plus-resin": 36,
    "3d-printed-robotic-arm-color-bundle-pla-silk-pla-1kg-4-rolls": 1,
@@ -668,5 +673,5 @@
    "usa-prime-deal-1000g-standard-resin-water-wash-standard-resin-and-standard-plus-resin": 57
   }
  },
- "updated": "2026-10-22"
+ "updated": "2026-10-27"
 }
