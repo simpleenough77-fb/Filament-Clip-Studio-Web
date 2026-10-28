@@ -132,7 +132,7 @@ def write_batch(path,variants,plates,settings,printer,author,slicer='bambu_studi
         if has_sleeve:
             cfgsettings.update(json.loads((author/'Tested_Support_Settings.json').read_text()))
             cfgsettings.update(enable_support='1', support_type='normal(manual)', support_filament='0', support_interface_filament='0', enable_arc_fitting='0', version='02.08.02.61')
-            cfgsettings['different_settings_to_system']=['enable_arc_fitting;enable_support;support_type','','','','','']
+            cfgsettings['different_settings_to_system']=['enable_arc_fitting;enable_support;support_type;wall_generator','','','','','']
             cfgsettings['from']='project'
         cfgsettings['wipe_tower_x']=[str(p['tower'][0]+8 if p['tower'] else 0) for p in plates];cfgsettings['wipe_tower_y']=[str(p['tower'][1]+8 if p['tower'] else 0) for p in plates]
         # Studio stores one complete filament-to-filament matrix per physical nozzle.

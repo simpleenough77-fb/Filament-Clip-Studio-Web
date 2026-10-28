@@ -41,15 +41,15 @@ def orca_settings(palette, plates, printer, support=None):
            'enable_prime_tower': '1' if any(p['tower'] for p in plates) else '0', 'prime_tower_width': '60',
            'wipe_tower_x': [str(p['tower'][0] + 8 if p['tower'] else 0) for p in plates],
            'wipe_tower_y': [str(p['tower'][1] + 8 if p['tower'] else 0) for p in plates],
-           'brim_type': 'no_brim', 'skirt_loops': '0', 'enable_support': '0', 'support_type': 'normal(auto)',
+           'brim_type': 'no_brim', 'skirt_loops': '0', 'wall_generator': 'arachne', 'enable_support': '0', 'support_type': 'normal(auto)',
            'from': 'project', 'name': 'Filament Labels', 'version': '02.06.00.51', 'printer_settings_id': 'Generic Marlin printer',
-           'print_settings_id': 'Filament Labels', 'printer_model': '', 'different_settings_to_system': [''] * (n + 2)}
+           'print_settings_id': 'Filament Labels', 'printer_model': '', 'different_settings_to_system': ['wall_generator'] + [''] * (n + 1)}
     for key, value in PER_FILAMENT.items():
         cfg[key] = [value] * n
     if support:
         cfg.update(support)
         cfg.update(support_filament='0', support_interface_filament='0', enable_support='1', support_type='normal(manual)')
-        # List the support settings as overrides of the print preset. Without this, a slicer that swaps in the user's own
+        # List the support settings (and the Arachne wall generator, set above) as overrides of the print preset. Without this, a slicer that swaps in the user's own
         # printer profile on load (Snapmaker Orca does) drops them and warns that support enforcers need support enabled.
-        cfg['different_settings_to_system'][0] = ';'.join(sorted(set(support) | {'enable_support', 'support_type', 'support_filament', 'support_interface_filament'}))
+        cfg['different_settings_to_system'][0] = ';'.join(sorted(set(support) | {'wall_generator', 'enable_support', 'support_type', 'support_filament', 'support_interface_filament'}))
     return cfg
