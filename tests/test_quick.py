@@ -453,7 +453,15 @@ def test_orca_family_sleeve_projects_keep_manual_supports():
     assert {'enable_support', 'support_type'} <= set(overrides)
     assert len(cfg['different_settings_to_system']) == 4
     plain = orca_settings([('A', '#000000')], [dict(tower=None)], dict(bed=[270, 270, 270]))
-    assert plain['enable_support'] == '0' and plain['different_settings_to_system'][0] == ''
+    assert plain['enable_support'] == '0' and plain['different_settings_to_system'][0] == 'wall_generator'
+    assert plain['wall_generator'] == cfg['wall_generator'] == 'arachne' and 'wall_generator' in overrides
+
+
+def test_every_export_path_uses_the_arachne_wall_generator():
+    """Arachne keeps the small label text clean; Bambu presets, Orca-family projects and PrusaSlicer projects must all ask for it."""
+    for f in sorted((g.AUTHOR / 'Printer_Settings').glob('*.json')):
+        assert json.loads(f.read_text())['wall_generator'] == 'arachne', f.name
+    assert "'perimeter_generator': 'arachne'" in (g.AUTHOR / 'prusa_export.py').read_text()
 
 
 def test_sleeve_objects_carry_their_own_manual_supports():
