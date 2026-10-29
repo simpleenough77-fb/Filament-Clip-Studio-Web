@@ -45,7 +45,7 @@
    "pla-silk-dual-pack": 5,
    "pla-silk-dual-sample": 1,
    "pla-silk-glow-in-the-dark-variety-pack-4x200g": 1,
-   "pla-silk-quad-color-1-75mm-1kg-2-2lb": 4,
+   "pla-silk-quad-color-1-75mm-1kg-2-2lb": 6,
    "pla-silk-quad-variety-pack-4x200g-1-75mm": 2,
    "pla-silk-rainbow": 10,
    "pla-silk-rainbow-variety-pack-4x200g-1-75mm": 6,
@@ -74,7 +74,8 @@
    "tpu-transparent-1-75mm-1kg-2-2lb": 10
   },
   "Bambu Lab": {
-   "petg-matte": "added"
+   "petg-matte": "added",
+   "tpu-75a-2-85mm": "added"
   },
   "Geeetech": {
    "10kg-10rolls-pla-3d-printer-filament-1-75mm-1kg-roll": 52,
@@ -91,9 +92,13 @@
    "free-gift-2-rolls-salessss": 1,
    "free-gift-3-rolls": 1,
    "free-gift-sale": 1,
-   "geeetech-10kg-10-rolls-petg-filament-1-75mm-1kg-spool-3d-printer-filament": 32,
+   "geeetech-10kg-10-rolls-petg-filament-1-75mm-1kg-spool-3d-printer-filament": 36,
    "geeetech-abs-3d-printer-filament-1-75mm-1kg-spool-12-rolls-bundle": 52,
+   "geeetech-petg-3d-printer-filament-1-75mm-1kg-spool-100-rolls-bundle": 14,
+   "geeetech-petg-3d-printer-filament-1-75mm-1kg-spool-50-rolls-bundle-1": 14,
+   "geeetech-pla-3d-printer-filament-1-75mm-1kg-spool-100-rolls-bundle": 17,
    "geeetech-pla-3d-printer-filament-1-75mm-1kg-spool-20-rolls-bundle": 3,
+   "geeetech-pla-3d-printer-filament-1-75mm-1kg-spool-50-rolls-bundle": 17,
    "geeetech-pla-3d-printer-filament-1-75mm-1kg-spool-8-rolls-bundle": 12,
    "geeetech-silk-pla-3d-printer-filament-1-75mm-1kg-spool-10-rolls-bundle": 16,
    "geeetech-silk-pla-3d-printer-filament-1-75mm-1kg-spool-20-rolls-bundle": 4,
@@ -176,7 +181,7 @@
    "jayo-filadryer-j1-split-design-filament-high-efficiency-drying": 8,
    "jayo-gift-card-free-gift": 4,
    "jayo-halloween-filament-bundle-5-rolls-eu": 3,
-   "jayo-high-speed-matte-petg-1-1kg-3d-printing-filament-resuable-spool": 22,
+   "jayo-high-speed-matte-petg-1-1kg-3d-printing-filament-resuable-spool": 33,
    "jayo-high-speed-matte-petg-1kg-3d-printing-filament-bundle": 33,
    "jayo-high-speed-matte-pla-1-1kg-reusable-spool-3d-printing-filament": 22,
    "jayo-high-speed-pla-1-1kg-3d-printing-filament-bundle": 40,
@@ -210,7 +215,7 @@
    "moq-5-rolls-jayo-silk-pla-1-1kg-reusable-spool-1-75mm-filament-3d-printer-consumables-1-1kg-spool-shiny-metallic": 32,
    "new-arrival14k-standard-resin-1000g-3d-printer-uv-resin-405nm-good-liquidity-lcd-dlp": 4,
    "new-colors-jayo-1-1kg-pla-reusable-spool-3d-printer-filament": 27,
-   "new-colors-jayo-petg-1-1kg-3d-printing-filament-reusable-spool": 28,
+   "new-colors-jayo-petg-1-1kg-3d-printing-filament-reusable-spool": 42,
    "petg-5kg-large-spool-3d-printer-filament": 7,
    "pla-5kg-large-spool-3d-printer-filament": 16,
    "pla-matte-5kg-large-spool-3d-printer-filament-copy": 6,
@@ -218,7 +223,7 @@
    "reusable-spool-jayo-high-speed-marble-pla-600mm-s-high-speed-3d-printer-non-toxic-filament-1-1kg-roll-reusable-spool": 12,
    "reusable-spool-jayo-high-speed-pla-1-1kg-reusable-spool-3d-printing-filament": 20,
    "reusable-spool-jayo-petg-1-1kg-3d-printing-filament-reusable-spool": 89,
-   "reusable-spool-jayo-pla-classic-1-1kg-1-75mm-3d-printer-filament": 22,
+   "reusable-spool-jayo-pla-classic-1-1kg-1-75mm-3d-printer-filament": 33,
    "reusable-spool-jayo-pla-rainbow-1-1kg-3d-filament": 8,
    "reusable-spool-jayo-pla-rainbow-1-1kg-3d-filament-for-fdm-neatly-wound-3d-printing-material": 28,
    "reusable-spool-jayo-pla-transparent-rainbow-1-1kg-3d-filament": 8,
@@ -544,7 +549,7 @@
    "1-75mm-sunlu-pla-plus-3d-printer-filament-5kg-roll-5kg-spool": 10,
    "1-75mm-sunlu-regular16m-or-upgraded8m-rainbow-3d-printer-filament-1kg-roll": 50,
    "1-75mm-sunlu-tpu-silk-3d-printer-filament-1kg-roll": 20,
-   "10x1000g-of-sunlu-standard-3d-resin-lcd-uv-curing-405nm-standard-photopolymer-resin": 82,
+   "10x1000g-of-sunlu-standard-3d-resin-lcd-uv-curing-405nm-standard-photopolymer-resin": 84,
    "250g-spool-3d-printing-filaments-0-25kg-per-roll": 16,
    "3000g-standard-resin-abs-like-resin-waterwash-standard-resin-high-tough-resin-standard-plus-resin": 36,
    "3d-printed-robotic-arm-color-bundle-pla-silk-pla-1kg-4-rolls": 1,
@@ -635,8 +640,8 @@
    "sunlu-250g-filament-bundle": 22,
    "sunlu-abs-flame-retardant-abs-fr-3d-printer-filament-1kg-engineering-filaments": 20,
    "sunlu-abs-gf-abs-glass-fiber-3d-printer-filament-1kg": 11,
-   "sunlu-ams-heater-upgraded-your-bambu-ams-save-an-ams-2pro-for-you": 24,
-   "sunlu-ams-lite-heater-upgraded-your-bambu-lab-ams-lite": 12,
+   "sunlu-ams-heater-upgraded-your-bambu-ams-save-an-ams-2pro-for-you": 20,
+   "sunlu-ams-lite-heater-upgraded-your-bambu-lab-ams-lite": 4,
    "sunlu-asa-filament-1-75mm": 10,
    "sunlu-cmyk-color-mixing-resin": 2,
    "sunlu-easter-funny-bundles-1kg-4-rolls-hatch-easter-magic-ultimate-3d-printing-pack-for-vibrant-spring-creations": 32,
@@ -668,5 +673,5 @@
    "usa-prime-deal-1000g-standard-resin-water-wash-standard-resin-and-standard-plus-resin": 57
   }
  },
- "updated": "2026-10-22"
+ "updated": "2026-10-29"
 }
