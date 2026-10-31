@@ -1,6 +1,7 @@
 {
   "note": "Newest first. Add an entry at the top for every change visitors would notice. kind: New, Improved, Fixed or Removed. Dates are UTC (YYYY-MM-DD).",
   "entries": [
+    {"date": "2026-10-31", "kind": "Improved", "title": "New colors added", "details": ["Added 9 Bambu Lab TPU 75A (2.85mm) colors: Red, Pink, Purple, Mandarin Orange, Grass Green, Dark Green, Lemon Yellow, Black and Cyan."]},
     {"date": "2026-10-28", "kind": "Improved", "title": "Cleaner label text in the slicer", "details": ["Downloaded projects now use the Arachne wall generator in Bambu Studio, Orca Slicer, Creality Print, ElegooSlicer, Anycubic Slicer Next, Snapmaker Orca and PrusaSlicer. It adapts line width to thin strokes, so small letters print sharper than with the Classic generator. Clips you print from a plain STL still use whatever your slicer is set to."]},
     {"date": "2026-10-22", "kind": "New", "title": "A few more colors", "details": ["Added Amolen Silk S-Series Gold/Red/Green, Geeetech PETG Transparent Emerald Green and Transparent Grey, and Geeetech Silk PLA Sparkly Silver. Preview colors for these are approximations from the vendors' photos."]},
     {"date": "2026-10-22", "kind": "Improved", "title": "Clearer messages when a spool is not found", "details": ["When a CSV or pasted row is skipped, the studio now says what did not match and suggests the closest brand, type or color, for example \"Bambu Labs\" becomes a suggestion for \"Bambu Lab\". Spellings that differ only in capitals or punctuation now import on their own."]},
