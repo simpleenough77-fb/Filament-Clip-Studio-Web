@@ -1,6 +1,6 @@
 {
-  "version": "3.10",
-  "updated": "2026-11-05",
+  "version": "3.11",
+  "updated": "2026-11-19",
   "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix, plus the vendor lists below. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools have their own clip body (Sunlu 1kg). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools have their own clip body (Jayo 1.1kg). Some long Bambu Lab, Cookiecad and Amolen names are shortened so they print in full on the clip; the manufacturer's original names are kept as label_aliases, so CSVs that use them still import. Polymaker and Panchroma entries are the 1 kg, 1.75 mm spools from the US Polymaker store (shop.polymaker.com), including sold-out colors; Panchroma lines are listed under the Panchroma name and all other Polymaker lines under Polymaker. Refills, 0.5/0.75/2/3/5 kg spools, 2.85 mm, bundles and multi-roll packs are excluded. Where a color exists in both old and new packaging or formula, only one entry is kept (the new one). Panchroma Matte PLA colors beyond the store feed's cutoff were taken from the product page and have no SKU. Inland entries are the 1 kg (1.0 kg, 2.2 lbs.) 1.75 mm filaments whose Micro Center product title says Cardboard Spool (microcenter.com), read from each product page on 2026-10-07; plastic-spool rolls, rolls whose title does not name the spool, 0.5 kg and larger rolls, multi-packs and resins are excluded. Availability was not recorded per store, so every entry is marked available. Protopasta entries are 1.75 mm spools from the Protopasta store (protopasta.com), read from its product feed on 2026-10-09, including sold-out colors, using the 1 kg spool; 50 g and 100 g coils, 500 g, 2 kg and larger spools, cases, 2.85 mm, subscriptions, digital items and non-filament products are excluded. Protopasta Cardboard entries use the cardboard-spool clip; Protopasta is moving gradually to plastic spools, so those entries stay in the catalog while stock lasts. Protopasta Plastic entries are the 64 1 kg spool products in the \"Now on plastic spools\" collection on proto-pasta.com (1 kg Spool filter, read from the collection pages on 2026-10-15); each repeats its Protopasta cardboard-spool entry (same SKU) where one exists, and Composite Copper, Steel and Iron PETG are new. Protopasta Plastic has its own clip body. Both print \"Protopasta\" as the manufacturer line on the clip (label_manufacturer); CSVs that say just Protopasta import as the cardboard entry (label_aliases). Creality entries are the single 1 kg spools on the US Creality store (store.creality.com) on 2026-10-09, including sold-out colors; spool-free refills, multi-packs and bundles are excluded. Creality 1 kg spools have their own clip body (Creality 1kg). Geeetech entries are the single 1 kg, 1.75 mm spools on the US Geeetech store (geeetech.com) on 2026-10-09, including sold-out colors; multi-packs and bundles are excluded. Geeetech 1 kg spools have their own clip body (Geeetech 1kg). Swatches for the new vendors are screen approximations from the color names. The catalog is refreshed every day from the manufacturers' stores (tools/refresh_catalog.py): new colors are added and nothing is ever removed, so saved batches keep working. Cookiecad, Creality and Inland cannot be read automatically and are updated by hand.",
   "products": [
     {
@@ -6970,6 +6970,28 @@
       "swatch_description": "White \u2014 approximate manufacturer swatch"
     },
     {
+      "id": "bambu-pla-palette-key",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "PLA Palette",
+      "color_name": "Key",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/pla-palette",
+      "source_date": "2026-11-19",
+      "source_color_name": "Key(18101)",
+      "source_color_code": "18101",
+      "source_sku_ids": [
+        "792646054746030092"
+      ],
+      "available_at_refresh": true,
+      "swatch_effects": [],
+      "swatch": "#1A1A1A",
+      "preview_palette": [
+        "#1A1A1A"
+      ],
+      "swatch_method": "Approximate color from the color name; no manufacturer swatch image was available",
+      "swatch_description": "Key \u2014 approximate manufacturer swatch"
+    },
+    {
       "id": "bambu-tpu-75a-2-85mm-black",
       "manufacturer": "Bambu Lab",
       "filament_type": "TPU 75A (2.85mm)",
@@ -7166,6 +7188,28 @@
       ],
       "swatch_method": "Approximate color from the color name; no manufacturer swatch image was available",
       "swatch_description": "Mandarin Orange \u2014 approximate manufacturer swatch"
+    },
+    {
+      "id": "bambu-tpu-75a-2-85mm-dark-ivory",
+      "manufacturer": "Bambu Lab",
+      "filament_type": "TPU 75A (2.85mm)",
+      "color_name": "Dark Ivory",
+      "spool_profile": "Bambu Original",
+      "source": "https://us.store.bambulab.com/products/tpu-75a-2-85mm",
+      "source_date": "2026-11-19",
+      "source_color_name": "Dark Ivory(56401)",
+      "source_color_code": "56401",
+      "source_sku_ids": [
+        "784659041048600626"
+      ],
+      "available_at_refresh": false,
+      "swatch_effects": [],
+      "swatch": "#B8AD8F",
+      "preview_palette": [
+        "#B8AD8F"
+      ],
+      "swatch_method": "Approximate color from the color name; no manufacturer swatch image was available",
+      "swatch_description": "Dark Ivory \u2014 approximate manufacturer swatch"
     },
     {
       "id": "cookiecad-858d592987",
@@ -12638,6 +12682,66 @@
           "Blue Yellow Red White"
         ]
       ]
+    },
+    {
+      "id": "amolen-pla-silk-quad-color-1-75mm-1kg-2-2lb-blue-purple-yellow-pink",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk Quad",
+      "color_name": "Blue Purple Yellow Pink",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-quad-color-1-75mm-1kg-2-2lb",
+      "source_title": "PLA Silk Quad Color 1.75mm, 1KG/2.2LB",
+      "source_date": "2026-11-19",
+      "source_color_name": "Blue Purple Yellow Pink",
+      "source_sku": "#5-3DQSBLPUPKYLW",
+      "source_variant_id": 46087769456663,
+      "swatch": "#E86AA6",
+      "preview_palette": [
+        "#E86AA6"
+      ],
+      "swatch_method": "Approximate preview color from the color name; the vendor publishes no swatch image (multi-color spool: shown as its last color, like other Quad entries)",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-quad-color-1-75mm-1kg-2-2lb-blue-purple-red-green",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk Quad",
+      "color_name": "Blue Purple Red Green",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-quad-color-1-75mm-1kg-2-2lb",
+      "source_title": "PLA Silk Quad Color 1.75mm, 1KG/2.2LB",
+      "source_date": "2026-11-19",
+      "source_color_name": "Blue Purple Red Green",
+      "source_sku": "#5-3DQSBLUPUREGRE",
+      "source_variant_id": 45914673250327,
+      "swatch": "#2E9E4F",
+      "preview_palette": [
+        "#2E9E4F"
+      ],
+      "swatch_method": "Approximate preview color from the color name; the vendor publishes no swatch image (multi-color spool: shown as its last color, like other Quad entries)",
+      "available_at_refresh": true
+    },
+    {
+      "id": "amolen-pla-silk-quad-color-1-75mm-1kg-2-2lb-blue-red-yellow-green",
+      "manufacturer": "Amolen",
+      "filament_type": "PLA Silk Quad",
+      "color_name": "Blue Red Yellow Green",
+      "spool_profile": "Amolen 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.amolen.com/products/pla-silk-quad-color-1-75mm-1kg-2-2lb",
+      "source_title": "PLA Silk Quad Color 1.75mm, 1KG/2.2LB",
+      "source_date": "2026-11-19",
+      "source_color_name": "Blue Red Yellow Green",
+      "source_sku": "#5-3DQSBLRDYEGRN",
+      "source_variant_id": 46154759274519,
+      "swatch": "#2E9E4F",
+      "preview_palette": [
+        "#2E9E4F"
+      ],
+      "swatch_method": "Approximate preview color from the color name; the vendor publishes no swatch image (multi-color spool: shown as its last color, like other Quad entries)",
+      "available_at_refresh": true
     },
     {
       "id": "amolen-pla-temp-color-change-purple-green-to-pink-yellow",
@@ -51709,6 +51813,46 @@
       "available_at_refresh": true
     },
     {
+      "id": "geeetech-4px-us-700-001-2222",
+      "manufacturer": "Geeetech",
+      "filament_type": "Matte PLA",
+      "color_name": "Matte Peanut Brown",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/pla-matte-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH Matte PLA 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-11-19",
+      "source_color_name": "Matte Peanut Brown",
+      "source_sku": "4PX-US-700-001-2222",
+      "source_variant_id": 68086789079288,
+      "swatch": "#9C6B3F",
+      "preview_palette": [
+        "#9C6B3F"
+      ],
+      "swatch_method": "Approximate preview color from the color name; the vendor publishes no swatch image",
+      "available_at_refresh": false
+    },
+    {
+      "id": "geeetech-4px-us-700-001-2223",
+      "manufacturer": "Geeetech",
+      "filament_type": "Matte PLA",
+      "color_name": "Matte Sunny Orange",
+      "spool_profile": "Geeetech 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.geeetech.com/products/pla-matte-3d-printer-filament-1-75mm-1kg-roll",
+      "source_title": "GEEETECH Matte PLA 3D Printer Filament 1.75mm, 1kg Spool",
+      "source_date": "2026-11-19",
+      "source_color_name": "Matte Sunny Orange",
+      "source_sku": "4PX-US-700-001-2223",
+      "source_variant_id": 68086805233912,
+      "swatch": "#F28C28",
+      "preview_palette": [
+        "#F28C28"
+      ],
+      "swatch_method": "Approximate preview color from the color name; the vendor publishes no swatch image",
+      "available_at_refresh": true
+    },
+    {
       "id": "geeetech-us700-001-1246",
       "manufacturer": "Geeetech",
       "filament_type": "Silk PLA",
@@ -56712,6 +56856,406 @@
         "#222222"
       ],
       "swatch_method": "Creality US store variant (no color named; color read from product photo); swatch is a screen approximation",
+      "available_at_refresh": true
+    },
+    {
+      "id": "sunlu-asa-grey",
+      "manufacturer": "Sunlu",
+      "filament_type": "ASA",
+      "color_name": "Grey",
+      "spool_profile": "Sunlu 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://store.sunlu.com/products/sunlu-asa-filament-1-75mm",
+      "source_title": "SUNLU ASA 3D Printer Filament 1KG",
+      "source_date": "2026-11-19",
+      "source_color_name": "ASA / Grey",
+      "source_sku": "DLZ-US-SL-ASA-GY-1KG",
+      "source_variant_id": 53379431891226,
+      "swatch": "#8A8D8F",
+      "preview_palette": [
+        "#8A8D8F"
+      ],
+      "swatch_method": "Sunlu 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "sunlu-asa-green",
+      "manufacturer": "Sunlu",
+      "filament_type": "ASA",
+      "color_name": "Green",
+      "spool_profile": "Sunlu 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://store.sunlu.com/products/sunlu-asa-filament-1-75mm",
+      "source_title": "SUNLU ASA 3D Printer Filament 1KG",
+      "source_date": "2026-11-19",
+      "source_color_name": "ASA / Green",
+      "source_sku": "DLZ-US-SL-ASA-GN-1KG",
+      "source_variant_id": 53379431923994,
+      "swatch": "#1E9E4A",
+      "preview_palette": [
+        "#1E9E4A"
+      ],
+      "swatch_method": "Sunlu 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "sunlu-asa-sunny-orange",
+      "manufacturer": "Sunlu",
+      "filament_type": "ASA",
+      "color_name": "Sunny Orange",
+      "spool_profile": "Sunlu 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://store.sunlu.com/products/sunlu-asa-filament-1-75mm",
+      "source_title": "SUNLU ASA 3D Printer Filament 1KG",
+      "source_date": "2026-11-19",
+      "source_color_name": "ASA / Sunny Orange (Orange)",
+      "source_sku": "DLZ-US-SL-ASA-SO-1KG",
+      "source_variant_id": 53379431956762,
+      "swatch": "#FF8F1F",
+      "preview_palette": [
+        "#FF8F1F"
+      ],
+      "swatch_method": "Sunlu 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "sunlu-asa-mocha-mousse",
+      "manufacturer": "Sunlu",
+      "filament_type": "ASA",
+      "color_name": "Mocha Mousse",
+      "spool_profile": "Sunlu 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://store.sunlu.com/products/sunlu-asa-filament-1-75mm",
+      "source_title": "SUNLU ASA 3D Printer Filament 1KG",
+      "source_date": "2026-11-19",
+      "source_color_name": "ASA / Mocha Mousse",
+      "source_sku": "DLZ-US-SL-ASA-MM-1KG",
+      "source_variant_id": 53379431989530,
+      "swatch": "#A47864",
+      "preview_palette": [
+        "#A47864"
+      ],
+      "swatch_method": "Sunlu 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "sunlu-asa-lavender-purple",
+      "manufacturer": "Sunlu",
+      "filament_type": "ASA",
+      "color_name": "Lavender Purple",
+      "spool_profile": "Sunlu 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://store.sunlu.com/products/sunlu-asa-filament-1-75mm",
+      "source_title": "SUNLU ASA 3D Printer Filament 1KG",
+      "source_date": "2026-11-19",
+      "source_color_name": "ASA / Lavender Purple",
+      "source_sku": "DLZ-US-SL-ASA-LP-1KG",
+      "source_variant_id": 53379432022298,
+      "swatch": "#A98BD0",
+      "preview_palette": [
+        "#A98BD0"
+      ],
+      "swatch_method": "Sunlu 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "sunlu-tpu-95a-grey",
+      "manufacturer": "Sunlu",
+      "filament_type": "TPU 95A",
+      "color_name": "Grey",
+      "spool_profile": "Sunlu 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://store.sunlu.com/products/moq-3kg-tpu-3d-printer-filament-1kg",
+      "source_title": "[MOQ: 3KG] TPU 3D Printer Filament 1KG, TPU 90A/TPU 95A",
+      "source_date": "2026-11-19",
+      "source_color_name": "TPU 95A / Grey",
+      "source_sku": "DLZ-US-SL-TPU-GY-1KG",
+      "source_variant_id": 53379420717338,
+      "swatch": "#8A8D8F",
+      "preview_palette": [
+        "#8A8D8F"
+      ],
+      "swatch_method": "Sunlu 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "sunlu-tpu-95a-red",
+      "manufacturer": "Sunlu",
+      "filament_type": "TPU 95A",
+      "color_name": "Red",
+      "spool_profile": "Sunlu 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://store.sunlu.com/products/moq-3kg-tpu-3d-printer-filament-1kg",
+      "source_title": "[MOQ: 3KG] TPU 3D Printer Filament 1KG, TPU 90A/TPU 95A",
+      "source_date": "2026-11-19",
+      "source_color_name": "TPU 95A / Red",
+      "source_sku": "DLZ-US-SL-TPU-RD-1KG",
+      "source_variant_id": 53379420750106,
+      "swatch": "#C8102E",
+      "preview_palette": [
+        "#C8102E"
+      ],
+      "swatch_method": "Sunlu 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "sunlu-tpu-95a-azure",
+      "manufacturer": "Sunlu",
+      "filament_type": "TPU 95A",
+      "color_name": "Azure",
+      "spool_profile": "Sunlu 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://store.sunlu.com/products/moq-3kg-tpu-3d-printer-filament-1kg",
+      "source_title": "[MOQ: 3KG] TPU 3D Printer Filament 1KG, TPU 90A/TPU 95A",
+      "source_date": "2026-11-19",
+      "source_color_name": "TPU 95A / Azure",
+      "source_sku": "DLZ-US-SL-TPU-AZ-1KG",
+      "source_variant_id": 53379420782874,
+      "swatch": "#2F8FE0",
+      "preview_palette": [
+        "#2F8FE0"
+      ],
+      "swatch_method": "Sunlu 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "sunlu-tpu-95a-green",
+      "manufacturer": "Sunlu",
+      "filament_type": "TPU 95A",
+      "color_name": "Green",
+      "spool_profile": "Sunlu 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://store.sunlu.com/products/moq-3kg-tpu-3d-printer-filament-1kg",
+      "source_title": "[MOQ: 3KG] TPU 3D Printer Filament 1KG, TPU 90A/TPU 95A",
+      "source_date": "2026-11-19",
+      "source_color_name": "TPU 95A / Green",
+      "source_sku": "DLZ-US-SL-TPU-GN-1KG",
+      "source_variant_id": 53379420815642,
+      "swatch": "#1E9E4A",
+      "preview_palette": [
+        "#1E9E4A"
+      ],
+      "swatch_method": "Sunlu 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "sunlu-tpu-95a-sunny-orange",
+      "manufacturer": "Sunlu",
+      "filament_type": "TPU 95A",
+      "color_name": "Sunny Orange",
+      "spool_profile": "Sunlu 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://store.sunlu.com/products/moq-3kg-tpu-3d-printer-filament-1kg",
+      "source_title": "[MOQ: 3KG] TPU 3D Printer Filament 1KG, TPU 90A/TPU 95A",
+      "source_date": "2026-11-19",
+      "source_color_name": "TPU 95A / Orange(Sunny Orange)",
+      "source_sku": "DLZ-US-SL-TPU-SO-1KG",
+      "source_variant_id": 53379420848410,
+      "swatch": "#FF8F1F",
+      "preview_palette": [
+        "#FF8F1F"
+      ],
+      "swatch_method": "Sunlu 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "polymaker-pm1022060",
+      "manufacturer": "Polymaker",
+      "filament_type": "G-Flex PETG",
+      "color_name": "Black",
+      "spool_profile": "Polymaker 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://shop.polymaker.com/products/polymaker-gflex-petg",
+      "source_title": "Polymaker\u2122 G-Flex PETG",
+      "source_date": "2026-11-19",
+      "source_color_name": "1.75mm / 1kg / Black",
+      "source_sku": "PM1022060",
+      "source_variant_id": 51092666187833,
+      "swatch": "#161616",
+      "preview_palette": [
+        "#161616"
+      ],
+      "swatch_method": "Polymaker 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "polymaker-pm1022069",
+      "manufacturer": "Polymaker",
+      "filament_type": "G-Flex PETG",
+      "color_name": "White",
+      "spool_profile": "Polymaker 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://shop.polymaker.com/products/polymaker-gflex-petg",
+      "source_title": "Polymaker\u2122 G-Flex PETG",
+      "source_date": "2026-11-19",
+      "source_color_name": "1.75mm / 1kg / White",
+      "source_sku": "PM1022069",
+      "source_variant_id": 50551531601977,
+      "swatch": "#F2F2F0",
+      "preview_palette": [
+        "#F2F2F0"
+      ],
+      "swatch_method": "Polymaker 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "polymaker-pm1022068",
+      "manufacturer": "Polymaker",
+      "filament_type": "G-Flex PETG",
+      "color_name": "Grey",
+      "spool_profile": "Polymaker 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://shop.polymaker.com/products/polymaker-gflex-petg",
+      "source_title": "Polymaker\u2122 G-Flex PETG",
+      "source_date": "2026-11-19",
+      "source_color_name": "1.75mm / 1kg / Grey",
+      "source_sku": "PM1022068",
+      "source_variant_id": 51092666220601,
+      "swatch": "#8A8D8F",
+      "preview_palette": [
+        "#8A8D8F"
+      ],
+      "swatch_method": "Polymaker 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "polymaker-pm1022067",
+      "manufacturer": "Polymaker",
+      "filament_type": "G-Flex PETG",
+      "color_name": "Red",
+      "spool_profile": "Polymaker 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://shop.polymaker.com/products/polymaker-gflex-petg",
+      "source_title": "Polymaker\u2122 G-Flex PETG",
+      "source_date": "2026-11-19",
+      "source_color_name": "1.75mm / 1kg / Red",
+      "source_sku": "PM1022067",
+      "source_variant_id": 51092666253369,
+      "swatch": "#C8102E",
+      "preview_palette": [
+        "#C8102E"
+      ],
+      "swatch_method": "Polymaker 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "polymaker-pm1022066",
+      "manufacturer": "Polymaker",
+      "filament_type": "G-Flex PETG",
+      "color_name": "Yellow",
+      "spool_profile": "Polymaker 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://shop.polymaker.com/products/polymaker-gflex-petg",
+      "source_title": "Polymaker\u2122 G-Flex PETG",
+      "source_date": "2026-11-19",
+      "source_color_name": "1.75mm / 1kg / Yellow",
+      "source_sku": "PM1022066",
+      "source_variant_id": 51092666286137,
+      "swatch": "#F2C500",
+      "preview_palette": [
+        "#F2C500"
+      ],
+      "swatch_method": "Polymaker 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "polymaker-pm1022065",
+      "manufacturer": "Polymaker",
+      "filament_type": "G-Flex PETG",
+      "color_name": "Blue",
+      "spool_profile": "Polymaker 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://shop.polymaker.com/products/polymaker-gflex-petg",
+      "source_title": "Polymaker\u2122 G-Flex PETG",
+      "source_date": "2026-11-19",
+      "source_color_name": "1.75mm / 1kg / Blue",
+      "source_sku": "PM1022065",
+      "source_variant_id": 51092666318905,
+      "swatch": "#1F5FBF",
+      "preview_palette": [
+        "#1F5FBF"
+      ],
+      "swatch_method": "Polymaker 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "polymaker-pm1022064",
+      "manufacturer": "Polymaker",
+      "filament_type": "G-Flex PETG",
+      "color_name": "Green",
+      "spool_profile": "Polymaker 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://shop.polymaker.com/products/polymaker-gflex-petg",
+      "source_title": "Polymaker\u2122 G-Flex PETG",
+      "source_date": "2026-11-19",
+      "source_color_name": "1.75mm / 1kg / Green",
+      "source_sku": "PM1022064",
+      "source_variant_id": 51092666351673,
+      "swatch": "#2E9E4F",
+      "preview_palette": [
+        "#2E9E4F"
+      ],
+      "swatch_method": "Polymaker 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "polymaker-pm1022063",
+      "manufacturer": "Polymaker",
+      "filament_type": "G-Flex PETG",
+      "color_name": "Orange",
+      "spool_profile": "Polymaker 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://shop.polymaker.com/products/polymaker-gflex-petg",
+      "source_title": "Polymaker\u2122 G-Flex PETG",
+      "source_date": "2026-11-19",
+      "source_color_name": "1.75mm / 1kg / Orange",
+      "source_sku": "PM1022063",
+      "source_variant_id": 51092666384441,
+      "swatch": "#F28C28",
+      "preview_palette": [
+        "#F28C28"
+      ],
+      "swatch_method": "Polymaker 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "polymaker-pm1022062",
+      "manufacturer": "Polymaker",
+      "filament_type": "G-Flex PETG",
+      "color_name": "Tan",
+      "spool_profile": "Polymaker 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://shop.polymaker.com/products/polymaker-gflex-petg",
+      "source_title": "Polymaker\u2122 G-Flex PETG",
+      "source_date": "2026-11-19",
+      "source_color_name": "1.75mm / 1kg / Tan",
+      "source_sku": "PM1022062",
+      "source_variant_id": 51092666417209,
+      "swatch": "#C8A97E",
+      "preview_palette": [
+        "#C8A97E"
+      ],
+      "swatch_method": "Polymaker 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "polymaker-pm1022061",
+      "manufacturer": "Polymaker",
+      "filament_type": "G-Flex PETG",
+      "color_name": "Brown",
+      "spool_profile": "Polymaker 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://shop.polymaker.com/products/polymaker-gflex-petg",
+      "source_title": "Polymaker\u2122 G-Flex PETG",
+      "source_date": "2026-11-19",
+      "source_color_name": "1.75mm / 1kg / Brown",
+      "source_sku": "PM1022061",
+      "source_variant_id": 51092666449977,
+      "swatch": "#6B4A32",
+      "preview_palette": [
+        "#6B4A32"
+      ],
+      "swatch_method": "Polymaker 1 kg US variant; swatch is a screen approximation from the color name",
       "available_at_refresh": true
     }
   ]
