@@ -1,5 +1,5 @@
 {
-  "version": "3.11",
+  "version": "3.12",
   "updated": "2026-11-19",
   "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix, plus the vendor lists below. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools have their own clip body (Sunlu 1kg). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools have their own clip body (Jayo 1.1kg). Some long Bambu Lab, Cookiecad and Amolen names are shortened so they print in full on the clip; the manufacturer's original names are kept as label_aliases, so CSVs that use them still import. Polymaker and Panchroma entries are the 1 kg, 1.75 mm spools from the US Polymaker store (shop.polymaker.com), including sold-out colors; Panchroma lines are listed under the Panchroma name and all other Polymaker lines under Polymaker. Refills, 0.5/0.75/2/3/5 kg spools, 2.85 mm, bundles and multi-roll packs are excluded. Where a color exists in both old and new packaging or formula, only one entry is kept (the new one). Panchroma Matte PLA colors beyond the store feed's cutoff were taken from the product page and have no SKU. Inland entries are the 1 kg (1.0 kg, 2.2 lbs.) 1.75 mm filaments whose Micro Center product title says Cardboard Spool (microcenter.com), read from each product page on 2026-10-07; plastic-spool rolls, rolls whose title does not name the spool, 0.5 kg and larger rolls, multi-packs and resins are excluded. Availability was not recorded per store, so every entry is marked available. Protopasta entries are 1.75 mm spools from the Protopasta store (protopasta.com), read from its product feed on 2026-10-09, including sold-out colors, using the 1 kg spool; 50 g and 100 g coils, 500 g, 2 kg and larger spools, cases, 2.85 mm, subscriptions, digital items and non-filament products are excluded. Protopasta Cardboard entries use the cardboard-spool clip; Protopasta is moving gradually to plastic spools, so those entries stay in the catalog while stock lasts. Protopasta Plastic entries are the 64 1 kg spool products in the \"Now on plastic spools\" collection on proto-pasta.com (1 kg Spool filter, read from the collection pages on 2026-10-15); each repeats its Protopasta cardboard-spool entry (same SKU) where one exists, and Composite Copper, Steel and Iron PETG are new. Protopasta Plastic has its own clip body. Both print \"Protopasta\" as the manufacturer line on the clip (label_manufacturer); CSVs that say just Protopasta import as the cardboard entry (label_aliases). Creality entries are the single 1 kg spools on the US Creality store (store.creality.com) on 2026-10-09, including sold-out colors; spool-free refills, multi-packs and bundles are excluded. Creality 1 kg spools have their own clip body (Creality 1kg). Geeetech entries are the single 1 kg, 1.75 mm spools on the US Geeetech store (geeetech.com) on 2026-10-09, including sold-out colors; multi-packs and bundles are excluded. Geeetech 1 kg spools have their own clip body (Geeetech 1kg). Swatches for the new vendors are screen approximations from the color names. The catalog is refreshed every day from the manufacturers' stores (tools/refresh_catalog.py): new colors are added and nothing is ever removed, so saved batches keep working. Cookiecad, Creality and Inland cannot be read automatically and are updated by hand.",
   "products": [
@@ -41569,6 +41569,24 @@
       ]
     },
     {
+      "id": "inland-503784",
+      "manufacturer": "Inland",
+      "filament_type": "PETG",
+      "color_name": "Purple",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/503784",
+      "source_date": "2026-11-19",
+      "source_color_name": "Purple",
+      "source_sku": "503784",
+      "swatch": "#6A3D9A",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; approximate preview color from the color name; the vendor publishes no swatch image",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#6A3D9A"
+      ]
+    },
+    {
       "id": "inland-639678",
       "manufacturer": "Inland",
       "filament_type": "PETG-ESD",
@@ -42145,6 +42163,24 @@
       ]
     },
     {
+      "id": "inland-638639",
+      "manufacturer": "Inland",
+      "filament_type": "PLA",
+      "color_name": "Light Olive",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/638639",
+      "source_date": "2026-11-19",
+      "source_color_name": "Light Olive",
+      "source_sku": "638639",
+      "swatch": "#9C9F5C",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; approximate preview color from the color name; the vendor publishes no swatch image",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#9C9F5C"
+      ]
+    },
+    {
       "id": "inland-692935",
       "manufacturer": "Inland",
       "filament_type": "PLA Basic",
@@ -42476,6 +42512,25 @@
       "preview_palette": [
         "#C9A227",
         "#C62828"
+      ]
+    },
+    {
+      "id": "inland-650249",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Silk Dual",
+      "color_name": "Blue-Silver",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/650249",
+      "source_date": "2026-11-19",
+      "source_color_name": "Blue-Silver",
+      "source_sku": "650249",
+      "swatch": "#C0C0C4",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; approximate preview color from the color name; the vendor publishes no swatch image",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#1F5FBF",
+        "#C0C0C4"
       ]
     },
     {
@@ -43100,6 +43155,24 @@
       ]
     },
     {
+      "id": "inland-642925",
+      "manufacturer": "Inland",
+      "filament_type": "PLA Matte",
+      "color_name": "Yellow",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/642925",
+      "source_date": "2026-11-19",
+      "source_color_name": "Yellow",
+      "source_sku": "642925",
+      "swatch": "#F2C811",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; approximate preview color from the color name; the vendor publishes no swatch image",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#F2C811"
+      ]
+    },
+    {
       "id": "inland-670192",
       "manufacturer": "Inland",
       "filament_type": "HS PLA+",
@@ -43619,6 +43692,42 @@
       "available_at_refresh": true,
       "preview_palette": [
         "#DCE6EA"
+      ]
+    },
+    {
+      "id": "inland-670216",
+      "manufacturer": "Inland",
+      "filament_type": "HS PETG+",
+      "color_name": "Black",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670216",
+      "source_date": "2026-11-19",
+      "source_color_name": "Black",
+      "source_sku": "670216",
+      "swatch": "#161616",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; approximate preview color from the color name; the vendor publishes no swatch image",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#161616"
+      ]
+    },
+    {
+      "id": "inland-670219",
+      "manufacturer": "Inland",
+      "filament_type": "HS PETG+",
+      "color_name": "Grey",
+      "spool_profile": "Inland 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.microcenter.com/product/670219",
+      "source_date": "2026-11-19",
+      "source_color_name": "Grey",
+      "source_sku": "670219",
+      "swatch": "#8E8E8E",
+      "swatch_method": "Micro Center 1 kg cardboard-spool listing; approximate preview color from the color name; the vendor publishes no swatch image",
+      "available_at_refresh": true,
+      "preview_palette": [
+        "#8E8E8E"
       ]
     },
     {
