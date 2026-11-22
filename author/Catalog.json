@@ -1,7 +1,7 @@
 {
-  "version": "3.12",
-  "updated": "2026-11-19",
-  "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix, plus the vendor lists below. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools have their own clip body (Sunlu 1kg). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools have their own clip body (Jayo 1.1kg). Some long Bambu Lab, Cookiecad and Amolen names are shortened so they print in full on the clip; the manufacturer's original names are kept as label_aliases, so CSVs that use them still import. Polymaker and Panchroma entries are the 1 kg, 1.75 mm spools from the US Polymaker store (shop.polymaker.com), including sold-out colors; Panchroma lines are listed under the Panchroma name and all other Polymaker lines under Polymaker. Refills, 0.5/0.75/2/3/5 kg spools, 2.85 mm, bundles and multi-roll packs are excluded. Where a color exists in both old and new packaging or formula, only one entry is kept (the new one). Panchroma Matte PLA colors beyond the store feed's cutoff were taken from the product page and have no SKU. Inland entries are the 1 kg (1.0 kg, 2.2 lbs.) 1.75 mm filaments whose Micro Center product title says Cardboard Spool (microcenter.com), read from each product page on 2026-10-07; plastic-spool rolls, rolls whose title does not name the spool, 0.5 kg and larger rolls, multi-packs and resins are excluded. Availability was not recorded per store, so every entry is marked available. Protopasta entries are 1.75 mm spools from the Protopasta store (protopasta.com), read from its product feed on 2026-10-09, including sold-out colors, using the 1 kg spool; 50 g and 100 g coils, 500 g, 2 kg and larger spools, cases, 2.85 mm, subscriptions, digital items and non-filament products are excluded. Protopasta Cardboard entries use the cardboard-spool clip; Protopasta is moving gradually to plastic spools, so those entries stay in the catalog while stock lasts. Protopasta Plastic entries are the 64 1 kg spool products in the \"Now on plastic spools\" collection on proto-pasta.com (1 kg Spool filter, read from the collection pages on 2026-10-15); each repeats its Protopasta cardboard-spool entry (same SKU) where one exists, and Composite Copper, Steel and Iron PETG are new. Protopasta Plastic has its own clip body. Both print \"Protopasta\" as the manufacturer line on the clip (label_manufacturer); CSVs that say just Protopasta import as the cardboard entry (label_aliases). Creality entries are the single 1 kg spools on the US Creality store (store.creality.com) on 2026-10-09, including sold-out colors; spool-free refills, multi-packs and bundles are excluded. Creality 1 kg spools have their own clip body (Creality 1kg). Geeetech entries are the single 1 kg, 1.75 mm spools on the US Geeetech store (geeetech.com) on 2026-10-09, including sold-out colors; multi-packs and bundles are excluded. Geeetech 1 kg spools have their own clip body (Geeetech 1kg). Swatches for the new vendors are screen approximations from the color names. The catalog is refreshed every day from the manufacturers' stores (tools/refresh_catalog.py): new colors are added and nothing is ever removed, so saved batches keep working. Cookiecad, Creality and Inland cannot be read automatically and are updated by hand.",
+  "version": "3.13",
+  "updated": "2026-11-22",
+  "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix, plus the vendor lists below. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools have their own clip body (Sunlu 1kg). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools have their own clip body (Jayo 1.1kg). Some long Bambu Lab, Cookiecad and Amolen names are shortened so they print in full on the clip; the manufacturer's original names are kept as label_aliases, so CSVs that use them still import. Polymaker and Panchroma entries are the 1 kg, 1.75 mm spools from the US Polymaker store (shop.polymaker.com), including sold-out colors; Panchroma lines are listed under the Panchroma name and all other Polymaker lines under Polymaker. Refills, 0.5/0.75/2/3/5 kg spools, 2.85 mm, bundles and multi-roll packs are excluded. Where a color exists in both old and new packaging or formula, only one entry is kept (the new one). Panchroma Matte PLA colors beyond the store feed's cutoff were taken from the product page and have no SKU. Inland entries are the 1 kg (1.0 kg, 2.2 lbs.) 1.75 mm filaments whose Micro Center product title says Cardboard Spool (microcenter.com), read from each product page on 2026-10-07; plastic-spool rolls, rolls whose title does not name the spool, 0.5 kg and larger rolls, multi-packs and resins are excluded. Availability was not recorded per store, so every entry is marked available. Protopasta entries are 1.75 mm spools from the Protopasta store (protopasta.com), read from its product feed on 2026-10-09, including sold-out colors, using the 1 kg spool; 50 g and 100 g coils, 500 g, 2 kg and larger spools, cases, 2.85 mm, subscriptions, digital items and non-filament products are excluded. Protopasta Cardboard entries use the cardboard-spool clip; Protopasta is moving gradually to plastic spools, so those entries stay in the catalog while stock lasts. Protopasta Plastic entries are the 64 1 kg spool products in the \"Now on plastic spools\" collection on proto-pasta.com (1 kg Spool filter, read from the collection pages on 2026-10-15); each repeats its Protopasta cardboard-spool entry (same SKU) where one exists, and Composite Copper, Steel and Iron PETG are new. Protopasta Plastic has its own clip body. Both print \"Protopasta\" as the manufacturer line on the clip (label_manufacturer); CSVs that say just Protopasta import as the cardboard entry (label_aliases). Creality entries are the single 1 kg spools on the US Creality store (store.creality.com) on 2026-10-09, including sold-out colors; spool-free refills, multi-packs and bundles are excluded. Creality 1 kg spools have their own clip body (Creality 1kg). Geeetech entries are the single 1 kg, 1.75 mm spools on the US Geeetech store (geeetech.com) on 2026-10-09, including sold-out colors; multi-packs and bundles are excluded. Geeetech 1 kg spools have their own clip body (Geeetech 1kg). Swatches for the new vendors are screen approximations from the color names. Insignia entries are the 1 kg, 1.75 mm spools Best Buy (bestbuy.com) sells under its Insignia brand, read from the color selectors on the product pages on 2026-11-22: PLA, PLA+, Matte PLA, Silk PLA, PLA Glitter, PLA Glow, PETG, ABS and TPU. Insignia comes on the same cardboard spool as Polymaker, but has its own clip body (Insignia 1kg) so either can change without the other. The Matte and Silk prefixes Best Buy puts on some color names are dropped because the type already says it (Matte Black is PLA Matte, Black). Colors that appear only in a color selector have no SKU and point to the product page that lists them. The catalog is refreshed every day from the manufacturers' stores (tools/refresh_catalog.py): new colors are added and nothing is ever removed, so saved batches keep working. Cookiecad, Creality, Inland and Insignia cannot be read automatically and are updated by hand.",
   "products": [
     {
       "id": "bambu-petg-hf-blue",
@@ -57365,6 +57365,838 @@
         "#6B4A32"
       ],
       "swatch_method": "Polymaker 1 kg US variant; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-black",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "Black",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-black/J2FPJK9FK2",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Black",
+      "source_sku": "6674458",
+      "swatch": "#161616",
+      "preview_palette": [
+        "#161616"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-blue",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "Blue",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-blue/J2FPJK9FZC",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Blue",
+      "source_sku": "6674487",
+      "swatch": "#1F5FBF",
+      "preview_palette": [
+        "#1F5FBF"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-brown",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "Brown",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-brown/J2FPJK9VY2",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Brown",
+      "swatch": "#6B4A32",
+      "preview_palette": [
+        "#6B4A32"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-dark-gray",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "Dark Gray",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-white/J2FPJK9FKP",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Dark Gray",
+      "swatch": "#4A4A4A",
+      "preview_palette": [
+        "#4A4A4A"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-gray",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "Gray",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-gray/J2FPJK9F4G",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Gray",
+      "source_sku": "6674459",
+      "swatch": "#8E8E8E",
+      "preview_palette": [
+        "#8E8E8E"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-green",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "Green",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-green/J2FPJK9FZH",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Green",
+      "source_sku": "6674484",
+      "swatch": "#2E9A4A",
+      "preview_palette": [
+        "#2E9A4A"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-jungle-green",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "Jungle Green",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-white/J2FPJK9FKP",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Jungle Green",
+      "swatch": "#2A7F62",
+      "preview_palette": [
+        "#2A7F62"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-magenta",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "Magenta",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-white/J2FPJK9FKP",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Magenta",
+      "swatch": "#C2187E",
+      "preview_palette": [
+        "#C2187E"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-olive-green",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "Olive Green",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-white/J2FPJK9FKP",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Olive Green",
+      "swatch": "#6B7A2E",
+      "preview_palette": [
+        "#6B7A2E"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-orange",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "Orange",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-orange/J2FPJK9F44",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Orange",
+      "source_sku": "6674489",
+      "swatch": "#F07C1C",
+      "preview_palette": [
+        "#F07C1C"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-pink",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "Pink",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-pink/J2FPJK9VLS",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Pink",
+      "source_sku": "6674483",
+      "swatch": "#F08CB4",
+      "preview_palette": [
+        "#F08CB4"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-purple",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "Purple",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-purple/J2FPJK9F56",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Purple",
+      "source_sku": "6674457",
+      "swatch": "#6A3D9A",
+      "preview_palette": [
+        "#6A3D9A"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-red",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "Red",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-red/J2FPJK9FZY",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Red",
+      "source_sku": "6674476",
+      "swatch": "#C62828",
+      "preview_palette": [
+        "#C62828"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-stone-blue",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "Stone Blue",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-white/J2FPJK9FKP",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Stone Blue",
+      "swatch": "#5F7A94",
+      "preview_palette": [
+        "#5F7A94"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-white",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "White",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-white/J2FPJK9FKP",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "White",
+      "source_sku": "6674464",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-yellow",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA",
+      "color_name": "Yellow",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-yellow/J2FPJK9F4R",
+      "source_title": "Insignia\u2122 - PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Yellow",
+      "source_sku": "6674475",
+      "swatch": "#F2C811",
+      "preview_palette": [
+        "#F2C811"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-plus-black",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA+",
+      "color_name": "Black",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-black/J2FPJK9F5Z",
+      "source_title": "Insignia\u2122 - PLA + 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Black",
+      "source_sku": "6674471",
+      "swatch": "#161616",
+      "preview_palette": [
+        "#161616"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-plus-blue",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA+",
+      "color_name": "Blue",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-blue/J2FPJK9FFK",
+      "source_title": "Insignia\u2122 - PLA + 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Blue",
+      "source_sku": "6674467",
+      "swatch": "#1F5FBF",
+      "preview_palette": [
+        "#1F5FBF"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-plus-green",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA+",
+      "color_name": "Green",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-green/J2FPJK9FVL",
+      "source_title": "Insignia\u2122 - PLA + 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Green",
+      "swatch": "#2E9A4A",
+      "preview_palette": [
+        "#2E9A4A"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-plus-red",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA+",
+      "color_name": "Red",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-red/J2FPJK9FVJ",
+      "source_title": "Insignia\u2122 - PLA + 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Red",
+      "source_sku": "6674474",
+      "swatch": "#C62828",
+      "preview_palette": [
+        "#C62828"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-plus-white",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA+",
+      "color_name": "White",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-white/J2FPJK9FFC",
+      "source_title": "Insignia\u2122 - PLA + 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-matte-black",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA Matte",
+      "color_name": "Black",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-matte-pla-1-75mm-filament-matte-black/J2FPJK9VJK",
+      "source_title": "Insignia\u2122 - Matte PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Matte Black",
+      "source_sku": "6674466",
+      "swatch": "#161616",
+      "preview_palette": [
+        "#161616"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-matte-blue",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA Matte",
+      "color_name": "Blue",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-matte-pla-1-75mm-filament-matte-blue/J2FPJK9V2G",
+      "source_title": "Insignia\u2122 - Matte PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Matte Blue",
+      "swatch": "#1F5FBF",
+      "preview_palette": [
+        "#1F5FBF"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-matte-green",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA Matte",
+      "color_name": "Green",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-matte-pla-1-75mm-filament-matte-green/J2FPJK9V27",
+      "source_title": "Insignia\u2122 - Matte PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Matte Green",
+      "swatch": "#2E9A4A",
+      "preview_palette": [
+        "#2E9A4A"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-matte-pastel-rainbow",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA Matte",
+      "color_name": "Pastel Rainbow",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-matte-pla-1-75mm-filament-matte-pastel-rainbow/J2FPJK9VPF",
+      "source_title": "Insignia\u2122 - Matte PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Matte Pastel Rainbow",
+      "swatch": "#F6B3C2",
+      "preview_palette": [
+        "#F6B3C2",
+        "#FBE29A",
+        "#B9E6C3",
+        "#AFCBF0",
+        "#D3B8EC"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-matte-white",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA Matte",
+      "color_name": "White",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-matte-pla-1-75mm-filament-white/J2FPJK9VCJ",
+      "source_title": "Insignia\u2122 - Matte PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-silk-gold",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA Silk",
+      "color_name": "Gold",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-silk-pla-1-75mm-filament-silk-gold/J2FPJK9V78",
+      "source_title": "Insignia\u2122 - Silk PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Silk Gold",
+      "source_sku": "6674485",
+      "swatch": "#C9A227",
+      "preview_palette": [
+        "#C9A227"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Silk sheen",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-silk-silver",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA Silk",
+      "color_name": "Silver",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-silk-pla-1-75mm-filament-silk-gold/J2FPJK9V78",
+      "source_title": "Insignia\u2122 - Silk PLA 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Silk Silver",
+      "swatch": "#C0C0C4",
+      "preview_palette": [
+        "#C0C0C4"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Silk sheen",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-glitter-cosmic-purple",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA Glitter",
+      "color_name": "Cosmic Purple",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-glitter-1-75mm-filament-violet-frost/J2FPJK9V92",
+      "source_title": "Insignia\u2122 - PLA Glitter 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Cosmic Purple",
+      "swatch": "#4B2A7A",
+      "preview_palette": [
+        "#4B2A7A"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Glitter",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-glitter-galaxy-black",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA Glitter",
+      "color_name": "Galaxy Black",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-glitter-1-75mm-filament-violet-frost/J2FPJK9V92",
+      "source_title": "Insignia\u2122 - PLA Glitter 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Galaxy Black",
+      "swatch": "#1C1C24",
+      "preview_palette": [
+        "#1C1C24"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Glitter",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-glitter-night-sapphire",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA Glitter",
+      "color_name": "Night Sapphire",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-glitter-1-75mm-filament-night-sapphire/J2FPJK9VS3",
+      "source_title": "Insignia\u2122 - PLA Glitter 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Night Sapphire",
+      "source_sku": "6674455",
+      "swatch": "#1E2F6B",
+      "preview_palette": [
+        "#1E2F6B"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Glitter",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-glitter-violet-frost",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA Glitter",
+      "color_name": "Violet Frost",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-glitter-1-75mm-filament-violet-frost/J2FPJK9V92",
+      "source_title": "Insignia\u2122 - PLA Glitter 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Violet Frost",
+      "source_sku": "6674477",
+      "swatch": "#9C86C9",
+      "preview_palette": [
+        "#9C86C9"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Glitter",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-pla-glow-rainbow",
+      "manufacturer": "Insignia",
+      "filament_type": "PLA Glow",
+      "color_name": "Rainbow",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-pla-1-75mm-filament-yellow/J2FPJK9F4R",
+      "source_title": "Insignia\u2122 - PLA Glow 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Glow Rainbow",
+      "swatch": "#E53935",
+      "preview_palette": [
+        "#E53935",
+        "#FDD835",
+        "#43A047",
+        "#1E88E5",
+        "#8E24AA"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Glow in the dark",
+          "colors": [
+            "#C8F5A8"
+          ]
+        }
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-petg-black",
+      "manufacturer": "Insignia",
+      "filament_type": "PETG",
+      "color_name": "Black",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-petg-1-75mm-filament-black/J2FPJK9VX3",
+      "source_title": "Insignia\u2122 - PETG 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Black",
+      "source_sku": "6674456",
+      "swatch": "#161616",
+      "preview_palette": [
+        "#161616"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-petg-blue",
+      "manufacturer": "Insignia",
+      "filament_type": "PETG",
+      "color_name": "Blue",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-petg-1-75mm-filament-blue/J2FPJK9V3W",
+      "source_title": "Insignia\u2122 - PETG 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Blue",
+      "swatch": "#1F5FBF",
+      "preview_palette": [
+        "#1F5FBF"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-petg-clear",
+      "manufacturer": "Insignia",
+      "filament_type": "PETG",
+      "color_name": "Clear",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-petg-1-75mm-filament-clear/J2FPJK9VPY",
+      "source_title": "Insignia\u2122 - PETG 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Clear",
+      "source_sku": "6674479",
+      "swatch": "#DCE6EA",
+      "preview_palette": [
+        "#DCE6EA"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Clear/Transparent",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-petg-gray",
+      "manufacturer": "Insignia",
+      "filament_type": "PETG",
+      "color_name": "Gray",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-petg-1-75mm-filament-gray/J2FPJK9VYT",
+      "source_title": "Insignia\u2122 - PETG 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Gray",
+      "source_sku": "6674460",
+      "swatch": "#8E8E8E",
+      "preview_palette": [
+        "#8E8E8E"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-petg-white",
+      "manufacturer": "Insignia",
+      "filament_type": "PETG",
+      "color_name": "White",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-petg-1-75mm-filament-white/J2FPJK9VX9",
+      "source_title": "Insignia\u2122 - PETG 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "White",
+      "swatch": "#F4F4F0",
+      "preview_palette": [
+        "#F4F4F0"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-abs-black",
+      "manufacturer": "Insignia",
+      "filament_type": "ABS",
+      "color_name": "Black",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-abs-1-75mm-filament-black/J2FPJK9VYP",
+      "source_title": "Insignia\u2122 - ABS 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Black",
+      "swatch": "#161616",
+      "preview_palette": [
+        "#161616"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-abs-gray",
+      "manufacturer": "Insignia",
+      "filament_type": "ABS",
+      "color_name": "Gray",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-abs-1-75mm-filament-gray/J2FPJK9V8T",
+      "source_title": "Insignia\u2122 - ABS 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Gray",
+      "source_sku": "6674465",
+      "swatch": "#8E8E8E",
+      "preview_palette": [
+        "#8E8E8E"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "insignia-tpu-black",
+      "manufacturer": "Insignia",
+      "filament_type": "TPU",
+      "color_name": "Black",
+      "spool_profile": "Insignia 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.bestbuy.com/product/insignia-tpu-1-75mm-filament-black/J2FPJK9V8V",
+      "source_title": "Insignia\u2122 - TPU 1.75mm Filament",
+      "source_date": "2026-11-22",
+      "source_color_name": "Black",
+      "source_sku": "6674488",
+      "swatch": "#161616",
+      "preview_palette": [
+        "#161616"
+      ],
+      "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
       "available_at_refresh": true
     }
   ]

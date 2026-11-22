@@ -12,7 +12,8 @@ It only ever ADDS. Existing entries are never removed, renamed or reordered, bec
                         new colors on products the catalog already lists, and new Bambu filament lines.
   Reported for review   anything else that changed: new products or new variants at Sunlu, Jayo, Protopasta, and new
                         product lines at the automatic vendors (naming a new line is a human decision).
-  Not readable by script  Cookiecad and Creality publish no product feed; Micro Center (Inland) blocks automated requests.
+  Not readable by script  Cookiecad and Creality publish no product feed; Micro Center (Inland) blocks automated requests;
+                        Best Buy (Insignia) publishes no product feed.
                         These are updated by hand.
 
 Availability is deliberately not tracked for existing entries: stock flips daily and nothing reads it, so it would only add noise.
@@ -27,7 +28,7 @@ CATALOG_FILE = ROOT / 'author' / 'Catalog.json'
 STATE_FILE = ROOT / 'author' / 'Refresh_State.json'
 USER_AGENT = 'FilamentClipStudio-catalog-refresh (+https://filamentclip.com)'
 NOTE_SENTENCE = (" The catalog is refreshed every day from the manufacturers' stores (tools/refresh_catalog.py): new colors are added and nothing "
-                 'is ever removed, so saved batches keep working. Cookiecad, Creality and Inland cannot be read automatically and are updated by hand.')
+                 'is ever removed, so saved batches keep working. Cookiecad, Creality, Inland and Insignia cannot be read automatically and are updated by hand.')
 
 BAMBU = 'Bambu Lab'
 BAMBU_HOST = 'https://us.store.bambulab.com'
@@ -39,6 +40,7 @@ UNREADABLE = {
     'Cookiecad': 'its store publishes no product feed',
     'Creality': 'its store publishes no product feed',
     'Inland': 'Micro Center blocks automated requests',
+    'Insignia': 'Best Buy publishes no product feed',
 }
 
 
