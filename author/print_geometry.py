@@ -22,6 +22,7 @@ PROFILES={
     'Polymaker 1kg':_p('polymaker',**_CARDBOARD),
     'Panchroma 1kg':_p('panchroma',**_CARDBOARD),
     'Inland 1kg':_p('inland',**_CARDBOARD),
+    'Insignia 1kg':_p('insignia',**_CARDBOARD),   # same cardboard spool as Polymaker; own STLs so either can change
     'Protopasta':_p('protopasta',70.0,(70.0,33.0,15.5),29.5,12.5,plate=3.0,bore_z=5.0),
     'Protopasta Plastic':_p('protopasta_plastic',65.09,(65.09,37.0,18.0),27.05,12.5,plate=3.0,bore_z=4.5),
     'Geeetech 1kg':_p('geeetech',54.0,(54.0,55.935,21.279),23.0,12.5,plate=3.0,bore_z=4.5),

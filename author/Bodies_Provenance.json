@@ -166,5 +166,19 @@
     "sha256": "ccf574df5f366a26612683a59f225015844cd530e45075974b22e7a913db6f14",
     "triangles": 12864,
     "label_text_shells_dropped": 0
+  },
+  "insignia.stl": {
+    "source": "Insignia clip only.stl",
+    "source_sha256": "bc18e32f070394363ea027c7f927f342b11d65218902d4d95ef0d276713e1177",
+    "sha256": "d6c101d6bad0bf306fcbb80ec9febf29fce220fb14f3280ade01cebbe0f2e101",
+    "triangles": 19412,
+    "label_text_shells_dropped": 0
+  },
+  "insignia_sleeve.stl": {
+    "source": "Insignia with sleeve.stl",
+    "source_sha256": "308b33b613e67b9c0ad478e81b89bf2b422daab07ab125f29535c361d6a22887",
+    "sha256": "c4660a9b8a9683ec187472eea09873898269cc2d5509c1d5caa6517e980e037e",
+    "triangles": 17362,
+    "label_text_shells_dropped": 0
   }
 }
