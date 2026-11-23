@@ -1,7 +1,7 @@
 {
-  "version": "3.13",
-  "updated": "2026-11-22",
-  "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix, plus the vendor lists below. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools have their own clip body (Sunlu 1kg). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools have their own clip body (Jayo 1.1kg). Some long Bambu Lab, Cookiecad and Amolen names are shortened so they print in full on the clip; the manufacturer's original names are kept as label_aliases, so CSVs that use them still import. Polymaker and Panchroma entries are the 1 kg, 1.75 mm spools from the US Polymaker store (shop.polymaker.com), including sold-out colors; Panchroma lines are listed under the Panchroma name and all other Polymaker lines under Polymaker. Refills, 0.5/0.75/2/3/5 kg spools, 2.85 mm, bundles and multi-roll packs are excluded. Where a color exists in both old and new packaging or formula, only one entry is kept (the new one). Panchroma Matte PLA colors beyond the store feed's cutoff were taken from the product page and have no SKU. Inland entries are the 1 kg (1.0 kg, 2.2 lbs.) 1.75 mm filaments whose Micro Center product title says Cardboard Spool (microcenter.com), read from each product page on 2026-10-07; plastic-spool rolls, rolls whose title does not name the spool, 0.5 kg and larger rolls, multi-packs and resins are excluded. Availability was not recorded per store, so every entry is marked available. Protopasta entries are 1.75 mm spools from the Protopasta store (protopasta.com), read from its product feed on 2026-10-09, including sold-out colors, using the 1 kg spool; 50 g and 100 g coils, 500 g, 2 kg and larger spools, cases, 2.85 mm, subscriptions, digital items and non-filament products are excluded. Protopasta Cardboard entries use the cardboard-spool clip; Protopasta is moving gradually to plastic spools, so those entries stay in the catalog while stock lasts. Protopasta Plastic entries are the 64 1 kg spool products in the \"Now on plastic spools\" collection on proto-pasta.com (1 kg Spool filter, read from the collection pages on 2026-10-15); each repeats its Protopasta cardboard-spool entry (same SKU) where one exists, and Composite Copper, Steel and Iron PETG are new. Protopasta Plastic has its own clip body. Both print \"Protopasta\" as the manufacturer line on the clip (label_manufacturer); CSVs that say just Protopasta import as the cardboard entry (label_aliases). Creality entries are the single 1 kg spools on the US Creality store (store.creality.com) on 2026-10-09, including sold-out colors; spool-free refills, multi-packs and bundles are excluded. Creality 1 kg spools have their own clip body (Creality 1kg). Geeetech entries are the single 1 kg, 1.75 mm spools on the US Geeetech store (geeetech.com) on 2026-10-09, including sold-out colors; multi-packs and bundles are excluded. Geeetech 1 kg spools have their own clip body (Geeetech 1kg). Swatches for the new vendors are screen approximations from the color names. Insignia entries are the 1 kg, 1.75 mm spools Best Buy (bestbuy.com) sells under its Insignia brand, read from the color selectors on the product pages on 2026-11-22: PLA, PLA+, Matte PLA, Silk PLA, PLA Glitter, PLA Glow, PETG, ABS and TPU. Insignia comes on the same cardboard spool as Polymaker, but has its own clip body (Insignia 1kg) so either can change without the other. The Matte and Silk prefixes Best Buy puts on some color names are dropped because the type already says it (Matte Black is PLA Matte, Black). Colors that appear only in a color selector have no SKU and point to the product page that lists them. The catalog is refreshed every day from the manufacturers' stores (tools/refresh_catalog.py): new colors are added and nothing is ever removed, so saved batches keep working. Cookiecad, Creality, Inland and Insignia cannot be read automatically and are updated by hand.",
+  "version": "3.14",
+  "updated": "2026-11-23",
+  "note": "416 verified manufacturer/type/color combinations from the US Bambu Lab store product variants and Cookiecad shop/color matrix, plus the vendor lists below. Includes sold-out listings. Bundles, packaging and spool/refill duplicates excluded. Preview swatches approximate appearance. Catalog listings do not validate spool geometry or configure printing material presets. Amolen entries are limited to 1 kg spools for the initial profile. Sunlu entries are the 1 kg rolls from the US Sunlu store (store.sunlu.com), including sold-out colors; refill coils, 3 kg/5 kg large spools, 250 g minis and 0.8\u20130.9 kg rolls are excluded. Sunlu 1 kg spools have their own clip body (Sunlu 1kg). Jayo entries are the 1.1 kg rolls on Jayo's reusable plastic spool from the US Jayo store (store.jayo3d.com), including sold-out colors (Jayo ABS comes as 1 kg); cardboard-spool, transparent-spool, 5 kg, bundle and multi-roll listings are excluded. Jayo reusable spools have their own clip body (Jayo 1.1kg). Some long Bambu Lab, Cookiecad and Amolen names are shortened so they print in full on the clip; the manufacturer's original names are kept as label_aliases, so CSVs that use them still import. Polymaker and Panchroma entries are the 1 kg, 1.75 mm spools from the US Polymaker store (shop.polymaker.com), including sold-out colors; Panchroma lines are listed under the Panchroma name and all other Polymaker lines under Polymaker. Refills, 0.5/0.75/2/3/5 kg spools, 2.85 mm, bundles and multi-roll packs are excluded. Where a color exists in both old and new packaging or formula, only one entry is kept (the new one). Panchroma Matte PLA colors beyond the store feed's cutoff were taken from the product page and have no SKU. Inland entries are the 1 kg (1.0 kg, 2.2 lbs.) 1.75 mm filaments whose Micro Center product title says Cardboard Spool (microcenter.com), read from each product page on 2026-10-07; plastic-spool rolls, rolls whose title does not name the spool, 0.5 kg and larger rolls, multi-packs and resins are excluded. Availability was not recorded per store, so every entry is marked available. Protopasta entries are 1.75 mm spools from the Protopasta store (protopasta.com), read from its product feed on 2026-10-09, including sold-out colors, using the 1 kg spool; 50 g and 100 g coils, 500 g, 2 kg and larger spools, cases, 2.85 mm, subscriptions, digital items and non-filament products are excluded. Protopasta Cardboard entries use the cardboard-spool clip; Protopasta is moving gradually to plastic spools, so those entries stay in the catalog while stock lasts. Protopasta Plastic entries are the 64 1 kg spool products in the \"Now on plastic spools\" collection on proto-pasta.com (1 kg Spool filter, read from the collection pages on 2026-10-15); each repeats its Protopasta cardboard-spool entry (same SKU) where one exists, and Composite Copper, Steel and Iron PETG are new. Protopasta Plastic has its own clip body. Both print \"Protopasta\" as the manufacturer line on the clip (label_manufacturer); CSVs that say just Protopasta import as the cardboard entry (label_aliases). Creality entries are the single 1 kg spools on the US Creality store (store.creality.com) on 2026-10-09, including sold-out colors; spool-free refills, multi-packs and bundles are excluded. Creality 1 kg spools have their own clip body (Creality 1kg). Geeetech entries are the single 1 kg, 1.75 mm spools on the US Geeetech store (geeetech.com) on 2026-10-09, including sold-out colors; multi-packs and bundles are excluded. Geeetech 1 kg spools have their own clip body (Geeetech 1kg). Swatches for the new vendors are screen approximations from the color names. Insignia entries are the 1 kg, 1.75 mm spools Best Buy (bestbuy.com) sells under its Insignia brand, read from the color selectors on the product pages on 2026-11-22: PLA, PLA+, Matte PLA, Silk PLA, PLA Glitter, PLA Glow, PETG, ABS and TPU. Insignia comes on the same cardboard spool as Polymaker, but has its own clip body (Insignia 1kg) so either can change without the other. The Matte and Silk prefixes Best Buy puts on some color names are dropped because the type already says it (Matte Black is PLA Matte, Black). Colors that appear only in a color selector have no SKU and point to the product page that lists them. Hobby Lobby entries are the 1.75 mm, 330 m (2.2 lb) spools hobbylobby.com sells under the Hobby Lobby name, read from the product pages and their color selectors on 2026-11-23: PLA, PLA+, Matte PLA, Silk PLA, Luminous Green (PLA Glow), Burnt Titanium Sparkling (PLA Sparkle) and TPU; the refillable empty spool is excluded. Hobby Lobby spools have an outer flange ledge and their own clip body (Hobby Lobby 1kg). Multi-color silk names use hyphens (Black & Pink is Black-Pink); the store's own name is kept in source_color_name. Entries whose color appears only in a color selector point to the product page that lists it. The catalog is refreshed every day from the manufacturers' stores (tools/refresh_catalog.py): new colors are added and nothing is ever removed, so saved batches keep working. Cookiecad, Creality, Inland, Insignia and Hobby Lobby cannot be read automatically and are updated by hand.",
   "products": [
     {
       "id": "bambu-petg-hf-blue",
@@ -58197,6 +58197,679 @@
         "#161616"
       ],
       "swatch_method": "Best Buy 1 kg cardboard-spool listing; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-black",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA",
+      "color_name": "Black",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/3d-printing-filament/p/p81250144",
+      "source_title": "3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Black",
+      "source_sku": "2589638",
+      "swatch": "#161616",
+      "preview_palette": [
+        "#161616"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-blue",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA",
+      "color_name": "Blue",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/3d-printing-filament/p/p81250144",
+      "source_title": "3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Blue",
+      "source_sku": "2589646",
+      "swatch": "#1F5FBF",
+      "preview_palette": [
+        "#1F5FBF"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-red",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA",
+      "color_name": "Red",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/3d-printing-filament/p/p81250144",
+      "source_title": "3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Red",
+      "source_sku": "2589653",
+      "swatch": "#C62828",
+      "preview_palette": [
+        "#C62828"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-yellow",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA",
+      "color_name": "Yellow",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/yellow---3d-printing-filament/p/81250147",
+      "source_title": "3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Yellow",
+      "source_sku": "2589661",
+      "swatch": "#F5C518",
+      "preview_palette": [
+        "#F5C518"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-purple",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA",
+      "color_name": "Purple",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/purple---3d-printing-filament/p/81250148",
+      "source_title": "3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Purple",
+      "source_sku": "2589679",
+      "swatch": "#6A3FA0",
+      "preview_palette": [
+        "#6A3FA0"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-orange",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA",
+      "color_name": "Orange",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/3d-printing-filament/p/p81250144",
+      "source_title": "3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Orange",
+      "source_sku": "2589687",
+      "swatch": "#EF6C00",
+      "preview_palette": [
+        "#EF6C00"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-pink",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA",
+      "color_name": "Pink",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/3d-printing-filament/p/p81250144",
+      "source_title": "3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Pink",
+      "source_sku": "2589695",
+      "swatch": "#F48FB1",
+      "preview_palette": [
+        "#F48FB1"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-white",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA",
+      "color_name": "White",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/white---3d-printing-filament/p/81250151",
+      "source_title": "3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "White",
+      "source_sku": "2589703",
+      "swatch": "#F2F2F2",
+      "preview_palette": [
+        "#F2F2F2"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-gray",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA",
+      "color_name": "Gray",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/gray---3d-printing-filament/p/81250152",
+      "source_title": "3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Gray",
+      "source_sku": "2589711",
+      "swatch": "#8A8D91",
+      "preview_palette": [
+        "#8A8D91"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-wood",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA",
+      "color_name": "Wood",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/3d-printing-filament/p/p81250144",
+      "source_title": "3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Wood",
+      "source_sku": "2589729",
+      "swatch": "#B5835A",
+      "preview_palette": [
+        "#B5835A"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-marble",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA",
+      "color_name": "Marble",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/3d-printing-filament/p/p81250144",
+      "source_title": "3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Marble",
+      "source_sku": "2589760",
+      "swatch": "#D9D6D0",
+      "preview_palette": [
+        "#D9D6D0",
+        "#7A7A7A"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-golden",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA",
+      "color_name": "Golden",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/3d-printing-filament/p/p81250144",
+      "source_title": "3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Golden",
+      "source_sku": "2645463",
+      "swatch": "#C9A227",
+      "preview_palette": [
+        "#C9A227"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-green",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA",
+      "color_name": "Green",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/3d-printing-filament/p/p81250144",
+      "source_title": "3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Green",
+      "source_sku": "2645471",
+      "swatch": "#2E9A4A",
+      "preview_palette": [
+        "#2E9A4A"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-plus-black",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA+",
+      "color_name": "Black",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/3d-printing-filament/p/p81274578",
+      "source_title": "3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Black",
+      "source_sku": "2645398",
+      "swatch": "#161616",
+      "preview_palette": [
+        "#161616"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-plus-white",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA+",
+      "color_name": "White",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/white---3d-printing-filament/p/81274579",
+      "source_title": "3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "White",
+      "source_sku": "2645406",
+      "swatch": "#F2F2F2",
+      "preview_palette": [
+        "#F2F2F2"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-matte-black",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA Matte",
+      "color_name": "Black",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/matte-3d-printing-filament/p/p81274573",
+      "source_title": "Matte 3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Black",
+      "source_sku": "2645349",
+      "swatch": "#1E1E1E",
+      "preview_palette": [
+        "#1E1E1E"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-matte-gray",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA Matte",
+      "color_name": "Gray",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/gray---matte-3d-printing-filament/p/81274574",
+      "source_title": "Matte 3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Gray",
+      "source_sku": "2645356",
+      "swatch": "#8A8D91",
+      "preview_palette": [
+        "#8A8D91"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-matte-pink",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA Matte",
+      "color_name": "Pink",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/pink---matte-3d-printing-filament/p/81274575",
+      "source_title": "Matte 3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Pink",
+      "source_sku": "2645364",
+      "swatch": "#F2A7BE",
+      "preview_palette": [
+        "#F2A7BE"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-silk-black-pink",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA Silk",
+      "color_name": "Black-Pink",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/silk-3d-printing-filament/p/p81250157",
+      "source_title": "Silk 3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Black & Pink",
+      "source_sku": "2589752",
+      "swatch": "#161616",
+      "preview_palette": [
+        "#161616",
+        "#E85A9A"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Silk sheen",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-silk-black",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA Silk",
+      "color_name": "Black",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/silk-3d-printing-filament/p/p81250157",
+      "source_title": "Silk 3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Black",
+      "source_sku": "2645331",
+      "swatch": "#161616",
+      "preview_palette": [
+        "#161616"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Silk sheen",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-silk-pink-blue",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA Silk",
+      "color_name": "Pink-Blue",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/silk-3d-printing-filament/p/p81250157",
+      "source_title": "Silk 3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Pink & Blue",
+      "source_sku": "2645430",
+      "swatch": "#E85A9A",
+      "preview_palette": [
+        "#E85A9A",
+        "#3A7BD5"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Silk sheen",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-silk-rainbow-tmp",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA Silk",
+      "color_name": "Rainbow TMP",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/silk-3d-printing-filament/p/p81250157",
+      "source_title": "Silk 3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Rainbow TMP",
+      "source_sku": "2645414",
+      "swatch": "#E53935",
+      "preview_palette": [
+        "#E53935",
+        "#FDD835",
+        "#43A047",
+        "#1E88E5",
+        "#8E24AA"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Silk sheen",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-silk-red-blue-green",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA Silk",
+      "color_name": "Red-Blue-Green",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/silk-3d-printing-filament/p/p81250157",
+      "source_title": "Silk 3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Red/Blue/Green",
+      "source_sku": "2645448",
+      "swatch": "#C62828",
+      "preview_palette": [
+        "#C62828",
+        "#1F5FBF",
+        "#2E9A4A"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Silk sheen",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-silk-candy-black-silver",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA Silk",
+      "color_name": "Candy Black Silver",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/silk-3d-printing-filament/p/p81250157",
+      "source_title": "Silk 3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Candy Black Silver",
+      "source_sku": "2645489",
+      "swatch": "#161616",
+      "preview_palette": [
+        "#161616",
+        "#C0C0C0"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Silk sheen",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-silk-red-gold",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA Silk",
+      "color_name": "Red-Gold",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/silk-3d-printing-filament/p/p81250157",
+      "source_title": "Silk 3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Red/Gold",
+      "source_sku": "2645455",
+      "swatch": "#C62828",
+      "preview_palette": [
+        "#C62828",
+        "#C9A227"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Silk sheen",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-silk-silver",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA Silk",
+      "color_name": "Silver",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/silver-silk-3d-printing-filament/p/81250156",
+      "source_title": "Silk 3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Silver",
+      "source_sku": "2589745",
+      "swatch": "#C0C0C0",
+      "preview_palette": [
+        "#C0C0C0"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Silk sheen",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-silk-rainbow",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA Silk",
+      "color_name": "Rainbow",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/rainbow-silk-3d-printing-filament/p/81250154",
+      "source_title": "Silk 3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Rainbow",
+      "source_sku": "2589737",
+      "swatch": "#E53935",
+      "preview_palette": [
+        "#E53935",
+        "#FDD835",
+        "#43A047",
+        "#1E88E5",
+        "#8E24AA"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Silk sheen",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-glow-green",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA Glow",
+      "color_name": "Green",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/luminous-green-3d-printing-filament/p/81274576",
+      "source_title": "Luminous Green 3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Luminous Green",
+      "source_sku": "2645372",
+      "swatch": "#9BE07A",
+      "preview_palette": [
+        "#9BE07A"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Glow in the dark",
+          "colors": [
+            "#C8F5A8"
+          ]
+        }
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-pla-sparkle-burnt-titanium",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "PLA Sparkle",
+      "color_name": "Burnt Titanium",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/burnt-titanium-sparkling-3d-printing-filament/p/81274581",
+      "source_title": "Burnt Titanium Sparkling 3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Burnt Titanium",
+      "source_sku": "2645422",
+      "swatch": "#4A4E6A",
+      "preview_palette": [
+        "#4A4E6A"
+      ],
+      "swatch_effects": [
+        {
+          "name": "Glitter",
+          "colors": [
+            "#FFFFFF"
+          ]
+        }
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
+      "available_at_refresh": true
+    },
+    {
+      "id": "hobby-lobby-tpu-black",
+      "manufacturer": "Hobby Lobby",
+      "filament_type": "TPU",
+      "color_name": "Black",
+      "spool_profile": "Hobby Lobby 1kg",
+      "spool_weight_g": 1000,
+      "source": "https://www.hobbylobby.com/crafts-hobbies/kids-crafts-activities/arts-crafts-supplies/tpu-black-3d-printing-filament/p/81274577",
+      "source_title": "TPU Black 3D Printing Filament",
+      "source_date": "2026-11-23",
+      "source_color_name": "Black",
+      "source_sku": "2645380",
+      "swatch": "#161616",
+      "preview_palette": [
+        "#161616"
+      ],
+      "swatch_method": "Hobby Lobby 1 kg (2.2 lb) spool listing on hobbylobby.com; swatch is a screen approximation from the color name",
       "available_at_refresh": true
     }
   ]

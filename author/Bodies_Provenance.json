@@ -180,5 +180,19 @@
     "sha256": "c4660a9b8a9683ec187472eea09873898269cc2d5509c1d5caa6517e980e037e",
     "triangles": 17362,
     "label_text_shells_dropped": 0
+  },
+  "hobby_lobby.stl": {
+    "source": "Hobby Lobby clip only.stl",
+    "source_sha256": "abb9f6a8c19d41dbef2c461391369d6572b19dd99448ec4f5d67d720a9b8a7e9",
+    "sha256": "82a733e0c51d742dbea7a12620329b0c94b5c23f834c41d4862679934aad83de",
+    "triangles": 8388,
+    "label_text_shells_dropped": 0
+  },
+  "hobby_lobby_sleeve.stl": {
+    "source": "Hobby Lobby with sleeve.stl",
+    "source_sha256": "104a281d9ecc74deaf203117c6c8581dc2e5d1559e465db097315e939870a2cc",
+    "sha256": "b330296bc55ffe080f3d8587a8715db7e5ae8f283d721c2c7a7908246ae5723b",
+    "triangles": 8428,
+    "label_text_shells_dropped": 0
   }
 }
