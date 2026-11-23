@@ -3,14 +3,15 @@
     python tools/prepare_bodies.py "/path/to/Clip STLs"          # needs numpy and manifold3d (pip install manifold3d numpy)
     python tools/prepare_bodies.py "/path/to/Clip STLs" protopasta_plastic   # rebuild only the named vendor stems
 
-Each vendor has two source files, "<Vendor> clip only.stl" and "<Vendor> with sleeve.stl" (Jayo's is "Jayo with Sleeve.stl").
+Each vendor has two source files, "<Vendor> clip only.stl" and "<Vendor> with sleeve.stl" (Jayo's is "Jayo with Sleeve.stl"),
+binary or ASCII (OpenSCAD exports ASCII).
 The owner models every clip face down: front (label) face on z = 0, legs rising from the back. This script
   * merges the separate overlapping shells a CAD export leaves behind into one watertight solid (union),
   * drops label text baked into the face (shells no taller than the 0.6 mm label inlay; the Amolen files contain some),
   * centres the body on X/Y using the clip-only bounds, so the sleeve version lines up with it,
   * writes a binary STL and records source and result hashes in author/Bodies_Provenance.json.
 """
-import hashlib, json, struct, sys
+import hashlib, json, re, struct, sys
 from pathlib import Path
 import numpy as np
 import manifold3d as m3d
@@ -19,6 +20,7 @@ ROOT = Path(__file__).resolve().parent.parent
 AUTHOR = ROOT / 'author'
 VENDORS = {'bambu': 'Bambu Lab', 'cookiecad': 'Cookiecad', 'amolen': 'Amolen', 'sunlu': 'Sunlu', 'jayo': 'Jayo',
            'polymaker': 'Polymaker', 'panchroma': 'Panchroma', 'inland': 'Inland', 'insignia': 'Insignia',
+           'hobby_lobby': 'Hobby Lobby',
            'protopasta': 'Protopasta', 'protopasta_plastic': 'Protopasta Plastic',
            'geeetech': 'Geeetech', 'creality': 'Creality'}
 LABEL_INLAY = 0.61
@@ -26,9 +28,13 @@ LABEL_INLAY = 0.61
 
 def load(path):
     raw = Path(path).read_bytes()
-    n = struct.unpack_from('<I', raw, 80)[0]
+    n = struct.unpack_from('<I', raw, 80)[0] if len(raw) >= 84 else -1
     if 84 + 50 * n != len(raw):
-        raise ValueError(f'{path}: binary STL expected')
+        if raw.lstrip().startswith(b'solid'):   # ASCII STL, as OpenSCAD exports it
+            v = np.array(re.findall(rb'vertex\s+(\S+)\s+(\S+)\s+(\S+)', raw), dtype=float)
+            if len(v) and len(v) % 3 == 0:
+                return v.reshape(-1, 3, 3)
+        raise ValueError(f'{path}: binary or ASCII STL expected')
     rec = np.frombuffer(raw, dtype=np.dtype([('n', '<3f4'), ('v', '<9f4'), ('a', '<u2')]), count=n, offset=84)
     return rec['v'].reshape(-1, 3, 3).astype(float)
 
